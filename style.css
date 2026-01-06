@@ -1,0 +1,2496 @@
+/* ============================================
+   SISTEMA DE LAUDOS DIGITAIS - CSS UNIFICADO
+   Hospital São Rafael
+   ============================================ */
+
+/* Reset e Configurações Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #400f00;
+    --primary-dark: #400f00;
+    --primary-light: #c7b38d;
+    --secondary-color: #422e23;
+    --danger-color: #422e23;
+    --warning-color: #faeedc;
+    --light-color: #f8e1b3;
+    --dark-color: #422e23;
+    --gray-color: #7d766c;
+    --gray-light: #e9ecef;
+    --border-color: #422e23a8;
+    --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 5px 20px rgba(0, 0, 0, 0.15);
+    --border-radius: 8px;
+    --border-radius-sm: 4px;
+    --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-secondary: 'Roboto Slab', Georgia, serif;
+    --transition: all 0.3s ease;
+    --font-scale: 1;
+    --export-font-scale: 1;
+}
+
+body {
+    font-family: var(--font-primary);
+    background: linear-gradient(135deg, #faf9f5 0%, #e2d2c3 100%);
+    color: var(--dark-color);
+    line-height: 1.6;
+    min-height: 100vh;
+    overflow-x: auto;
+}
+
+/* Container Principal */
+.app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+/* Cabeçalho */
+.app-header {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.hospital-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.hospital-logo img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.hospital-logo h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.system-title {
+    font-size: 1rem;
+    opacity: 0.9;
+    padding-left: 1.5rem;
+    border-left: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.btn-help {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-help:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+}
+
+.auto-save-status {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9em;
+    opacity: 0.9;
+}
+
+.auto-save-status i {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 0.6;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+/* Conteúdo Principal */
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 2rem;
+    flex: 1;
+    max-width: 100%;
+    overflow: hidden;
+    min-height: calc(100vh - 120px);
+}
+
+@media (max-width: 1200px) {
+    .main-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Painel de Formulários */
+.form-panel {
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    padding: 0.5rem;
+    overflow-y: auto;
+    max-height: calc(100vh - 120px);
+}
+
+.form-section {
+    background: var(--light-color);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+}
+
+.form-section:hover {
+    border-color: var(--primary-light);
+    box-shadow: 0 2px 8px rgba(166, 113, 0, 0.1);
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.section-header i {
+    font-size: 1.5em;
+    color: var(--primary-color);
+}
+
+.section-header h2 {
+    font-size: 1.25em;
+    font-weight: 600;
+    color: var(--dark-color);
+    flex: 1;
+}
+
+.search-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-box i {
+    position: absolute;
+    left: 10px;
+    color: var(--gray-color);
+}
+
+.search-box input {
+    padding: 0.5rem 1rem 0.5rem 2.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-sm);
+    width: 200px;
+    font-size: 0.9em;
+    transition: var(--transition);
+}
+
+.search-box input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(56, 27, 0, 0.1);
+}
+
+/* Formulários */
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+.form-group label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: var(--dark-color);
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.form-group label.required::after {
+    content: '*';
+    color: var(--danger-color);
+    margin-left: 0.25rem;
+}
+
+.form-control {
+    padding: 0.75rem;
+    border: 2px solid var(--border-color);
+    border-radius: var(--border-radius-sm);
+    font-size: 0.95rem;
+    transition: var(--transition);
+    background: white;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(0, 86, 166, 0.1);
+}
+
+.form-control:read-only {
+    background-color: var(--gray-light);
+    cursor: not-allowed;
+}
+
+.input-with-action {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.btn-action {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius-sm);
+    padding: 0 1rem;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 40px;
+}
+
+.btn-action:hover {
+    background: var(--primary-dark);
+}
+
+.idade-input {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.idade-input .form-control {
+    flex: 1;
+}
+
+.idade-label {
+    color: var(--gray-color);
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+.professional-register-display {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.register-type {
+    background: var(--primary-color);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius-sm);
+    font-weight: 500;
+    min-width: 80px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+/* Abas de Categorias */
+.categorias-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.tab-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-sm);
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: var(--transition);
+    color: var(--dark-color);
+    white-space: nowrap;
+    border-left: 3px solid var(--primary-color);
+}
+
+.tab-btn i {
+    color: var(--primary-color);
+    font-size: 0.9rem;
+    min-width: 16px;
+    text-align: center;
+}
+
+.tab-btn:hover {
+    background: rgba(64, 15, 0, 0.05);
+    border-color: var(--primary-color);
+}
+
+.tab-btn.active {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.tab-btn.active i {
+    color: white;
+}
+
+/* Grid de Exames */
+.exames-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.exame-card {
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 1.25rem;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.75rem;
+}
+
+.exame-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--primary-color);
+    box-shadow: var(--shadow);
+}
+
+.exame-card i {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.exame-card h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--dark-color);
+    margin: 0;
+}
+
+.exame-card p {
+    font-size: 0.85rem;
+    color: var(--gray-color);
+    margin: 0;
+    line-height: 1.4;
+}
+
+.exame-card.selected {
+    background: rgba(0, 86, 166, 0.1);
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(0, 86, 166, 0.1);
+}
+
+.loading-exames {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 3rem;
+    color: var(--gray-color);
+}
+
+.loading-exames i {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+/* Paginação de exames */
+.exames-paginacao {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color);
+}
+
+/* Estilos para controles de paginação - se necessário */
+.paginacao-controls {
+    margin-top: 1em;
+    padding: 1rem;
+    background: white;
+    border-radius: var(--border-radius-sm);
+    border: 1px solid var(--border-color);
+}
+
+.paginacao-info {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: var(--gray-color);
+    font-size: 0.9rem;
+}
+
+.paginacao-botoes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.btn-paginacao {
+    padding: 0.5rem 1rem;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius-sm);
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.btn-paginacao:hover:not(:disabled) {
+    background: var(--primary-dark);
+}
+
+.btn-paginacao:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.paginacao-numeros {
+    display: flex;
+    gap: 0.25rem;
+}
+
+.pagina-numero {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border-color);
+    background: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.pagina-numero:hover {
+    border-color: var(--primary-color);
+}
+
+.pagina-numero.ativa {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+/* Área de Upload de Imagens */
+.upload-area {
+    border: 2px dashed var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 3rem 2rem;
+    text-align: center;
+    cursor: pointer;
+    transition: var(--transition);
+    background: rgba(248, 249, 250, 0.5);
+    margin-bottom: 1.5rem;
+}
+
+.upload-area:hover {
+    border-color: var(--primary-color);
+    background: rgba(0, 86, 166, 0.05);
+}
+
+.upload-area i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.upload-area h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: var(--dark-color);
+}
+
+.upload-area p {
+    color: var(--gray-color);
+    margin-bottom: 1.5rem;
+}
+
+.btn-select-images {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius-sm);
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-select-images:hover {
+    background: var(--primary-dark);
+}
+
+.upload-info {
+    font-size: 0.85rem;
+    color: var(--gray-color);
+    margin-top: 1rem;
+}
+
+/* Thumbnails de Imagens */
+.thumbnails-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 1rem;
+    min-height: 140px;
+}
+
+.thumbnail-item {
+    position: relative;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-sm);
+    overflow: hidden;
+    background: white;
+}
+
+.thumbnail-item img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    display: block;
+}
+
+.thumbnail-remove {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: var(--danger-color);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    font-size: 0.75rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.thumbnail-item:hover .thumbnail-remove {
+    opacity: 1;
+}
+
+.empty-thumbnails {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 2rem;
+    color: var(--gray-color);
+}
+
+.empty-thumbnails i {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    display: block;
+    opacity: 0.5;
+}
+
+/* Anexos */
+.anexos-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.empty-anexos {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 2rem;
+    color: var(--gray-color);
+}
+
+.empty-anexos i {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    display: block;
+    opacity: 0.5;
+}
+
+.anexo-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-sm);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.anexo-item:hover {
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+.anexo-numero {
+    background: var(--primary-color);
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.anexo-thumbnail {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: var(--border-radius-sm);
+}
+
+.anexo-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.anexo-nome {
+    font-weight: 500;
+    color: var(--dark-color);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.anexo-tipo {
+    font-size: 0.85rem;
+    color: var(--gray-color);
+}
+
+.anexo-remove {
+    background: var(--danger-color);
+    color: white;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.anexo-remove:hover {
+    background: #c82333;
+}
+
+/* Área de Assinatura */
+.assinatura-content {
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+.assinatura-upload {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.upload-assinatura-area {
+    border: 2px dashed var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    text-align: center;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.upload-assinatura-area:hover {
+    border-color: var(--primary-color);
+}
+
+.upload-assinatura-area i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.assinatura-preview {
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-sm);
+    padding: 1rem;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+}
+
+.assinatura-preview img {
+    max-width: 100%;
+    max-height: 100px;
+    object-fit: contain;
+}
+
+.no-assinatura {
+    color: var(--gray-color);
+    text-align: center;
+}
+
+.btn-close-exame {
+    background: var(--gray-color);
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.btn-close-exame:hover {
+    background: #c82333;
+}
+
+/* ============================================
+   PAINEL DE PRÉ-VISUALIZAÇÃO - CORRIGIDO
+   ============================================ */
+
+.preview-panel {
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.preview-header {
+    padding: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.preview-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--dark-color);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.preview-actions {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.btn-preview-action {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-sm);
+    background: white;
+    color: var(--dark-color);
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.btn-preview-action:hover {
+    background: var(--gray-light);
+}
+
+/* ============================================
+   LAUDO PREVIEW CONTAINER - CORRIGIDO
+   ============================================ */
+
+.laudo-preview-container {
+    flex: 1;
+    overflow: auto;
+    padding: 1.5rem;
+    background: #f8f9fa;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 0;
+    /* IMPORTANTE: permite flex shrink */
+    max-height: calc(61vh - 120px);
+}
+
+/* LAUDO PRINCIPAL - TAMANHO A4 EXATO */
+.laudo-preview {
+    background: white;
+    width: 210mm;
+    /* Largura A4: 210mm */
+    /* height: 297mm; /* Altura A4: 297mm */
+    min-height: 297mm;
+    margin: 0 auto;
+    padding: 20mm;
+    /* Margens internas: 2cm */
+    box-sizing: border-box;
+    font-family: var(--font-secondary);
+    font-size: 12px;
+    line-height: 1.6;
+    color: #333;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    overflow: visible !important;
+    position: relative;
+
+    /* Para visualização na tela */
+    transform: scale(0.85);
+    transform-origin: top center;
+}
+
+/* Páginas do laudo */
+.laudo-pagina {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+/* ============================================
+   CONTROLES DE PAGINAÇÃO E EXPORTAÇÃO - FIXOS
+   ============================================ */
+
+.export-controls {
+    background: white;
+    padding: 0.75rem 1rem;
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+    flex-shrink: 0;
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    /* Reduzido de 1.5rem */
+}
+
+/* Container principal das opções de exportação */
+.export-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0;
+    /* Removido */
+    padding: 0.25rem 0;
+    /* Padding mínimo */
+}
+
+/* Lado esquerdo - título e ícone */
+.export-option {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    color: var(--dark-color);
+    font-size: 0.95rem;
+    line-height: 1.2;
+}
+
+.export-option i {
+    color: var(--primary-color);
+    font-size: 1.1rem;
+}
+
+/* Lado direito - informações técnicas */
+.export-info {
+    font-size: 0.75rem;
+    color: var(--gray-color);
+    text-align: right;
+    line-height: 1.2;
+    margin: 0;
+}
+
+.export-info p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Controles de paginação - muito mais compactos */
+.paginacao-controls {
+    min-width: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    /* Reduzido drasticamente */
+    padding: 0.5rem;
+    /* Reduzido de 1rem */
+    background: #f8f9fa;
+    border-radius: var(--border-radius-sm);
+    border: 1px solid var(--border-color);
+    margin: 0.25rem 0;
+    /* Margem mínima */
+}
+
+/* Informação da página atual */
+.paginacao-info {
+    text-align: center;
+    margin-bottom: 0.25rem;
+    /* Reduzido de 1rem */
+    color: var(--gray-color);
+    font-size: 0.8rem;
+    line-height: 1.2;
+    padding: 0.1rem 0;
+}
+
+/* Container dos botões de navegação */
+.paginacao-botoes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.15rem;
+    /* Espaçamento mínimo entre botões */
+}
+
+/* Botões de navegação (primeira, anterior, próxima) */
+.btn-paginacao {
+    padding: 0.3rem 0.6rem;
+    /* Reduzido */
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius-sm);
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+    font-size: 0.8rem;
+    line-height: 1.2;
+    min-height: 28px;
+    /* Altura fixa menor */
+}
+
+.btn-paginacao:hover:not(:disabled) {
+    background: var(--primary-dark);
+}
+
+.btn-paginacao:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Container dos números de página */
+.paginacao-numeros {
+    display: flex;
+    gap: 0.1rem;
+    /* Espaçamento mínimo entre números */
+    margin: 0 0.25rem;
+    align-items: center;
+}
+
+/* Botões numéricos individuais */
+.pagina-numero {
+    width: 26px;
+    /* Reduzido de 32px */
+    height: 26px;
+    /* Reduzido de 32px */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border-color);
+    background: white;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 0.75rem;
+    transition: var(--transition);
+    line-height: 1;
+}
+
+.pagina-numero:hover {
+    border-color: var(--primary-color);
+    background: rgba(64, 15, 0, 0.05);
+}
+
+.pagina-numero.ativa {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* Botão principal de exportação */
+.btn-export {
+    width: 100%;
+    padding: 0.6rem;
+    /* Reduzido de 0.75rem */
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    color: white;
+    border: none;
+    border-radius: var(--border-radius-sm);
+    font-size: 0.95rem;
+    /* Reduzido de 1rem */
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    line-height: 1.2;
+    min-height: 42px;
+    /* Altura consistente */
+    margin-top: 0.25rem;
+    /* Espaço mínimo acima */
+}
+
+.btn-export:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Versão para mobile - ainda mais compacta */
+@media (max-width: 768px) {
+    .export-controls {
+        padding: 0.5rem 0.75rem;
+        gap: 0.4rem;
+    }
+
+    .export-option {
+        font-size: 0.9rem;
+        gap: 0.4rem;
+    }
+
+    .export-option i {
+        font-size: 1rem;
+    }
+
+    .export-info {
+        font-size: 0.7rem;
+    }
+
+    .paginacao-controls {
+        padding: 0.4rem;
+        gap: 0.15rem;
+    }
+
+    .paginacao-info {
+        font-size: 0.75rem;
+        margin-bottom: 0.15rem;
+    }
+
+    .btn-paginacao {
+        padding: 0.25rem 0.5rem;
+        font-size: 0.75rem;
+        min-height: 26px;
+    }
+
+    .pagina-numero {
+        width: 24px;
+        height: 24px;
+        font-size: 0.7rem;
+    }
+
+    .btn-export {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+        min-height: 38px;
+        gap: 0.3rem;
+    }
+}
+
+/* ============================================
+   CORREÇÕES ESPECÍFICAS PARA O SEU HTML
+   ============================================ */
+
+/* Remove o .preview-panel extra que está causando problemas */
+.preview-panel+.preview-panel {
+    display: none;
+}
+
+/* Cabeçalho do Laudo */
+.laudo-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 3px double var(--primary-color);
+}
+
+.laudo-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.hospital-logo-img {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hospital-logo-img img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+.laudo-titulo h1 {
+    font-size: 1.8em;
+    margin: 0;
+    letter-spacing: 1px;
+    color: var(--primary-color);
+}
+
+.laudo-subtitulo {
+    font-size: 0.9em;
+    margin-top: 0.25rem;
+    color: var(--gray-color);
+}
+
+.laudo-info-top {
+    font-size: 0.9em;
+    display: flex;
+    justify-content: space-between;
+    color: var(--dark-color);
+    margin-top: 1.5rem;
+}
+
+.info-item {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.info-label {
+    font-weight: 600;
+}
+
+.laudo-divider {
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--border-color), transparent);
+    margin: 1.5rem 0;
+}
+
+/* Seções do Laudo */
+.laudo-section {
+    margin-bottom: 2rem;
+}
+
+.laudo-section-title {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.1em;
+}
+
+.laudo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.laudo-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.field-label {
+    color: var(--gray-color);
+    margin-bottom: 0.25rem;
+    font-size: 0.9em;
+}
+
+.field-value {
+    font-weight: 500;
+    color: var(--dark-color);
+    min-height: 1.5rem;
+    border-bottom: 1px dotted var(--border-color);
+    padding-bottom: 0.25rem;
+    font-size: 1em;
+}
+
+/* Informações do Exame */
+.exame-info {
+    margin: 1.5rem 0;
+}
+
+.exame-titulo h3 {
+    color: var(--dark-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.3em;
+}
+
+.exame-descricao {
+    color: var(--gray-color);
+    line-height: 1.6;
+    font-size: 0.95em;
+}
+
+/* Resultados */
+.resultados-container {
+    margin: 1.5rem 0;
+}
+
+.resultado-item {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-left: 3px solid var(--primary-color);
+    border-radius: 0 var(--border-radius-sm) var(--border-radius-sm) 0;
+}
+
+.resultado-label {
+    font-weight: 600;
+    color: var(--dark-color);
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.resultado-valor {
+    color: var(--dark-color);
+}
+
+/* Observações */
+.observacoes-container {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: #fff9e6;
+    border-left: 3px solid var(--warning-color);
+    border-radius: 0 var(--border-radius-sm) var(--border-radius-sm) 0;
+}
+
+.observacao-title {
+    font-weight: 600;
+    color: var(--dark-color);
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.observacao-text {
+    color: var(--dark-color);
+    line-height: 1.6;
+    white-space: pre-wrap;
+}
+
+/* Conclusão */
+.conclusao-content {
+    padding: 1.5rem;
+    background: #fad1af62;
+    border-radius: var(--border-radius-sm);
+    border-left: 3px solid var(--primary-color);
+}
+
+/* Rodapé com Assinatura */
+.laudo-footer {
+    margin-top: 3rem;
+}
+
+.assinatura-container {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin: 2rem 0;
+    padding: 2rem 0;
+}
+
+.assinatura-preview-footer {
+    flex: 0 0 200px;
+    min-height: 100px;
+    height: auto;
+}
+
+.assinatura-preview-footer img {
+    max-width: 100%;
+    max-height: 80px;
+    object-fit: contain;
+}
+
+.assinatura-placeholder {
+    text-align: center;
+    color: var(--gray-color);
+}
+
+.assinatura-placeholder i {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.profissional-info {
+    flex: 1;
+    text-align: center;
+}
+
+.profissional-nome {
+    font-size: 1.1em;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--dark-color);
+    min-height: 2rem;
+    border-bottom: 1px solid var(--dark-color);
+    padding-bottom: 0.5rem;
+}
+
+.profissional-registro {
+    font-size: 0.9em;
+    color: var(--gray-color);
+    margin-top: 0.25rem;
+}
+
+.laudo-rodape {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color);
+    color: var(--gray-color);
+    font-size: 0.85em;
+}
+
+.laudo-aviso {
+    font-style: italic;
+    margin-top: 0.5rem;
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+/* Modal de Exportação */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2000;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal.show {
+    display: flex;
+}
+
+.modal-content {
+    background: white;
+    border-radius: var(--border-radius);
+    width: 90%;
+    max-width: 500px;
+    max-height: 80vh;
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+}
+
+.modal-header {
+    padding: 1.5rem;
+    background: var(--primary-color);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-header h2 {
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.modal-close {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.modal-body {
+    padding: 1.5rem;
+    overflow-y: auto;
+    max-height: calc(80vh - 80px);
+}
+
+.modal-body h3 {
+    margin-bottom: 1rem;
+    color: var(--dark-color);
+}
+
+.modal-body ol {
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.modal-body li {
+    margin-bottom: 0.5rem;
+}
+
+/* Modal de Exportação Específico */
+.modal-export {
+    width: 95%;
+    max-width: 1200px;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.export-body {
+    display: flex;
+    gap: 16px;
+    height: 100%;
+    overflow: hidden;
+    padding: 1.5rem;
+}
+
+/* Controles do modal de exportação */
+.modal-export .export-controls {
+    width: 280px;
+    min-width: 260px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 16px;
+    overflow-y: auto;
+    border: 1px solid #e0e0e0;
+    margin: 0;
+    border-top: none;
+}
+
+.modal-export .export-controls h3 {
+    font-size: 1rem;
+    margin-bottom: 12px;
+    color: #333;
+}
+
+.modal-export .export-controls .form-group {
+    margin-bottom: 20px;
+}
+
+.modal-export .export-controls label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 6px;
+    color: #555;
+}
+
+.modal-export .export-controls input[type="range"] {
+    width: 100%;
+}
+
+/* Preview no modal de exportação */
+.export-preview-wrapper {
+    flex: 1;
+    background: #e9ecef;
+    border-radius: 8px;
+    padding: 24px;
+    overflow: auto;
+    border: 1px solid #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.export-preview {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Laudo para exportação */
+#laudo-export-preview {
+    background: white;
+    width: 210mm;
+    height: 297mm;
+    min-height: 297mm;
+    padding: 20mm;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+    font-family: var(--font-secondary);
+    font-size: 12px;
+    line-height: 1.6;
+    color: #333;
+    overflow: visible !important;
+    margin: 0 auto;
+    box-sizing: border-box;
+    transform: scale(0.7);
+    transform-origin: top center;
+}
+
+/* Footer do modal */
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 12px;
+    padding: 1rem 1.5rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.btn {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: var(--border-radius-sm);
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.btn-secondary {
+    background: var(--gray-light);
+    color: var(--dark-color);
+}
+
+.btn-secondary:hover {
+    background: #d6d6d6;
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: var(--primary-dark);
+}
+
+/* Notificação */
+.notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--primary-color);
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-lg);
+    transform: translateY(100px);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    z-index: 3000;
+    max-width: 300px;
+}
+
+.notification.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.notification-content {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .main-content {
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .form-panel,
+    .preview-panel {
+        padding: 1rem;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .exames-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .categorias-tabs {
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        padding-bottom: 0.5rem;
+    }
+
+    .tab-btn {
+        white-space: nowrap;
+    }
+
+    .assinatura-container {
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
+    }
+
+    .assinatura-preview-footer {
+        flex: 0 0 auto;
+    }
+
+    .assinatura-preview-footer img {
+        max-width: 100%;
+        max-height: 60px;
+    }
+
+    .laudo-preview {
+        transform: scale(0.7);
+        width: 210mm;
+        height: 297mm;
+    }
+
+    .export-body {
+        flex-direction: column;
+    }
+
+    .modal-export .export-controls {
+        width: 100%;
+        min-width: unset;
+    }
+
+    #laudo-export-preview {
+        transform: scale(0.6);
+    }
+}
+
+@media (max-width: 480px) {
+    .app-header {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .header-left {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .system-title {
+        padding-left: 0;
+        border-left: none;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        padding-top: 0.5rem;
+    }
+
+    .preview-header {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .preview-actions {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Impressão */
+@media print {
+
+    .app-header,
+    .form-panel,
+    .preview-header,
+    .export-controls,
+    .paginacao-controls {
+        display: none !important;
+    }
+
+    .main-content {
+        display: block;
+        padding: 0;
+    }
+
+    .preview-panel {
+        box-shadow: none;
+        max-height: none;
+    }
+
+    .laudo-preview-container {
+        overflow: visible !important;
+        padding: 0;
+        background: white;
+    }
+
+    .laudo-preview {
+        box-shadow: none;
+        margin: 0;
+        padding: 0;
+        width: 100% !important;
+        height: auto !important;
+        min-height: auto !important;
+        transform: none !important;
+        page-break-after: always;
+    }
+
+    .laudo-pagina {
+        page-break-after: always;
+    }
+}
+
+/* Estilos para assinatura */
+.assinatura-preview-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    min-height: 150px;
+    border: 2px dashed var(--border-color);
+    border-radius: var(--border-radius);
+    background: white;
+}
+
+.assinatura-preview-inner img {
+    max-width: 100%;
+    max-height: 150px;
+    object-fit: contain;
+}
+
+.no-assinatura {
+    text-align: center;
+    color: var(--gray-color);
+}
+
+.no-assinatura i {
+    margin-bottom: 0.5rem;
+    color: var(--gray-color);
+    opacity: 0.5;
+}
+
+.assinatura-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.btn-sm {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+}
+
+.btn-danger {
+    background: var(--danger-color);
+    color: white;
+    border: none;
+}
+
+.btn-danger:hover {
+    background: #c82333;
+}
+
+/* Assinatura Simplificada */
+.assinatura-simple {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.simple-upload-area {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    border: 2px dashed #ccc;
+    border-radius: 8px;
+    background: #f8f9fa;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.simple-upload-area:hover {
+    border-color: #400f00;
+    background: #e9ecef;
+}
+
+.upload-icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #400f00;
+    border-radius: 50%;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.upload-text {
+    flex: 1;
+}
+
+.upload-title {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.25rem;
+}
+
+.upload-subtitle {
+    font-size: 0.85rem;
+    color: #666;
+    margin: 0;
+}
+
+/* Preview */
+.simple-preview {
+    min-height: 100px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: white;
+}
+
+.no-signature {
+    text-align: center;
+    color: #999;
+}
+
+.no-signature i {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    opacity: 0.5;
+}
+
+#simple-assinatura-img {
+    max-width: 100%;
+    max-height: 100px;
+    display: none;
+    object-fit: contain;
+}
+
+/* Botões */
+.simple-actions {
+    display: flex;
+    justify-content: center;
+    display: none;
+    /* Inicialmente oculto */
+}
+
+.simple-btn {
+    padding: 0.5rem 1rem;
+    background: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.simple-btn:hover {
+    background: #c82333;
+}
+
+/* ============================================
+   ELIMINAÇÃO DE ESPAÇOS MORTOS - BOTÃO DE EXPORTAÇÃO
+   ============================================ */
+
+/* Container principal ajustado */
+.main-content {
+    height: calc(100vh - 120px);
+    /* Ajuste fino */
+    padding: 1.5rem;
+    /* Reduzido de 2rem */
+}
+
+/* Painel de preview otimizado */
+.preview-panel {
+    min-height: 0;
+    /* IMPORTANTE para flex */
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Container do laudo ocupa MÁXIMO espaço */
+.laudo-preview-container {
+    flex: 1 1 auto;
+    overflow-y: auto;
+    padding: 1rem;
+    /* Reduzido de 1.5rem */
+    max-height: none;
+    /* REMOVER limite fixo */
+    min-height: 300px;
+}
+
+/* Controles de exportação - COMPACTADOS AO MÁXIMO */
+.export-controls {
+    padding: 0.5rem 0.75rem 0.5rem;
+    /* padding-bottom mínimo: 0.5rem */
+    gap: 0.25rem;
+    /* Espaçamento mínimo */
+    margin-top: auto;
+    /* Empurra para baixo naturalmente */
+    border-top: 1px solid var(--border-color);
+}
+
+/* Botão de exportação - SEM ESPAÇOS EXTRAS */
+.btn-export {
+    padding: 0.4rem 0.5rem;
+    /* Compacto */
+    margin: 0;
+    /* SEM margem */
+    font-size: 0.85rem;
+    min-height: 36px;
+    border-radius: 3px;
+}
+
+/* Remove qualquer padding/margin extra do container pai */
+.preview-panel {
+    padding-bottom: 0 !important;
+}
+
+.export-controls>*:last-child {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+/* Ajuste fino para altura máxima */
+@media (min-height: 800px) {
+    .laudo-preview-container {
+        max-height: calc(92vh - 300px);
+    }
+}
+
+/* Versão mobile compacta */
+@media (max-width: 768px) {
+    .main-content {
+        height: calc(100vh - 100px);
+        padding: 1rem;
+    }
+
+    .export-controls {
+        padding: 0.4rem 0.5rem 0.4rem;
+    }
+
+    .btn-export {
+        padding: 0.35rem 0.4rem;
+        font-size: 0.8rem;
+        min-height: 32px;
+    }
+}
+
+/* style.css - Adicionar após os estilos das categorias */
+
+.back-to-all-exames {
+    margin: 1rem 0;
+    padding: 0.5rem;
+    background: #f8f9fa;
+    border-radius: var(--border-radius-sm);
+    border: 1px solid var(--border-color);
+    display: none;
+}
+
+.btn-back-to-all {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius-sm);
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: var(--transition);
+    width: 100%;
+    justify-content: center;
+}
+
+.btn-back-to-all:hover {
+    background: var(--primary-dark);
+}
+
+/* Ajustar grid de exames quando apenas um está visível */
+.exames-grid.single-exame {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.exame-card.hidden {
+    display: none !important;
+}
+/* ============================================
+   RESPONSIVIDADE - CORREÇÕES ESPECÍFICAS
+   ============================================ */
+
+/* MOBILE FIRST - Telas menores que 768px */
+@media (max-width: 768px) {
+    /* Layout principal */
+    .main-content {
+        grid-template-columns: 1fr !important;
+        gap: 1rem;
+        padding: 1rem;
+        min-height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    /* Formulário em tela cheia */
+    .form-panel {
+        width: 100%;
+        max-height: 50vh;
+        overflow-y: auto;
+        margin-bottom: 1rem;
+        order: 1;
+    }
+    
+    /* Preview ajustado */
+    .preview-panel {
+        width: 100%;
+        order: 2;
+        flex: 1;
+    }
+    
+    /* Cabeçalho compacto */
+    .app-header {
+        padding: 0.75rem 1rem;
+        flex-wrap: wrap;
+    }
+    
+    .header-left {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    
+    .hospital-logo {
+        gap: 0.5rem;
+    }
+    
+    .hospital-logo img {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .hospital-logo h1 {
+        font-size: 1.1rem;
+    }
+    
+    .system-title {
+        font-size: 0.8rem;
+        padding-left: 0;
+        border-left: none;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        padding-top: 0.5rem;
+        margin-top: 0.5rem;
+    }
+    
+    /* Grids ajustados */
+    .form-grid {
+        grid-template-columns: 1fr !important;
+        gap: 0.75rem;
+    }
+    
+    .exames-grid {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)) !important;
+        gap: 0.75rem;
+    }
+    
+    /* Tamanho das fontes */
+    .section-header h2 {
+        font-size: 1.1rem;
+    }
+    
+    .form-control {
+        font-size: 16px !important; /* Evita zoom no iOS */
+        padding: 0.75rem;
+    }
+    
+    /* Preview do laudo ajustado */
+    .laudo-preview-container {
+        max-height: 50vh !important;
+        padding: 0.5rem;
+    }
+    
+    .laudo-preview {
+        transform: scale(0.65) !important;
+        transform-origin: top center;
+        width: 210mm;
+        margin: 0 auto;
+    }
+    
+    /* Controles compactos */
+    .export-controls {
+        padding: 0.5rem;
+        gap: 0.5rem;
+    }
+    
+    .export-options {
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+    
+    .export-info {
+        text-align: center;
+        font-size: 0.7rem;
+    }
+    
+    .paginacao-controls {
+        padding: 0.5rem;
+    }
+    
+    .paginacao-botoes {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.25rem;
+    }
+    
+    .btn-paginacao {
+        padding: 0.4rem 0.6rem;
+        font-size: 0.8rem;
+        min-height: 32px;
+    }
+    
+    .pagina-numero {
+        width: 28px;
+        height: 28px;
+        font-size: 0.8rem;
+    }
+    
+    .btn-export {
+        padding: 0.75rem;
+        font-size: 0.9rem;
+    }
+    
+    /* Categorias em linha única com scroll */
+    .categorias-tabs {
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        padding-bottom: 0.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .tab-btn {
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+    
+    /* Botão de voltar para exames */
+    .back-to-all-exames {
+        margin: 0.5rem 0;
+        padding: 0.5rem;
+    }
+    
+    .btn-back-to-all {
+        padding: 0.5rem;
+        font-size: 0.85rem;
+    }
+    
+    /* Modal responsivo */
+    .modal-content {
+        width: 95% !important;
+        margin: 1rem;
+    }
+    
+    /* Upload de anexos */
+    .upload-area {
+        padding: 1.5rem 1rem;
+    }
+    
+    .upload-area h3 {
+        font-size: 1.1rem;
+    }
+    
+    .upload-area p {
+        font-size: 0.9rem;
+    }
+    
+    .btn-select-images {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* TABLET - Telas entre 769px e 1024px */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .main-content {
+        grid-template-columns: 45% 55% !important;
+        gap: 1.5rem;
+        padding: 1.5rem;
+    }
+    
+    .form-panel {
+        max-height: calc(100vh - 120px);
+    }
+    
+    .preview-panel {
+        max-height: calc(100vh - 120px);
+    }
+    
+    .laudo-preview {
+        transform: scale(0.75);
+        transform-origin: top center;
+    }
+    
+    .form-grid {
+        grid-template-columns: 1fr !important;
+        gap: 0.8rem;
+    }
+    
+    .exames-grid {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)) !important;
+    }
+    
+    .export-options {
+        flex-wrap: wrap;
+    }
+}
+
+/* TELAS MUITO PEQUENAS (menos que 480px) */
+@media (max-width: 480px) {
+    /* Header mais compacto */
+    .app-header {
+        padding: 0.5rem;
+        min-height: 60px;
+    }
+    
+    .hospital-logo img {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .hospital-logo h1 {
+        font-size: 0.9rem;
+    }
+    
+    .system-title {
+        font-size: 0.7rem;
+    }
+    
+    /* Preview ainda menor */
+    .laudo-preview {
+        transform: scale(0.55) !important;
+    }
+    
+    /* Botões mais compactos */
+    .btn-help {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .auto-save-status {
+        font-size: 0.7rem;
+    }
+    
+    /* Grid de exames em 1 coluna */
+    .exames-grid {
+        grid-template-columns: 1fr !important;
+    }
+    
+    /* Formulários mais compactos */
+    .form-section {
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .section-header {
+        gap: 0.5rem;
+        margin-bottom: 0.75rem;
+    }
+    
+    .section-header h2 {
+        font-size: 1rem;
+    }
+    
+    /* Controles de paginação mais simples */
+    .paginacao-botoes {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.5rem;
+    }
+    
+    .btn-paginacao {
+        justify-content: center;
+    }
+    
+    .paginacao-numeros {
+        order: -1;
+        justify-content: center;
+    }
+}
+
+/* CORREÇÃO PARA EVITAR HORIZONTAL SCROLL */
+@media (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+        width: 100%;
+    }
+    
+    .app-container {
+        width: 100%;
+        max-width: 100vw;
+        overflow-x: hidden;
+    }
+    
+    .main-content {
+        width: 100%;
+        max-width: 100vw;
+    }
+    
+    .preview-panel,
+    .form-panel {
+        width: 100%;
+        max-width: 100vw;
+    }
+}
+
+/* AJUSTES ESPECÍFICOS PARA ELEMENTOS QUEBRADOS */
+@media (max-width: 768px) {
+    /* Corrigir campos que estouram */
+    .professional-register-display {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.5rem;
+    }
+    
+    .register-type {
+        min-width: auto;
+        justify-content: center;
+    }
+    
+    .idade-input {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.25rem;
+    }
+    
+    .idade-label {
+        text-align: center;
+        margin-top: 0.25rem;
+    }
+    
+    /* Ajustar anexos */
+    .anexos-container {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .anexo-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.75rem;
+    }
+    
+    .anexo-info {
+        width: 100%;
+    }
+    
+    .anexo-nome {
+        white-space: normal;
+        overflow: visible;
+    }
+    
+    /* Assinatura simplificada */
+    .assinatura-simple {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .simple-upload-area {
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem;
+        gap: 0.5rem;
+    }
+    
+    .upload-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+    
+    .upload-title {
+        font-size: 0.9rem;
+    }
+    
+    .upload-subtitle {
+        font-size: 0.8rem;
+    }
+}
