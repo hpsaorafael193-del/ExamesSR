@@ -2182,14 +2182,4 @@ var A4_HEIGHT = 3508; // px
 document.addEventListener('DOMContentLoaded', () => {
     window.laudosApp = new LaudosApp();
 
-    const aguardarDados = () => {
-        if (window.ExamesData?.exames?.length) {
-            renderizarCategorias();
-            renderizarExames();
-        } else {
-            setTimeout(aguardarDados, 50);
-        }
-    };
-
-    aguardarDados();
 });
