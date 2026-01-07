@@ -1724,6 +1724,56 @@
             ]
         },
         {
+            "id": "lab_alergia",
+            "nome": "Teste de Alergia",
+            "descricao": "Exame para diagnóstico de alergias",
+            "categoria": "laboratorio",
+            "icone": "fa-allergies",
+            "campos": [
+                {
+                    "id": "tipo_teste",
+                    "tipo": "select",
+                    "label": "Tipo de Teste",
+                    "opcoes": [
+                        {
+                            "valor": "sangue_IgE_Total",
+                            "label": "IgE Total"
+                        },
+                        {
+                            "valor": "sangue_IgE_Específica",
+                            "label": "IgE Específica"
+                        },
+                        {
+                            "valor": "prick_test",
+                            "label": "Teste de Puntura"
+                        },
+                        {
+                            "valor": "patch_test",
+                            "label": "Teste de Contato"
+                        }
+                    ]
+                },
+                {
+                    "id": "alergeno",
+                    "tipo": "texto",
+                    "label": "Alérgeno Testado",
+                    "placeholder": "Ex: Ácaro, Leite, Amendoim"
+                },
+                {
+                    "id": "resultado",
+                    "tipo": "texto",
+                    "label": "Resultado",
+                    "placeholder": "Ex: 150 kU/L ou Positivo"
+                },
+                {
+                    "id": "interpretacao",
+                    "tipo": "textarea",
+                    "label": "Interpretação",
+                    "placeholder": "Interpretação clínica..."
+                }
+            ]
+        },
+        {
             "id": "modelo_generico",
             "nome": "Laudo Genérico",
             "descricao": "Modelo de laudo genérico",
