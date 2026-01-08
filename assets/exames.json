@@ -1,0 +1,4442 @@
+{
+    "exames": [
+        {
+            "id": "lab_hemograma",
+            "nome": "Hemograma Completo",
+            "descricao": "Análise completa das células sanguíneas",
+            "categoria": "laboratorio",
+            "icone": "fa-tint",
+            "campos": [
+                {
+                    "id": "hemoglobina",
+                    "tipo": "texto",
+                    "label": "Hemoglobina (g/dL)",
+                    "placeholder": "Ex: 14.5"
+                },
+                {
+                    "id": "hematocrito",
+                    "tipo": "texto",
+                    "label": "Hematócrito (%)",
+                    "placeholder": "Ex: 42"
+                },
+                {
+                    "id": "leucocitos",
+                    "tipo": "texto",
+                    "label": "Leucócitos (/mm³)",
+                    "placeholder": "Ex: 7.500"
+                },
+                {
+                    "id": "plaquetas",
+                    "tipo": "texto",
+                    "label": "Plaquetas (/mm³)",
+                    "placeholder": "Ex: 250.000"
+                },
+                {
+                    "id": "observacoes",
+                    "tipo": "textarea",
+                    "label": "Observações",
+                    "placeholder": "Observações sobre o exame..."
+                }
+            ]
+        },
+        {
+            "id": "lab_bioquimica",
+            "nome": "Bioquímica Básica",
+            "descricao": "Avaliação de parâmetros bioquímicos sanguíneos",
+            "categoria": "laboratorio",
+            "icone": "fa-flask",
+            "campos": [
+                {
+                    "id": "glicemia",
+                    "tipo": "texto",
+                    "label": "Glicemia (mg/dL)",
+                    "placeholder": "Ex: 95"
+                },
+                {
+                    "id": "ureia",
+                    "tipo": "texto",
+                    "label": "Ureia (mg/dL)",
+                    "placeholder": "Ex: 35"
+                },
+                {
+                    "id": "creatinina",
+                    "tipo": "texto",
+                    "label": "Creatinina (mg/dL)",
+                    "placeholder": "Ex: 0.9"
+                },
+                {
+                    "id": "tgo",
+                    "tipo": "texto",
+                    "label": "TGO/AST (U/L)",
+                    "placeholder": "Ex: 25"
+                },
+                {
+                    "id": "tgp",
+                    "tipo": "texto",
+                    "label": "TGP/ALT (U/L)",
+                    "placeholder": "Ex: 30"
+                },
+                {
+                    "id": "impressao",
+                    "tipo": "textarea",
+                    "label": "Impressão",
+                    "placeholder": "Impressão diagnóstica..."
+                }
+            ]
+        },
+        {
+            "id": "lab_lipidico",
+            "nome": "Perfil Lipídico",
+            "descricao": "Avaliação dos níveis de colesterol e triglicerídeos",
+            "categoria": "laboratorio",
+            "icone": "fa-heartbeat",
+            "campos": [
+                {
+                    "id": "colesterol_total",
+                    "tipo": "texto",
+                    "label": "Colesterol Total (mg/dL)",
+                    "placeholder": "Ex: 180"
+                },
+                {
+                    "id": "hdl",
+                    "tipo": "texto",
+                    "label": "HDL (mg/dL)",
+                    "placeholder": "Ex: 55"
+                },
+                {
+                    "id": "ldl",
+                    "tipo": "texto",
+                    "label": "LDL (mg/dL)",
+                    "placeholder": "Ex: 110"
+                },
+                {
+                    "id": "triglicerideos",
+                    "tipo": "texto",
+                    "label": "Triglicerídeos (mg/dL)",
+                    "placeholder": "Ex: 120"
+                },
+                {
+                    "id": "risco_cardiovascular",
+                    "tipo": "textarea",
+                    "label": "Risco Cardiovascular",
+                    "placeholder": "Avaliação do risco cardiovascular..."
+                }
+            ]
+        },
+        {
+            "id": "lab_tipagem_sanguinea",
+            "nome": "Tipagem Sanguínea",
+            "descricao": "Determinação do tipo sanguíneo e fator Rh",
+            "categoria": "laboratorio",
+            "icone": "fa-dna",
+            "campos": [
+                {
+                    "id": "sistema_abo",
+                    "tipo": "select",
+                    "label": "Sistema ABO",
+                    "opcoes": [
+                        {
+                            "valor": "A",
+                            "label": "A"
+                        },
+                        {
+                            "valor": "B",
+                            "label": "B"
+                        },
+                        {
+                            "valor": "AB",
+                            "label": "AB"
+                        },
+                        {
+                            "valor": "O",
+                            "label": "O"
+                        }
+                    ]
+                },
+                {
+                    "id": "fator_rh",
+                    "tipo": "select",
+                    "label": "Fator Rh",
+                    "opcoes": [
+                        {
+                            "valor": "positivo",
+                            "label": "Positivo (+)"
+                        },
+                        {
+                            "valor": "negativo",
+                            "label": "Negativo (-)"
+                        }
+                    ]
+                },
+                {
+                    "id": "observacoes",
+                    "tipo": "textarea",
+                    "label": "Observações",
+                    "placeholder": "Observações sobre a tipagem..."
+                }
+            ]
+        },
+        {
+            "id": "lab_glicemia",
+            "nome": "Glicemia",
+            "descricao": "Dosagem da glicose sanguínea",
+            "categoria": "laboratorio",
+            "icone": "fa-vial",
+            "campos": [
+                {
+                    "id": "tipo_glicemia",
+                    "tipo": "select",
+                    "label": "Tipo de Exame",
+                    "opcoes": [
+                        {
+                            "valor": "jejum",
+                            "label": "Jejum"
+                        },
+                        {
+                            "valor": "casual",
+                            "label": "Casual"
+                        },
+                        {
+                            "valor": "pos_prandial",
+                            "label": "Pós-prandial"
+                        }
+                    ]
+                },
+                {
+                    "id": "resultado_glicemia",
+                    "tipo": "texto",
+                    "label": "Resultado (mg/dL)",
+                    "placeholder": "Ex: 98"
+                },
+                {
+                    "id": "referencia_glicemia",
+                    "tipo": "textarea",
+                    "label": "Valores de Referência",
+                    "placeholder": "Jejum:\n- Normal: < 100 mg/dL\n- Pré-diabetes: 100–125 mg/dL\n- Diabetes: ≥ 126 mg/dL\n\nCasual:\n- Diabetes: ≥ 200 mg/dL (com sintomas)"
+                },
+                {
+                    "id": "interpretacao_glicemia",
+                    "tipo": "textarea",
+                    "label": "Interpretação",
+                    "placeholder": "Interpretação do resultado..."
+                }
+            ]
+        },
+        {
+            "id": "lab_urocultura",
+            "nome": "Urocultura",
+            "descricao": "Cultura de urina com antibiograma",
+            "categoria": "laboratorio",
+            "icone": "fa-microscope",
+            "campos": [
+                {
+                    "id": "microorganismo",
+                    "tipo": "texto",
+                    "label": "Micro-organismo Identificado",
+                    "placeholder": "Ex: Escherichia coli"
+                },
+                {
+                    "id": "contagem_colonias",
+                    "tipo": "texto",
+                    "label": "Contagem de Colônias (UFC/mL)",
+                    "placeholder": "Ex: >100.000"
+                },
+                {
+                    "id": "antibiograma",
+                    "tipo": "textarea",
+                    "label": "Antibiograma (S/I/R)",
+                    "placeholder": "Sensibilidade aos antibióticos..."
+                },
+                {
+                    "id": "observacoes",
+                    "tipo": "textarea",
+                    "label": "Observações",
+                    "placeholder": "Observações sobre a cultura..."
+                },
+                {
+                    "id": "interpretacao",
+                    "tipo": "textarea",
+                    "label": "Interpretação",
+                    "placeholder": "Interpretação do exame..."
+                }
+            ]
+        },
+        {
+            "id": "lab_urina_completo",
+            "nome": "Urinálise Completa",
+            "descricao": "Exame completo de urina tipo I",
+            "categoria": "laboratorio",
+            "icone": "fa-flask",
+            "campos": [
+                {
+                    "id": "aspecto",
+                    "tipo": "texto",
+                    "label": "Aspecto",
+                    "placeholder": "Ex: Límpido"
+                },
+                {
+                    "id": "cor",
+                    "tipo": "texto",
+                    "label": "Cor",
+                    "placeholder": "Ex: Amarelo citrino"
+                },
+                {
+                    "id": "ph",
+                    "tipo": "texto",
+                    "label": "pH",
+                    "placeholder": "Ex: 6.0"
+                },
+                {
+                    "id": "densidade",
+                    "tipo": "texto",
+                    "label": "Densidade",
+                    "placeholder": "Ex: 1.020"
+                },
+                {
+                    "id": "proteinas",
+                    "tipo": "select",
+                    "label": "Proteínas",
+                    "opcoes": [
+                        {
+                            "valor": "ausente",
+                            "label": "Ausente"
+                        },
+                        {
+                            "valor": "traços",
+                            "label": "Traços"
+                        },
+                        {
+                            "valor": "+",
+                            "label": "+"
+                        },
+                        {
+                            "valor": "++",
+                            "label": "++"
+                        },
+                        {
+                            "valor": "+++",
+                            "label": "+++"
+                        }
+                    ]
+                },
+                {
+                    "id": "glicose",
+                    "tipo": "select",
+                    "label": "Glicose",
+                    "opcoes": [
+                        {
+                            "valor": "ausente",
+                            "label": "Ausente"
+                        },
+                        {
+                            "valor": "presente",
+                            "label": "Presente"
+                        }
+                    ]
+                },
+                {
+                    "id": "cetonas",
+                    "tipo": "select",
+                    "label": "Cetonas",
+                    "opcoes": [
+                        {
+                            "valor": "ausente",
+                            "label": "Ausente"
+                        },
+                        {
+                            "valor": "presente",
+                            "label": "Presente"
+                        }
+                    ]
+                },
+                {
+                    "id": "sangue",
+                    "tipo": "select",
+                    "label": "Sangue",
+                    "opcoes": [
+                        {
+                            "valor": "ausente",
+                            "label": "Ausente"
+                        },
+                        {
+                            "valor": "presente",
+                            "label": "Presente"
+                        }
+                    ]
+                },
+                {
+                    "id": "leucocitos",
+                    "tipo": "select",
+                    "label": "Leucócitos",
+                    "opcoes": [
+                        {
+                            "valor": "ausente",
+                            "label": "Ausente"
+                        },
+                        {
+                            "valor": "presente",
+                            "label": "Presente"
+                        }
+                    ]
+                },
+                {
+                    "id": "nitrito",
+                    "tipo": "select",
+                    "label": "Nitrito",
+                    "opcoes": [
+                        {
+                            "valor": "negativo",
+                            "label": "Negativo"
+                        },
+                        {
+                            "valor": "positivo",
+                            "label": "Positivo"
+                        }
+                    ]
+                },
+                {
+                    "id": "sedimento",
+                    "tipo": "textarea",
+                    "label": "Sedimento Urinário",
+                    "placeholder": "Descrição do sedimento..."
+                },
+                {
+                    "id": "interpretacao",
+                    "tipo": "textarea",
+                    "label": "Interpretação",
+                    "placeholder": "Interpretação do exame..."
+                }
+            ]
+        },
+        {
+            "id": "lab_sorologia",
+            "nome": "Sorologia Básica",
+            "descricao": "Painel de sorologias para doenças infecciosas",
+            "categoria": "laboratorio",
+            "icone": "fa-virus",
+            "campos": [
+                {
+                    "id": "hiv",
+                    "tipo": "select",
+                    "label": "HIV",
+                    "opcoes": [
+                        {
+                            "valor": "nao_reagente",
+                            "label": "Não Reagente"
+                        },
+                        {
+                            "valor": "reagente",
+                            "label": "Reagente"
+                        },
+                        {
+                            "valor": "indeterminado",
+                            "label": "Indeterminado"
+                        }
+                    ]
+                },
+                {
+                    "id": "hbsag",
+                    "tipo": "select",
+                    "label": "HBsAg",
+                    "opcoes": [
+                        {
+                            "valor": "nao_reagente",
+                            "label": "Não Reagente"
+                        },
+                        {
+                            "valor": "reagente",
+                            "label": "Reagente"
+                        }
+                    ]
+                },
+                {
+                    "id": "anti_hcv",
+                    "tipo": "select",
+                    "label": "Anti-HCV",
+                    "opcoes": [
+                        {
+                            "valor": "nao_reagente",
+                            "label": "Não Reagente"
+                        },
+                        {
+                            "valor": "reagente",
+                            "label": "Reagente"
+                        }
+                    ]
+                },
+                {
+                    "id": "vdrl",
+                    "tipo": "select",
+                    "label": "VDRL",
+                    "opcoes": [
+                        {
+                            "valor": "nao_reagente",
+                            "label": "Não Reagente"
+                        },
+                        {
+                            "valor": "reagente",
+                            "label": "Reagente"
+                        }
+                    ]
+                },
+                {
+                    "id": "titulo_vdrl",
+                    "tipo": "texto",
+                    "label": "Título VDRL",
+                    "placeholder": "Ex: 1:8"
+                },
+                {
+                    "id": "observacoes",
+                    "tipo": "textarea",
+                    "label": "Observações",
+                    "placeholder": "Observações sobre os resultados..."
+                }
+            ]
+        },
+        {
+            "id": "lab_beta_hcg",
+            "nome": "Beta-HCG Quantitativo",
+            "descricao": "Dosagem do hormônio da gravidez",
+            "categoria": "laboratorio",
+            "icone": "fa-baby",
+            "campos": [
+                {
+                    "id": "amostra",
+                    "tipo": "select",
+                    "label": "Tipo de Amostra",
+                    "opcoes": [
+                        {
+                            "valor": "sangue",
+                            "label": "Sangue"
+                        },
+                        {
+                            "valor": "urina",
+                            "label": "Urina"
+                        }
+                    ]
+                },
+                {
+                    "id": "resultado",
+                    "tipo": "texto",
+                    "label": "Resultado (mUI/mL)",
+                    "placeholder": "Ex: 2.500"
+                },
+                {
+                    "id": "valor_referencia",
+                    "tipo": "textarea",
+                    "label": "Valores de Referência",
+                    "placeholder": "< 5 mUI/mL: Negativo\n5 – 25 mUI/mL: Indeterminado\n> 25 mUI/mL: Positivo para gestação"
+                },
+                {
+                    "id": "interpretacao",
+                    "tipo": "textarea",
+                    "label": "Interpretação",
+                    "placeholder": "Interpretação do resultado..."
+                },
+                {
+                    "id": "observacoes",
+                    "tipo": "textarea",
+                    "label": "Observações",
+                    "placeholder": "Observações adicionais..."
+                }
+            ]
+        },
+        {
+            "id": "lab_teste_coombs",
+            "nome": "Teste de Coombs",
+            "descricao": "Teste para detecção de anticorpos anti-eritrocitários",
+            "categoria": "laboratorio",
+            "icone": "fa-vial",
+            "campos": [
+                {
+                    "id": "tipo_coombs",
+                    "tipo": "select",
+                    "label": "Tipo de Teste",
+                    "opcoes": [
+                        {
+                            "valor": "direto",
+                            "label": "Direto"
+                        },
+                        {
+                            "valor": "indireto",
+                            "label": "Indireto"
+                        }
+                    ]
+                },
+                {
+                    "id": "resultado_coombs",
+                    "tipo": "select",
+                    "label": "Resultado",
+                    "opcoes": [
+                        {
+                            "valor": "negativo",
+                            "label": "Negativo"
+                        },
+                        {
+                            "valor": "positivo",
+                            "label": "Positivo"
+                        }
+                    ]
+                },
+                {
+                    "id": "observacoes",
+                    "tipo": "textarea",
+                    "label": "Observações",
+                    "placeholder": "Observações sobre o teste..."
+                },
+                {
+                    "id": "interpretacao",
+                    "tipo": "textarea",
+                    "label": "Interpretação",
+                    "placeholder": "Interpretação do resultado..."
+                }
+            ]
+        },
+        {
+            "id": "lab_eletrolitos",
+            "nome": "Eletrólitos",
+            "descricao": "Dosagem de eletrólitos séricos",
+            "categoria": "laboratorio",
+            "icone": "fa-atom",
+            "campos": [
+                {
+                    "id": "sodio",
+                    "tipo": "texto",
+                    "label": "Sódio (mEq/L)",
+                    "placeholder": "Ex: 140"
+                },
+                {
+                    "id": "potassio",
+                    "tipo": "texto",
+                    "label": "Potássio (mEq/L)",
+                    "placeholder": "Ex: 4.0"
+                },
+                {
+                    "id": "cloro",
+                    "tipo": "texto",
+                    "label": "Cloro (mEq/L)",
+                    "placeholder": "Ex: 102"
+                },
+                {
+                    "id": "calcio",
+                    "tipo": "texto",
+                    "label": "Cálcio Total (mg/dL)",
+                    "placeholder": "Ex: 9.5"
+                },
+                {
+                    "id": "magnesio",
+                    "tipo": "texto",
+                    "label": "Magnésio (mg/dL)",
+                    "placeholder": "Ex: 2.0"
+                },
+                {
+                    "id": "interpretacao",
+                    "tipo": "textarea",
+                    "label": "Interpretação",
+                    "placeholder": "Interpretação dos resultados..."
+                }
+            ]
+        },
+        {
+            "id": "lab_funcao_renal",
+            "nome": "Função Renal",
+            "descricao": "Avaliação da função renal",
+            "categoria": "laboratorio",
+            "icone": "fa-kidneys",
+            "campos": [
+                {
+                    "id": "ureia",
+                    "tipo": "texto",
+                    "label": "Ureia (mg/dL)",
+                    "placeholder": "Ex: 40"
+                },
+                {
+                    "id": "creatinina",
+                    "tipo": "texto",
+                    "label": "Creatinina (mg/dL)",
+                    "placeholder": "Ex: 1.0"
+                },
+                {
+                    "id": "tfge",
+                    "tipo": "texto",
+                    "label": "TFG Estimada (mL/min/1,73m²)",
+                    "placeholder": "Ex: 90"
+                },
+                {
+                    "id": "acido_urico",
+                    "tipo": "texto",
+                    "label": "Ácido Úrico (mg/dL)",
+                    "placeholder": "Ex: 5.5"
+                },
+                {
+                    "id": "interpretacao",
+                    "tipo": "textarea",
+                    "label": "Interpretação",
+                    "placeholder": "Interpretação da função renal..."
+                }
+            ]
+        },
+        {
+            "id": "lab_perfil_metabolico",
+            "nome": "Perfil Metabólico",
+            "descricao": "Avaliação metabólica completa",
+            "categoria": "laboratorio",
+            "icone": "fa-chart-line",
+            "campos": [
+                {
+                    "id": "glicemia_jejum",
+                    "tipo": "texto",
+                    "label": "Glicemia de Jejum (mg/dL)",
+                    "placeholder": "Ex: 95"
+                },
+                {
+                    "id": "hemoglobina_glicada",
+                    "tipo": "texto",
+                    "label": "Hemoglobina Glicada (%)",
+                    "placeholder": "Ex: 5.6"
+                },
+                {
+                    "id": "colesterol_total",
+                    "tipo": "texto",
+                    "label": "Colesterol Total (mg/dL)",
+                    "placeholder": "Ex: 190"
+                },
+                {
+                    "id": "hdl",
+                    "tipo": "texto",
+                    "label": "HDL (mg/dL)",
+                    "placeholder": "Ex: 50"
+                },
+                {
+                    "id": "ldl",
+                    "tipo": "texto",
+                    "label": "LDL (mg/dL)",
+                    "placeholder": "Ex: 120"
+                },
+                {
+                    "id": "triglicerideos",
+                    "tipo": "texto",
+                    "label": "Triglicerídeos (mg/dL)",
+                    "placeholder": "Ex: 130"
+                },
+                {
+                    "id": "interpretacao",
+                    "tipo": "textarea",
+                    "label": "Interpretação",
+                    "placeholder": "Interpretação do perfil metabólico..."
+                }
+            ]
+        },
+        {
+            "id": "lab_hormonios_tireoide",
+            "nome": "Perfil Hormonal Tireoidiano",
+            "descricao": "Avaliação da função tireoidiana",
+            "categoria": "laboratorio",
+            "icone": "fa-thyroid",
+            "campos": [
+                {
+                    "id": "tsh",
+                    "tipo": "texto",
+                    "label": "TSH (µUI/mL)",
+                    "placeholder": "Ex: 2.5"
+                },
+                {
+                    "id": "t4_livre",
+                    "tipo": "texto",
+                    "label": "T4 Livre (ng/dL)",
+                    "placeholder": "Ex: 1.2"
+                },
+                {
+                    "id": "t3_total",
+                    "tipo": "texto",
+                    "label": "T3 Total (ng/dL)",
+                    "placeholder": "Ex: 120"
+                },
+                {
+                    "id": "t3_livre",
+                    "tipo": "texto",
+                    "label": "T3 Livre (pg/mL)",
+                    "placeholder": "Ex: 3.5"
+                },
+                {
+                    "id": "interpretacao",
+                    "tipo": "textarea",
+                    "label": "Interpretação",
+                    "placeholder": "Interpretação do perfil tireoidiano..."
+                }
+            ]
+        },
+        {
+            "id": "lab_hormonios_sexuais",
+            "nome": "Perfil Hormonal Sexual",
+            "descricao": "Avaliação dos hormônios sexuais",
+            "categoria": "laboratorio",
+            "icone": "fa-venus-mars",
+            "campos": [
+                {
+                    "id": "estradiol",
+                    "tipo": "texto",
+                    "label": "Estradiol (pg/mL)",
+                    "placeholder": "Ex: 150"
+                },
+                {
+                    "id": "progesterona",
+                    "tipo": "texto",
+                    "label": "Progesterona (ng/mL)",
+                    "placeholder": "Ex: 12"
+                },
+                {
+                    "id": "testosterona",
+                    "tipo": "texto",
+                    "label": "Testosterona (ng/dL)",
+                    "placeholder": "Ex: 500"
+                },
+                {
+                    "id": "lh",
+                    "tipo": "texto",
+                    "label": "LH (mUI/mL)",
+                    "placeholder": "Ex: 8"
+                },
+                {
+                    "id": "fsh",
+                    "tipo": "texto",
+                    "label": "FSH (mUI/mL)",
+                    "placeholder": "Ex: 6"
+                },
+                {
+                    "id": "prolactina",
+                    "tipo": "texto",
+                    "label": "Prolactina (ng/mL)",
+                    "placeholder": "Ex: 15"
+                },
+                {
+                    "id": "interpretacao",
+                    "tipo": "textarea",
+                    "label": "Interpretação",
+                    "placeholder": "Interpretação do perfil hormonal..."
+                }
+            ]
+        },
+        {
+            "id": "lab_estradiol",
+            "nome": "Estradiol",
+            "descricao": "Dosagem do estradiol",
+            "categoria": "laboratorio",
+            "icone": "fa-venus",
+            "campos": [
+                {
+                    "id": "estradiol_valor",
+                    "tipo": "texto",
+                    "label": "Estradiol (pg/mL)",
+                    "placeholder": "Ex: 180"
+                },
+                {
+                    "id": "valor_referencia",
+                    "tipo": "texto",
+                    "label": "Valor de Referência",
+                    "placeholder": "Ex: 30-400 pg/mL"
+                },
+                {
+                    "id": "fase_ciclo",
+                    "tipo": "select",
+                    "label": "Fase do Ciclo",
+                    "opcoes": [
+                        {
+                            "valor": "folicular",
+                            "label": "Folicular"
+                        },
+                        {
+                            "valor": "ovulacao",
+                            "label": "Ovulação"
+                        },
+                        {
+                            "valor": "lutea",
+                            "label": "Lútea"
+                        },
+                        {
+                            "valor": "menopausa",
+                            "label": "Menopausa"
+                        },
+                        {
+                            "valor": "nao_aplica",
+                            "label": "Não se aplica"
+                        }
+                    ]
+                },
+                {
+                    "id": "interpretacao",
+                    "tipo": "textarea",
+                    "label": "Interpretação",
+                    "placeholder": "Interpretação do resultado..."
+                }
+            ]
+        },
+        {
+            "id": "lab_fsh",
+            "nome": "FSH (Hormônio Folículo-Estimulante)",
+            "descricao": "Dosagem do FSH",
+            "categoria": "laboratorio",
+            "icone": "fa-venus",
+            "campos": [
+                {
+                    "id": "fsh_valor",
+                    "tipo": "texto",
+                    "label": "FSH (mUI/mL)",
+                    "placeholder": "Ex: 7.5"
+                },
+                {
+                    "id": "valor_referencia",
+                    "tipo": "texto",
+                    "label": "Valor de Referência",
+                    "placeholder": "Ex: 3-20 mUI/mL"
+                },
+                {
+                    "id": "fase_ciclo",
+                    "tipo": "select",
+                    "label": "Fase do Ciclo",
+                    "opcoes": [
+                        {
+                            "valor": "folicular",
+                            "label": "Folicular"
+                        },
+                        {
+                            "valor": "ovulacao",
+                            "label": "Ovulação"
+                        },
+                        {
+                            "valor": "lutea",
+                            "label": "Lútea"
+                        },
+                        {
+                            "valor": "menopausa",
+                            "label": "Menopausa"
+                        },
+                        {
+                            "valor": "nao_aplica",
+                            "label": "Não se aplica"
+                        }
+                    ]
+                },
+                {
+                    "id": "interpretacao",
+                    "tipo": "textarea",
+                    "label": "Interpretação",
+                    "placeholder": "Interpretação do resultado..."
+                }
+            ]
+        },
+        {
+            "id": "lab_lh",
+            "nome": "LH (Hormônio Luteinizante)",
+            "descricao": "Dosagem do LH",
+            "categoria": "laboratorio",
+            "icone": "fa-venus",
+            "campos": [
+                {
+                    "id": "lh_valor",
+                    "tipo": "texto",
+                    "label": "LH (mUI/mL)",
+                    "placeholder": "Ex: 15"
+                },
+                {
+                    "id": "valor_referencia",
+                    "tipo": "texto",
+                    "label": "Valor de Referência",
+                    "placeholder": "Ex: 2-20 mUI/mL"
+                },
+                {
+                    "id": "fase_ciclo",
+                    "tipo": "select",
+                    "label": "Fase do Ciclo",
+                    "opcoes": [
+                        {
+                            "valor": "folicular",
+                            "label": "Folicular"
+                        },
+                        {
+                            "valor": "ovulacao",
+                            "label": "Ovulação"
+                        },
+                        {
+                            "valor": "lutea",
+                            "label": "Lútea"
+                        },
+                        {
+                            "valor": "menopausa",
+                            "label": "Menopausa"
+                        },
+                        {
+                            "valor": "nao_aplica",
+                            "label": "Não se aplica"
+                        }
+                    ]
+                },
+                {
+                    "id": "interpretacao",
+                    "tipo": "textarea",
+                    "label": "Interpretação",
+                    "placeholder": "Interpretação do resultado..."
+                }
+            ]
+        },
+        {
+            "id": "lab_perfil_hormonal_completo",
+            "nome": "Perfil Hormonal Completo",
+            "descricao": "Painel hormonal completo",
+            "categoria": "laboratorio",
+            "icone": "fa-chart-bar",
+            "campos": [
+                {
+                    "id": "fsh",
+                    "tipo": "texto",
+                    "label": "FSH (mUI/mL)",
+                    "placeholder": "Ex: 8"
+                },
+                {
+                    "id": "lh",
+                    "tipo": "texto",
+                    "label": "LH (mUI/mL)",
+                    "placeholder": "Ex: 12"
+                },
+                {
+                    "id": "estradiol",
+                    "tipo": "texto",
+                    "label": "Estradiol (pg/mL)",
+                    "placeholder": "Ex: 200"
+                },
+                {
+                    "id": "progesterona",
+                    "tipo": "texto",
+                    "label": "Progesterona (ng/mL)",
+                    "placeholder": "Ex: 10"
+                },
+                {
+                    "id": "prolactina",
+                    "tipo": "texto",
+                    "label": "Prolactina (ng/mL)",
+                    "placeholder": "Ex: 18"
+                },
+                {
+                    "id": "testosterona",
+                    "tipo": "texto",
+                    "label": "Testosterona (ng/dL)",
+                    "placeholder": "Ex: 450"
+                },
+                {
+                    "id": "fase_ciclo",
+                    "tipo": "select",
+                    "label": "Fase do Ciclo",
+                    "opcoes": [
+                        {
+                            "valor": "folicular",
+                            "label": "Folicular"
+                        },
+                        {
+                            "valor": "ovulacao",
+                            "label": "Ovulação"
+                        },
+                        {
+                            "valor": "lutea",
+                            "label": "Lútea"
+                        },
+                        {
+                            "valor": "menopausa",
+                            "label": "Menopausa"
+                        },
+                        {
+                            "valor": "nao_aplica",
+                            "label": "Não se aplica"
+                        }
+                    ]
+                },
+                {
+                    "id": "interpretacao",
+                    "tipo": "textarea",
+                    "label": "Interpretação",
+                    "placeholder": "Interpretação completa..."
+                }
+            ]
+        },
+        {
+            "id": "lab_hormonio_crescimento",
+            "nome": "Hormônio do Crescimento (GH)",
+            "descricao": "Dosagem do GH e IGF-1",
+            "categoria": "laboratorio",
+            "icone": "fa-arrows-alt-v",
+            "campos": [
+                {
+                    "id": "gh_basal",
+                    "tipo": "texto",
+                    "label": "GH Basal (ng/mL)",
+                    "placeholder": "Ex: 0.8"
+                },
+                {
+                    "id": "igf1",
+                    "tipo": "texto",
+                    "label": "IGF-1 (ng/mL)",
+                    "placeholder": "Ex: 180"
+                },
+                {
+                    "id": "interpretacao",
+                    "tipo": "textarea",
+                    "label": "Interpretação",
+                    "placeholder": "Interpretação dos resultados..."
+                }
+            ]
+        },
+        {
+            "id": "lab_cortisol",
+            "nome": "Cortisol",
+            "descricao": "Dosagem do cortisol sérico",
+            "categoria": "laboratorio",
+            "icone": "fa-sun",
+            "campos": [
+                {
+                    "id": "cortisol_basal",
+                    "tipo": "texto",
+                    "label": "Cortisol Basal (µg/dL)",
+                    "placeholder": "Ex: 15"
+                },
+                {
+                    "id": "cortisol_pos_estimulo",
+                    "tipo": "texto",
+                    "label": "Cortisol Pós-Estímulo (µg/dL)",
+                    "placeholder": "Ex: 25"
+                },
+                {
+                    "id": "interpretacao",
+                    "tipo": "textarea",
+                    "label": "Interpretação",
+                    "placeholder": "Interpretação dos resultados..."
+                }
+            ]
+        },
+        {
+            "id": "lab_fezes",
+            "nome": "Exame de Fezes",
+            "descricao": "Exame parasitológico e físico-químico de fezes",
+            "categoria": "laboratorio",
+            "icone": "fa-poop",
+            "campos": [
+                {
+                    "id": "aspecto",
+                    "tipo": "select",
+                    "label": "Aspecto",
+                    "opcoes": [
+                        {
+                            "valor": "pastoso",
+                            "label": "Pastoso"
+                        },
+                        {
+                            "valor": "solido",
+                            "label": "Sólido"
+                        },
+                        {
+                            "valor": "liquido",
+                            "label": "Líquido"
+                        },
+                        {
+                            "valor": "diarreico",
+                            "label": "Diarreico"
+                        },
+                        {
+                            "valor": "constipado",
+                            "label": "Constipado"
+                        }
+                    ]
+                },
+                {
+                    "id": "cor",
+                    "tipo": "select",
+                    "label": "Cor",
+                    "opcoes": [
+                        {
+                            "valor": "marrom",
+                            "label": "Marrom"
+                        },
+                        {
+                            "valor": "amarelado",
+                            "label": "Amarelado"
+                        },
+                        {
+                            "valor": "esverdeado",
+                            "label": "Esverdeado"
+                        },
+                        {
+                            "valor": "acinzentado",
+                            "label": "Acinzentado"
+                        },
+                        {
+                            "valor": "enegrecido",
+                            "label": "Enegrecido"
+                        },
+                        {
+                            "valor": "avermelhado",
+                            "label": "Avermelhado"
+                        }
+                    ]
+                },
+                {
+                    "id": "consistencia",
+                    "tipo": "select",
+                    "label": "Consistência",
+                    "opcoes": [
+                        {
+                            "valor": "normal",
+                            "label": "Normal"
+                        },
+                        {
+                            "valor": "amolecida",
+                            "label": "Amolecida"
+                        },
+                        {
+                            "valor": "diarreica",
+                            "label": "Diarreica"
+                        },
+                        {
+                            "valor": "dura",
+                            "label": "Dura"
+                        },
+                        {
+                            "valor": "constipada",
+                            "label": "Constipada"
+                        }
+                    ]
+                },
+                {
+                    "id": "ph",
+                    "tipo": "texto",
+                    "label": "pH",
+                    "placeholder": "Ex: 7.0"
+                },
+                {
+                    "id": "sangue_oculto",
+                    "tipo": "select",
+                    "label": "Sangue Oculto",
+                    "opcoes": [
+                        {
+                            "valor": "negativo",
+                            "label": "Negativo"
+                        },
+                        {
+                            "valor": "positivo",
+                            "label": "Positivo"
+                        }
+                    ]
+                },
+                {
+                    "id": "gordura_neutra",
+                    "tipo": "texto",
+                    "label": "Gordura Neutra (g/24h)",
+                    "placeholder": "Ex: 5"
+                },
+                {
+                    "id": "gordura_total",
+                    "tipo": "texto",
+                    "label": "Gordura Total (g/24h)",
+                    "placeholder": "Ex: 15"
+                },
+                {
+                    "id": "fibra_muscular",
+                    "tipo": "select",
+                    "label": "Fibra Muscular",
+                    "opcoes": [
+                        {
+                            "valor": "ausente",
+                            "label": "Ausente"
+                        },
+                        {
+                            "valor": "presente",
+                            "label": "Presente"
+                        }
+                    ]
+                },
+                {
+                    "id": "amido",
+                    "tipo": "select",
+                    "label": "Amido",
+                    "opcoes": [
+                        {
+                            "valor": "ausente",
+                            "label": "Ausente"
+                        },
+                        {
+                            "valor": "presente",
+                            "label": "Presente"
+                        }
+                    ]
+                },
+                {
+                    "id": "leucocitos",
+                    "tipo": "select",
+                    "label": "Leucócitos",
+                    "opcoes": [
+                        {
+                            "valor": "ausente",
+                            "label": "Ausente"
+                        },
+                        {
+                            "valor": "presente",
+                            "label": "Presente"
+                        }
+                    ]
+                },
+                {
+                    "id": "hemacias",
+                    "tipo": "select",
+                    "label": "Hemácias",
+                    "opcoes": [
+                        {
+                            "valor": "ausente",
+                            "label": "Ausente"
+                        },
+                        {
+                            "valor": "presente",
+                            "label": "Presente"
+                        }
+                    ]
+                },
+                {
+                    "id": "mucus",
+                    "tipo": "select",
+                    "label": "Mucus",
+                    "opcoes": [
+                        {
+                            "valor": "ausente",
+                            "label": "Ausente"
+                        },
+                        {
+                            "valor": "presente",
+                            "label": "Presente"
+                        }
+                    ]
+                },
+                {
+                    "id": "protozoarios",
+                    "tipo": "textarea",
+                    "label": "Protozoários",
+                    "placeholder": "Protozoários encontrados..."
+                },
+                {
+                    "id": "helmintos",
+                    "tipo": "textarea",
+                    "label": "Helmintos",
+                    "placeholder": "Helmintos encontrados..."
+                },
+                {
+                    "id": "larvas",
+                    "tipo": "textarea",
+                    "label": "Larvas",
+                    "placeholder": "Larvas encontradas..."
+                },
+                {
+                    "id": "ovos",
+                    "tipo": "textarea",
+                    "label": "Ovos",
+                    "placeholder": "Ovos encontrados..."
+                },
+                {
+                    "id": "bacteriologia",
+                    "tipo": "textarea",
+                    "label": "Bacteriologia",
+                    "placeholder": "Resultados bacteriológicos..."
+                },
+                {
+                    "id": "interpretacao",
+                    "tipo": "textarea",
+                    "label": "Interpretação",
+                    "placeholder": "Interpretação do exame..."
+                },
+                {
+                    "id": "recomendacoes",
+                    "tipo": "textarea",
+                    "label": "Recomendações",
+                    "placeholder": "Recomendações..."
+                }
+            ]
+        },
+        {
+            "id": "rad_usg_obstetrica",
+            "nome": "Ultrassom Obstétrica",
+            "descricao": "Ultrassonografia obstétrica",
+            "categoria": "ginecologia",
+            "icone": "fa-baby-carriage",
+            "campos": [
+                {
+                    "id": "idade_gestacional",
+                    "tipo": "texto",
+                    "label": "Idade Gestacional (semanas)",
+                    "placeholder": "Ex: 12"
+                },
+                {
+                    "id": "sexo_bebe",
+                    "tipo": "select",
+                    "label": "Sexo do Bebê",
+                    "opcoes": [
+                        {
+                            "valor": "masculino",
+                            "label": "Masculino"
+                        },
+                        {
+                            "valor": "feminino",
+                            "label": "Feminino"
+                        },
+                        {
+                            "valor": "indeterminado",
+                            "label": "Indeterminado"
+                        }
+                    ]
+                },
+                {
+                    "id": "dum",
+                    "tipo": "texto",
+                    "label": "DUM",
+                    "placeholder": "Ex: 01/01/2024"
+                },
+                {
+                    "id": "dpp",
+                    "tipo": "texto",
+                    "label": "DPP",
+                    "placeholder": "Ex: 08/10/2024"
+                },
+                {
+                    "id": "fetal_biometry",
+                    "tipo": "textarea",
+                    "label": "Biometria Fetal",
+                    "placeholder": "Medidas fetais..."
+                },
+                {
+                    "id": "anatomia_fetal",
+                    "tipo": "textarea",
+                    "label": "Anatomia Fetal",
+                    "placeholder": "Anatomia fetal observada..."
+                },
+                {
+                    "id": "placenta",
+                    "tipo": "textarea",
+                    "label": "Placenta",
+                    "placeholder": "Descrição da placenta..."
+                },
+                {
+                    "id": "liquido_amniotico",
+                    "tipo": "textarea",
+                    "label": "Líquido Amniótico",
+                    "placeholder": "Quantidade e características..."
+                },
+                {
+                    "id": "conclusao",
+                    "tipo": "textarea",
+                    "label": "Conclusão",
+                    "placeholder": "Conclusão do exame..."
+                }
+            ]
+        },
+        {
+            "id": "usg_morfologico",
+            "nome": "Ultrassom Morfológico",
+            "descricao": "Ultrassom morfológico fetal detalhado",
+            "categoria": "ginecologia",
+            "icone": "fa-baby",
+            "campos": [
+                {
+                    "id": "idade_gestacional",
+                    "tipo": "texto",
+                    "label": "Idade Gestacional (semanas)",
+                    "placeholder": "Ex: 20"
+                },
+                {
+                    "id": "sexo_bebe",
+                    "tipo": "select",
+                    "label": "Sexo do Bebê",
+                    "opcoes": [
+                        {
+                            "valor": "masculino",
+                            "label": "Masculino"
+                        },
+                        {
+                            "valor": "feminino",
+                            "label": "Feminino"
+                        },
+                        {
+                            "valor": "indeterminado",
+                            "label": "Indeterminado"
+                        }
+                    ]
+                },
+                {
+                    "id": "dum",
+                    "tipo": "texto",
+                    "label": "DUM",
+                    "placeholder": "Ex: 01/01/2024"
+                },
+                {
+                    "id": "dpp",
+                    "tipo": "texto",
+                    "label": "DPP",
+                    "placeholder": "Ex: 08/10/2024"
+                },
+                {
+                    "id": "biometria_fetal",
+                    "tipo": "textarea",
+                    "label": "Biometria Fetal",
+                    "placeholder": "Medidas fetais detalhadas..."
+                },
+                {
+                    "id": "anatomia_fetal",
+                    "tipo": "textarea",
+                    "label": "Anatomia Fetal Detalhada",
+                    "placeholder": "Anatomia fetal completa..."
+                },
+                {
+                    "id": "cranio_encefalico",
+                    "tipo": "textarea",
+                    "label": "Crânio e Estruturas Encefálicas",
+                    "placeholder": "Avaliação craniana..."
+                },
+                {
+                    "id": "coluna_vertebral",
+                    "tipo": "textarea",
+                    "label": "Coluna Vertebral",
+                    "placeholder": "Avaliação da coluna..."
+                },
+                {
+                    "id": "torax",
+                    "tipo": "textarea",
+                    "label": "Tórax e Pulmões",
+                    "placeholder": "Avaliação torácica..."
+                },
+                {
+                    "id": "cardiaca",
+                    "tipo": "textarea",
+                    "label": "Avaliação Cardíaca",
+                    "placeholder": "Avaliação cardíaca..."
+                },
+                {
+                    "id": "abdome",
+                    "tipo": "textarea",
+                    "label": "Abdome e Órgãos Internos",
+                    "placeholder": "Avaliação abdominal..."
+                },
+                {
+                    "id": "extremidades",
+                    "tipo": "textarea",
+                    "label": "Extremidades",
+                    "placeholder": "Avaliação das extremidades..."
+                },
+                {
+                    "id": "placenta",
+                    "tipo": "textarea",
+                    "label": "Placenta",
+                    "placeholder": "Descrição da placenta..."
+                },
+                {
+                    "id": "liquido_amniotico",
+                    "tipo": "textarea",
+                    "label": "Líquido Amniótico",
+                    "placeholder": "Quantidade e características..."
+                },
+                {
+                    "id": "conclusao",
+                    "tipo": "textarea",
+                    "label": "Conclusão",
+                    "placeholder": "Conclusão do exame..."
+                }
+            ]
+        },
+        {
+            "id": "usg_obstetrico_convencional",
+            "nome": "Ultrassom Obstétrico Convencional",
+            "descricao": "Ultrassom obstétrico de rotina",
+            "categoria": "ginecologia",
+            "icone": "fa-baby",
+            "campos": [
+                {
+                    "id": "idade_gestacional",
+                    "tipo": "texto",
+                    "label": "Idade Gestacional (semanas)",
+                    "placeholder": "Ex: 28"
+                },
+                {
+                    "id": "dum",
+                    "tipo": "texto",
+                    "label": "DUM",
+                    "placeholder": "Ex: 01/01/2024"
+                },
+                {
+                    "id": "dpp",
+                    "tipo": "texto",
+                    "label": "DPP",
+                    "placeholder": "Ex: 08/10/2024"
+                },
+                {
+                    "id": "biometria_fetal",
+                    "tipo": "textarea",
+                    "label": "Biometria Fetal",
+                    "placeholder": "Medidas fetais básicas..."
+                },
+                {
+                    "id": "anatomia_fetal",
+                    "tipo": "textarea",
+                    "label": "Anatomia Fetal Básica",
+                    "placeholder": "Anatomia fetal observada..."
+                },
+                {
+                    "id": "atividade_cardíaca",
+                    "tipo": "textarea",
+                    "label": "Atividade Cardíaca Fetal",
+                    "placeholder": "Batimentos cardíacos..."
+                },
+                {
+                    "id": "placenta",
+                    "tipo": "textarea",
+                    "label": "Placenta",
+                    "placeholder": "Descrição da placenta..."
+                },
+                {
+                    "id": "liquido_amniotico",
+                    "tipo": "textarea",
+                    "label": "Líquido Amniótico",
+                    "placeholder": "Quantidade e características..."
+                },
+                {
+                    "id": "conclusao",
+                    "tipo": "textarea",
+                    "label": "Conclusão",
+                    "placeholder": "Conclusão do exame..."
+                }
+            ]
+        },
+        {
+            "id": "usg_3d",
+            "nome": "Ultrassom 3D",
+            "descricao": "Ultrassonografia tridimensional",
+            "categoria": "ginecologia",
+            "icone": "fa-cube",
+            "campos": [
+                {
+                    "id": "idade_gestacional",
+                    "tipo": "texto",
+                    "label": "Idade Gestacional (semanas)",
+                    "placeholder": "Ex: 26"
+                },
+                {
+                    "id": "sexo_bebe",
+                    "tipo": "select",
+                    "label": "Sexo do Bebê",
+                    "opcoes": [
+                        {
+                            "valor": "masculino",
+                            "label": "Masculino"
+                        },
+                        {
+                            "valor": "feminino",
+                            "label": "Feminino"
+                        },
+                        {
+                            "valor": "indeterminado",
+                            "label": "Indeterminado"
+                        }
+                    ]
+                },
+                {
+                    "id": "reconstrucao_volumetrica",
+                    "tipo": "textarea",
+                    "label": "Reconstrução Volumétrica",
+                    "placeholder": "Descrição da reconstrução 3D..."
+                },
+                {
+                    "id": "face_fetal",
+                    "tipo": "textarea",
+                    "label": "Face Fetal",
+                    "placeholder": "Características da face fetal..."
+                },
+                {
+                    "id": "extremidades",
+                    "tipo": "textarea",
+                    "label": "Extremidades",
+                    "placeholder": "Avaliação das extremidades..."
+                },
+                {
+                    "id": "anomalias_superficiais",
+                    "tipo": "textarea",
+                    "label": "Avaliação de Anomalias Superficiais",
+                    "placeholder": "Anomalias superficiais..."
+                },
+                {
+                    "id": "qualidade_imagem",
+                    "tipo": "textarea",
+                    "label": "Qualidade da Imagem 3D",
+                    "placeholder": "Qualidade das imagens..."
+                },
+                {
+                    "id": "conclusao",
+                    "tipo": "textarea",
+                    "label": "Conclusão",
+                    "placeholder": "Conclusão do exame..."
+                }
+            ]
+        },
+        {
+            "id": "usg_4d",
+            "nome": "Ultrassom 4D (Tempo Real)",
+            "descricao": "Ultrassonografia 4D em tempo real",
+            "categoria": "ginecologia",
+            "icone": "fa-video",
+            "campos": [
+                {
+                    "id": "idade_gestacional",
+                    "tipo": "texto",
+                    "label": "Idade Gestacional (semanas)",
+                    "placeholder": "Ex: 30"
+                },
+                {
+                    "id": "sexo_bebe",
+                    "tipo": "select",
+                    "label": "Sexo do Bebê",
+                    "opcoes": [
+                        {
+                            "valor": "masculino",
+                            "label": "Masculino"
+                        },
+                        {
+                            "valor": "feminino",
+                            "label": "Feminino"
+                        },
+                        {
+                            "valor": "indeterminado",
+                            "label": "Indeterminado"
+                        }
+                    ]
+                },
+                {
+                    "id": "movimentacao_fetal",
+                    "tipo": "textarea",
+                    "label": "Movimentação Fetal",
+                    "placeholder": "Padrões de movimento..."
+                },
+                {
+                    "id": "expressoes_faciais",
+                    "tipo": "textarea",
+                    "label": "Expressões Faciais",
+                    "placeholder": "Expressões observadas..."
+                },
+                {
+                    "id": "atividade_motora",
+                    "tipo": "textarea",
+                    "label": "Atividade Motora",
+                    "placeholder": "Atividade motora..."
+                },
+                {
+                    "id": "coordenacao_movimentos",
+                    "tipo": "textarea",
+                    "label": "Coordenação de Movimentos",
+                    "placeholder": "Coordenação motora..."
+                },
+                {
+                    "id": "qualidade_imagem",
+                    "tipo": "textarea",
+                    "label": "Qualidade da Imagem 4D",
+                    "placeholder": "Qualidade das imagens..."
+                },
+                {
+                    "id": "conclusao",
+                    "tipo": "textarea",
+                    "label": "Conclusão",
+                    "placeholder": "Conclusão do exame..."
+                }
+            ]
+        },
+        {
+            "id": "ecocardiografia_fetal",
+            "nome": "Ecocardiografia Fetal",
+            "descricao": "Avaliação ecocardiográfica fetal",
+            "categoria": "ginecologia",
+            "icone": "fa-heart",
+            "campos": [
+                {
+                    "id": "idade_gestacional",
+                    "tipo": "texto",
+                    "label": "Idade Gestacional (semanas)",
+                    "placeholder": "Ex: 24"
+                },
+                {
+                    "id": "sexo_bebe",
+                    "tipo": "select",
+                    "label": "Sexo do Bebê",
+                    "opcoes": [
+                        {
+                            "valor": "masculino",
+                            "label": "Masculino"
+                        },
+                        {
+                            "valor": "feminino",
+                            "label": "Feminino"
+                        },
+                        {
+                            "valor": "indeterminado",
+                            "label": "Indeterminado"
+                        }
+                    ]
+                },
+                {
+                    "id": "posicao_cardiaca",
+                    "tipo": "textarea",
+                    "label": "Posição e Eixo Cardíaco",
+                    "placeholder": "Posição cardíaca..."
+                },
+                {
+                    "id": "camaras_cardiacas",
+                    "tipo": "textarea",
+                    "label": "Câmaras Cardíacas",
+                    "placeholder": "Avaliação das câmaras..."
+                },
+                {
+                    "id": "septos_interatriais",
+                    "tipo": "textarea",
+                    "label": "Septos Interatriais e Interventriculares",
+                    "placeholder": "Avaliação dos septos..."
+                },
+                {
+                    "id": "valvas_cardiacas",
+                    "tipo": "textarea",
+                    "label": "Valvas Cardíacas",
+                    "placeholder": "Avaliação das valvas..."
+                },
+                {
+                    "id": "grandes_vasos",
+                    "tipo": "textarea",
+                    "label": "Grandes Vasos",
+                    "placeholder": "Avaliação dos vasos..."
+                },
+                {
+                    "id": "ritmo_cardiaco",
+                    "tipo": "textarea",
+                    "label": "Ritmo Cardíaco Fetal",
+                    "placeholder": "Ritmo cardíaco..."
+                },
+                {
+                    "id": "doppler_cardiaco",
+                    "tipo": "textarea",
+                    "label": "Doppler Cardíaco",
+                    "placeholder": "Avaliação por Doppler..."
+                },
+                {
+                    "id": "fluxos",
+                    "tipo": "textarea",
+                    "label": "Avaliação de Fluxos",
+                    "placeholder": "Padrões de fluxo..."
+                },
+                {
+                    "id": "conclusao",
+                    "tipo": "textarea",
+                    "label": "Conclusão",
+                    "placeholder": "Conclusão do exame..."
+                }
+            ]
+        },
+        {
+            "id": "usg_doppler_obstetrico",
+            "nome": "Ultrassom com Doppler Obstétrico",
+            "descricao": "Ultrassom com avaliação Doppler obstétrico",
+            "categoria": "ginecologia",
+            "icone": "fa-wave-square",
+            "campos": [
+                {
+                    "id": "idade_gestacional",
+                    "tipo": "texto",
+                    "label": "Idade Gestacional (semanas)",
+                    "placeholder": "Ex: 32"
+                },
+                {
+                    "id": "sexo_bebe",
+                    "tipo": "select",
+                    "label": "Sexo do Bebê",
+                    "opcoes": [
+                        {
+                            "valor": "masculino",
+                            "label": "Masculino"
+                        },
+                        {
+                            "valor": "feminino",
+                            "label": "Feminino"
+                        },
+                        {
+                            "valor": "indeterminado",
+                            "label": "Indeterminado"
+                        }
+                    ]
+                },
+                {
+                    "id": "doppler_arteria_umbilical",
+                    "tipo": "textarea",
+                    "label": "Doppler - Artéria Umbilical",
+                    "placeholder": "Avaliação da artéria umbilical..."
+                },
+                {
+                    "id": "doppler_arteria_uterina",
+                    "tipo": "textarea",
+                    "label": "Doppler - Artéria Uterina",
+                    "placeholder": "Avaliação da artéria uterina..."
+                },
+                {
+                    "id": "doppler_arteria_cerebral_media",
+                    "tipo": "textarea",
+                    "label": "Doppler - Artéria Cerebral Média",
+                    "placeholder": "Avaliação da artéria cerebral..."
+                },
+                {
+                    "id": "doppler_ducto_venoso",
+                    "tipo": "textarea",
+                    "label": "Doppler - Ducto Venoso",
+                    "placeholder": "Avaliação do ducto venoso..."
+                },
+                {
+                    "id": "indices_doppler",
+                    "tipo": "textarea",
+                    "label": "Índices Doppler",
+                    "placeholder": "Índices calculados..."
+                },
+                {
+                    "id": "fluxo_diastolico",
+                    "tipo": "textarea",
+                    "label": "Fluxo Diastólico",
+                    "placeholder": "Avaliação do fluxo diastólico..."
+                },
+                {
+                    "id": "conclusao",
+                    "tipo": "textarea",
+                    "label": "Conclusão",
+                    "placeholder": "Conclusão do exame..."
+                }
+            ]
+        },
+        {
+            "id": "neo_pezinho",
+            "nome": "Teste do Pezinho",
+            "descricao": "Triagem neonatal básica",
+            "categoria": "pediatria",
+            "icone": "fa-baby",
+            "campos": [
+                {
+                    "id": "tsh",
+                    "tipo": "texto",
+                    "label": "TSH (µUI/mL)",
+                    "placeholder": "Ex: 2.0"
+                },
+                {
+                    "id": "fenilalanina",
+                    "tipo": "texto",
+                    "label": "Fenilalanina (mg/dL)",
+                    "placeholder": "Ex: 1.5"
+                },
+                {
+                    "id": "hemoglobina_fetal",
+                    "tipo": "texto",
+                    "label": "Perfil de Hemoglobinas",
+                    "placeholder": "Ex: Normal"
+                },
+                {
+                    "id": "biotinidase",
+                    "tipo": "texto",
+                    "label": "Biotinidase (%)",
+                    "placeholder": "Ex: 85"
+                },
+                {
+                    "id": "observacoes",
+                    "tipo": "textarea",
+                    "label": "Observações",
+                    "placeholder": "Observações sobre o teste..."
+                }
+            ]
+        },
+        {
+            "id": "neo_olhinho",
+            "nome": "Teste do Olhinho (Reflexo Vermelho)",
+            "descricao": "Teste do reflexo vermelho",
+            "categoria": "pediatria",
+            "icone": "fa-eye",
+            "campos": [
+                {
+                    "id": "reflexo_vermelho",
+                    "tipo": "select",
+                    "label": "Reflexo Vermelho",
+                    "opcoes": [
+                        {
+                            "valor": "presente",
+                            "label": "Presente"
+                        },
+                        {
+                            "valor": "ausente",
+                            "label": "Ausente"
+                        }
+                    ]
+                },
+                {
+                    "id": "alteracoes",
+                    "tipo": "textarea",
+                    "label": "Alterações Encontradas",
+                    "placeholder": "Alterações observadas..."
+                },
+                {
+                    "id": "observacoes",
+                    "tipo": "textarea",
+                    "label": "Observações",
+                    "placeholder": "Observações sobre o teste..."
+                }
+            ]
+        },
+        {
+            "id": "neo_orelhinha",
+            "nome": "Teste da Orelhinha (EOAE)",
+            "descricao": "Teste de emissões otoacústicas",
+            "categoria": "pediatria",
+            "icone": "fa-ear-deaf",
+            "campos": [
+                {
+                    "id": "resultado_direita",
+                    "tipo": "select",
+                    "label": "Orelha Direita",
+                    "opcoes": [
+                        {
+                            "valor": "passou",
+                            "label": "Passou"
+                        },
+                        {
+                            "valor": "falhou",
+                            "label": "Falhou"
+                        }
+                    ]
+                },
+                {
+                    "id": "resultado_esquerda",
+                    "tipo": "select",
+                    "label": "Orelha Esquerda",
+                    "opcoes": [
+                        {
+                            "valor": "passou",
+                            "label": "Passou"
+                        },
+                        {
+                            "valor": "falhou",
+                            "label": "Falhou"
+                        }
+                    ]
+                },
+                {
+                    "id": "observacoes",
+                    "tipo": "textarea",
+                    "label": "Observações",
+                    "placeholder": "Observações sobre o teste..."
+                }
+            ]
+        },
+        {
+            "id": "neo_coracaozinho",
+            "nome": "Teste do Coraçãozinho (Oximetria de Pulso)",
+            "descricao": "Triagem de cardiopatias congênitas",
+            "categoria": "pediatria",
+            "icone": "fa-heart",
+            "campos": [
+                {
+                    "id": "saturacao_mao_direita",
+                    "tipo": "texto",
+                    "label": "SpO₂ Mão Direita (%)",
+                    "placeholder": "Ex: 98"
+                },
+                {
+                    "id": "saturacao_pe_direito",
+                    "tipo": "texto",
+                    "label": "SpO₂ Pé Direito (%)",
+                    "placeholder": "Ex: 97"
+                },
+                {
+                    "id": "resultado",
+                    "tipo": "select",
+                    "label": "Resultado",
+                    "opcoes": [
+                        {
+                            "valor": "normal",
+                            "label": "Normal"
+                        },
+                        {
+                            "valor": "alterado",
+                            "label": "Alterado"
+                        }
+                    ]
+                },
+                {
+                    "id": "observacoes",
+                    "tipo": "textarea",
+                    "label": "Observações",
+                    "placeholder": "Observações sobre o teste..."
+                }
+            ]
+        },
+        {
+            "id": "neo_bilirrubinas",
+            "nome": "Bilirrubinas Neonatais",
+            "descricao": "Dosagem de bilirrubinas no período neonatal",
+            "categoria": "pediatria",
+            "icone": "fa-vial",
+            "campos": [
+                {
+                    "id": "bili_total",
+                    "tipo": "texto",
+                    "label": "Bilirrubina Total (mg/dL)",
+                    "placeholder": "Ex: 12.5"
+                },
+                {
+                    "id": "bili_direta",
+                    "tipo": "texto",
+                    "label": "Bilirrubina Direta (mg/dL)",
+                    "placeholder": "Ex: 0.8"
+                },
+                {
+                    "id": "bili_indireta",
+                    "tipo": "texto",
+                    "label": "Bilirrubina Indireta (mg/dL)",
+                    "placeholder": "Ex: 11.7"
+                },
+                {
+                    "id": "observacoes",
+                    "tipo": "textarea",
+                    "label": "Observações",
+                    "placeholder": "Observações sobre os resultados..."
+                }
+            ]
+        },
+        {
+            "id": "neo_gasometria",
+            "nome": "Gasometria do Cordão Umbilical",
+            "descricao": "Gasometria do sangue do cordão umbilical",
+            "categoria": "pediatria",
+            "icone": "fa-lungs",
+            "campos": [
+                {
+                    "id": "ph",
+                    "tipo": "texto",
+                    "label": "pH",
+                    "placeholder": "Ex: 7.25"
+                },
+                {
+                    "id": "pco2",
+                    "tipo": "texto",
+                    "label": "pCO₂ (mmHg)",
+                    "placeholder": "Ex: 45"
+                },
+                {
+                    "id": "po2",
+                    "tipo": "texto",
+                    "label": "pO₂ (mmHg)",
+                    "placeholder": "Ex: 25"
+                },
+                {
+                    "id": "hco3",
+                    "tipo": "texto",
+                    "label": "HCO₃⁻ (mmol/L)",
+                    "placeholder": "Ex: 20"
+                },
+                {
+                    "id": "observacoes",
+                    "tipo": "textarea",
+                    "label": "Observações",
+                    "placeholder": "Observações sobre a gasometria..."
+                }
+            ]
+        },
+        {
+            "id": "neo_glicemia",
+            "nome": "Glicemia Neonatal",
+            "descricao": "Glicemia no período neonatal",
+            "categoria": "pediatria",
+            "icone": "fa-vial",
+            "campos": [
+                {
+                    "id": "glicemia",
+                    "tipo": "texto",
+                    "label": "Glicemia (mg/dL)",
+                    "placeholder": "Ex: 70"
+                },
+                {
+                    "id": "jejum",
+                    "tipo": "select",
+                    "label": "Coleta em Jejum?",
+                    "opcoes": [
+                        {
+                            "valor": "sim",
+                            "label": "Sim"
+                        },
+                        {
+                            "valor": "nao",
+                            "label": "Não"
+                        }
+                    ]
+                },
+                {
+                    "id": "observacoes",
+                    "tipo": "textarea",
+                    "label": "Observações",
+                    "placeholder": "Observações sobre o resultado..."
+                }
+            ]
+        },
+        {
+            "id": "card_ecg",
+            "nome": "Eletrocardiograma",
+            "descricao": "Eletrocardiograma de repouso",
+            "categoria": "cardiologia",
+            "icone": "fa-heartbeat",
+            "campos": [
+                {
+                    "id": "frequencia_cardiaca",
+                    "tipo": "texto",
+                    "label": "Frequência Cardíaca (bpm)",
+                    "placeholder": "Ex: 72"
+                },
+                {
+                    "id": "ritmo",
+                    "tipo": "select",
+                    "label": "Ritmo",
+                    "opcoes": [
+                        {
+                            "valor": "ritmo_sinusal",
+                            "label": "Ritmo Sinusal"
+                        },
+                        {
+                            "valor": "fibrilacao_atrial",
+                            "label": "Fibrilação Atrial"
+                        },
+                        {
+                            "valor": "flutter_atrial",
+                            "label": "Flutter Atrial"
+                        },
+                        {
+                            "valor": "taquicardia_sinusal",
+                            "label": "Taquicardia Sinusal"
+                        },
+                        {
+                            "valor": "bradicardia_sinusal",
+                            "label": "Bradicardia Sinusal"
+                        }
+                    ]
+                },
+                {
+                    "id": "alteracoes_ondas",
+                    "tipo": "textarea",
+                    "label": "Alterações de Ondas",
+                    "placeholder": "Alterações observadas..."
+                },
+                {
+                    "id": "diagnostico",
+                    "tipo": "textarea",
+                    "label": "Diagnóstico",
+                    "placeholder": "Diagnóstico eletrocardiográfico..."
+                }
+            ]
+        },
+        {
+            "id": "card_eco",
+            "nome": "Ecocardiograma",
+            "descricao": "Ecocardiograma transtorácico",
+            "categoria": "cardiologia",
+            "icone": "fa-heart",
+            "campos": [
+                {
+                    "id": "feje",
+                    "tipo": "texto",
+                    "label": "Fração de Ejeção (%)",
+                    "placeholder": "Ex: 65"
+                },
+                {
+                    "id": "camaras_cardiacas",
+                    "tipo": "textarea",
+                    "label": "Câmaras Cardíacas",
+                    "placeholder": "Avaliação das câmaras..."
+                },
+                {
+                    "id": "valvas",
+                    "tipo": "textarea",
+                    "label": "Valvas Cardíacas",
+                    "placeholder": "Avaliação das valvas..."
+                },
+                {
+                    "id": "conclusao",
+                    "tipo": "textarea",
+                    "label": "Conclusão",
+                    "placeholder": "Conclusão do exame..."
+                }
+            ]
+        },
+        {
+            "id": "card_holter",
+            "nome": "Holter 24h",
+            "descricao": "Monitorização eletrocardiográfica ambulatorial",
+            "categoria": "cardiologia",
+            "icone": "fa-clock",
+            "campos": [
+                {
+                    "id": "fc_minima",
+                    "tipo": "texto",
+                    "label": "FC Mínima (bpm)",
+                    "placeholder": "Ex: 48"
+                },
+                {
+                    "id": "fc_maxima",
+                    "tipo": "texto",
+                    "label": "FC Máxima (bpm)",
+                    "placeholder": "Ex: 145"
+                },
+                {
+                    "id": "fc_media",
+                    "tipo": "texto",
+                    "label": "FC Média (bpm)",
+                    "placeholder": "Ex: 78"
+                },
+                {
+                    "id": "arritmias",
+                    "tipo": "textarea",
+                    "label": "Arritmias Detectadas",
+                    "placeholder": "Arritmias observadas..."
+                },
+                {
+                    "id": "pausas",
+                    "tipo": "textarea",
+                    "label": "Pausas Sinusais",
+                    "placeholder": "Pausas sinusais..."
+                },
+                {
+                    "id": "alteracoes_st",
+                    "tipo": "textarea",
+                    "label": "Alterações do ST",
+                    "placeholder": "Alterações do segmento ST..."
+                },
+                {
+                    "id": "correlacao_sintomas",
+                    "tipo": "textarea",
+                    "label": "Correlação com Sintomas",
+                    "placeholder": "Correlação com sintomas..."
+                },
+                {
+                    "id": "conclusao",
+                    "tipo": "textarea",
+                    "label": "Conclusão",
+                    "placeholder": "Conclusão do exame..."
+                }
+            ]
+        },
+        {
+            "id": "card_teste_ergometrico",
+            "nome": "Teste Ergométrico",
+            "descricao": "Teste de esforço em esteira",
+            "categoria": "cardiologia",
+            "icone": "fa-running",
+            "campos": [
+                {
+                    "id": "protocolo",
+                    "tipo": "texto",
+                    "label": "Protocolo",
+                    "placeholder": "Ex: Bruce"
+                },
+                {
+                    "id": "duracao",
+                    "tipo": "texto",
+                    "label": "Duração (min)",
+                    "placeholder": "Ex: 12"
+                },
+                {
+                    "id": "mets",
+                    "tipo": "texto",
+                    "label": "METs Alcançados",
+                    "placeholder": "Ex: 10"
+                },
+                {
+                    "id": "fc_maxima",
+                    "tipo": "texto",
+                    "label": "FC Máxima (bpm)",
+                    "placeholder": "Ex: 165"
+                },
+                {
+                    "id": "pa_maxima",
+                    "tipo": "texto",
+                    "label": "PA Máxima (mmHg)",
+                    "placeholder": "Ex: 180/100"
+                },
+                {
+                    "id": "sintomas",
+                    "tipo": "textarea",
+                    "label": "Sintomas",
+                    "placeholder": "Sintomas durante o teste..."
+                },
+                {
+                    "id": "alteracoes_ecg",
+                    "tipo": "textarea",
+                    "label": "Alterações no ECG",
+                    "placeholder": "Alterações eletrocardiográficas..."
+                },
+                {
+                    "id": "resultado",
+                    "tipo": "select",
+                    "label": "Resultado",
+                    "opcoes": [
+                        {
+                            "valor": "negativo",
+                            "label": "Negativo"
+                        },
+                        {
+                            "valor": "positivo",
+                            "label": "Positivo"
+                        },
+                        {
+                            "valor": "inconclusivo",
+                            "label": "Inconclusivo"
+                        },
+                        {
+                            "valor": "limitado_sintomas",
+                            "label": "Limitado por Sintomas"
+                        }
+                    ]
+                },
+                {
+                    "id": "recomendacoes",
+                    "tipo": "textarea",
+                    "label": "Recomendações",
+                    "placeholder": "Recomendações..."
+                }
+            ]
+        },
+        {
+            "id": "card_mapa",
+            "nome": "MAPPA - Monitorização Ambulatorial da PA",
+            "descricao": "Monitorização ambulatorial da pressão arterial",
+            "categoria": "cardiologia",
+            "icone": "fa-tachometer-alt",
+            "campos": [
+                {
+                    "id": "pa_media_diurna",
+                    "tipo": "texto",
+                    "label": "PA Média Diurna (mmHg)",
+                    "placeholder": "Ex: 135/85"
+                },
+                {
+                    "id": "pa_media_noturna",
+                    "tipo": "texto",
+                    "label": "PA Média Noturna (mmHg)",
+                    "placeholder": "Ex: 120/75"
+                },
+                {
+                    "id": "pa_media_24h",
+                    "tipo": "texto",
+                    "label": "PA Média 24h (mmHg)",
+                    "placeholder": "Ex: 130/80"
+                },
+                {
+                    "id": "variacao_circadiana",
+                    "tipo": "textarea",
+                    "label": "Variação Circadiana",
+                    "placeholder": "Padrão circadiano..."
+                },
+                {
+                    "id": "picos_hipertensivos",
+                    "tipo": "textarea",
+                    "label": "Picos Hipertensivos",
+                    "placeholder": "Picos hipertensivos..."
+                },
+                {
+                    "id": "diagnostico",
+                    "tipo": "textarea",
+                    "label": "Diagnóstico",
+                    "placeholder": "Diagnóstico..."
+                },
+                {
+                    "id": "conduta",
+                    "tipo": "textarea",
+                    "label": "Conduta",
+                    "placeholder": "Conduta recomendada..."
+                }
+            ]
+        },
+        {
+            "id": "card_marcadores",
+            "nome": "Marcadores Cardíacos",
+            "descricao": "Dosagem de marcadores cardíacos",
+            "categoria": "cardiologia",
+            "icone": "fa-vial",
+            "campos": [
+                {
+                    "id": "troponina",
+                    "tipo": "texto",
+                    "label": "Troponina (ng/mL)",
+                    "placeholder": "Ex: 0.02"
+                },
+                {
+                    "id": "ck_mb",
+                    "tipo": "texto",
+                    "label": "CK-MB (U/L)",
+                    "placeholder": "Ex: 15"
+                },
+                {
+                    "id": "bnp",
+                    "tipo": "texto",
+                    "label": "BNP (pg/mL)",
+                    "placeholder": "Ex: 150"
+                },
+                {
+                    "id": "nt_probnp",
+                    "tipo": "texto",
+                    "label": "NT-proBNP (pg/mL)",
+                    "placeholder": "Ex: 300"
+                },
+                {
+                    "id": "interpretacao",
+                    "tipo": "textarea",
+                    "label": "Interpretação",
+                    "placeholder": "Interpretação dos marcadores..."
+                },
+                {
+                    "id": "conduta",
+                    "tipo": "textarea",
+                    "label": "Conduta",
+                    "placeholder": "Conduta recomendada..."
+                }
+            ]
+        },
+        {
+            "id": "oft_bio",
+            "nome": "Biomicroscopia",
+            "descricao": "Biomicroscopia ocular",
+            "categoria": "oftalmologia",
+            "icone": "fa-eye",
+            "campos": [
+                {
+                    "id": "olho_examinado",
+                    "tipo": "texto",
+                    "label": "Olho Examinado",
+                    "placeholder": "Ex: OD, OE ou Ambos"
+                },
+                {
+                    "id": "palpebras_conjuntiva",
+                    "tipo": "textarea",
+                    "label": "Pálpebras e Conjuntiva",
+                    "placeholder": "Avaliação palpebral e conjuntival..."
+                },
+                {
+                    "id": "cornea",
+                    "tipo": "textarea",
+                    "label": "Córnea",
+                    "placeholder": "Avaliação corneana..."
+                },
+                {
+                    "id": "espessura_cornea",
+                    "tipo": "texto",
+                    "label": "Espessura Corneana",
+                    "placeholder": "Ex: 540µm"
+                },
+                {
+                    "id": "camara_anterior",
+                    "tipo": "textarea",
+                    "label": "Câmara Anterior",
+                    "placeholder": "Avaliação da câmara anterior..."
+                },
+                {
+                    "id": "iris",
+                    "tipo": "textarea",
+                    "label": "Íris",
+                    "placeholder": "Avaliação da íris..."
+                },
+                {
+                    "id": "cristalino",
+                    "tipo": "textarea",
+                    "label": "Cristalino",
+                    "placeholder": "Avaliação do cristalino..."
+                },
+                {
+                    "id": "testes_corantes",
+                    "tipo": "textarea",
+                    "label": "Testes com Corantes",
+                    "placeholder": "Testes com fluoresceína/rosa bengala..."
+                },
+                {
+                    "id": "pressao_intraocular",
+                    "tipo": "texto",
+                    "label": "Pressão Intraocular",
+                    "placeholder": "Ex: 16mmHg"
+                },
+                {
+                    "id": "impressao_diagnostica",
+                    "tipo": "textarea",
+                    "label": "Impressão Diagnóstica",
+                    "placeholder": "Impressão diagnóstica..."
+                },
+                {
+                    "id": "conduta",
+                    "tipo": "textarea",
+                    "label": "Conduta",
+                    "placeholder": "Conduta recomendada..."
+                }
+            ]
+        },
+        {
+            "id": "oft_refratometria",
+            "nome": "Refratometria",
+            "descricao": "Refratometria ocular",
+            "categoria": "oftalmologia",
+            "icone": "fa-glasses",
+            "campos": [
+                {
+                    "id": "od_esferico",
+                    "tipo": "texto",
+                    "label": "OD Esférico",
+                    "placeholder": "Ex: -2.50"
+                },
+                {
+                    "id": "od_cilindrico",
+                    "tipo": "texto",
+                    "label": "OD Cilíndrico",
+                    "placeholder": "Ex: -0.75"
+                },
+                {
+                    "id": "od_eixo",
+                    "tipo": "texto",
+                    "label": "OD Eixo",
+                    "placeholder": "Ex: 180"
+                },
+                {
+                    "id": "oe_esferico",
+                    "tipo": "texto",
+                    "label": "OE Esférico",
+                    "placeholder": "Ex: -2.25"
+                },
+                {
+                    "id": "oe_cilindrico",
+                    "tipo": "texto",
+                    "label": "OE Cilíndrico",
+                    "placeholder": "Ex: -1.00"
+                },
+                {
+                    "id": "oe_eixo",
+                    "tipo": "texto",
+                    "label": "OE Eixo",
+                    "placeholder": "Ex: 175"
+                },
+                {
+                    "id": "acuidade_visual",
+                    "tipo": "textarea",
+                    "label": "Acuidade Visual",
+                    "placeholder": "Acuidade visual corrigida..."
+                },
+                {
+                    "id": "prescricao",
+                    "tipo": "textarea",
+                    "label": "Prescrição",
+                    "placeholder": "Prescrição de óculos/lentes..."
+                }
+            ]
+        },
+        {
+            "id": "oft_tonometria",
+            "nome": "Tonometria",
+            "descricao": "Medição da pressão intraocular",
+            "categoria": "oftalmologia",
+            "icone": "fa-tachometer-alt",
+            "campos": [
+                {
+                    "id": "pio_od",
+                    "tipo": "texto",
+                    "label": "PIO OD",
+                    "placeholder": "Ex: 16mmHg"
+                },
+                {
+                    "id": "pio_oe",
+                    "tipo": "texto",
+                    "label": "PIO OE",
+                    "placeholder": "Ex: 17mmHg"
+                },
+                {
+                    "id": "paquimetria",
+                    "tipo": "texto",
+                    "label": "Paquimetria",
+                    "placeholder": "Ex: 540µm"
+                },
+                {
+                    "id": "achados",
+                    "tipo": "textarea",
+                    "label": "Achados",
+                    "placeholder": "Achados da tonometria..."
+                }
+            ]
+        },
+        {
+            "id": "oft_fundo_olho",
+            "nome": "Fundo de Olho",
+            "descricao": "Fundoscopia ocular",
+            "categoria": "oftalmologia",
+            "icone": "fa-eye",
+            "campos": [
+                {
+                    "id": "disco_optico",
+                    "tipo": "textarea",
+                    "label": "Disco Óptico",
+                    "placeholder": "Avaliação do disco óptico..."
+                },
+                {
+                    "id": "macula",
+                    "tipo": "textarea",
+                    "label": "Mácula",
+                    "placeholder": "Avaliação da mácula..."
+                },
+                {
+                    "id": "vasos_retinianos",
+                    "tipo": "textarea",
+                    "label": "Vasos Retinianos",
+                    "placeholder": "Avaliação dos vasos retinianos..."
+                },
+                {
+                    "id": "retina_periferica",
+                    "tipo": "textarea",
+                    "label": "Retina Periférica",
+                    "placeholder": "Avaliação da retina periférica..."
+                },
+                {
+                    "id": "conclusao",
+                    "tipo": "textarea",
+                    "label": "Conclusão",
+                    "placeholder": "Conclusão do exame..."
+                }
+            ]
+        },
+        {
+            "id": "oft_campo_visual",
+            "nome": "Campo Visual",
+            "descricao": "Campimetria computadorizada",
+            "categoria": "oftalmologia",
+            "icone": "fa-expand",
+            "campos": [
+                {
+                    "id": "tipo_exame",
+                    "tipo": "texto",
+                    "label": "Tipo de Exame",
+                    "placeholder": "Ex: Humphrey 24-2"
+                },
+                {
+                    "id": "resultado_od",
+                    "tipo": "textarea",
+                    "label": "Resultado OD",
+                    "placeholder": "Resultado do olho direito..."
+                },
+                {
+                    "id": "resultado_oe",
+                    "tipo": "textarea",
+                    "label": "Resultado OE",
+                    "placeholder": "Resultado do olho esquerdo..."
+                },
+                {
+                    "id": "interpretacao",
+                    "tipo": "textarea",
+                    "label": "Interpretação",
+                    "placeholder": "Interpretação dos resultados..."
+                }
+            ]
+        },
+        {
+            "id": "oft_retinografia",
+            "nome": "Retinografia",
+            "descricao": "Retinografia digital",
+            "categoria": "oftalmologia",
+            "icone": "fa-camera",
+            "campos": [
+                {
+                    "id": "descricao_imagens",
+                    "tipo": "textarea",
+                    "label": "Descrição das Imagens",
+                    "placeholder": "Descrição das retinografias..."
+                },
+                {
+                    "id": "disco_macula",
+                    "tipo": "textarea",
+                    "label": "Disco e Mácula",
+                    "placeholder": "Avaliação do disco e mácula..."
+                },
+                {
+                    "id": "achados",
+                    "tipo": "textarea",
+                    "label": "Achados",
+                    "placeholder": "Achados importantes..."
+                },
+                {
+                    "id": "conduta",
+                    "tipo": "textarea",
+                    "label": "Conduta",
+                    "placeholder": "Conduta recomendada..."
+                }
+            ]
+        },
+        {
+            "id": "oft_angio_oct",
+            "nome": "Angio-OCT",
+            "descricao": "Angio-OCT retiniano",
+            "categoria": "oftalmologia",
+            "icone": "fa-wave-square",
+            "campos": [
+                {
+                    "id": "vasos_maculares",
+                    "tipo": "textarea",
+                    "label": "Vasos Maculares",
+                    "placeholder": "Avaliação dos vasos maculares..."
+                },
+                {
+                    "id": "densidade_vascular",
+                    "tipo": "texto",
+                    "label": "Densidade Vascular",
+                    "placeholder": "Ex: 45%"
+                },
+                {
+                    "id": "fluxo_sanguineo",
+                    "tipo": "textarea",
+                    "label": "Fluxo Sanguíneo",
+                    "placeholder": "Avaliação do fluxo sanguíneo..."
+                },
+                {
+                    "id": "interpretacao",
+                    "tipo": "textarea",
+                    "label": "Interpretação",
+                    "placeholder": "Interpretação do exame..."
+                }
+            ]
+        },
+        {
+            "id": "oft_paquimetria",
+            "nome": "Paquimetria",
+            "descricao": "Paquimetria corneana",
+            "categoria": "oftalmologia",
+            "icone": "fa-ruler",
+            "campos": [
+                {
+                    "id": "espessura_od",
+                    "tipo": "texto",
+                    "label": "Espessura OD",
+                    "placeholder": "Ex: 540µm"
+                },
+                {
+                    "id": "espessura_oe",
+                    "tipo": "texto",
+                    "label": "Espessura OE",
+                    "placeholder": "Ex: 535µm"
+                },
+                {
+                    "id": "espessura_media",
+                    "tipo": "texto",
+                    "label": "Espessura Média",
+                    "placeholder": "Ex: 537.5µm"
+                },
+                {
+                    "id": "observacoes",
+                    "tipo": "textarea",
+                    "label": "Observações",
+                    "placeholder": "Observações sobre a paquimetria..."
+                }
+            ]
+        },
+        {
+            "id": "oft_microscopia_endotelial",
+            "nome": "Microscopia Endotelial",
+            "descricao": "Microscopia especular da córnea",
+            "categoria": "oftalmologia",
+            "icone": "fa-microscope",
+            "campos": [
+                {
+                    "id": "densidade_endotelial",
+                    "tipo": "texto",
+                    "label": "Densidade Endotelial",
+                    "placeholder": "Ex: 2500 células/mm²"
+                },
+                {
+                    "id": "polimegatismo",
+                    "tipo": "texto",
+                    "label": "Polimegatismo",
+                    "placeholder": "Ex: 30%"
+                },
+                {
+                    "id": "pleomorfismo",
+                    "tipo": "texto",
+                    "label": "Pleomorfismo",
+                    "placeholder": "Ex: 70%"
+                },
+                {
+                    "id": "morfologia_celular",
+                    "tipo": "textarea",
+                    "label": "Morfologia Celular",
+                    "placeholder": "Avaliação da morfologia celular..."
+                }
+            ]
+        },
+        {
+            "id": "oft_ceratoscopia_computadorizada",
+            "nome": "Ceratoscopia",
+            "descricao": "Ceratoscopia computadorizada",
+            "categoria": "oftalmologia",
+            "icone": "fa-circle",
+            "campos": [
+                {
+                    "id": "k1_k2_od",
+                    "tipo": "texto",
+                    "label": "K1/K2 OD",
+                    "placeholder": "Ex: 42.50/43.75 @ 90"
+                },
+                {
+                    "id": "k1_k2_oe",
+                    "tipo": "texto",
+                    "label": "K1/K2 OE",
+                    "placeholder": "Ex: 42.25/43.50 @ 85"
+                },
+                {
+                    "id": "mapa_topografico",
+                    "tipo": "textarea",
+                    "label": "Mapa Topográfico",
+                    "placeholder": "Avaliação do mapa topográfico..."
+                },
+                {
+                    "id": "observacoes",
+                    "tipo": "textarea",
+                    "label": "Observações",
+                    "placeholder": "Observações sobre a ceratoscopia..."
+                }
+            ]
+        },
+        {
+            "id": "oft_ecografia_ocular",
+            "nome": "Ecografia Ocular",
+            "descricao": "Ecografia ocular",
+            "categoria": "oftalmologia",
+            "icone": "fa-wave-square",
+            "campos": [
+                {
+                    "id": "segmento_anterior",
+                    "tipo": "textarea",
+                    "label": "Segmento Anterior",
+                    "placeholder": "Avaliação do segmento anterior..."
+                },
+                {
+                    "id": "segmento_posterior",
+                    "tipo": "textarea",
+                    "label": "Segmento Posterior",
+                    "placeholder": "Avaliação do segmento posterior..."
+                },
+                {
+                    "id": "achados",
+                    "tipo": "textarea",
+                    "label": "Achados",
+                    "placeholder": "Achados importantes..."
+                },
+                {
+                    "id": "diagnostico",
+                    "tipo": "textarea",
+                    "label": "Diagnóstico",
+                    "placeholder": "Diagnóstico ecográfico..."
+                }
+            ]
+        },
+        {
+            "id": "neuro_eeg",
+            "nome": "Eletroencefalograma",
+            "descricao": "Eletroencefalograma de rotina",
+            "categoria": "neurologia",
+            "icone": "fa-brain",
+            "campos": [
+                {
+                    "id": "atividade_base",
+                    "tipo": "textarea",
+                    "label": "Atividade de Base",
+                    "placeholder": "Atividade de base observada..."
+                },
+                {
+                    "id": "descargas",
+                    "tipo": "textarea",
+                    "label": "Descargas",
+                    "placeholder": "Descargas epilépticas..."
+                },
+                {
+                    "id": "interpretacao",
+                    "tipo": "textarea",
+                    "label": "Interpretação",
+                    "placeholder": "Interpretação do EEG..."
+                }
+            ]
+        },
+        {
+            "id": "rad_rx_torax",
+            "nome": "Raio-X de Tórax",
+            "descricao": "Radiografia de tórax",
+            "categoria": "radiologia",
+            "icone": "fa-lungs",
+            "campos": [
+                {
+                    "id": "incidencias",
+                    "tipo": "select",
+                    "label": "Incidiências",
+                    "opcoes": [
+                        {
+                            "valor": "pa_perfil",
+                            "label": "PA/Perfil"
+                        },
+                        {
+                            "valor": "ap",
+                            "label": "AP"
+                        },
+                        {
+                            "valor": "decubito",
+                            "label": "Decúbito"
+                        }
+                    ]
+                },
+                {
+                    "id": "campos_pulmonares",
+                    "tipo": "textarea",
+                    "label": "Campos Pulmonares",
+                    "placeholder": "Avaliação dos campos pulmonares..."
+                },
+                {
+                    "id": "silhueta_cardiaca",
+                    "tipo": "textarea",
+                    "label": "Silhueta Cardíaca",
+                    "placeholder": "Avaliação da silhueta cardíaca..."
+                },
+                {
+                    "id": "mediastino",
+                    "tipo": "textarea",
+                    "label": "Mediastino",
+                    "placeholder": "Avaliação do mediastino..."
+                },
+                {
+                    "id": "seios_costofrenicos",
+                    "tipo": "textarea",
+                    "label": "Seios Costofrênicos",
+                    "placeholder": "Avaliação dos seios costofrênicos..."
+                },
+                {
+                    "id": "partes_moles",
+                    "tipo": "textarea",
+                    "label": "Partes Moles",
+                    "placeholder": "Avaliação das partes moles..."
+                },
+                {
+                    "id": "impressao",
+                    "tipo": "textarea",
+                    "label": "Impressão",
+                    "placeholder": "Impressão diagnóstica..."
+                }
+            ]
+        },
+        {
+            "id": "rad_rx_abdome",
+            "nome": "Raio-X de Abdome",
+            "descricao": "Radiografia de abdome",
+            "categoria": "radiologia",
+            "icone": "fa-stomach",
+            "campos": [
+                {
+                    "id": "incidencias",
+                    "tipo": "select",
+                    "label": "Incidiências",
+                    "opcoes": [
+                        {
+                            "valor": "simples",
+                            "label": "Simples"
+                        },
+                        {
+                            "valor": "ortostatica",
+                            "label": "Ortostática"
+                        },
+                        {
+                            "valor": "decubito",
+                            "label": "Decúbito"
+                        }
+                    ]
+                },
+                {
+                    "id": "arcadas_digestivas",
+                    "tipo": "textarea",
+                    "label": "Arcadas Digestivas",
+                    "placeholder": "Avaliação das arcadas digestivas..."
+                },
+                {
+                    "id": "ar_livre",
+                    "tipo": "textarea",
+                    "label": "Ar Livre",
+                    "placeholder": "Presença de ar livre..."
+                },
+                {
+                    "id": "niveis_hidroaereos",
+                    "tipo": "textarea",
+                    "label": "Níveis Hidroaéreos",
+                    "placeholder": "Níveis hidroaéreos..."
+                },
+                {
+                    "id": "visceras_solidas",
+                    "tipo": "textarea",
+                    "label": "Vísceras Sólidas",
+                    "placeholder": "Avaliação das vísceras sólidas..."
+                },
+                {
+                    "id": "partes_moles",
+                    "tipo": "textarea",
+                    "label": "Partes Moles",
+                    "placeholder": "Avaliação das partes moles..."
+                },
+                {
+                    "id": "impressao",
+                    "tipo": "textarea",
+                    "label": "Impressão",
+                    "placeholder": "Impressão diagnóstica..."
+                }
+            ]
+        },
+        {
+            "id": "rad_rx_coluna",
+            "nome": "Raio-X de Coluna",
+            "descricao": "Radiografia de coluna vertebral",
+            "categoria": "radiologia",
+            "icone": "fa-spine",
+            "campos": [
+                {
+                    "id": "segmento",
+                    "tipo": "select",
+                    "label": "Segmento",
+                    "opcoes": [
+                        {
+                            "valor": "cervical",
+                            "label": "Cervical"
+                        },
+                        {
+                            "valor": "toracica",
+                            "label": "Torácica"
+                        },
+                        {
+                            "valor": "lombar",
+                            "label": "Lombar"
+                        },
+                        {
+                            "valor": "lombossacra",
+                            "label": "Lombossacra"
+                        }
+                    ]
+                },
+                {
+                    "id": "incidencias",
+                    "tipo": "select",
+                    "label": "Incidiências",
+                    "opcoes": [
+                        {
+                            "valor": "ap_perfil",
+                            "label": "AP/Perfil"
+                        },
+                        {
+                            "valor": "ap_perfil_obliguas",
+                            "label": "AP/Perfil/Oblíquas"
+                        },
+                        {
+                            "valor": "dinamicas",
+                            "label": "Dinâmicas"
+                        }
+                    ]
+                },
+                {
+                    "id": "alinhamento",
+                    "tipo": "textarea",
+                    "label": "Alinhamento",
+                    "placeholder": "Alinhamento vertebral..."
+                },
+                {
+                    "id": "corpos_vertebrais",
+                    "tipo": "textarea",
+                    "label": "Corpos Vertebrais",
+                    "placeholder": "Avaliação dos corpos vertebrais..."
+                },
+                {
+                    "id": "discos",
+                    "tipo": "textarea",
+                    "label": "Discos Intervertebrais",
+                    "placeholder": "Avaliação dos discos..."
+                },
+                {
+                    "id": "forames",
+                    "tipo": "textarea",
+                    "label": "Forames Neurais",
+                    "placeholder": "Avaliação dos forames..."
+                },
+                {
+                    "id": "partes_moles",
+                    "tipo": "textarea",
+                    "label": "Partes Moles",
+                    "placeholder": "Avaliação das partes moles..."
+                },
+                {
+                    "id": "impressao",
+                    "tipo": "textarea",
+                    "label": "Impressão",
+                    "placeholder": "Impressão diagnóstica..."
+                }
+            ]
+        },
+        {
+            "id": "rad_rx_ossos",
+            "nome": "Raio-X de Ossos/Articulações",
+            "descricao": "Radiografia óssea/articular",
+            "categoria": "radiologia",
+            "icone": "fa-bone",
+            "campos": [
+                {
+                    "id": "local",
+                    "tipo": "texto",
+                    "label": "Local",
+                    "placeholder": "Ex: Joelho direito"
+                },
+                {
+                    "id": "incidencias",
+                    "tipo": "select",
+                    "label": "Incidiências",
+                    "opcoes": [
+                        {
+                            "valor": "ap",
+                            "label": "AP"
+                        },
+                        {
+                            "valor": "perfil",
+                            "label": "Perfil"
+                        },
+                        {
+                            "valor": "ap_perfil",
+                            "label": "AP/Perfil"
+                        },
+                        {
+                            "valor": "obliguas",
+                            "label": "Oblíquas"
+                        }
+                    ]
+                },
+                {
+                    "id": "corticais",
+                    "tipo": "textarea",
+                    "label": "Corticais Ósseas",
+                    "placeholder": "Avaliação das corticais..."
+                },
+                {
+                    "id": "espaco_articular",
+                    "tipo": "textarea",
+                    "label": "Espaço Articular",
+                    "placeholder": "Avaliação do espaço articular..."
+                },
+                {
+                    "id": "partes_moles",
+                    "tipo": "textarea",
+                    "label": "Partes Moles",
+                    "placeholder": "Avaliação das partes moles..."
+                },
+                {
+                    "id": "impressao",
+                    "tipo": "textarea",
+                    "label": "Impressão",
+                    "placeholder": "Impressão diagnóstica..."
+                }
+            ]
+        },
+        {
+            "id": "rad_tc_cranio",
+            "nome": "Tomografia de Crânio",
+            "descricao": "Tomografia computadorizada de crânio",
+            "categoria": "radiologia",
+            "icone": "fa-brain",
+            "campos": [
+                {
+                    "id": "contraste",
+                    "tipo": "select",
+                    "label": "Contraste",
+                    "opcoes": [
+                        {
+                            "valor": "sem",
+                            "label": "Sem"
+                        },
+                        {
+                            "valor": "com",
+                            "label": "Com"
+                        },
+                        {
+                            "valor": "dupla_fase",
+                            "label": "Dupla Fase"
+                        }
+                    ]
+                },
+                {
+                    "id": "parenquima",
+                    "tipo": "textarea",
+                    "label": "Parênquima Encefálico",
+                    "placeholder": "Avaliação do parênquima..."
+                },
+                {
+                    "id": "sistema_ventricular",
+                    "tipo": "textarea",
+                    "label": "Sistema Ventricular",
+                    "placeholder": "Avaliação do sistema ventricular..."
+                },
+                {
+                    "id": "cisternas",
+                    "tipo": "textarea",
+                    "label": "Cisternas da Base",
+                    "placeholder": "Avaliação das cisternas..."
+                },
+                {
+                    "id": "espaco_subaracnoide",
+                    "tipo": "textarea",
+                    "label": "Espaço Subaracnóideo",
+                    "placeholder": "Avaliação do espaço subaracnóideo..."
+                },
+                {
+                    "id": "calota",
+                    "tipo": "textarea",
+                    "label": "Calota Craniana",
+                    "placeholder": "Avaliação da calota craniana..."
+                },
+                {
+                    "id": "seios_paranasais",
+                    "tipo": "textarea",
+                    "label": "Seios Paranasais",
+                    "placeholder": "Avaliação dos seios paranasais..."
+                },
+                {
+                    "id": "impressao",
+                    "tipo": "textarea",
+                    "label": "Impressão",
+                    "placeholder": "Impressão diagnóstica..."
+                }
+            ]
+        },
+        {
+            "id": "rad_tc_torax",
+            "nome": "Tomografia de Tórax",
+            "descricao": "Tomografia computadorizada de tórax",
+            "categoria": "radiologia",
+            "icone": "fa-lungs",
+            "campos": [
+                {
+                    "id": "contraste",
+                    "tipo": "select",
+                    "label": "Contraste",
+                    "opcoes": [
+                        {
+                            "valor": "sem",
+                            "label": "Sem"
+                        },
+                        {
+                            "valor": "com",
+                            "label": "Com"
+                        }
+                    ]
+                },
+                {
+                    "id": "parenquima_pulmonar",
+                    "tipo": "textarea",
+                    "label": "Parênquima Pulmonar",
+                    "placeholder": "Avaliação do parênquima pulmonar..."
+                },
+                {
+                    "id": "vias_aereas",
+                    "tipo": "textarea",
+                    "label": "Vias Aéreas",
+                    "placeholder": "Avaliação das vias aéreas..."
+                },
+                {
+                    "id": "mediastino",
+                    "tipo": "textarea",
+                    "label": "Mediastino",
+                    "placeholder": "Avaliação do mediastino..."
+                },
+                {
+                    "id": "paredes_toracicas",
+                    "tipo": "textarea",
+                    "label": "Paredes Torácicas",
+                    "placeholder": "Avaliação das paredes torácicas..."
+                },
+                {
+                    "id": "impressao",
+                    "tipo": "textarea",
+                    "label": "Impressão",
+                    "placeholder": "Impressão diagnóstica..."
+                }
+            ]
+        },
+        {
+            "id": "rad_tc_abdome",
+            "nome": "Tomografia de Abdome",
+            "descricao": "Tomografia computadorizada de abdome",
+            "categoria": "radiologia",
+            "icone": "fa-stomach",
+            "campos": [
+                {
+                    "id": "contraste",
+                    "tipo": "select",
+                    "label": "Contraste",
+                    "opcoes": [
+                        {
+                            "valor": "sem",
+                            "label": "Sem"
+                        },
+                        {
+                            "valor": "com",
+                            "label": "Com"
+                        },
+                        {
+                            "valor": "dupla_tripla_fase",
+                            "label": "Dupla/Tripla Fase"
+                        }
+                    ]
+                },
+                {
+                    "id": "figado",
+                    "tipo": "textarea",
+                    "label": "Fígado",
+                    "placeholder": "Avaliação do fígado..."
+                },
+                {
+                    "id": "vesicula",
+                    "tipo": "textarea",
+                    "label": "Vesícula Biliar",
+                    "placeholder": "Avaliação da vesícula..."
+                },
+                {
+                    "id": "pancreas",
+                    "tipo": "textarea",
+                    "label": "Pâncreas",
+                    "placeholder": "Avaliação do pâncreas..."
+                },
+                {
+                    "id": "baço",
+                    "tipo": "textarea",
+                    "label": "Baço",
+                    "placeholder": "Avaliação do baço..."
+                },
+                {
+                    "id": "rins",
+                    "tipo": "textarea",
+                    "label": "Rins",
+                    "placeholder": "Avaliação dos rins..."
+                },
+                {
+                    "id": "adrenais",
+                    "tipo": "textarea",
+                    "label": "Adrenais",
+                    "placeholder": "Avaliação das adrenais..."
+                },
+                {
+                    "id": "intestinos",
+                    "tipo": "textarea",
+                    "label": "Intestinos",
+                    "placeholder": "Avaliação dos intestinos..."
+                },
+                {
+                    "id": "vasos",
+                    "tipo": "textarea",
+                    "label": "Grandes Vasos",
+                    "placeholder": "Avaliação dos grandes vasos..."
+                },
+                {
+                    "id": "linfonodos",
+                    "tipo": "textarea",
+                    "label": "Linfonodos",
+                    "placeholder": "Avaliação dos linfonodos..."
+                },
+                {
+                    "id": "impressao",
+                    "tipo": "textarea",
+                    "label": "Impressão",
+                    "placeholder": "Impressão diagnóstica..."
+                }
+            ]
+        },
+        {
+            "id": "rad_rm_coluna",
+            "nome": "Ressonância de Coluna",
+            "descricao": "Ressonância magnética de coluna",
+            "categoria": "radiologia",
+            "icone": "fa-spine",
+            "campos": [
+                {
+                    "id": "segmento",
+                    "tipo": "select",
+                    "label": "Segmento",
+                    "opcoes": [
+                        {
+                            "valor": "cervical",
+                            "label": "Cervical"
+                        },
+                        {
+                            "valor": "toracica",
+                            "label": "Torácica"
+                        },
+                        {
+                            "valor": "lombar",
+                            "label": "Lombar"
+                        },
+                        {
+                            "valor": "lombossacra",
+                            "label": "Lombossacra"
+                        }
+                    ]
+                },
+                {
+                    "id": "alinhamento",
+                    "tipo": "textarea",
+                    "label": "Alinhamento",
+                    "placeholder": "Alinhamento vertebral..."
+                },
+                {
+                    "id": "corpos_vertebrais",
+                    "tipo": "textarea",
+                    "label": "Corpos Vertebrais",
+                    "placeholder": "Avaliação dos corpos vertebrais..."
+                },
+                {
+                    "id": "discos",
+                    "tipo": "textarea",
+                    "label": "Discos Intervertebrais",
+                    "placeholder": "Avaliação dos discos..."
+                },
+                {
+                    "id": "canal_medular",
+                    "tipo": "textarea",
+                    "label": "Canal Medular",
+                    "placeholder": "Avaliação do canal medular..."
+                },
+                {
+                    "id": "forames",
+                    "tipo": "textarea",
+                    "label": "Forames Neurais",
+                    "placeholder": "Avaliação dos forames..."
+                },
+                {
+                    "id": "ligamentos",
+                    "tipo": "textarea",
+                    "label": "Ligamentos",
+                    "placeholder": "Avaliação dos ligamentos..."
+                },
+                {
+                    "id": "medula",
+                    "tipo": "textarea",
+                    "label": "Medula Espinhal",
+                    "placeholder": "Avaliação da medula..."
+                },
+                {
+                    "id": "impressao",
+                    "tipo": "textarea",
+                    "label": "Impressão",
+                    "placeholder": "Impressão diagnóstica..."
+                }
+            ]
+        },
+        {
+            "id": "rad_rm_cranio",
+            "nome": "Ressonância de Crânio",
+            "descricao": "Ressonância magnética de crânio",
+            "categoria": "radiologia",
+            "icone": "fa-brain",
+            "campos": [
+                {
+                    "id": "contraste",
+                    "tipo": "select",
+                    "label": "Contraste",
+                    "opcoes": [
+                        {
+                            "valor": "sem",
+                            "label": "Sem"
+                        },
+                        {
+                            "valor": "com",
+                            "label": "Com"
+                        }
+                    ]
+                },
+                {
+                    "id": "parenquima",
+                    "tipo": "textarea",
+                    "label": "Parênquima Encefálico",
+                    "placeholder": "Avaliação do parênquima..."
+                },
+                {
+                    "id": "ventriculos",
+                    "tipo": "textarea",
+                    "label": "Ventrículos",
+                    "placeholder": "Avaliação dos ventrículos..."
+                },
+                {
+                    "id": "cisternas",
+                    "tipo": "textarea",
+                    "label": "Cisternas",
+                    "placeholder": "Avaliação das cisternas..."
+                },
+                {
+                    "id": "espaco_subaracnoide",
+                    "tipo": "textarea",
+                    "label": "Espaço Subaracnóideo",
+                    "placeholder": "Avaliação do espaço subaracnóideo..."
+                },
+                {
+                    "id": "regiao_selar",
+                    "tipo": "textarea",
+                    "label": "Região Selar",
+                    "placeholder": "Avaliação da região selar..."
+                },
+                {
+                    "id": "nervos_cranianos",
+                    "tipo": "textarea",
+                    "label": "Nervos Cranianos",
+                    "placeholder": "Avaliação dos nervos cranianos..."
+                },
+                {
+                    "id": "impressao",
+                    "tipo": "textarea",
+                    "label": "Impressão",
+                    "placeholder": "Impressão diagnóstica..."
+                }
+            ]
+        },
+        {
+            "id": "rad_usg_abdome",
+            "nome": "Ultrassom de Abdome",
+            "descricao": "Ultrassonografia de abdome",
+            "categoria": "radiologia",
+            "icone": "fa-stomach",
+            "campos": [
+                {
+                    "id": "figado",
+                    "tipo": "textarea",
+                    "label": "Fígado",
+                    "placeholder": "Avaliação do fígado..."
+                },
+                {
+                    "id": "vesicula",
+                    "tipo": "textarea",
+                    "label": "Vesícula Biliar",
+                    "placeholder": "Avaliação da vesícula..."
+                },
+                {
+                    "id": "vias_biliares",
+                    "tipo": "textarea",
+                    "label": "Vias Biliares",
+                    "placeholder": "Avaliação das vias biliares..."
+                },
+                {
+                    "id": "pancreas",
+                    "tipo": "textarea",
+                    "label": "Pâncreas",
+                    "placeholder": "Avaliação do pâncreas..."
+                },
+                {
+                    "id": "baço",
+                    "tipo": "textarea",
+                    "label": "Baço",
+                    "placeholder": "Avaliação do baço..."
+                },
+                {
+                    "id": "rins",
+                    "tipo": "textarea",
+                    "label": "Rins",
+                    "placeholder": "Avaliação dos rins..."
+                },
+                {
+                    "id": "bexiga",
+                    "tipo": "textarea",
+                    "label": "Bexiga",
+                    "placeholder": "Avaliação da bexiga..."
+                },
+                {
+                    "id": "aorta",
+                    "tipo": "textarea",
+                    "label": "Aorta",
+                    "placeholder": "Avaliação da aorta..."
+                },
+                {
+                    "id": "linfonodos",
+                    "tipo": "textarea",
+                    "label": "Linfonodos",
+                    "placeholder": "Avaliação dos linfonodos..."
+                },
+                {
+                    "id": "liquido_livre",
+                    "tipo": "textarea",
+                    "label": "Líquido Livre",
+                    "placeholder": "Presença de líquido livre..."
+                },
+                {
+                    "id": "conclusao",
+                    "tipo": "textarea",
+                    "label": "Conclusão",
+                    "placeholder": "Conclusão do exame..."
+                }
+            ]
+        },
+        {
+            "id": "rad_usg_pelvica",
+            "nome": "Ultrassom Pélvica",
+            "descricao": "Ultrassonografia pélvica",
+            "categoria": "radiologia",
+            "icone": "fa-female",
+            "campos": [
+                {
+                    "id": "via",
+                    "tipo": "select",
+                    "label": "Via",
+                    "opcoes": [
+                        {
+                            "valor": "abdominal",
+                            "label": "Abdominal"
+                        },
+                        {
+                            "valor": "transvaginal",
+                            "label": "Transvaginal"
+                        },
+                        {
+                            "valor": "retal",
+                            "label": "Retal"
+                        }
+                    ]
+                },
+                {
+                    "id": "utero",
+                    "tipo": "textarea",
+                    "label": "Útero",
+                    "placeholder": "Avaliação do útero..."
+                },
+                {
+                    "id": "endometrio",
+                    "tipo": "textarea",
+                    "label": "Endométrio",
+                    "placeholder": "Avaliação do endométrio..."
+                },
+                {
+                    "id": "ovarios",
+                    "tipo": "textarea",
+                    "label": "Ovários",
+                    "placeholder": "Avaliação dos ovários..."
+                },
+                {
+                    "id": "trompas",
+                    "tipo": "textarea",
+                    "label": "Trompas",
+                    "placeholder": "Avaliação das trompas..."
+                },
+                {
+                    "id": "fundus",
+                    "tipo": "textarea",
+                    "label": "Fundus de Douglas",
+                    "placeholder": "Avaliação do fundus de Douglas..."
+                },
+                {
+                    "id": "bexiga",
+                    "tipo": "textarea",
+                    "label": "Bexiga",
+                    "placeholder": "Avaliação da bexiga..."
+                },
+                {
+                    "id": "conclusao",
+                    "tipo": "textarea",
+                    "label": "Conclusão",
+                    "placeholder": "Conclusão do exame..."
+                }
+            ]
+        },
+        {
+            "id": "rad_usg_mama",
+            "nome": "Ultrassom de Mama",
+            "descricao": "Ultrassonografia mamária",
+            "categoria": "radiologia",
+            "icone": "fa-female",
+            "campos": [
+                {
+                    "id": "lateralidade",
+                    "tipo": "select",
+                    "label": "Lateralidade",
+                    "opcoes": [
+                        {
+                            "valor": "direita",
+                            "label": "Direita"
+                        },
+                        {
+                            "valor": "esquerda",
+                            "label": "Esquerda"
+                        },
+                        {
+                            "valor": "bilateral",
+                            "label": "Bilateral"
+                        }
+                    ]
+                },
+                {
+                    "id": "parenquima_mamario",
+                    "tipo": "textarea",
+                    "label": "Parênquima Mamário",
+                    "placeholder": "Avaliação do parênquima..."
+                },
+                {
+                    "id": "nódulos",
+                    "tipo": "textarea",
+                    "label": "Nódulos",
+                    "placeholder": "Descrição de nódulos..."
+                },
+                {
+                    "id": "ductos",
+                    "tipo": "textarea",
+                    "label": "Ductos Mamários",
+                    "placeholder": "Avaliação dos ductos..."
+                },
+                {
+                    "id": "linfonodos",
+                    "tipo": "textarea",
+                    "label": "Linfonodos Axilares",
+                    "placeholder": "Avaliação dos linfonodos..."
+                },
+                {
+                    "id": "birads",
+                    "tipo": "textarea",
+                    "label": "BI-RADS",
+                    "placeholder": "Classificação BI-RADS..."
+                },
+                {
+                    "id": "recomendacoes",
+                    "tipo": "textarea",
+                    "label": "Recomendações",
+                    "placeholder": "Recomendações..."
+                }
+            ]
+        },
+        {
+            "id": "rad_usg_tireoide",
+            "nome": "Ultrassom de Tireoide",
+            "descricao": "Ultrassonografia de tireoide",
+            "categoria": "radiologia",
+            "icone": "fa-thyroid",
+            "campos": [
+                {
+                    "id": "dimensoes",
+                    "tipo": "textarea",
+                    "label": "Dimensões da Tireoide",
+                    "placeholder": "Medidas da tireoide..."
+                },
+                {
+                    "id": "ecogenicidade",
+                    "tipo": "textarea",
+                    "label": "Ecogenicidade",
+                    "placeholder": "Padrão de ecogenicidade..."
+                },
+                {
+                    "id": "nódulos",
+                    "tipo": "textarea",
+                    "label": "Nódulos",
+                    "placeholder": "Descrição de nódulos..."
+                },
+                {
+                    "id": "vascularizacao",
+                    "tipo": "textarea",
+                    "label": "Vascularização",
+                    "placeholder": "Padrão vascular..."
+                },
+                {
+                    "id": "linfonodos",
+                    "tipo": "textarea",
+                    "label": "Linfonodos Cervicais",
+                    "placeholder": "Avaliação dos linfonodos..."
+                },
+                {
+                    "id": "conclusao",
+                    "tipo": "textarea",
+                    "label": "Conclusão",
+                    "placeholder": "Conclusão do exame..."
+                }
+            ]
+        },
+        {
+            "id": "rad_usg_prostata",
+            "nome": "Ultrassom de Próstata",
+            "descricao": "Ultrassonografia de próstata",
+            "categoria": "radiologia",
+            "icone": "fa-male",
+            "campos": [
+                {
+                    "id": "via",
+                    "tipo": "select",
+                    "label": "Via",
+                    "opcoes": [
+                        {
+                            "valor": "abdominal",
+                            "label": "Abdominal"
+                        },
+                        {
+                            "valor": "retal",
+                            "label": "Retal"
+                        }
+                    ]
+                },
+                {
+                    "id": "dimensoes",
+                    "tipo": "textarea",
+                    "label": "Dimensões da Próstata",
+                    "placeholder": "Medidas da próstata..."
+                },
+                {
+                    "id": "volume",
+                    "tipo": "texto",
+                    "label": "Volume Prostático (mL)",
+                    "placeholder": "Ex: 35"
+                },
+                {
+                    "id": "ecogenicidade",
+                    "tipo": "textarea",
+                    "label": "Ecogenicidade",
+                    "placeholder": "Padrão de ecogenicidade..."
+                },
+                {
+                    "id": "nódulos",
+                    "tipo": "textarea",
+                    "label": "Nódulos",
+                    "placeholder": "Descrição de nódulos..."
+                },
+                {
+                    "id": "residuo_pos_miccional",
+                    "tipo": "texto",
+                    "label": "Resíduo Pós-Miccional (mL)",
+                    "placeholder": "Ex: 50"
+                },
+                {
+                    "id": "conclusao",
+                    "tipo": "textarea",
+                    "label": "Conclusão",
+                    "placeholder": "Conclusão do exame..."
+                }
+            ]
+        },
+        {
+            "id": "rad_usg_partes_moles",
+            "nome": "Ultrassom de Partes Moles",
+            "descricao": "Ultrassonografia de partes moles",
+            "categoria": "radiologia",
+            "icone": "fa-hands",
+            "campos": [
+                {
+                    "id": "local",
+                    "tipo": "texto",
+                    "label": "Local",
+                    "placeholder": "Ex: Coxa anterior direita"
+                },
+                {
+                    "id": "caracteristicas_lesao",
+                    "tipo": "textarea",
+                    "label": "Características da Lesão",
+                    "placeholder": "Características da lesão..."
+                },
+                {
+                    "id": "dimensoes",
+                    "tipo": "textarea",
+                    "label": "Dimensões",
+                    "placeholder": "Medidas da lesão..."
+                },
+                {
+                    "id": "ecogenicidade",
+                    "tipo": "textarea",
+                    "label": "Ecogenicidade",
+                    "placeholder": "Padrão de ecogenicidade..."
+                },
+                {
+                    "id": "limites",
+                    "tipo": "textarea",
+                    "label": "Limites",
+                    "placeholder": "Limites da lesão..."
+                },
+                {
+                    "id": "vascularizacao",
+                    "tipo": "textarea",
+                    "label": "Vascularização",
+                    "placeholder": "Padrão vascular..."
+                },
+                {
+                    "id": "conclusao",
+                    "tipo": "textarea",
+                    "label": "Conclusão",
+                    "placeholder": "Conclusão do exame..."
+                }
+            ]
+        },
+        {
+            "id": "usg_doppler_geral",
+            "nome": "Ultrassom com Doppler Geral",
+            "descricao": "Ultrassonografia com Doppler",
+            "categoria": "radiologia",
+            "icone": "fa-wave-square",
+            "campos": [
+                {
+                    "id": "local_avaliado",
+                    "tipo": "texto",
+                    "label": "Local Avaliado",
+                    "placeholder": "Ex: Artérias renais"
+                },
+                {
+                    "id": "doppler_arterial",
+                    "tipo": "textarea",
+                    "label": "Doppler Arterial",
+                    "placeholder": "Avaliação arterial..."
+                },
+                {
+                    "id": "doppler_venoso",
+                    "tipo": "textarea",
+                    "label": "Doppler Venoso",
+                    "placeholder": "Avaliação venosa..."
+                },
+                {
+                    "id": "indices_doppler",
+                    "tipo": "textarea",
+                    "label": "Índices Doppler",
+                    "placeholder": "Índices calculados..."
+                },
+                {
+                    "id": "fluxos",
+                    "tipo": "textarea",
+                    "label": "Avaliação de Fluxos",
+                    "placeholder": "Padrões de fluxo..."
+                },
+                {
+                    "id": "estenoses",
+                    "tipo": "textarea",
+                    "label": "Avaliação de Estenoses",
+                    "placeholder": "Avaliação de estenoses..."
+                },
+                {
+                    "id": "tromboses",
+                    "tipo": "textarea",
+                    "label": "Avaliação de Tromboses",
+                    "placeholder": "Avaliação de tromboses..."
+                },
+                {
+                    "id": "conclusao",
+                    "tipo": "textarea",
+                    "label": "Conclusão",
+                    "placeholder": "Conclusão do exame..."
+                }
+            ]
+        },
+        {
+            "id": "rad_mamografia",
+            "nome": "Mamografia",
+            "descricao": "Mamografia bilateral",
+            "categoria": "radiologia",
+            "icone": "fa-female",
+            "campos": [
+                {
+                    "id": "lateralidade",
+                    "tipo": "select",
+                    "label": "Lateralidade",
+                    "opcoes": [
+                        {
+                            "valor": "direita",
+                            "label": "Direita"
+                        },
+                        {
+                            "valor": "esquerda",
+                            "label": "Esquerda"
+                        },
+                        {
+                            "valor": "bilateral",
+                            "label": "Bilateral"
+                        }
+                    ]
+                },
+                {
+                    "id": "densidade",
+                    "tipo": "select",
+                    "label": "Densidade Mamária",
+                    "opcoes": [
+                        {
+                            "valor": "a",
+                            "label": "A"
+                        },
+                        {
+                            "valor": "b",
+                            "label": "B"
+                        },
+                        {
+                            "valor": "c",
+                            "label": "C"
+                        },
+                        {
+                            "valor": "d",
+                            "label": "D"
+                        }
+                    ]
+                },
+                {
+                    "id": "achados",
+                    "tipo": "textarea",
+                    "label": "Achados",
+                    "placeholder": "Achados mamográficos..."
+                },
+                {
+                    "id": "birads",
+                    "tipo": "textarea",
+                    "label": "BI-RADS",
+                    "placeholder": "Classificação BI-RADS..."
+                },
+                {
+                    "id": "recomendacoes",
+                    "tipo": "textarea",
+                    "label": "Recomendações",
+                    "placeholder": "Recomendações..."
+                }
+            ]
+        },
+        {
+            "id": "rad_densitometria",
+            "nome": "Densitometria Óssea",
+            "descricao": "Densitometria óssea",
+            "categoria": "radiologia",
+            "icone": "fa-bone",
+            "campos": [
+                {
+                    "id": "t_score_coluna",
+                    "tipo": "texto",
+                    "label": "T-Score Coluna",
+                    "placeholder": "Ex: -1.5"
+                },
+                {
+                    "id": "t_score_femoral",
+                    "tipo": "texto",
+                    "label": "T-Score Colo Femoral",
+                    "placeholder": "Ex: -1.8"
+                },
+                {
+                    "id": "z_score",
+                    "tipo": "texto",
+                    "label": "Z-Score",
+                    "placeholder": "Ex: -0.5"
+                },
+                {
+                    "id": "classificacao",
+                    "tipo": "select",
+                    "label": "Classificação",
+                    "opcoes": [
+                        {
+                            "valor": "normal",
+                            "label": "Normal"
+                        },
+                        {
+                            "valor": "osteopenia",
+                            "label": "Osteopenia"
+                        },
+                        {
+                            "valor": "osteoporose",
+                            "label": "Osteoporose"
+                        }
+                    ]
+                },
+                {
+                    "id": "recomendacoes",
+                    "tipo": "textarea",
+                    "label": "Recomendações",
+                    "placeholder": "Recomendações..."
+                }
+            ]
+        },
+        {
+            "id": "exame_endoscopia",
+            "nome": "Endoscopia Digestiva",
+            "descricao": "Endoscopia digestiva alta",
+            "categoria": "gastro",
+            "icone": "fa-procedures",
+            "campos": [
+                {
+                    "id": "esofago",
+                    "tipo": "textarea",
+                    "label": "Esôfago",
+                    "placeholder": "Avaliação do esôfago..."
+                },
+                {
+                    "id": "estomago",
+                    "tipo": "textarea",
+                    "label": "Estômago",
+                    "placeholder": "Avaliação do estômago..."
+                },
+                {
+                    "id": "duodeno",
+                    "tipo": "textarea",
+                    "label": "Duodeno",
+                    "placeholder": "Avaliação do duodeno..."
+                },
+                {
+                    "id": "biopsias",
+                    "tipo": "textarea",
+                    "label": "Biópsias",
+                    "placeholder": "Locais das biópsias..."
+                },
+                {
+                    "id": "conclusao",
+                    "tipo": "textarea",
+                    "label": "Conclusão",
+                    "placeholder": "Conclusão do exame..."
+                }
+            ]
+        },
+        {
+            "id": "lab_comparador_dna",
+            "nome": "Comparador de Material Genético",
+            "descricao": "Análise comparativa de DNA",
+            "categoria": "genetica",
+            "icone": "fa-dna",
+            "campos": [
+                {
+                    "id": "amostra_1",
+                    "tipo": "textarea",
+                    "label": "Amostra 1 - Descrição",
+                    "placeholder": "Descrição da amostra 1..."
+                },
+                {
+                    "id": "amostra_2",
+                    "tipo": "textarea",
+                    "label": "Amostra 2 - Descrição",
+                    "placeholder": "Descrição da amostra 2..."
+                },
+                {
+                    "id": "loci_analisados",
+                    "tipo": "texto",
+                    "label": "Loci Analisados",
+                    "placeholder": "Ex: 15 loci STR"
+                },
+                {
+                    "id": "concordancia",
+                    "tipo": "texto",
+                    "label": "Concordância (%)",
+                    "placeholder": "Ex: 99.99"
+                },
+                {
+                    "id": "relacao",
+                    "tipo": "select",
+                    "label": "Relação Biológica",
+                    "opcoes": [
+                        {
+                            "valor": "paternidade_compativel",
+                            "label": "Compatível com Paternidade"
+                        },
+                        {
+                            "valor": "paternidade_exclui",
+                            "label": "Exclui Paternidade"
+                        },
+                        {
+                            "valor": "maternidade_compativel",
+                            "label": "Compatível com Maternidade"
+                        },
+                        {
+                            "valor": "maternidade_exclui",
+                            "label": "Exclui Maternidade"
+                        },
+                        {
+                            "valor": "irmandade_compativel",
+                            "label": "Compatível com Irmandade"
+                        },
+                        {
+                            "valor": "inconclusivo",
+                            "label": "Inconclusivo"
+                        }
+                    ]
+                },
+                {
+                    "id": "indice_paternidade",
+                    "tipo": "texto",
+                    "label": "Índice de Paternidade",
+                    "placeholder": "Ex: 99.999%"
+                },
+                {
+                    "id": "marcadores",
+                    "tipo": "textarea",
+                    "label": "Marcadores Genéticos",
+                    "placeholder": "Marcadores analisados..."
+                },
+                {
+                    "id": "conclusao",
+                    "tipo": "textarea",
+                    "label": "Conclusão",
+                    "placeholder": "Conclusão da análise..."
+                }
+            ]
+        },
+        {
+            "id": "vac_bcg",
+            "nome": "BCG (Tuberculose)",
+            "descricao": "Vacina BCG",
+            "categoria": "vacinas",
+            "icone": "fa-syringe",
+            "campos": [
+                {
+                    "id": "data_aplicacao",
+                    "tipo": "date",
+                    "label": "Data da Aplicação"
+                },
+                {
+                    "id": "lote",
+                    "tipo": "texto",
+                    "label": "Lote da Vacina",
+                    "placeholder": "Ex: BCG12345"
+                },
+                {
+                    "id": "fabricante",
+                    "tipo": "texto",
+                    "label": "Fabricante",
+                    "placeholder": "Ex: Fundação Ataulpho de Paiva"
+                },
+                {
+                    "id": "dose",
+                    "tipo": "select",
+                    "label": "Dose",
+                    "opcoes": [
+                        {
+                            "valor": "unica",
+                            "label": "Única"
+                        }
+                    ]
+                },
+                {
+                    "id": "observacoes",
+                    "tipo": "textarea",
+                    "label": "Observações",
+                    "placeholder": "Observações sobre a vacinação..."
+                }
+            ]
+        },
+        {
+            "id": "vac_hep_b",
+            "nome": "Hepatite B",
+            "descricao": "Vacina contra hepatite B",
+            "categoria": "vacinas",
+            "icone": "fa-syringe",
+            "campos": [
+                {
+                    "id": "data_aplicacao",
+                    "tipo": "date",
+                    "label": "Data da Aplicação"
+                },
+                {
+                    "id": "lote",
+                    "tipo": "texto",
+                    "label": "Lote da Vacina",
+                    "placeholder": "Ex: HEPB67890"
+                },
+                {
+                    "id": "fabricante",
+                    "tipo": "texto",
+                    "label": "Fabricante",
+                    "placeholder": "Ex: Butantan"
+                },
+                {
+                    "id": "dose",
+                    "tipo": "select",
+                    "label": "Dose",
+                    "opcoes": [
+                        {
+                            "valor": "dose1",
+                            "label": "1ª Dose"
+                        },
+                        {
+                            "valor": "dose2",
+                            "label": "2ª Dose"
+                        },
+                        {
+                            "valor": "dose3",
+                            "label": "3ª Dose"
+                        }
+                    ]
+                },
+                {
+                    "id": "observacoes",
+                    "tipo": "textarea",
+                    "label": "Observações",
+                    "placeholder": "Observações sobre a vacinação..."
+                }
+            ]
+        },
+        {
+            "id": "lab_alergia",
+            "nome": "Teste de Alergia",
+            "descricao": "Exame para diagnóstico de alergias",
+            "categoria": "laboratorio",
+            "icone": "fa-allergies",
+            "campos": [
+                {
+                    "id": "tipo_teste",
+                    "tipo": "select",
+                    "label": "Tipo de Teste",
+                    "opcoes": [
+                        {
+                            "valor": "sangue_IgE_Total",
+                            "label": "IgE Total"
+                        },
+                        {
+                            "valor": "sangue_IgE_Específica",
+                            "label": "IgE Específica"
+                        },
+                        {
+                            "valor": "prick_test",
+                            "label": "Teste de Puntura"
+                        },
+                        {
+                            "valor": "patch_test",
+                            "label": "Teste de Contato"
+                        }
+                    ]
+                },
+                {
+                    "id": "alergeno",
+                    "tipo": "texto",
+                    "label": "Alérgeno Testado",
+                    "placeholder": "Ex: Ácaro, Leite, Amendoim"
+                },
+                {
+                    "id": "resultado",
+                    "tipo": "texto",
+                    "label": "Resultado",
+                    "placeholder": "Ex: 150 kU/L ou Positivo"
+                },
+                {
+                    "id": "interpretacao",
+                    "tipo": "textarea",
+                    "label": "Interpretação",
+                    "placeholder": "Interpretação clínica..."
+                }
+            ]
+        },
+        {
+            "id": "modelo_generico",
+            "nome": "Laudo Genérico",
+            "descricao": "Modelo de laudo genérico",
+            "categoria": "generico",
+            "icone": "fa-file-medical",
+            "campos": [
+                {
+                    "id": "descricao",
+                    "tipo": "textarea",
+                    "label": "Descrição",
+                    "placeholder": "Descrição do caso..."
+                },
+                {
+                    "id": "achados",
+                    "tipo": "textarea",
+                    "label": "Achados",
+                    "placeholder": "Achados principais..."
+                },
+                {
+                    "id": "discussao",
+                    "tipo": "textarea",
+                    "label": "Discussão",
+                    "placeholder": "Discussão do caso..."
+                },
+                {
+                    "id": "conclusao",
+                    "tipo": "textarea",
+                    "label": "Conclusão",
+                    "placeholder": "Conclusão final..."
+                }
+            ]
+        }
+    ]
+}
