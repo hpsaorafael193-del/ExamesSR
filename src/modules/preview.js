@@ -1,3 +1,9 @@
+/**
+ * © 2026 Luidhy Conceição dos Santos
+ * Custom Restricted License
+ * Usage restricted to the author and the original RP medical group.
+ * Unauthorized use or modification is prohibited.
+ */
 // Renderização do preview do laudo
 class Preview {
     constructor(app) {
@@ -265,4 +271,5 @@ class Preview {
             container.appendChild(pagina);
         });
     }
+
 }
