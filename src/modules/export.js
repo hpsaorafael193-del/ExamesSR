@@ -1,3 +1,9 @@
+/**
+ * © 2026 Luidhy Conceição dos Santos
+ * Custom Restricted License
+ * Usage restricted to the author and the original RP medical group.
+ * Unauthorized use or modification is prohibited.
+ */
 // Exportação PNG (somente página atual) - versão robusta contra canvas 0x0
 class Export {
   constructor(app) {
@@ -172,3 +178,4 @@ class Export {
     }
   }
 }
+
