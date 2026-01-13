@@ -1,3 +1,9 @@
+/**
+ * © 2026 Luidhy Conceição dos Santos
+ * Custom Restricted License
+ * Usage restricted to the author and the original RP medical group.
+ * Unauthorized use or modification is prohibited.
+ */
 // Manipulação de formulários
 class FormHandler {
     constructor(app) {
@@ -121,4 +127,5 @@ class FormHandler {
             helpModal.classList.remove('show');
         }
     }
+
 }
