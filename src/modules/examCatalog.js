@@ -1,3 +1,9 @@
+/**
+ * © 2026 Luidhy Conceição dos Santos
+ * Custom Restricted License
+ * Usage restricted to the author and the original RP medical group.
+ * Unauthorized use or modification is prohibited.
+ */
 // Catálogo de exames
 class ExamCatalog {
     constructor(app) {
@@ -341,4 +347,5 @@ class ExamCatalog {
             backButton.style.display = 'none';
         }
     }
+
 }
