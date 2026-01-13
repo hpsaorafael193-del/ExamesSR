@@ -1,6 +1,12 @@
+ /**
+ * © 2026 Luidhy Conceição dos Santos
+ * Custom Restricted License
+ * Usage restricted to the author and the original RP medical group.
+ * Unauthorized use or modification is prohibited.
+ */
+
 // ===============================
-// MODELS.JS - FIXED
-// Fonte única de dados do sistema
+// MODELS.JS - Fonte única de dados do sistema
 // ===============================
 
 // Estado global (MANTIDO)
