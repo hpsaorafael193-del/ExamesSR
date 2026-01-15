@@ -124,59 +124,6 @@
             ]
         },
         {
-            "id": "lab_tipagem_sanguinea",
-            "nome": "Tipagem Sanguínea",
-            "descricao": "Determinação do tipo sanguíneo e fator Rh",
-            "categoria": "laboratorio",
-            "icone": "fa-dna",
-            "campos": [
-                {
-                    "id": "sistema_abo",
-                    "tipo": "select",
-                    "label": "Sistema ABO",
-                    "opcoes": [
-                        {
-                            "valor": "A",
-                            "label": "A"
-                        },
-                        {
-                            "valor": "B",
-                            "label": "B"
-                        },
-                        {
-                            "valor": "AB",
-                            "label": "AB"
-                        },
-                        {
-                            "valor": "O",
-                            "label": "O"
-                        }
-                    ]
-                },
-                {
-                    "id": "fator_rh",
-                    "tipo": "select",
-                    "label": "Fator Rh",
-                    "opcoes": [
-                        {
-                            "valor": "positivo",
-                            "label": "Positivo (+)"
-                        },
-                        {
-                            "valor": "negativo",
-                            "label": "Negativo (-)"
-                        }
-                    ]
-                },
-                {
-                    "id": "observacoes",
-                    "tipo": "textarea",
-                    "label": "Observações",
-                    "placeholder": "Observações sobre a tipagem..."
-                }
-            ]
-        },
-        {
             "id": "lab_glicemia",
             "nome": "Glicemia",
             "descricao": "Dosagem da glicose sanguínea",
