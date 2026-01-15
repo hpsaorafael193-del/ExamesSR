@@ -4356,6 +4356,57 @@
             ]
         },
         {
+            "id": "vac_influ",
+            "nome": "Influenza",
+            "descricao": "Vacina contra o vírus influenza",
+            "categoria": "vacinas",
+            "icone": "fa-syringe",
+            "campos": [
+                {
+                    "id": "data_aplicacao",
+                    "tipo": "date",
+                    "label": "Data da Aplicação"
+                },
+                {
+                    "id": "lote",
+                    "tipo": "texto",
+                    "label": "Lote da Vacina",
+                    "placeholder": "Ex: HEPB67890"
+                },
+                {
+                    "id": "fabricante",
+                    "tipo": "texto",
+                    "label": "Fabricante",
+                    "placeholder": "Ex: Butantan"
+                },
+                {
+                    "id": "dose",
+                    "tipo": "select",
+                    "label": "Dose",
+                    "opcoes": [
+                        {
+                            "valor": "dose1",
+                            "label": "1ª Dose"
+                        },
+                        {
+                            "valor": "dose2",
+                            "label": "2ª Dose"
+                        },
+                        {
+                            "valor": "dose3",
+                            "label": "3ª Dose"
+                        }
+                    ]
+                },
+                {
+                    "id": "observacoes",
+                    "tipo": "textarea",
+                    "label": "Observações",
+                    "placeholder": "Observações sobre a vacinação..."
+                }
+            ]
+        },
+        {
             "id": "lab_alergia",
             "nome": "Teste de Alergia",
             "descricao": "Exame para diagnóstico de alergias",
