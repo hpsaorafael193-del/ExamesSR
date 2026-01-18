@@ -1,0 +1,479 @@
+/* Container do Preview */
+.laudo-preview-container {
+    flex: 1;
+    overflow: auto;
+    padding: 1.5rem;
+    background: #f8f9fa;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 0;
+    max-height: calc(60vh - 40px);
+}
+
+/* Laudo Principal - Tamanho A4 */
+.laudo-preview {
+    background: transparent;
+    width: 210mm;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    box-shadow: none;
+    border-radius: 0;
+    overflow: hidden;
+}
+ 
+/* Páginas do laudo */
+.laudo-pagina {
+    display: none !important;
+    width: 210mm;
+    min-height: 297mm;
+    height: auto;
+    padding: 6mm;
+    margin: 0 auto 12mm auto;
+    background: #fff;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 0 30px rgba(0,0,0,0.1);
+    border-radius: 2px;
+}
+
+.laudo-pagina.ativa {
+    display: block !important;
+}
+
+/* Cabeçalho do Laudo */
+.laudo-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px double var(--primary-color);
+}
+
+.laudo-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.hospital-logo-img {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hospital-logo-img img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+.laudo-titulo h1 {
+    font-size: 1.8em;
+    margin: 0;
+    letter-spacing: 1px;
+    color: var(--primary-color);
+}
+
+.laudo-subtitulo {
+    font-size: 0.9em;
+    margin-top: 0.25rem;
+    color: var(--gray-color);
+}
+
+.laudo-divider {
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--border-color), transparent);
+    margin: 1.5rem 0;
+}
+
+/* Seções do Laudo */
+.laudo-section {
+    margin-bottom: 2rem;
+}
+
+.laudo-section-title {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.1em;
+}
+
+.laudo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.laudo-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.field-label {
+    color: var(--gray-color);
+    margin-bottom: 0.25rem;
+    font-size: 0.9em;
+}
+
+.field-value {
+    font-weight: 500;
+    color: var(--dark-color);
+    min-height: 1.5rem;
+    border-bottom: 1px dotted var(--border-color);
+    padding-bottom: 0.25rem;
+    font-size: 1em;
+}
+
+/* Informações do Exame */
+.exame-info {
+    margin: 1.5rem 0;
+}
+
+.exame-titulo h3 {
+    color: var(--dark-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.3em;
+}
+
+.exame-descricao {
+    color: var(--gray-color);
+    line-height: 1.6;
+    font-size: 0.95em;
+}
+
+/* Resultados */
+.resultados-container {
+    margin: 1.5rem 0;
+}
+
+.resultado-item {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-left: 3px solid var(--primary-color);
+    border-radius: 0 var(--border-radius-sm) var(--border-radius-sm) 0;
+}
+
+.resultado-label {
+    font-weight: 600;
+    color: var(--dark-color);
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.resultado-valor {
+    color: var(--dark-color);
+}
+
+/* Observações */
+.observacoes-container {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    min-height: 90mm;
+    background: #fff9e6;
+    border-left: 3px solid var(--warning-color);
+    border-radius: 0 var(--border-radius-sm) var(--border-radius-sm) 0;
+}
+
+.observacao-title {
+    font-weight: 600;
+    color: var(--dark-color);
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.observacao-text {
+    color: var(--dark-color);
+    line-height: 1.6;
+    white-space: pre-wrap;
+}
+
+/* Rodapé com Assinatura */
+.laudo-footer {
+  position: absolute;
+  bottom: 15mm;         /* respeita a margem inferior */
+  left: 20mm;
+  right: 20mm;
+
+  padding-top: 6mm;
+}
+
+.assinatura-container{
+  display: grid;
+  grid-template-columns: 1fr 180px; /* info | assinatura */
+  align-items: end;
+  gap: 12px;
+  justify-content: center;
+  margin: 0.75rem 0;   /* antes: 2rem 0 */
+  padding: 0.75rem 0;  /* antes: 2rem 0 */
+  border-top: 1px solid var(--border-color);
+}
+
+/* área da assinatura menor */
+.assinatura-preview-footer{
+  flex: unset;           /* neutraliza o flex antigo */
+  min-height: unset;     /* remove altura mínima */
+  height: auto;
+  text-align: right;
+}
+
+.assinatura-preview-footer img{
+  max-height: 45px;      /* antes: 80px */
+  max-width: 180px;
+  object-fit: contain;
+}
+
+/* info do médico mais “seca” e alinhada */
+.profissional-info{
+  text-align: left;      /* antes: center */
+  line-height: 1.2;
+}
+
+.profissional-nome{
+  font-size: 0.95em;     /* antes: 1.1em */
+  margin-bottom: 0.15rem;
+  min-height: unset;     /* antes: 2rem */
+  border-bottom: none;   /* remove linha grande */
+  padding-bottom: 0;
+  font-weight: 700;
+}
+
+.profissional-registro{
+  font-size: 0.8em;      /* antes: 0.9em */
+  margin-top: 0;
+}
+
+/* rodapé final (aviso) mais compacto */
+.laudo-rodape{
+  margin-top: 0.5rem;    /* antes: 2rem */
+  padding-top: 0.4rem;
+  font-size: 0.78em;     /* antes: 0.85em */
+}
+
+.profissional-nome {
+    font-size: 1.1em;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--dark-color);
+    min-height: 2rem;
+    border-bottom: 1px solid var(--dark-color);
+    padding-bottom: 0.5rem;
+}
+
+.profissional-registro {
+    font-size: 0.9em;
+    color: var(--gray-color);
+    margin-top: 0.25rem;
+}
+
+.laudo-rodape {
+    text-align: center;
+    margin-top: 1rem;
+    padding-top: 0rem;
+    border-top: 1px solid var(--border-color);
+    color: var(--gray-color);
+    font-size: 0.85em;
+}
+
+.laudo-aviso {
+    font-style: italic;
+    margin-top: 0.5rem;
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+/* Indicador de Anexos */
+.anexos-indicator {
+    background: #f8f9fa;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-sm);
+    padding: 1rem;
+    text-align: center;
+    margin: 1rem 0;
+    color: var(--gray-color);
+}
+
+.anexos-indicator i {
+    margin-right: 0.5rem;
+    color: var(--primary-color);
+}
+
+/* Conteúdo de Anexos */
+.anexos-content {
+    padding: 2rem;
+}
+
+.anexo-pagina-item {
+    text-align: center;
+}
+
+.anexo-pagina-titulo {
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.anexo-pagina-imagem {
+    margin: 2rem 0;
+}
+
+.anexo-pagina-imagem img {
+    max-width: 100%;
+    object-fit: contain;
+    display: block; 
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-sm);
+    padding: 0.5rem;
+    background: white;
+}
+
+.anexo-pagina-descricao {
+    color: var(--gray-color);
+    font-size: 0.9em;
+    margin-top: 1rem;
+}
+/* Garantir compatibilidade com html2canvas */
+.laudo-preview * {
+    box-sizing: border-box;
+}
+
+/* Forçar display block em elementos estruturais */
+.laudo-header,
+.laudo-section,
+.laudo-footer,
+.exame-info,
+.resultados-container,
+.conclusao-content,
+.observacoes-container,
+.anexos-content {
+    display: block !important;
+}
+
+/* Garantir que flex e grid containers mantenham layout */
+.laudo-logo,
+.laudo-section-title,
+.assinatura-container,
+.anexo-pagina-titulo {
+    display: flex !important;
+}
+
+.laudo-grid {
+    display: grid !important;
+}
+
+/* Garantir que elementos inline fiquem inline */
+.laudo-preview span,
+.laudo-preview strong,
+.laudo-preview em,
+.laudo-preview b,
+.laudo-preview i {
+    display: inline !important;
+}
+
+.laudo-footer .profissional-info {
+  line-height: 1.2;
+}
+
+.laudo-footer .profissional-nome {
+  font-size: 0.95em;
+}
+
+.laudo-footer .profissional-registro {
+  font-size: 0.8em;
+}
+
+
+/* ===============================
+   Tipo Sanguíneo – Destaque Clínico
+================================ */
+
+@media print {
+  .laudo-preview {
+    height: auto !important;
+    overflow: visible !important;
+  }
+
+  .laudo-pagina {
+    display: block !important;
+    page-break-after: always;
+  }
+}
+
+/* REMOVER BLOCO DE CONCLUSÃO (institucional) */
+.laudo-conclusao,
+.laudo-conclusao-box,
+.laudo-conclusao-text,
+.conclusao,
+.conclusao-box,
+.info-box,
+.info-institucional {
+  display: none !important;
+}
+
+/* ===============================
+   TABELA DE RESULTADOS TÉCNICOS
+   COM REFERÊNCIA
+================================ */
+
+.tabela-resultados {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  font-size: 0.9em;
+}
+
+.tabela-resultados thead {
+  background: #f2f4f7;
+}
+
+.tabela-resultados th,
+.tabela-resultados td {
+  border: 1px solid #d0d5dd;
+  padding: 8px 10px;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.tabela-resultados th {
+  font-weight: 600;
+}
+
+/* Larguras equilibradas */
+.tabela-resultados .col-parametro {
+  width: 40%;
+}
+
+.tabela-resultados .col-resultado {
+  width: 30%;
+}
+
+.tabela-resultados .col-referencia {
+  width: 30%;
+  color: #475467;
+  font-size: 0.85em;
+}
+
+.sem-resultados {
+  font-style: italic;
+  color: #667085;
+  margin-top: 1rem;
+}

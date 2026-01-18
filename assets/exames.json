@@ -1,0 +1,7294 @@
+{
+  "exames": [
+    {
+      "id": "lab_beta_hcg_completo",
+      "nome": "β-hCG (Beta hCG)",
+      "descricao": "Dosagem da gonadotrofina coriônica humana para diagnóstico e acompanhamento gestacional",
+      "categoria": "laboratorio",
+      "icone": "fa-vial",
+      "campos": [
+        {
+          "id": "tipo_exame",
+          "tipo": "select",
+          "label": "Tipo de Exame",
+          "opcoes": [
+            {
+              "valor": "qualitativo",
+              "label": "Qualitativo"
+            },
+            {
+              "valor": "quantitativo",
+              "label": "Quantitativo"
+            }
+          ],
+          "referencia": "Qualitativo / Quantitativo"
+        },
+        {
+          "id": "resultado_qualitativo",
+          "tipo": "select",
+          "label": "Resultado Qualitativo",
+          "opcoes": [
+            {
+              "valor": "negativo",
+              "label": "Negativo"
+            },
+            {
+              "valor": "positivo",
+              "label": "Positivo"
+            }
+          ],
+          "referencia": "Negativo"
+        },
+        {
+          "id": "beta_hcg_quantitativo",
+          "tipo": "number",
+          "label": "β-hCG Quantitativo",
+          "unidade": "mUI/mL",
+          "referencia": "< 5"
+        },
+        {
+          "id": "correspondencia_gestacional",
+          "tipo": "select",
+          "label": "Correspondência Gestacional",
+          "opcoes": [
+            {
+              "valor": "nao_gestante",
+              "label": "Não gestante"
+            },
+            {
+              "valor": "inicial",
+              "label": "Gestação inicial (até 4 semanas)"
+            },
+            {
+              "valor": "evolutiva",
+              "label": "Gestação evolutiva"
+            },
+            {
+              "valor": "incompativel",
+              "label": "Valor incompatível com IG referida"
+            }
+          ],
+          "referencia": "Não gestante"
+        },
+        {
+          "id": "evolucao_seriada",
+          "tipo": "select",
+          "label": "Evolução Seriada",
+          "opcoes": [
+            {
+              "valor": "nao_aplicavel",
+              "label": "Não aplicável"
+            },
+            {
+              "valor": "adequada",
+              "label": "Elevação adequada"
+            },
+            {
+              "valor": "inadequada",
+              "label": "Elevação inadequada"
+            },
+            {
+              "valor": "queda",
+              "label": "Queda dos níveis"
+            }
+          ],
+          "referencia": "Não aplicável"
+        },
+        {
+          "id": "impressao",
+          "tipo": "select",
+          "label": "Impressão Clínica",
+          "opcoes": [
+            {
+              "valor": "negativo",
+              "label": "Ausência de gestação"
+            },
+            {
+              "valor": "gestacao_inicial",
+              "label": "Gestação inicial confirmada"
+            },
+            {
+              "valor": "gestacao_evolutiva",
+              "label": "Gestação em evolução"
+            },
+            {
+              "valor": "suspeita_abortamento",
+              "label": "Suspeita de abortamento"
+            },
+            {
+              "valor": "suspeita_ectopica",
+              "label": "Suspeita de gestação ectópica"
+            }
+          ],
+          "referencia": "Negativo / Alterado"
+        },
+        {
+          "id": "interpretacao",
+          "tipo": "textarea",
+          "label": "Interpretação"
+        },
+        {
+          "id": "conclusao",
+          "tipo": "textarea",
+          "label": "Conclusão"
+        }
+      ]
+    },
+    {
+      "id": "lab_teste_dna",
+      "nome": "Teste de DNA",
+      "descricao": "Análise genética para identificação de vínculo biológico ou investigação genética",
+      "categoria": "laboratorio",
+      "icone": "fa-dna",
+      "campos": [
+        {
+          "id": "finalidade",
+          "tipo": "select",
+          "label": "Finalidade do Teste",
+          "opcoes": [
+            {
+              "valor": "paternidade",
+              "label": "Paternidade"
+            },
+            {
+              "valor": "maternidade",
+              "label": "Maternidade"
+            },
+            {
+              "valor": "parentesco",
+              "label": "Parentesco biológico"
+            },
+            {
+              "valor": "identificacao",
+              "label": "Identificação genética"
+            }
+          ],
+          "referencia": "Paternidade / Parentesco"
+        },
+        {
+          "id": "tipo_amostra",
+          "tipo": "select",
+          "label": "Tipo de Amostra",
+          "opcoes": [
+            {
+              "valor": "swab_bucal",
+              "label": "Swab bucal"
+            },
+            {
+              "valor": "sangue",
+              "label": "Sangue periférico"
+            },
+            {
+              "valor": "outro",
+              "label": "Outro"
+            }
+          ],
+          "referencia": "Swab bucal"
+        },
+        {
+          "id": "perfil_genetico",
+          "tipo": "select",
+          "label": "Perfil Genético",
+          "opcoes": [
+            {
+              "valor": "compativel",
+              "label": "Compatível"
+            },
+            {
+              "valor": "incompativel",
+              "label": "Incompatível"
+            }
+          ],
+          "referencia": "Compatível / Incompatível"
+        },
+        {
+          "id": "indice_probabilidade",
+          "tipo": "number",
+          "label": "Índice de Probabilidade",
+          "unidade": "%",
+          "referencia": "≥ 99.9"
+        },
+        {
+          "id": "conclusao_tecnica",
+          "tipo": "select",
+          "label": "Conclusão Técnica",
+          "opcoes": [
+            {
+              "valor": "confirmado",
+              "label": "Vínculo biológico confirmado"
+            },
+            {
+              "valor": "excluido",
+              "label": "Vínculo biológico excluído"
+            },
+            {
+              "valor": "inconclusivo",
+              "label": "Resultado inconclusivo"
+            }
+          ],
+          "referencia": "Confirmado / Excluído"
+        },
+        {
+          "id": "validade_legal",
+          "tipo": "select",
+          "label": "Validade Legal",
+          "opcoes": [
+            {
+              "valor": "sim",
+              "label": "Sim"
+            },
+            {
+              "valor": "nao",
+              "label": "Não"
+            }
+          ],
+          "referencia": "Sim / Não"
+        },
+        {
+          "id": "observacoes_tecnicas",
+          "tipo": "select",
+          "label": "Observações Técnicas",
+          "opcoes": [
+            {
+              "valor": "sem_intercorrencias",
+              "label": "Sem intercorrências"
+            },
+            {
+              "valor": "amostra_limitada",
+              "label": "Amostra limitada"
+            },
+            {
+              "valor": "necessita_recoleta",
+              "label": "Necessita recoleta"
+            }
+          ],
+          "referencia": "Sem intercorrências"
+        },
+        {
+          "id": "interpretacao",
+          "tipo": "textarea",
+          "label": "Interpretação"
+        },
+        {
+          "id": "conclusao",
+          "tipo": "textarea",
+          "label": "Conclusão"
+        }
+      ]
+    },
+    {
+      "id": "lab_hemograma_completo",
+      "nome": "Hemograma Completo",
+      "descricao": "Avaliação quantitativa e qualitativa das células sanguíneas",
+      "categoria": "laboratorio",
+      "icone": "fa-tint",
+      "campos": [
+        {
+          "id": "hemacias",
+          "tipo": "number",
+          "label": "Hemácias",
+          "unidade": "milhões/mm³",
+          "referencia": "4.0 – 5.5"
+        },
+        {
+          "id": "hemoglobina",
+          "tipo": "number",
+          "label": "Hemoglobina",
+          "unidade": "g/dL",
+          "referencia": "12 – 16"
+        },
+        {
+          "id": "hematocrito",
+          "tipo": "number",
+          "label": "Hematócrito",
+          "unidade": "%",
+          "referencia": "36 – 48"
+        },
+        {
+          "id": "vcm",
+          "tipo": "number",
+          "label": "VCM (Volume Corpuscular Médio)",
+          "unidade": "fL",
+          "referencia": "80 – 100"
+        },
+        {
+          "id": "hcm",
+          "tipo": "number",
+          "label": "HCM (Hemoglobina Corpuscular Média)",
+          "unidade": "pg",
+          "referencia": "27 – 33"
+        },
+        {
+          "id": "chcm",
+          "tipo": "number",
+          "label": "CHCM (Concentração de Hemoglobina Corpuscular Média)",
+          "unidade": "g/dL",
+          "referencia": "32 – 36"
+        },
+        {
+          "id": "anisocitose",
+          "tipo": "select",
+          "label": "Anisocitose",
+          "opcoes": [
+            {
+              "valor": "ausente",
+              "label": "Ausente"
+            },
+            {
+              "valor": "presente",
+              "label": "Presente"
+            }
+          ],
+          "referencia": "Ausente"
+        },
+        {
+          "id": "leucocitos_totais",
+          "tipo": "number",
+          "label": "Leucócitos Totais",
+          "unidade": "/mm³",
+          "referencia": "4.000 – 10.000"
+        },
+        {
+          "id": "neutrofilos",
+          "tipo": "number",
+          "label": "Neutrófilos",
+          "unidade": "%",
+          "referencia": "40 – 70"
+        },
+        {
+          "id": "linfocitos",
+          "tipo": "number",
+          "label": "Linfócitos",
+          "unidade": "%",
+          "referencia": "20 – 45"
+        },
+        {
+          "id": "monocitos",
+          "tipo": "number",
+          "label": "Monócitos",
+          "unidade": "%",
+          "referencia": "2 – 10"
+        },
+        {
+          "id": "eosinofilos",
+          "tipo": "number",
+          "label": "Eosinófilos",
+          "unidade": "%",
+          "referencia": "1 – 6"
+        },
+        {
+          "id": "basofilos",
+          "tipo": "number",
+          "label": "Basófilos",
+          "unidade": "%",
+          "referencia": "< 1"
+        },
+        {
+          "id": "plaquetas",
+          "tipo": "number",
+          "label": "Plaquetas",
+          "unidade": "/mm³",
+          "referencia": "150.000 – 450.000"
+        },
+        {
+          "id": "agregados_plaquetarios",
+          "tipo": "select",
+          "label": "Agregados Plaquetários",
+          "opcoes": [
+            {
+              "valor": "ausente",
+              "label": "Ausente"
+            },
+            {
+              "valor": "presente",
+              "label": "Presente"
+            }
+          ],
+          "referencia": "Ausente"
+        },
+        {
+          "id": "impressao",
+          "tipo": "select",
+          "label": "Impressão Global",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Hemograma dentro da normalidade"
+            },
+            {
+              "valor": "anemia",
+              "label": "Sugestivo de anemia"
+            },
+            {
+              "valor": "infeccao",
+              "label": "Sugestivo de processo infeccioso"
+            },
+            {
+              "valor": "alterado",
+              "label": "Hemograma alterado"
+            }
+          ],
+          "referencia": "Normal / Alterado"
+        },
+        {
+          "id": "interpretacao",
+          "tipo": "textarea",
+          "label": "Interpretação"
+        },
+        {
+          "id": "conclusao",
+          "tipo": "textarea",
+          "label": "Conclusão"
+        }
+      ]
+    },
+    {
+      "id": "lab_teste_coombs",
+      "nome": "Teste de Coombs",
+      "descricao": "Pesquisa de anticorpos irregulares associados a hemólise",
+      "categoria": "laboratorio",
+      "icone": "fa-droplet",
+      "campos": [
+        {
+          "id": "tipo_coombs",
+          "tipo": "select",
+          "label": "Tipo de Coombs",
+          "opcoes": [
+            {
+              "valor": "direto",
+              "label": "Coombs Direto"
+            },
+            {
+              "valor": "indireto",
+              "label": "Coombs Indireto"
+            }
+          ],
+          "referencia": "—"
+        },
+        {
+          "id": "resultado",
+          "tipo": "select",
+          "label": "Resultado",
+          "opcoes": [
+            {
+              "valor": "negativo",
+              "label": "Negativo"
+            },
+            {
+              "valor": "positivo",
+              "label": "Positivo"
+            }
+          ],
+          "referencia": "Negativo"
+        },
+        {
+          "id": "impressao",
+          "tipo": "select",
+          "label": "Impressão Laboratorial",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Sem evidência de hemólise imunológica"
+            },
+            {
+              "valor": "hemolise",
+              "label": "Hemólise imunomediada"
+            }
+          ],
+          "referencia": "Normal / Alterado"
+        },
+        {
+          "id": "interpretacao",
+          "tipo": "textarea",
+          "label": "Interpretação"
+        },
+        {
+          "id": "conclusao",
+          "tipo": "textarea",
+          "label": "Conclusão"
+        }
+      ]
+    },
+    {
+      "id": "lab_sorologia",
+      "nome": "Sorologia",
+      "descricao": "Pesquisa de anticorpos para doenças infecciosas",
+      "categoria": "laboratorio",
+      "icone": "fa-vials",
+      "campos": [
+        {
+          "id": "agente",
+          "tipo": "select",
+          "label": "Agente Pesquisado",
+          "opcoes": [
+            {
+              "valor": "hiv",
+              "label": "HIV"
+            },
+            {
+              "valor": "hepatite_b",
+              "label": "Hepatite B"
+            },
+            {
+              "valor": "hepatite_c",
+              "label": "Hepatite C"
+            },
+            {
+              "valor": "sifilis",
+              "label": "Sífilis"
+            },
+            {
+              "valor": "toxoplasmose",
+              "label": "Toxoplasmose"
+            },
+            {
+              "valor": "rubéola",
+              "label": "Rubéola"
+            },
+            {
+              "valor": "citomegalovirus",
+              "label": "Citomegalovírus"
+            }
+          ],
+          "referencia": "—"
+        },
+        {
+          "id": "anticorpo",
+          "tipo": "select",
+          "label": "Anticorpo",
+          "opcoes": [
+            {
+              "valor": "igg",
+              "label": "IgG"
+            },
+            {
+              "valor": "igm",
+              "label": "IgM"
+            }
+          ],
+          "referencia": "—"
+        },
+        {
+          "id": "resultado",
+          "tipo": "select",
+          "label": "Resultado",
+          "opcoes": [
+            {
+              "valor": "reagente",
+              "label": "Reagente"
+            },
+            {
+              "valor": "nao_reagente",
+              "label": "Não reagente"
+            },
+            {
+              "valor": "indeterminado",
+              "label": "Indeterminado"
+            }
+          ],
+          "referencia": "Não reagente"
+        },
+        {
+          "id": "impressao",
+          "tipo": "select",
+          "label": "Impressão Sorológica",
+          "opcoes": [
+            {
+              "valor": "negativa",
+              "label": "Sorologia negativa"
+            },
+            {
+              "valor": "infeccao_previa",
+              "label": "Contato prévio / imunidade"
+            },
+            {
+              "valor": "infeccao_ativa",
+              "label": "Infecção ativa"
+            }
+          ],
+          "referencia": "Normal / Alterado"
+        },
+        {
+          "id": "interpretacao",
+          "tipo": "textarea",
+          "label": "Interpretação"
+        },
+        {
+          "id": "conclusao",
+          "tipo": "textarea",
+          "label": "Conclusão"
+        }
+      ]
+    },
+    {
+      "id": "lab_perfil_lipidico_completo",
+      "nome": "Perfil Lipídico Completo",
+      "descricao": "Avaliação do metabolismo lipídico e do risco cardiovascular",
+      "categoria": "laboratorio",
+      "icone": "fa-heartbeat",
+      "campos": [
+        {
+          "id": "colesterol_total",
+          "tipo": "number",
+          "label": "Colesterol Total",
+          "unidade": "mg/dL",
+          "referencia": "< 200"
+        },
+        {
+          "id": "hdl",
+          "tipo": "number",
+          "label": "HDL (Colesterol HDL)",
+          "unidade": "mg/dL",
+          "referencia": "≥ 40"
+        },
+        {
+          "id": "ldl",
+          "tipo": "number",
+          "label": "LDL (Colesterol LDL)",
+          "unidade": "mg/dL",
+          "referencia": "< 130"
+        },
+        {
+          "id": "vldl",
+          "tipo": "number",
+          "label": "VLDL",
+          "unidade": "mg/dL",
+          "referencia": "< 30"
+        },
+        {
+          "id": "triglicerideos",
+          "tipo": "number",
+          "label": "Triglicerídeos",
+          "unidade": "mg/dL",
+          "referencia": "< 150"
+        },
+        {
+          "id": "colesterol_nao_hdl",
+          "tipo": "number",
+          "label": "Colesterol Não-HDL",
+          "unidade": "mg/dL",
+          "referencia": "< 160"
+        },
+        {
+          "id": "indice_aterogenico",
+          "tipo": "number",
+          "label": "Índice Aterogênico (CT/HDL)",
+          "referencia": "< 5.0"
+        },
+        {
+          "id": "impressao",
+          "tipo": "select",
+          "label": "Impressão Clínica",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Perfil lipídico dentro da normalidade"
+            },
+            {
+              "valor": "dislipidemia_isolada",
+              "label": "Dislipidemia isolada"
+            },
+            {
+              "valor": "alto_risco",
+              "label": "Alto risco cardiovascular"
+            },
+            {
+              "valor": "alterado",
+              "label": "Perfil lipídico alterado"
+            }
+          ],
+          "referencia": "Normal / Alterado"
+        },
+        {
+          "id": "interpretacao",
+          "tipo": "textarea",
+          "label": "Interpretação"
+        },
+        {
+          "id": "conclusao",
+          "tipo": "textarea",
+          "label": "Conclusão"
+        }
+      ]
+    },
+    {
+      "id": "lab_glicemia_completa",
+      "nome": "Glicemia",
+      "descricao": "Avaliação da glicose plasmática e do metabolismo glicídico",
+      "categoria": "laboratorio",
+      "icone": "fa-vial",
+      "campos": [
+        {
+          "id": "tipo_coleta",
+          "tipo": "select",
+          "label": "Tipo de Coleta",
+          "opcoes": [
+            {
+              "valor": "jejum",
+              "label": "Jejum"
+            },
+            {
+              "valor": "casual",
+              "label": "Casual"
+            },
+            {
+              "valor": "pos_prandial",
+              "label": "Pós-prandial"
+            }
+          ],
+          "referencia": "Jejum / Casual / Pós-prandial"
+        },
+        {
+          "id": "glicose",
+          "tipo": "number",
+          "label": "Glicose Plasmática",
+          "unidade": "mg/dL",
+          "referencia": "Jejum < 100"
+        },
+        {
+          "id": "sintomas_associados",
+          "tipo": "select",
+          "label": "Sintomas Associados",
+          "opcoes": [
+            {
+              "valor": "ausente",
+              "label": "Ausentes"
+            },
+            {
+              "valor": "poliuria",
+              "label": "Poliúria"
+            },
+            {
+              "valor": "polidipsia",
+              "label": "Polidipsia"
+            },
+            {
+              "valor": "polifagia",
+              "label": "Polifagia"
+            }
+          ],
+          "referencia": "Ausentes"
+        },
+        {
+          "id": "impressao",
+          "tipo": "select",
+          "label": "Impressão Clínica",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Glicemia dentro da normalidade"
+            },
+            {
+              "valor": "hipoglicemia",
+              "label": "Hipoglicemia"
+            },
+            {
+              "valor": "prediabetes",
+              "label": "Glicemia sugestiva de pré-diabetes"
+            },
+            {
+              "valor": "diabetes",
+              "label": "Glicemia compatível com diabetes"
+            }
+          ],
+          "referencia": "Normal / Alterado"
+        },
+        {
+          "id": "interpretacao",
+          "tipo": "textarea",
+          "label": "Interpretação"
+        },
+        {
+          "id": "conclusao",
+          "tipo": "textarea",
+          "label": "Conclusão"
+        }
+      ]
+    },
+    {
+      "id": "lab_hba1c_completa",
+      "nome": "Hemoglobina Glicada (HbA1c)",
+      "descricao": "Avaliação do controle glicêmico médio dos últimos 2 a 3 meses",
+      "categoria": "laboratorio",
+      "icone": "fa-chart-line",
+      "campos": [
+        {
+          "id": "hba1c",
+          "tipo": "number",
+          "label": "HbA1c",
+          "unidade": "%",
+          "referencia": "< 5.7"
+        },
+        {
+          "id": "glicemia_media_estimada",
+          "tipo": "number",
+          "label": "Glicemia Média Estimada (eAG)",
+          "unidade": "mg/dL",
+          "referencia": "—"
+        },
+        {
+          "id": "controle_glicemico",
+          "tipo": "select",
+          "label": "Controle Glicêmico",
+          "opcoes": [
+            {
+              "valor": "adequado",
+              "label": "Adequado"
+            },
+            {
+              "valor": "parcial",
+              "label": "Parcialmente controlado"
+            },
+            {
+              "valor": "inadequado",
+              "label": "Inadequado"
+            }
+          ],
+          "referencia": "Adequado"
+        },
+        {
+          "id": "impressao",
+          "tipo": "select",
+          "label": "Impressão Clínica",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Controle glicêmico normal"
+            },
+            {
+              "valor": "prediabetes",
+              "label": "Compatível com pré-diabetes"
+            },
+            {
+              "valor": "diabetes_controlado",
+              "label": "Diabetes controlado"
+            },
+            {
+              "valor": "diabetes_descompensado",
+              "label": "Diabetes descompensado"
+            }
+          ],
+          "referencia": "Normal / Alterado"
+        },
+        {
+          "id": "interpretacao",
+          "tipo": "textarea",
+          "label": "Interpretação"
+        },
+        {
+          "id": "conclusao",
+          "tipo": "textarea",
+          "label": "Conclusão"
+        }
+      ]
+    },
+    {
+      "id": "lab_funcao_renal_completa",
+      "nome": "Função Renal",
+      "descricao": "Avaliação da função renal e da filtração glomerular",
+      "categoria": "laboratorio",
+      "icone": "fa-vial",
+      "campos": [
+        {
+          "id": "ureia",
+          "tipo": "number",
+          "label": "Ureia",
+          "unidade": "mg/dL",
+          "referencia": "10 – 50"
+        },
+        {
+          "id": "creatinina",
+          "tipo": "number",
+          "label": "Creatinina",
+          "unidade": "mg/dL",
+          "referencia": "0.6 – 1.3"
+        },
+        {
+          "id": "taxa_filtracao_glomerular",
+          "tipo": "number",
+          "label": "Taxa de Filtração Glomerular (TFG estimada)",
+          "unidade": "mL/min/1,73m²",
+          "referencia": "≥ 90"
+        },
+        {
+          "id": "estagio_drc",
+          "tipo": "select",
+          "label": "Estágio de Doença Renal Crônica (DRC)",
+          "opcoes": [
+            {
+              "valor": "nao_aplicavel",
+              "label": "Não aplicável"
+            },
+            {
+              "valor": "estagio_1",
+              "label": "Estágio 1"
+            },
+            {
+              "valor": "estagio_2",
+              "label": "Estágio 2"
+            },
+            {
+              "valor": "estagio_3a",
+              "label": "Estágio 3A"
+            },
+            {
+              "valor": "estagio_3b",
+              "label": "Estágio 3B"
+            },
+            {
+              "valor": "estagio_4",
+              "label": "Estágio 4"
+            },
+            {
+              "valor": "estagio_5",
+              "label": "Estágio 5"
+            }
+          ],
+          "referencia": "Não aplicável"
+        },
+        {
+          "id": "relacao_ureia_creatinina",
+          "tipo": "number",
+          "label": "Relação Ureia/Creatinina",
+          "referencia": "10 – 20"
+        },
+        {
+          "id": "impressao",
+          "tipo": "select",
+          "label": "Impressão Clínica",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Função renal preservada"
+            },
+            {
+              "valor": "azotemia_prerrenal",
+              "label": "Sugestivo de azotemia pré-renal"
+            },
+            {
+              "valor": "insuficiencia_renal",
+              "label": "Insuficiência renal"
+            },
+            {
+              "valor": "drc",
+              "label": "Doença renal crônica"
+            }
+          ],
+          "referencia": "Normal / Alterado"
+        },
+        {
+          "id": "interpretacao",
+          "tipo": "textarea",
+          "label": "Interpretação"
+        },
+        {
+          "id": "conclusao",
+          "tipo": "textarea",
+          "label": "Conclusão"
+        }
+      ]
+    },
+    {
+      "id": "lab_urina_analise",
+      "nome": "Urina – Análise (EAS / Tipo I)",
+      "descricao": "Análise físico-química e microscópica da urina",
+      "categoria": "laboratorio",
+      "icone": "fa-flask",
+      "campos": [
+        {
+          "id": "cor",
+          "tipo": "select",
+          "label": "Cor",
+          "opcoes": [
+            {
+              "valor": "amarelo_claro",
+              "label": "Amarelo claro"
+            },
+            {
+              "valor": "amarelo_escuro",
+              "label": "Amarelo escuro"
+            },
+            {
+              "valor": "avermelhada",
+              "label": "Avermelhada"
+            }
+          ],
+          "referencia": "Amarelo claro"
+        },
+        {
+          "id": "aspecto",
+          "tipo": "select",
+          "label": "Aspecto",
+          "opcoes": [
+            {
+              "valor": "limpido",
+              "label": "Límpido"
+            },
+            {
+              "valor": "turvo",
+              "label": "Turvo"
+            }
+          ],
+          "referencia": "Límpido"
+        },
+        {
+          "id": "densidade",
+          "tipo": "number",
+          "label": "Densidade",
+          "referencia": "1.005 – 1.030"
+        },
+        {
+          "id": "ph",
+          "tipo": "number",
+          "label": "pH",
+          "referencia": "4.5 – 8.0"
+        },
+        {
+          "id": "proteinas",
+          "tipo": "select",
+          "label": "Proteínas",
+          "opcoes": [
+            {
+              "valor": "ausente",
+              "label": "Ausente"
+            },
+            {
+              "valor": "tracos",
+              "label": "Traços"
+            },
+            {
+              "valor": "presente",
+              "label": "Presente"
+            }
+          ],
+          "referencia": "Ausente"
+        },
+        {
+          "id": "glicose",
+          "tipo": "select",
+          "label": "Glicose",
+          "opcoes": [
+            {
+              "valor": "ausente",
+              "label": "Ausente"
+            },
+            {
+              "valor": "presente",
+              "label": "Presente"
+            }
+          ],
+          "referencia": "Ausente"
+        },
+        {
+          "id": "cetonas",
+          "tipo": "select",
+          "label": "Corpos Cetônicos",
+          "opcoes": [
+            {
+              "valor": "ausentes",
+              "label": "Ausentes"
+            },
+            {
+              "valor": "presentes",
+              "label": "Presentes"
+            }
+          ],
+          "referencia": "Ausentes"
+        },
+        {
+          "id": "nitrito",
+          "tipo": "select",
+          "label": "Nitrito",
+          "opcoes": [
+            {
+              "valor": "negativo",
+              "label": "Negativo"
+            },
+            {
+              "valor": "positivo",
+              "label": "Positivo"
+            }
+          ],
+          "referencia": "Negativo"
+        },
+        {
+          "id": "leucocitos",
+          "tipo": "number",
+          "label": "Leucócitos",
+          "unidade": "por campo",
+          "referencia": "Até 5"
+        },
+        {
+          "id": "hemacias",
+          "tipo": "number",
+          "label": "Hemácias",
+          "unidade": "por campo",
+          "referencia": "Até 3"
+        },
+        {
+          "id": "cilindros",
+          "tipo": "select",
+          "label": "Cilindros",
+          "opcoes": [
+            {
+              "valor": "ausentes",
+              "label": "Ausentes"
+            },
+            {
+              "valor": "hialinos",
+              "label": "Hialinos"
+            },
+            {
+              "valor": "patologicos",
+              "label": "Patológicos"
+            }
+          ],
+          "referencia": "Ausentes"
+        },
+        {
+          "id": "bacterias",
+          "tipo": "select",
+          "label": "Bactérias",
+          "opcoes": [
+            {
+              "valor": "ausentes",
+              "label": "Ausentes"
+            },
+            {
+              "valor": "presentes",
+              "label": "Presentes"
+            }
+          ],
+          "referencia": "Ausentes"
+        },
+        {
+          "id": "impressao",
+          "tipo": "select",
+          "label": "Impressão Laboratorial",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Exame dentro da normalidade"
+            },
+            {
+              "valor": "infecao_urinaria",
+              "label": "Sugestivo de infecção urinária"
+            },
+            {
+              "valor": "alteracao_metabolica",
+              "label": "Alterações metabólicas"
+            }
+          ],
+          "referencia": "Normal / Alterado"
+        },
+        {
+          "id": "interpretacao",
+          "tipo": "textarea",
+          "label": "Interpretação"
+        },
+        {
+          "id": "conclusao",
+          "tipo": "textarea",
+          "label": "Conclusão"
+        }
+      ]
+    },
+    {
+      "id": "lab_funcao_hepatica_completa",
+      "nome": "Função Hepática",
+      "descricao": "Avaliação da função hepática, integridade hepatocelular e vias biliares",
+      "categoria": "laboratorio",
+      "icone": "fa-flask",
+      "campos": [
+        {
+          "id": "tgo_ast",
+          "tipo": "number",
+          "label": "TGO / AST",
+          "unidade": "U/L",
+          "referencia": "< 40"
+        },
+        {
+          "id": "tgp_alt",
+          "tipo": "number",
+          "label": "TGP / ALT",
+          "unidade": "U/L",
+          "referencia": "< 41"
+        },
+        {
+          "id": "relacao_ast_alt",
+          "tipo": "number",
+          "label": "Relação AST/ALT",
+          "referencia": "< 1.0"
+        },
+        {
+          "id": "fosfatase_alcalina",
+          "tipo": "number",
+          "label": "Fosfatase Alcalina",
+          "unidade": "U/L",
+          "referencia": "40 – 130"
+        },
+        {
+          "id": "ggt",
+          "tipo": "number",
+          "label": "GGT",
+          "unidade": "U/L",
+          "referencia": "< 60"
+        },
+        {
+          "id": "bilirrubina_total",
+          "tipo": "number",
+          "label": "Bilirrubina Total",
+          "unidade": "mg/dL",
+          "referencia": "0.3 – 1.2"
+        },
+        {
+          "id": "bilirrubina_direta",
+          "tipo": "number",
+          "label": "Bilirrubina Direta",
+          "unidade": "mg/dL",
+          "referencia": "< 0.3"
+        },
+        {
+          "id": "bilirrubina_indireta",
+          "tipo": "number",
+          "label": "Bilirrubina Indireta",
+          "unidade": "mg/dL",
+          "referencia": "< 0.9"
+        },
+        {
+          "id": "albumina",
+          "tipo": "number",
+          "label": "Albumina",
+          "unidade": "g/dL",
+          "referencia": "3.5 – 5.0"
+        },
+        {
+          "id": "tempo_protrombina",
+          "tipo": "number",
+          "label": "Tempo de Protrombina (TP)",
+          "unidade": "segundos",
+          "referencia": "—"
+        },
+        {
+          "id": "inr",
+          "tipo": "number",
+          "label": "INR",
+          "referencia": "0.8 – 1.2"
+        },
+        {
+          "id": "impressao",
+          "tipo": "select",
+          "label": "Impressão Clínica",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Função hepática preservada"
+            },
+            {
+              "valor": "hepatocelular",
+              "label": "Padrão hepatocelular"
+            },
+            {
+              "valor": "colestatico",
+              "label": "Padrão colestático"
+            },
+            {
+              "valor": "misto",
+              "label": "Padrão misto"
+            },
+            {
+              "valor": "insuficiencia_hepatica",
+              "label": "Insuficiência hepática"
+            }
+          ],
+          "referencia": "Normal / Alterado"
+        },
+        {
+          "id": "interpretacao",
+          "tipo": "textarea",
+          "label": "Interpretação"
+        },
+        {
+          "id": "conclusao",
+          "tipo": "textarea",
+          "label": "Conclusão"
+        }
+      ]
+    },
+    {
+      "id": "lab_eletrolitos_completos",
+      "nome": "Eletrólitos Séricos",
+      "descricao": "Avaliação do equilíbrio hidroeletrolítico e metabólico",
+      "categoria": "laboratorio",
+      "icone": "fa-bolt",
+      "campos": [
+        {
+          "id": "sodio",
+          "tipo": "number",
+          "label": "Sódio (Na⁺)",
+          "unidade": "mEq/L",
+          "referencia": "135 – 145"
+        },
+        {
+          "id": "potassio",
+          "tipo": "number",
+          "label": "Potássio (K⁺)",
+          "unidade": "mEq/L",
+          "referencia": "3.5 – 5.1"
+        },
+        {
+          "id": "calcio_total",
+          "tipo": "number",
+          "label": "Cálcio Total",
+          "unidade": "mg/dL",
+          "referencia": "8.6 – 10.2"
+        },
+        {
+          "id": "magnesio",
+          "tipo": "number",
+          "label": "Magnésio (Mg²⁺)",
+          "unidade": "mg/dL",
+          "referencia": "1.7 – 2.4"
+        },
+        {
+          "id": "padrao_eletrolitico",
+          "tipo": "select",
+          "label": "Padrão Eletrolítico",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Equilíbrio eletrolítico preservado"
+            },
+            {
+              "valor": "hiponatremia",
+              "label": "Hiponatremia"
+            },
+            {
+              "valor": "hipernatremia",
+              "label": "Hipernatremia"
+            },
+            {
+              "valor": "hipocalemia",
+              "label": "Hipocalemia"
+            },
+            {
+              "valor": "hipercalemia",
+              "label": "Hipercalemia"
+            },
+            {
+              "valor": "hipocalcemia",
+              "label": "Hipocalcemia"
+            },
+            {
+              "valor": "hipomagnesemia",
+              "label": "Hipomagnesemia"
+            }
+          ],
+          "referencia": "Normal"
+        },
+        {
+          "id": "correlacao_clinica",
+          "tipo": "select",
+          "label": "Correlação Clínica",
+          "opcoes": [
+            {
+              "valor": "assintomatico",
+              "label": "Assintomático"
+            },
+            {
+              "valor": "neurologica",
+              "label": "Sintomas neurológicos"
+            },
+            {
+              "valor": "cardiaca",
+              "label": "Sintomas cardíacos"
+            },
+            {
+              "valor": "muscular",
+              "label": "Sintomas musculares"
+            }
+          ],
+          "referencia": "Assintomático"
+        },
+        {
+          "id": "impressao",
+          "tipo": "select",
+          "label": "Impressão Clínica",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Eletrólitos dentro da normalidade"
+            },
+            {
+              "valor": "disturbio_leve",
+              "label": "Distúrbio eletrolítico leve"
+            },
+            {
+              "valor": "disturbio_moderado",
+              "label": "Distúrbio eletrolítico moderado"
+            },
+            {
+              "valor": "disturbio_grave",
+              "label": "Distúrbio eletrolítico grave"
+            }
+          ],
+          "referencia": "Normal / Alterado"
+        },
+        {
+          "id": "interpretacao",
+          "tipo": "textarea",
+          "label": "Interpretação"
+        },
+        {
+          "id": "conclusao",
+          "tipo": "textarea",
+          "label": "Conclusão"
+        }
+      ]
+    },
+    {
+      "id": "lab_dtpa",
+      "nome": "dTpa (Difteria, Tétano e Coqueluche)",
+      "descricao": "Registro e avaliação de imunização dTpa",
+      "categoria": "laboratorio",
+      "icone": "fa-syringe",
+      "campos": [
+        {
+          "id": "situacao_vacinal",
+          "tipo": "select",
+          "label": "Situação Vacinal",
+          "opcoes": [
+            {
+              "valor": "em_dia",
+              "label": "Em dia"
+            },
+            {
+              "valor": "atrasada",
+              "label": "Atrasada"
+            },
+            {
+              "valor": "nao_vacinado",
+              "label": "Não vacinado"
+            }
+          ],
+          "referencia": "—"
+        },
+        {
+          "id": "dose",
+          "tipo": "select",
+          "label": "Dose Avaliada",
+          "opcoes": [
+            {
+              "valor": "primeira",
+              "label": "1ª dose"
+            },
+            {
+              "valor": "reforco",
+              "label": "Reforço"
+            }
+          ],
+          "referencia": "—"
+        },
+        {
+          "id": "indicacao",
+          "tipo": "select",
+          "label": "Indicação Clínica",
+          "opcoes": [
+            {
+              "valor": "gestante",
+              "label": "Gestante"
+            },
+            {
+              "valor": "adulto",
+              "label": "Adulto"
+            },
+            {
+              "valor": "profissional_saude",
+              "label": "Profissional de saúde"
+            }
+          ],
+          "referencia": "—"
+        },
+        {
+          "id": "impressao",
+          "tipo": "select",
+          "label": "Impressão Vacinal",
+          "opcoes": [
+            {
+              "valor": "adequada",
+              "label": "Imunização adequada"
+            },
+            {
+              "valor": "necessita_dose",
+              "label": "Necessita atualização vacinal"
+            }
+          ],
+          "referencia": "Normal / Alterado"
+        },
+        {
+          "id": "interpretacao",
+          "tipo": "textarea",
+          "label": "Interpretação"
+        },
+        {
+          "id": "conclusao",
+          "tipo": "textarea",
+          "label": "Conclusão"
+        }
+      ]
+    },
+    {
+      "id": "img_rx_torax",
+      "nome": "Raio-X de Tórax",
+      "descricao": "Avaliação radiográfica do tórax, pulmões, mediastino e arcabouço ósseo",
+      "categoria": "imagem",
+      "icone": "fa-x-ray",
+      "campos": [
+        {
+          "id": "incidencia",
+          "tipo": "select",
+          "label": "Incidência",
+          "opcoes": [
+            {
+              "valor": "pa",
+              "label": "PA"
+            },
+            {
+              "valor": "ap",
+              "label": "AP"
+            },
+            {
+              "valor": "perfil",
+              "label": "Perfil"
+            }
+          ],
+          "referencia": "PA"
+        },
+        {
+          "id": "padrao_pulmonar",
+          "tipo": "select",
+          "label": "Padrão Pulmonar",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Normal"
+            },
+            {
+              "valor": "intersticial",
+              "label": "Intersticial"
+            },
+            {
+              "valor": "alveolar",
+              "label": "Alveolar"
+            }
+          ],
+          "referencia": "Normal"
+        },
+        {
+          "id": "derrame_pleural",
+          "tipo": "select",
+          "label": "Derrame Pleural",
+          "opcoes": [
+            {
+              "valor": "ausente",
+              "label": "Ausente"
+            },
+            {
+              "valor": "unilateral",
+              "label": "Unilateral"
+            },
+            {
+              "valor": "bilateral",
+              "label": "Bilateral"
+            }
+          ],
+          "referencia": "Ausente"
+        },
+        {
+          "id": "silhueta_cardiaca",
+          "tipo": "select",
+          "label": "Silhueta Cardíaca",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Normal"
+            },
+            {
+              "valor": "aumentada",
+              "label": "Aumentada"
+            }
+          ],
+          "referencia": "Normal"
+        },
+        {
+          "id": "impressao",
+          "tipo": "select",
+          "label": "Impressão Radiológica",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Sem alterações"
+            },
+            {
+              "valor": "infeccioso",
+              "label": "Sugestivo de infecção"
+            },
+            {
+              "valor": "congestivo",
+              "label": "Sugestivo de congestão"
+            }
+          ],
+          "referencia": "Normal / Alterado"
+        },
+        {
+          "id": "interpretacao",
+          "tipo": "textarea",
+          "label": "Interpretação"
+        },
+        {
+          "id": "conclusao",
+          "tipo": "textarea",
+          "label": "Conclusão"
+        }
+      ]
+    },
+    {
+      "id": "img_rx_coluna",
+      "nome": "Raio-X de Coluna Vertebral",
+      "descricao": "Avaliação radiográfica da coluna vertebral",
+      "categoria": "imagem",
+      "icone": "fa-x-ray",
+      "campos": [
+        {
+          "id": "segmento",
+          "tipo": "select",
+          "label": "Segmento Avaliado",
+          "opcoes": [
+            {
+              "valor": "cervical",
+              "label": "Cervical"
+            },
+            {
+              "valor": "toracica",
+              "label": "Torácica"
+            },
+            {
+              "valor": "lombar",
+              "label": "Lombar"
+            }
+          ],
+          "referencia": "—"
+        },
+        {
+          "id": "alinhamento",
+          "tipo": "select",
+          "label": "Alinhamento",
+          "opcoes": [
+            {
+              "valor": "preservado",
+              "label": "Preservado"
+            },
+            {
+              "valor": "alterado",
+              "label": "Alterado"
+            }
+          ],
+          "referencia": "Preservado"
+        },
+        {
+          "id": "espacos_discais",
+          "tipo": "select",
+          "label": "Espaços Discais",
+          "opcoes": [
+            {
+              "valor": "preservados",
+              "label": "Preservados"
+            },
+            {
+              "valor": "reduzidos",
+              "label": "Reduzidos"
+            }
+          ],
+          "referencia": "Preservados"
+        },
+        {
+          "id": "osteofitos",
+          "tipo": "select",
+          "label": "Osteófitos",
+          "opcoes": [
+            {
+              "valor": "ausente",
+              "label": "Ausentes"
+            },
+            {
+              "valor": "presentes",
+              "label": "Presentes"
+            }
+          ],
+          "referencia": "Ausentes"
+        },
+        {
+          "id": "impressao",
+          "tipo": "select",
+          "label": "Impressão Radiológica",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Sem alterações significativas"
+            },
+            {
+              "valor": "degenerativa",
+              "label": "Alterações degenerativas"
+            },
+            {
+              "valor": "traumatica",
+              "label": "Achados pós-traumáticos"
+            }
+          ],
+          "referencia": "Normal / Alterado"
+        },
+        {
+          "id": "interpretacao",
+          "tipo": "textarea",
+          "label": "Interpretação"
+        },
+        {
+          "id": "conclusao",
+          "tipo": "textarea",
+          "label": "Conclusão"
+        }
+      ]
+    },
+    {
+      "id": "img_rx_membros",
+      "nome": "Raio-X de Membros",
+      "descricao": "Avaliação radiográfica de membros superiores ou inferiores",
+      "categoria": "imagem",
+      "icone": "fa-x-ray",
+      "campos": [
+        {
+          "id": "membro",
+          "tipo": "select",
+          "label": "Membro Avaliado",
+          "opcoes": [
+            {
+              "valor": "superior",
+              "label": "Membro Superior"
+            },
+            {
+              "valor": "inferior",
+              "label": "Membro Inferior"
+            }
+          ],
+          "referencia": "—"
+        },
+        {
+          "id": "fratura",
+          "tipo": "select",
+          "label": "Fratura",
+          "opcoes": [
+            {
+              "valor": "ausente",
+              "label": "Ausente"
+            },
+            {
+              "valor": "presente",
+              "label": "Presente"
+            }
+          ],
+          "referencia": "Ausente"
+        },
+        {
+          "id": "desvio",
+          "tipo": "select",
+          "label": "Desvio Ósseo",
+          "opcoes": [
+            {
+              "valor": "ausente",
+              "label": "Ausente"
+            },
+            {
+              "valor": "presente",
+              "label": "Presente"
+            }
+          ],
+          "referencia": "Ausente"
+        },
+        {
+          "id": "partes_moles",
+          "tipo": "select",
+          "label": "Partes Moles",
+          "opcoes": [
+            {
+              "valor": "preservadas",
+              "label": "Preservadas"
+            },
+            {
+              "valor": "edema",
+              "label": "Edema"
+            }
+          ],
+          "referencia": "Preservadas"
+        },
+        {
+          "id": "impressao",
+          "tipo": "select",
+          "label": "Impressão Radiológica",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Sem alterações"
+            },
+            {
+              "valor": "fratura",
+              "label": "Fratura óssea"
+            }
+          ],
+          "referencia": "Normal / Alterado"
+        },
+        {
+          "id": "interpretacao",
+          "tipo": "textarea",
+          "label": "Interpretação"
+        },
+        {
+          "id": "conclusao",
+          "tipo": "textarea",
+          "label": "Conclusão"
+        }
+      ]
+    },
+    {
+      "id": "img_rx_abdome",
+      "nome": "Raio-X de Abdome",
+      "descricao": "Avaliação radiográfica do abdome e padrão gasoso intestinal",
+      "categoria": "imagem",
+      "icone": "fa-x-ray",
+      "campos": [
+        {
+          "id": "padrao_gases",
+          "tipo": "select",
+          "label": "Padrão Gasoso",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Normal"
+            },
+            {
+              "valor": "distensao",
+              "label": "Distensão"
+            }
+          ],
+          "referencia": "Normal"
+        },
+        {
+          "id": "niveis_hidroaereos",
+          "tipo": "select",
+          "label": "Níveis Hidroaéreos",
+          "opcoes": [
+            {
+              "valor": "ausentes",
+              "label": "Ausentes"
+            },
+            {
+              "valor": "presentes",
+              "label": "Presentes"
+            }
+          ],
+          "referencia": "Ausentes"
+        },
+        {
+          "id": "calcificacoes",
+          "tipo": "select",
+          "label": "Calcificações",
+          "opcoes": [
+            {
+              "valor": "ausentes",
+              "label": "Ausentes"
+            },
+            {
+              "valor": "presentes",
+              "label": "Presentes"
+            }
+          ],
+          "referencia": "Ausentes"
+        },
+        {
+          "id": "impressao",
+          "tipo": "select",
+          "label": "Impressão Radiológica",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Sem alterações radiográficas"
+            },
+            {
+              "valor": "obstrucao",
+              "label": "Sugestivo de obstrução intestinal"
+            }
+          ],
+          "referencia": "Normal / Alterado"
+        },
+        {
+          "id": "interpretacao",
+          "tipo": "textarea",
+          "label": "Interpretação"
+        },
+        {
+          "id": "conclusao",
+          "tipo": "textarea",
+          "label": "Conclusão"
+        }
+      ]
+    },
+    {
+      "id": "img_rx_seios_face",
+      "nome": "Raio-X de Seios da Face",
+      "descricao": "Avaliação radiográfica dos seios paranasais",
+      "categoria": "imagem",
+      "icone": "fa-x-ray",
+      "campos": [
+        {
+          "id": "velamento",
+          "tipo": "select",
+          "label": "Velamento",
+          "opcoes": [
+            {
+              "valor": "ausente",
+              "label": "Ausente"
+            },
+            {
+              "valor": "presente",
+              "label": "Presente"
+            }
+          ],
+          "referencia": "Ausente"
+        },
+        {
+          "id": "nivel_liquido",
+          "tipo": "select",
+          "label": "Nível Líquido",
+          "opcoes": [
+            {
+              "valor": "ausente",
+              "label": "Ausente"
+            },
+            {
+              "valor": "presente",
+              "label": "Presente"
+            }
+          ],
+          "referencia": "Ausente"
+        },
+        {
+          "id": "impressao",
+          "tipo": "select",
+          "label": "Impressão Radiológica",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Seios da face sem alterações"
+            },
+            {
+              "valor": "sinusite",
+              "label": "Achados sugestivos de sinusite"
+            }
+          ],
+          "referencia": "Normal / Alterado"
+        },
+        {
+          "id": "interpretacao",
+          "tipo": "textarea",
+          "label": "Interpretação"
+        },
+        {
+          "id": "conclusao",
+          "tipo": "textarea",
+          "label": "Conclusão"
+        }
+      ]
+    },
+    {
+      "id": "img_us_abdome_total",
+      "nome": "Ultrassonografia de Abdome Total",
+      "descricao": "Avaliação ultrassonográfica completa dos órgãos abdominais",
+      "categoria": "imagem",
+      "icone": "fa-wave-square",
+      "campos": [
+        {
+          "id": "figado",
+          "tipo": "select",
+          "label": "Fígado",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Normal"
+            },
+            {
+              "valor": "esteatose",
+              "label": "Esteatose hepática"
+            },
+            {
+              "valor": "hepatopatia",
+              "label": "Hepatopatia difusa"
+            }
+          ],
+          "referencia": "Normal"
+        },
+        {
+          "id": "vesicula_biliar",
+          "tipo": "select",
+          "label": "Vesícula Biliar",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Normal"
+            },
+            {
+              "valor": "litíase",
+              "label": "Litíase"
+            },
+            {
+              "valor": "lamina",
+              "label": "Lama biliar"
+            }
+          ],
+          "referencia": "Normal"
+        },
+        {
+          "id": "vias_biliares",
+          "tipo": "select",
+          "label": "Vias Biliares",
+          "opcoes": [
+            {
+              "valor": "nao_dilatadas",
+              "label": "Não dilatadas"
+            },
+            {
+              "valor": "dilatadas",
+              "label": "Dilatadas"
+            }
+          ],
+          "referencia": "Não dilatadas"
+        },
+        {
+          "id": "rins",
+          "tipo": "select",
+          "label": "Rins",
+          "opcoes": [
+            {
+              "valor": "normais",
+              "label": "Normais"
+            },
+            {
+              "valor": "litíase",
+              "label": "Litíase renal"
+            },
+            {
+              "valor": "hidronefrose",
+              "label": "Hidronefrose"
+            }
+          ],
+          "referencia": "Normais"
+        },
+        {
+          "id": "baço",
+          "tipo": "select",
+          "label": "Baço",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Normal"
+            },
+            {
+              "valor": "esplenomegalia",
+              "label": "Esplenomegalia"
+            }
+          ],
+          "referencia": "Normal"
+        },
+        {
+          "id": "impressao",
+          "tipo": "select",
+          "label": "Impressão Ultrassonográfica",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Sem alterações significativas"
+            },
+            {
+              "valor": "hepatica",
+              "label": "Alterações hepáticas"
+            },
+            {
+              "valor": "biliar",
+              "label": "Alterações biliares"
+            },
+            {
+              "valor": "renal",
+              "label": "Alterações renais"
+            }
+          ],
+          "referencia": "Normal / Alterado"
+        },
+        {
+          "id": "interpretacao",
+          "tipo": "textarea",
+          "label": "Interpretação"
+        },
+        {
+          "id": "conclusao",
+          "tipo": "textarea",
+          "label": "Conclusão"
+        }
+      ]
+    },
+    {
+      "id": "img_us_pelvica",
+      "nome": "Ultrassonografia Pélvica",
+      "descricao": "Avaliação ultrassonográfica dos órgãos pélvicos",
+      "categoria": "imagem",
+      "icone": "fa-wave-square",
+      "campos": [
+        {
+          "id": "utero",
+          "tipo": "select",
+          "label": "Útero",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Normal"
+            },
+            {
+              "valor": "miomatose",
+              "label": "Miomatose"
+            }
+          ],
+          "referencia": "Normal"
+        },
+        {
+          "id": "endometrio",
+          "tipo": "number",
+          "label": "Espessura Endometrial",
+          "unidade": "mm",
+          "referencia": "< 12"
+        },
+        {
+          "id": "ovarios",
+          "tipo": "select",
+          "label": "Ovários",
+          "opcoes": [
+            {
+              "valor": "normais",
+              "label": "Normais"
+            },
+            {
+              "valor": "cistos",
+              "label": "Cistos ovarianos"
+            }
+          ],
+          "referencia": "Normais"
+        },
+        {
+          "id": "liquido_livre",
+          "tipo": "select",
+          "label": "Líquido Livre",
+          "opcoes": [
+            {
+              "valor": "ausente",
+              "label": "Ausente"
+            },
+            {
+              "valor": "presente",
+              "label": "Presente"
+            }
+          ],
+          "referencia": "Ausente"
+        },
+        {
+          "id": "impressao",
+          "tipo": "select",
+          "label": "Impressão Ultrassonográfica",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Exame dentro da normalidade"
+            },
+            {
+              "valor": "ginecologica",
+              "label": "Alterações ginecológicas"
+            }
+          ],
+          "referencia": "Normal / Alterado"
+        },
+        {
+          "id": "interpretacao",
+          "tipo": "textarea",
+          "label": "Interpretação"
+        },
+        {
+          "id": "conclusao",
+          "tipo": "textarea",
+          "label": "Conclusão"
+        }
+      ]
+    },
+    {
+      "id": "img_us_doppler_vascular",
+      "nome": "Ultrassonografia Doppler Vascular",
+      "descricao": "Avaliação do fluxo sanguíneo arterial ou venoso",
+      "categoria": "imagem",
+      "icone": "fa-wave-square",
+      "campos": [
+        {
+          "id": "territorio",
+          "tipo": "select",
+          "label": "Território Avaliado",
+          "opcoes": [
+            {
+              "valor": "arterial",
+              "label": "Arterial"
+            },
+            {
+              "valor": "venoso",
+              "label": "Venoso"
+            }
+          ],
+          "referencia": "—"
+        },
+        {
+          "id": "fluxo",
+          "tipo": "select",
+          "label": "Fluxo",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Normal"
+            },
+            {
+              "valor": "reduzido",
+              "label": "Reduzido"
+            },
+            {
+              "valor": "ausente",
+              "label": "Ausente"
+            }
+          ],
+          "referencia": "Normal"
+        },
+        {
+          "id": "trombose",
+          "tipo": "select",
+          "label": "Trombose",
+          "opcoes": [
+            {
+              "valor": "ausente",
+              "label": "Ausente"
+            },
+            {
+              "valor": "presente",
+              "label": "Presente"
+            }
+          ],
+          "referencia": "Ausente"
+        },
+        {
+          "id": "impressao",
+          "tipo": "select",
+          "label": "Impressão Doppler",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Fluxo preservado"
+            },
+            {
+              "valor": "alterado",
+              "label": "Alteração hemodinâmica"
+            }
+          ],
+          "referencia": "Normal / Alterado"
+        },
+        {
+          "id": "interpretacao",
+          "tipo": "textarea",
+          "label": "Interpretação"
+        },
+        {
+          "id": "conclusao",
+          "tipo": "textarea",
+          "label": "Conclusão"
+        }
+      ]
+    },
+    {
+      "id": "img_tc_cranio",
+      "nome": "Tomografia Computadorizada de Crânio",
+      "descricao": "Avaliação de estruturas encefálicas e ósseas do crânio",
+      "categoria": "imagem",
+      "icone": "fa-brain",
+      "campos": [
+        {
+          "id": "uso_contraste",
+          "tipo": "select",
+          "label": "Uso de Contraste",
+          "opcoes": [
+            {
+              "valor": "sem",
+              "label": "Sem contraste"
+            },
+            {
+              "valor": "com",
+              "label": "Com contraste"
+            }
+          ],
+          "referencia": "Sem contraste"
+        },
+        {
+          "id": "hemorragia",
+          "tipo": "select",
+          "label": "Hemorragia",
+          "opcoes": [
+            {
+              "valor": "ausente",
+              "label": "Ausente"
+            },
+            {
+              "valor": "intraparenquimatosa",
+              "label": "Intraparenquimatosa"
+            },
+            {
+              "valor": "subaracnoidea",
+              "label": "Subaracnoidea"
+            },
+            {
+              "valor": "subdural",
+              "label": "Subdural"
+            }
+          ],
+          "referencia": "Ausente"
+        },
+        {
+          "id": "isquemia",
+          "tipo": "select",
+          "label": "Sinais de Isquemia",
+          "opcoes": [
+            {
+              "valor": "ausente",
+              "label": "Ausentes"
+            },
+            {
+              "valor": "presente",
+              "label": "Presentes"
+            }
+          ],
+          "referencia": "Ausentes"
+        },
+        {
+          "id": "efeito_massa",
+          "tipo": "select",
+          "label": "Efeito de Massa",
+          "opcoes": [
+            {
+              "valor": "ausente",
+              "label": "Ausente"
+            },
+            {
+              "valor": "presente",
+              "label": "Presente"
+            }
+          ],
+          "referencia": "Ausente"
+        },
+        {
+          "id": "ventriculos",
+          "tipo": "select",
+          "label": "Sistema Ventricular",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Normal"
+            },
+            {
+              "valor": "hidrocefalia",
+              "label": "Hidrocefalia"
+            }
+          ],
+          "referencia": "Normal"
+        },
+        {
+          "id": "impressao",
+          "tipo": "select",
+          "label": "Impressão Tomográfica",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Sem alterações tomográficas"
+            },
+            {
+              "valor": "avc_isquemico",
+              "label": "Achados compatíveis com AVC isquêmico"
+            },
+            {
+              "valor": "avc_hemorragico",
+              "label": "Achados compatíveis com AVC hemorrágico"
+            },
+            {
+              "valor": "traumatica",
+              "label": "Achados pós-traumáticos"
+            }
+          ],
+          "referencia": "Normal / Alterado"
+        },
+        {
+          "id": "interpretacao",
+          "tipo": "textarea",
+          "label": "Interpretação"
+        },
+        {
+          "id": "conclusao",
+          "tipo": "textarea",
+          "label": "Conclusão"
+        }
+      ]
+    },
+    {
+      "id": "img_tc_torax",
+      "nome": "Tomografia Computadorizada de Tórax",
+      "descricao": "Avaliação detalhada do parênquima pulmonar, mediastino e pleura",
+      "categoria": "imagem",
+      "icone": "fa-lungs",
+      "campos": [
+        {
+          "id": "uso_contraste",
+          "tipo": "select",
+          "label": "Uso de Contraste",
+          "opcoes": [
+            {
+              "valor": "sem",
+              "label": "Sem contraste"
+            },
+            {
+              "valor": "com",
+              "label": "Com contraste"
+            }
+          ],
+          "referencia": "Sem contraste"
+        },
+        {
+          "id": "padrao_pulmonar",
+          "tipo": "select",
+          "label": "Padrão Pulmonar",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Normal"
+            },
+            {
+              "valor": "vidro_fosco",
+              "label": "Vidro fosco"
+            },
+            {
+              "valor": "consolidacao",
+              "label": "Consolidação"
+            },
+            {
+              "valor": "fibrose",
+              "label": "Fibrose"
+            }
+          ],
+          "referencia": "Normal"
+        },
+        {
+          "id": "derrame_pleural",
+          "tipo": "select",
+          "label": "Derrame Pleural",
+          "opcoes": [
+            {
+              "valor": "ausente",
+              "label": "Ausente"
+            },
+            {
+              "valor": "unilateral",
+              "label": "Unilateral"
+            },
+            {
+              "valor": "bilateral",
+              "label": "Bilateral"
+            }
+          ],
+          "referencia": "Ausente"
+        },
+        {
+          "id": "mediastino",
+          "tipo": "select",
+          "label": "Mediastino",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Normal"
+            },
+            {
+              "valor": "linfonodomegalia",
+              "label": "Linfonodomegalia"
+            }
+          ],
+          "referencia": "Normal"
+        },
+        {
+          "id": "impressao",
+          "tipo": "select",
+          "label": "Impressão Tomográfica",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Sem alterações significativas"
+            },
+            {
+              "valor": "infecciosa",
+              "label": "Processo infeccioso"
+            },
+            {
+              "valor": "intersticial",
+              "label": "Doença intersticial pulmonar"
+            },
+            {
+              "valor": "neoplasica",
+              "label": "Suspeita de neoplasia"
+            }
+          ],
+          "referencia": "Normal / Alterado"
+        },
+        {
+          "id": "interpretacao",
+          "tipo": "textarea",
+          "label": "Interpretação"
+        },
+        {
+          "id": "conclusao",
+          "tipo": "textarea",
+          "label": "Conclusão"
+        }
+      ]
+    },
+    {
+      "id": "img_tc_abdome_pelve",
+      "nome": "Tomografia Computadorizada de Abdome e Pelve",
+      "descricao": "Avaliação tomográfica dos órgãos abdominais e pélvicos",
+      "categoria": "imagem",
+      "icone": "fa-x-ray",
+      "campos": [
+        {
+          "id": "uso_contraste",
+          "tipo": "select",
+          "label": "Uso de Contraste",
+          "opcoes": [
+            {
+              "valor": "sem",
+              "label": "Sem contraste"
+            },
+            {
+              "valor": "com",
+              "label": "Com contraste"
+            }
+          ],
+          "referencia": "Com contraste"
+        },
+        {
+          "id": "figado",
+          "tipo": "select",
+          "label": "Fígado",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Normal"
+            },
+            {
+              "valor": "lesoes",
+              "label": "Lesões focais"
+            },
+            {
+              "valor": "esteatose",
+              "label": "Esteatose"
+            }
+          ],
+          "referencia": "Normal"
+        },
+        {
+          "id": "rins",
+          "tipo": "select",
+          "label": "Rins",
+          "opcoes": [
+            {
+              "valor": "normais",
+              "label": "Normais"
+            },
+            {
+              "valor": "litíase",
+              "label": "Litíase"
+            },
+            {
+              "valor": "hidronefrose",
+              "label": "Hidronefrose"
+            }
+          ],
+          "referencia": "Normais"
+        },
+        {
+          "id": "liquido_livre",
+          "tipo": "select",
+          "label": "Líquido Livre",
+          "opcoes": [
+            {
+              "valor": "ausente",
+              "label": "Ausente"
+            },
+            {
+              "valor": "presente",
+              "label": "Presente"
+            }
+          ],
+          "referencia": "Ausente"
+        },
+        {
+          "id": "impressao",
+          "tipo": "select",
+          "label": "Impressão Tomográfica",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Sem alterações significativas"
+            },
+            {
+              "valor": "inflamatoria",
+              "label": "Processo inflamatório"
+            },
+            {
+              "valor": "obstrutiva",
+              "label": "Processo obstrutivo"
+            },
+            {
+              "valor": "neoplasica",
+              "label": "Suspeita de neoplasia"
+            }
+          ],
+          "referencia": "Normal / Alterado"
+        },
+        {
+          "id": "interpretacao",
+          "tipo": "textarea",
+          "label": "Interpretação"
+        },
+        {
+          "id": "conclusao",
+          "tipo": "textarea",
+          "label": "Conclusão"
+        }
+      ]
+    },
+    {
+      "id": "img_tc_coluna",
+      "nome": "Tomografia Computadorizada de Coluna",
+      "descricao": "Avaliação tomográfica da coluna vertebral",
+      "categoria": "imagem",
+      "icone": "fa-x-ray",
+      "campos": [
+        {
+          "id": "segmento",
+          "tipo": "select",
+          "label": "Segmento Avaliado",
+          "opcoes": [
+            {
+              "valor": "cervical",
+              "label": "Cervical"
+            },
+            {
+              "valor": "toracica",
+              "label": "Torácica"
+            },
+            {
+              "valor": "lombar",
+              "label": "Lombar"
+            }
+          ],
+          "referencia": "—"
+        },
+        {
+          "id": "fraturas",
+          "tipo": "select",
+          "label": "Fraturas",
+          "opcoes": [
+            {
+              "valor": "ausentes",
+              "label": "Ausentes"
+            },
+            {
+              "valor": "presentes",
+              "label": "Presentes"
+            }
+          ],
+          "referencia": "Ausentes"
+        },
+        {
+          "id": "canal_medular",
+          "tipo": "select",
+          "label": "Canal Medular",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Normal"
+            },
+            {
+              "valor": "estenose",
+              "label": "Estenose"
+            }
+          ],
+          "referencia": "Normal"
+        },
+        {
+          "id": "impressao",
+          "tipo": "select",
+          "label": "Impressão Tomográfica",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Sem alterações significativas"
+            },
+            {
+              "valor": "degenerativa",
+              "label": "Alterações degenerativas"
+            },
+            {
+              "valor": "traumatica",
+              "label": "Achados traumáticos"
+            }
+          ],
+          "referencia": "Normal / Alterado"
+        },
+        {
+          "id": "interpretacao",
+          "tipo": "textarea",
+          "label": "Interpretação"
+        },
+        {
+          "id": "conclusao",
+          "tipo": "textarea",
+          "label": "Conclusão"
+        }
+      ]
+    },
+    {
+      "id": "img_rm_cranio",
+      "nome": "Ressonância Magnética de Crânio",
+      "descricao": "Avaliação detalhada do encéfalo, substância branca, cinzenta e estruturas associadas",
+      "categoria": "imagem",
+      "icone": "fa-brain",
+      "campos": [
+        {
+          "id": "uso_contraste",
+          "tipo": "select",
+          "label": "Uso de Contraste",
+          "opcoes": [
+            {
+              "valor": "sem",
+              "label": "Sem contraste"
+            },
+            {
+              "valor": "com",
+              "label": "Com contraste"
+            }
+          ],
+          "referencia": "Sem contraste"
+        },
+        {
+          "id": "lesoes_focais",
+          "tipo": "select",
+          "label": "Lesões Focais",
+          "opcoes": [
+            {
+              "valor": "ausentes",
+              "label": "Ausentes"
+            },
+            {
+              "valor": "presentes",
+              "label": "Presentes"
+            }
+          ],
+          "referencia": "Ausentes"
+        },
+        {
+          "id": "isquemia",
+          "tipo": "select",
+          "label": "Sinais de Isquemia",
+          "opcoes": [
+            {
+              "valor": "ausentes",
+              "label": "Ausentes"
+            },
+            {
+              "valor": "aguda",
+              "label": "Isquemia aguda"
+            },
+            {
+              "valor": "cronica",
+              "label": "Isquemia crônica"
+            }
+          ],
+          "referencia": "Ausentes"
+        },
+        {
+          "id": "hemorragia",
+          "tipo": "select",
+          "label": "Hemorragia",
+          "opcoes": [
+            {
+              "valor": "ausente",
+              "label": "Ausente"
+            },
+            {
+              "valor": "presente",
+              "label": "Presente"
+            }
+          ],
+          "referencia": "Ausente"
+        },
+        {
+          "id": "substancia_branca",
+          "tipo": "select",
+          "label": "Substância Branca",
+          "opcoes": [
+            {
+              "valor": "preservada",
+              "label": "Preservada"
+            },
+            {
+              "valor": "desmielinizacao",
+              "label": "Alterações desmielinizantes"
+            }
+          ],
+          "referencia": "Preservada"
+        },
+        {
+          "id": "impressao",
+          "tipo": "select",
+          "label": "Impressão por RM",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Sem alterações significativas"
+            },
+            {
+              "valor": "avc",
+              "label": "Achados compatíveis com AVC"
+            },
+            {
+              "valor": "desmielinizante",
+              "label": "Doença desmielinizante"
+            },
+            {
+              "valor": "neoplasica",
+              "label": "Suspeita de neoplasia"
+            }
+          ],
+          "referencia": "Normal / Alterado"
+        },
+        {
+          "id": "interpretacao",
+          "tipo": "textarea",
+          "label": "Interpretação"
+        },
+        {
+          "id": "conclusao",
+          "tipo": "textarea",
+          "label": "Conclusão"
+        }
+      ]
+    },
+    {
+      "id": "img_rm_coluna",
+      "nome": "Ressonância Magnética de Coluna",
+      "descricao": "Avaliação detalhada da coluna vertebral, discos intervertebrais e medula",
+      "categoria": "imagem",
+      "icone": "fa-x-ray",
+      "campos": [
+        {
+          "id": "segmento",
+          "tipo": "select",
+          "label": "Segmento Avaliado",
+          "opcoes": [
+            {
+              "valor": "cervical",
+              "label": "Cervical"
+            },
+            {
+              "valor": "toracica",
+              "label": "Torácica"
+            },
+            {
+              "valor": "lombar",
+              "label": "Lombar"
+            }
+          ],
+          "referencia": "—"
+        },
+        {
+          "id": "discos",
+          "tipo": "select",
+          "label": "Discos Intervertebrais",
+          "opcoes": [
+            {
+              "valor": "preservados",
+              "label": "Preservados"
+            },
+            {
+              "valor": "protusao",
+              "label": "Protusão discal"
+            },
+            {
+              "valor": "hernia",
+              "label": "Hérnia discal"
+            }
+          ],
+          "referencia": "Preservados"
+        },
+        {
+          "id": "canal_medular",
+          "tipo": "select",
+          "label": "Canal Medular",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Normal"
+            },
+            {
+              "valor": "estenose",
+              "label": "Estenose do canal"
+            }
+          ],
+          "referencia": "Normal"
+        },
+        {
+          "id": "compressao_neural",
+          "tipo": "select",
+          "label": "Compressão Neural",
+          "opcoes": [
+            {
+              "valor": "ausente",
+              "label": "Ausente"
+            },
+            {
+              "valor": "presente",
+              "label": "Presente"
+            }
+          ],
+          "referencia": "Ausente"
+        },
+        {
+          "id": "impressao",
+          "tipo": "select",
+          "label": "Impressão por RM",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Sem alterações relevantes"
+            },
+            {
+              "valor": "degenerativa",
+              "label": "Doença degenerativa da coluna"
+            },
+            {
+              "valor": "compressiva",
+              "label": "Compressão neural"
+            }
+          ],
+          "referencia": "Normal / Alterado"
+        },
+        {
+          "id": "interpretacao",
+          "tipo": "textarea",
+          "label": "Interpretação"
+        },
+        {
+          "id": "conclusao",
+          "tipo": "textarea",
+          "label": "Conclusão"
+        }
+      ]
+    },
+    {
+      "id": "img_rm_articulacao",
+      "nome": "Ressonância Magnética de Articulação",
+      "descricao": "Avaliação detalhada das estruturas articulares, cartilagens, ligamentos e tendões",
+      "categoria": "imagem",
+      "icone": "fa-x-ray",
+      "campos": [
+        {
+          "id": "articulacao",
+          "tipo": "select",
+          "label": "Articulação Avaliada",
+          "opcoes": [
+            {
+              "valor": "joelho",
+              "label": "Joelho"
+            },
+            {
+              "valor": "ombro",
+              "label": "Ombro"
+            },
+            {
+              "valor": "quadril",
+              "label": "Quadril"
+            }
+          ],
+          "referencia": "—"
+        },
+        {
+          "id": "ligamentos",
+          "tipo": "select",
+          "label": "Ligamentos",
+          "opcoes": [
+            {
+              "valor": "integros",
+              "label": "Íntegros"
+            },
+            {
+              "valor": "lesao_parcial",
+              "label": "Lesão parcial"
+            },
+            {
+              "valor": "lesao_completa",
+              "label": "Lesão completa"
+            }
+          ],
+          "referencia": "Íntegros"
+        },
+        {
+          "id": "meniscos_tendao",
+          "tipo": "select",
+          "label": "Meniscos / Tendões",
+          "opcoes": [
+            {
+              "valor": "preservados",
+              "label": "Preservados"
+            },
+            {
+              "valor": "lesionados",
+              "label": "Lesionados"
+            }
+          ],
+          "referencia": "Preservados"
+        },
+        {
+          "id": "derrame_articular",
+          "tipo": "select",
+          "label": "Derrame Articular",
+          "opcoes": [
+            {
+              "valor": "ausente",
+              "label": "Ausente"
+            },
+            {
+              "valor": "presente",
+              "label": "Presente"
+            }
+          ],
+          "referencia": "Ausente"
+        },
+        {
+          "id": "impressao",
+          "tipo": "select",
+          "label": "Impressão por RM",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Sem alterações significativas"
+            },
+            {
+              "valor": "lesao_ligamentar",
+              "label": "Lesão ligamentar"
+            },
+            {
+              "valor": "lesao_meniscal",
+              "label": "Lesão meniscal/tendínea"
+            },
+            {
+              "valor": "degenerativa",
+              "label": "Alterações degenerativas"
+            }
+          ],
+          "referencia": "Normal / Alterado"
+        },
+        {
+          "id": "interpretacao",
+          "tipo": "textarea",
+          "label": "Interpretação"
+        },
+        {
+          "id": "conclusao",
+          "tipo": "textarea",
+          "label": "Conclusão"
+        }
+      ]
+    },
+    {
+      "id": "img_rm_cardiaca",
+      "nome": "Ressonância Magnética Cardíaca",
+      "descricao": "Avaliação da anatomia e função cardíaca por ressonância magnética",
+      "categoria": "imagem",
+      "icone": "fa-heartbeat",
+      "campos": [
+        {
+          "id": "funcao_sistolica",
+          "tipo": "select",
+          "label": "Função Sistólica",
+          "opcoes": [
+            {
+              "valor": "preservada",
+              "label": "Preservada"
+            },
+            {
+              "valor": "reduzida",
+              "label": "Reduzida"
+            }
+          ],
+          "referencia": "Preservada"
+        },
+        {
+          "id": "fracao_ejecao",
+          "tipo": "number",
+          "label": "Fração de Ejeção",
+          "unidade": "%",
+          "referencia": "≥ 55"
+        },
+        {
+          "id": "realce_tardio",
+          "tipo": "select",
+          "label": "Realce Tardio",
+          "opcoes": [
+            {
+              "valor": "ausente",
+              "label": "Ausente"
+            },
+            {
+              "valor": "presente",
+              "label": "Presente"
+            }
+          ],
+          "referencia": "Ausente"
+        },
+        {
+          "id": "impressao",
+          "tipo": "select",
+          "label": "Impressão por RM",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Função cardíaca preservada"
+            },
+            {
+              "valor": "miocardiopatia",
+              "label": "Miocardiopatia"
+            },
+            {
+              "valor": "isquemica",
+              "label": "Doença isquêmica"
+            }
+          ],
+          "referencia": "Normal / Alterado"
+        },
+        {
+          "id": "interpretacao",
+          "tipo": "textarea",
+          "label": "Interpretação"
+        },
+        {
+          "id": "conclusao",
+          "tipo": "textarea",
+          "label": "Conclusão"
+        }
+      ]
+    },
+    {
+      "id": "cardio_ecg",
+      "nome": "Eletrocardiograma (ECG)",
+      "descricao": "Registro da atividade elétrica cardíaca em repouso",
+      "categoria": "cardiologia",
+      "icone": "fa-heartbeat",
+      "campos": [
+        {
+          "id": "ritmo",
+          "tipo": "select",
+          "label": "Ritmo Cardíaco",
+          "opcoes": [
+            {
+              "valor": "sinusal",
+              "label": "Ritmo sinusal"
+            },
+            {
+              "valor": "fibrilacao_atrial",
+              "label": "Fibrilação atrial"
+            },
+            {
+              "valor": "flutter",
+              "label": "Flutter atrial"
+            },
+            {
+              "valor": "outro",
+              "label": "Outro ritmo"
+            }
+          ],
+          "referencia": "Ritmo sinusal"
+        },
+        {
+          "id": "frequencia_cardiaca",
+          "tipo": "number",
+          "label": "Frequência Cardíaca",
+          "unidade": "bpm",
+          "referencia": "60 – 100"
+        },
+        {
+          "id": "eixo",
+          "tipo": "select",
+          "label": "Eixo Elétrico",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Normal"
+            },
+            {
+              "valor": "desviado_esquerda",
+              "label": "Desvio à esquerda"
+            },
+            {
+              "valor": "desviado_direita",
+              "label": "Desvio à direita"
+            }
+          ],
+          "referencia": "Normal"
+        },
+        {
+          "id": "intervalo_pr",
+          "tipo": "number",
+          "label": "Intervalo PR",
+          "unidade": "ms",
+          "referencia": "120 – 200"
+        },
+        {
+          "id": "qrs",
+          "tipo": "number",
+          "label": "Duração do QRS",
+          "unidade": "ms",
+          "referencia": "< 120"
+        },
+        {
+          "id": "segmento_st",
+          "tipo": "select",
+          "label": "Segmento ST",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Normal"
+            },
+            {
+              "valor": "supra",
+              "label": "Supra de ST"
+            },
+            {
+              "valor": "infra",
+              "label": "Infra de ST"
+            }
+          ],
+          "referencia": "Normal"
+        },
+        {
+          "id": "onda_t",
+          "tipo": "select",
+          "label": "Onda T",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Normal"
+            },
+            {
+              "valor": "invertida",
+              "label": "Invertida"
+            }
+          ],
+          "referencia": "Normal"
+        },
+        {
+          "id": "impressao",
+          "tipo": "select",
+          "label": "Impressão Eletrocardiográfica",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "ECG dentro da normalidade"
+            },
+            {
+              "valor": "isquemia",
+              "label": "Alterações isquêmicas"
+            },
+            {
+              "valor": "arritmia",
+              "label": "Arritmia cardíaca"
+            },
+            {
+              "valor": "bloqueio",
+              "label": "Distúrbio de condução"
+            }
+          ],
+          "referencia": "Normal / Alterado"
+        },
+        {
+          "id": "interpretacao",
+          "tipo": "textarea",
+          "label": "Interpretação"
+        },
+        {
+          "id": "conclusao",
+          "tipo": "textarea",
+          "label": "Conclusão"
+        }
+      ]
+    },
+    {
+      "id": "cardio_ecocardiograma",
+      "nome": "Ecocardiograma Transtorácico",
+      "descricao": "Avaliação anatômica e funcional do coração",
+      "categoria": "cardiologia",
+      "icone": "fa-heart",
+      "campos": [
+        {
+          "id": "fracao_ejecao",
+          "tipo": "number",
+          "label": "Fração de Ejeção (FEVE)",
+          "unidade": "%",
+          "referencia": "≥ 55"
+        },
+        {
+          "id": "funcao_sistolica",
+          "tipo": "select",
+          "label": "Função Sistólica",
+          "opcoes": [
+            {
+              "valor": "preservada",
+              "label": "Preservada"
+            },
+            {
+              "valor": "reduzida",
+              "label": "Reduzida"
+            }
+          ],
+          "referencia": "Preservada"
+        },
+        {
+          "id": "funcao_diastolica",
+          "tipo": "select",
+          "label": "Função Diastólica",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Normal"
+            },
+            {
+              "valor": "grau_1",
+              "label": "Disfunção grau I"
+            },
+            {
+              "valor": "grau_2",
+              "label": "Disfunção grau II"
+            },
+            {
+              "valor": "grau_3",
+              "label": "Disfunção grau III"
+            }
+          ],
+          "referencia": "Normal"
+        },
+        {
+          "id": "valvulas",
+          "tipo": "select",
+          "label": "Valvas Cardíacas",
+          "opcoes": [
+            {
+              "valor": "normais",
+              "label": "Normais"
+            },
+            {
+              "valor": "estenose",
+              "label": "Estenose"
+            },
+            {
+              "valor": "insuficiencia",
+              "label": "Insuficiência"
+            }
+          ],
+          "referencia": "Normais"
+        },
+        {
+          "id": "pressao_pulmonar",
+          "tipo": "number",
+          "label": "Pressão Sistólica da Artéria Pulmonar",
+          "unidade": "mmHg",
+          "referencia": "< 35"
+        },
+        {
+          "id": "impressao",
+          "tipo": "select",
+          "label": "Impressão Ecocardiográfica",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Ecocardiograma normal"
+            },
+            {
+              "valor": "miocardiopatia",
+              "label": "Miocardiopatia"
+            },
+            {
+              "valor": "valvar",
+              "label": "Doença valvar"
+            },
+            {
+              "valor": "ic",
+              "label": "Insuficiência cardíaca"
+            }
+          ],
+          "referencia": "Normal / Alterado"
+        },
+        {
+          "id": "interpretacao",
+          "tipo": "textarea",
+          "label": "Interpretação"
+        },
+        {
+          "id": "conclusao",
+          "tipo": "textarea",
+          "label": "Conclusão"
+        }
+      ]
+    },
+    {
+      "id": "cardio_holter_24h",
+      "nome": "Holter 24 horas",
+      "descricao": "Monitorização contínua do ritmo cardíaco por 24 horas",
+      "categoria": "cardiologia",
+      "icone": "fa-clock",
+      "campos": [
+        {
+          "id": "fc_minima",
+          "tipo": "number",
+          "label": "Frequência Cardíaca Mínima",
+          "unidade": "bpm",
+          "referencia": "—"
+        },
+        {
+          "id": "fc_maxima",
+          "tipo": "number",
+          "label": "Frequência Cardíaca Máxima",
+          "unidade": "bpm",
+          "referencia": "—"
+        },
+        {
+          "id": "arritmias",
+          "tipo": "select",
+          "label": "Arritmias Detectadas",
+          "opcoes": [
+            {
+              "valor": "ausentes",
+              "label": "Ausentes"
+            },
+            {
+              "valor": "supraventriculares",
+              "label": "Supraventriculares"
+            },
+            {
+              "valor": "ventriculares",
+              "label": "Ventriculares"
+            }
+          ],
+          "referencia": "Ausentes"
+        },
+        {
+          "id": "pausas",
+          "tipo": "select",
+          "label": "Pausas",
+          "opcoes": [
+            {
+              "valor": "ausentes",
+              "label": "Ausentes"
+            },
+            {
+              "valor": "presentes",
+              "label": "Presentes"
+            }
+          ],
+          "referencia": "Ausentes"
+        },
+        {
+          "id": "impressao",
+          "tipo": "select",
+          "label": "Impressão do Holter",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Ritmo preservado"
+            },
+            {
+              "valor": "arritmico",
+              "label": "Arritmia documentada"
+            }
+          ],
+          "referencia": "Normal / Alterado"
+        },
+        {
+          "id": "interpretacao",
+          "tipo": "textarea",
+          "label": "Interpretação"
+        },
+        {
+          "id": "conclusao",
+          "tipo": "textarea",
+          "label": "Conclusão"
+        }
+      ]
+    },
+    {
+      "id": "cardio_teste_ergometrico",
+      "nome": "Teste Ergométrico",
+      "descricao": "Avaliação da resposta cardiovascular ao esforço físico",
+      "categoria": "cardiologia",
+      "icone": "fa-running",
+      "campos": [
+        {
+          "id": "capacidade_funcional",
+          "tipo": "select",
+          "label": "Capacidade Funcional",
+          "opcoes": [
+            {
+              "valor": "boa",
+              "label": "Boa"
+            },
+            {
+              "valor": "reduzida",
+              "label": "Reduzida"
+            }
+          ],
+          "referencia": "Boa"
+        },
+        {
+          "id": "fc_maxima_atingida",
+          "tipo": "number",
+          "label": "FC Máxima Atingida",
+          "unidade": "bpm",
+          "referencia": "—"
+        },
+        {
+          "id": "resposta_pressorica",
+          "tipo": "select",
+          "label": "Resposta Pressórica",
+          "opcoes": [
+            {
+              "valor": "adequada",
+              "label": "Adequada"
+            },
+            {
+              "valor": "inadequada",
+              "label": "Inadequada"
+            }
+          ],
+          "referencia": "Adequada"
+        },
+        {
+          "id": "isquemia",
+          "tipo": "select",
+          "label": "Sinais de Isquemia",
+          "opcoes": [
+            {
+              "valor": "ausentes",
+              "label": "Ausentes"
+            },
+            {
+              "valor": "presentes",
+              "label": "Presentes"
+            }
+          ],
+          "referencia": "Ausentes"
+        },
+        {
+          "id": "impressao",
+          "tipo": "select",
+          "label": "Impressão do Teste",
+          "opcoes": [
+            {
+              "valor": "negativo",
+              "label": "Negativo para isquemia"
+            },
+            {
+              "valor": "positivo",
+              "label": "Positivo para isquemia"
+            }
+          ],
+          "referencia": "Negativo"
+        },
+        {
+          "id": "interpretacao",
+          "tipo": "textarea",
+          "label": "Interpretação"
+        },
+        {
+          "id": "conclusao",
+          "tipo": "textarea",
+          "label": "Conclusão"
+        }
+      ]
+    },
+    {
+      "id": "cardio_mapa_24h",
+      "nome": "MAPA 24 horas",
+      "descricao": "Monitorização ambulatorial da pressão arterial",
+      "categoria": "cardiologia",
+      "icone": "fa-stethoscope",
+      "campos": [
+        {
+          "id": "pa_media",
+          "tipo": "number",
+          "label": "Pressão Arterial Média",
+          "unidade": "mmHg",
+          "referencia": "< 130/80"
+        },
+        {
+          "id": "padrao_circadiano",
+          "tipo": "select",
+          "label": "Padrão Circadiano",
+          "opcoes": [
+            {
+              "valor": "dipper",
+              "label": "Dipper"
+            },
+            {
+              "valor": "non_dipper",
+              "label": "Non-dipper"
+            },
+            {
+              "valor": "reverse_dipper",
+              "label": "Reverse dipper"
+            }
+          ],
+          "referencia": "Dipper"
+        },
+        {
+          "id": "picos_hipertensivos",
+          "tipo": "select",
+          "label": "Picos Hipertensivos",
+          "opcoes": [
+            {
+              "valor": "ausentes",
+              "label": "Ausentes"
+            },
+            {
+              "valor": "presentes",
+              "label": "Presentes"
+            }
+          ],
+          "referencia": "Ausentes"
+        },
+        {
+          "id": "impressao",
+          "tipo": "select",
+          "label": "Impressão do MAPA",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Pressão controlada"
+            },
+            {
+              "valor": "has",
+              "label": "Hipertensão arterial sistêmica"
+            }
+          ],
+          "referencia": "Normal / Alterado"
+        },
+        {
+          "id": "interpretacao",
+          "tipo": "textarea",
+          "label": "Interpretação"
+        },
+        {
+          "id": "conclusao",
+          "tipo": "textarea",
+          "label": "Conclusão"
+        }
+      ]
+    },
+    {
+      "id": "neuro_eeg",
+      "nome": "Eletroencefalograma (EEG)",
+      "descricao": "Registro da atividade elétrica cerebral em repouso e/ou ativação",
+      "categoria": "neurologia",
+      "icone": "fa-brain",
+      "campos": [
+        {
+          "id": "estado_paciente",
+          "tipo": "select",
+          "label": "Estado do Paciente",
+          "opcoes": [
+            {
+              "valor": "vigilia",
+              "label": "Vigília"
+            },
+            {
+              "valor": "sono",
+              "label": "Sono"
+            },
+            {
+              "valor": "vigilia_sono",
+              "label": "Vigília e sono"
+            }
+          ],
+          "referencia": "Vigília"
+        },
+        {
+          "id": "atividade_base",
+          "tipo": "select",
+          "label": "Atividade de Base",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Organizada e simétrica"
+            },
+            {
+              "valor": "lenta",
+              "label": "Lentificada"
+            },
+            {
+              "valor": "desorganizada",
+              "label": "Desorganizada"
+            }
+          ],
+          "referencia": "Normal"
+        },
+        {
+          "id": "descargas_epileptiformes",
+          "tipo": "select",
+          "label": "Descargas Epileptiformes",
+          "opcoes": [
+            {
+              "valor": "ausentes",
+              "label": "Ausentes"
+            },
+            {
+              "valor": "focais",
+              "label": "Focais"
+            },
+            {
+              "valor": "generalizadas",
+              "label": "Generalizadas"
+            }
+          ],
+          "referencia": "Ausentes"
+        },
+        {
+          "id": "resposta_estimulos",
+          "tipo": "select",
+          "label": "Resposta a Estímulos",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Normal"
+            },
+            {
+              "valor": "alterada",
+              "label": "Alterada"
+            }
+          ],
+          "referencia": "Normal"
+        },
+        {
+          "id": "impressao",
+          "tipo": "select",
+          "label": "Impressão Neurológica",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "EEG dentro da normalidade"
+            },
+            {
+              "valor": "epileptiforme",
+              "label": "Atividade epileptiforme"
+            },
+            {
+              "valor": "encefalopatia",
+              "label": "Sinais de encefalopatia difusa"
+            }
+          ],
+          "referencia": "Normal / Alterado"
+        },
+        {
+          "id": "interpretacao",
+          "tipo": "textarea",
+          "label": "Interpretação"
+        },
+        {
+          "id": "conclusao",
+          "tipo": "textarea",
+          "label": "Conclusão"
+        }
+      ]
+    },
+    {
+      "id": "neuro_enmg",
+      "nome": "Eletroneuromiografia (ENMG)",
+      "descricao": "Avaliação da condução nervosa e da atividade muscular",
+      "categoria": "neurologia",
+      "icone": "fa-dna",
+      "campos": [
+        {
+          "id": "territorio",
+          "tipo": "select",
+          "label": "Território Avaliado",
+          "opcoes": [
+            {
+              "valor": "membros_superiores",
+              "label": "Membros Superiores"
+            },
+            {
+              "valor": "membros_inferiores",
+              "label": "Membros Inferiores"
+            },
+            {
+              "valor": "ambos",
+              "label": "Ambos"
+            }
+          ],
+          "referencia": "—"
+        },
+        {
+          "id": "conducao_nervosa",
+          "tipo": "select",
+          "label": "Condução Nervosa",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Normal"
+            },
+            {
+              "valor": "reduzida",
+              "label": "Reduzida"
+            },
+            {
+              "valor": "bloqueio",
+              "label": "Bloqueio de condução"
+            }
+          ],
+          "referencia": "Normal"
+        },
+        {
+          "id": "atividade_muscular",
+          "tipo": "select",
+          "label": "Atividade Muscular",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Normal"
+            },
+            {
+              "valor": "denervacao",
+              "label": "Sinais de denervação"
+            }
+          ],
+          "referencia": "Normal"
+        },
+        {
+          "id": "padrao_neuropatico",
+          "tipo": "select",
+          "label": "Padrão Neuropático",
+          "opcoes": [
+            {
+              "valor": "ausente",
+              "label": "Ausente"
+            },
+            {
+              "valor": "axonal",
+              "label": "Axonal"
+            },
+            {
+              "valor": "desmielinizante",
+              "label": "Desmielinizante"
+            }
+          ],
+          "referencia": "Ausente"
+        },
+        {
+          "id": "impressao",
+          "tipo": "select",
+          "label": "Impressão Neurológica",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Exame normal"
+            },
+            {
+              "valor": "neuropatia",
+              "label": "Neuropatia periférica"
+            },
+            {
+              "valor": "radiculopatia",
+              "label": "Radiculopatia"
+            },
+            {
+              "valor": "miopatia",
+              "label": "Miopatia"
+            }
+          ],
+          "referencia": "Normal / Alterado"
+        },
+        {
+          "id": "interpretacao",
+          "tipo": "textarea",
+          "label": "Interpretação"
+        },
+        {
+          "id": "conclusao",
+          "tipo": "textarea",
+          "label": "Conclusão"
+        }
+      ]
+    },
+    {
+      "id": "neuro_doppler_transcraniano",
+      "nome": "Doppler Transcraniano",
+      "descricao": "Avaliação do fluxo sanguíneo nas artérias cerebrais",
+      "categoria": "neurologia",
+      "icone": "fa-wave-square",
+      "campos": [
+        {
+          "id": "arterias_avaliadas",
+          "tipo": "select",
+          "label": "Artérias Avaliadas",
+          "opcoes": [
+            {
+              "valor": "cerebral_media",
+              "label": "Cerebral Média"
+            },
+            {
+              "valor": "cerebral_anterior",
+              "label": "Cerebral Anterior"
+            },
+            {
+              "valor": "cerebral_posterior",
+              "label": "Cerebral Posterior"
+            }
+          ],
+          "referencia": "—"
+        },
+        {
+          "id": "fluxo",
+          "tipo": "select",
+          "label": "Fluxo Sanguíneo",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Normal"
+            },
+            {
+              "valor": "reduzido",
+              "label": "Reduzido"
+            },
+            {
+              "valor": "aumentado",
+              "label": "Aumentado"
+            }
+          ],
+          "referencia": "Normal"
+        },
+        {
+          "id": "estenose",
+          "tipo": "select",
+          "label": "Estenose",
+          "opcoes": [
+            {
+              "valor": "ausente",
+              "label": "Ausente"
+            },
+            {
+              "valor": "presente",
+              "label": "Presente"
+            }
+          ],
+          "referencia": "Ausente"
+        },
+        {
+          "id": "impressao",
+          "tipo": "select",
+          "label": "Impressão Hemodinâmica",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Fluxo cerebral preservado"
+            },
+            {
+              "valor": "isquemica",
+              "label": "Sugestivo de isquemia cerebral"
+            },
+            {
+              "valor": "vasoespasmo",
+              "label": "Vasoespasmo cerebral"
+            }
+          ],
+          "referencia": "Normal / Alterado"
+        },
+        {
+          "id": "interpretacao",
+          "tipo": "textarea",
+          "label": "Interpretação"
+        },
+        {
+          "id": "conclusao",
+          "tipo": "textarea",
+          "label": "Conclusão"
+        }
+      ]
+    },
+    {
+      "id": "neuro_liquor",
+      "nome": "Análise do Líquor (LCR)",
+      "descricao": "Avaliação do líquido cefalorraquidiano",
+      "categoria": "neurologia",
+      "icone": "fa-vial",
+      "campos": [
+        {
+          "id": "aspecto",
+          "tipo": "select",
+          "label": "Aspecto",
+          "opcoes": [
+            {
+              "valor": "claro",
+              "label": "Claro"
+            },
+            {
+              "valor": "turvo",
+              "label": "Turvo"
+            }
+          ],
+          "referencia": "Claro"
+        },
+        {
+          "id": "celulas",
+          "tipo": "number",
+          "label": "Células",
+          "unidade": "cél/mm³",
+          "referencia": "< 5"
+        },
+        {
+          "id": "proteinas",
+          "tipo": "number",
+          "label": "Proteínas",
+          "unidade": "mg/dL",
+          "referencia": "15 – 45"
+        },
+        {
+          "id": "glicose",
+          "tipo": "number",
+          "label": "Glicose",
+          "unidade": "mg/dL",
+          "referencia": "≥ 2/3 da glicemia"
+        },
+        {
+          "id": "impressao",
+          "tipo": "select",
+          "label": "Impressão Neurológica",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "LCR normal"
+            },
+            {
+              "valor": "meningite",
+              "label": "Sugestivo de meningite"
+            },
+            {
+              "valor": "inflamatoria",
+              "label": "Processo inflamatório do SNC"
+            }
+          ],
+          "referencia": "Normal / Alterado"
+        },
+        {
+          "id": "interpretacao",
+          "tipo": "textarea",
+          "label": "Interpretação"
+        },
+        {
+          "id": "conclusao",
+          "tipo": "textarea",
+          "label": "Conclusão"
+        }
+      ]
+    },
+    {
+      "id": "gineco_papanicolau",
+      "nome": "Citopatológico do Colo do Útero (Papanicolau)",
+      "descricao": "Avaliação citológica do colo uterino para rastreamento de lesões intraepiteliais e câncer",
+      "categoria": "ginecologia",
+      "icone": "fa-female",
+      "campos": [
+        {
+          "id": "amostra_satisfatoria",
+          "tipo": "select",
+          "label": "Amostra Satisfatória",
+          "opcoes": [
+            {
+              "valor": "sim",
+              "label": "Sim"
+            },
+            {
+              "valor": "nao",
+              "label": "Não"
+            }
+          ],
+          "referencia": "Sim"
+        },
+        {
+          "id": "zona_transformacao",
+          "tipo": "select",
+          "label": "Representatividade da Zona de Transformação",
+          "opcoes": [
+            {
+              "valor": "presente",
+              "label": "Presente"
+            },
+            {
+              "valor": "ausente",
+              "label": "Ausente"
+            }
+          ],
+          "referencia": "Presente"
+        },
+        {
+          "id": "achados_inflamatorios",
+          "tipo": "select",
+          "label": "Achados Inflamatórios",
+          "opcoes": [
+            {
+              "valor": "ausentes",
+              "label": "Ausentes"
+            },
+            {
+              "valor": "leves",
+              "label": "Leves"
+            },
+            {
+              "valor": "moderados",
+              "label": "Moderados"
+            },
+            {
+              "valor": "intensos",
+              "label": "Intensos"
+            }
+          ],
+          "referencia": "Ausentes"
+        },
+        {
+          "id": "microbiologia",
+          "tipo": "select",
+          "label": "Microbiologia",
+          "opcoes": [
+            {
+              "valor": "flora_habitual",
+              "label": "Flora habitual"
+            },
+            {
+              "valor": "candidiase",
+              "label": "Candida spp."
+            },
+            {
+              "valor": "gardnerella",
+              "label": "Vaginose bacteriana (Gardnerella)"
+            },
+            {
+              "valor": "trichomonas",
+              "label": "Trichomonas vaginalis"
+            }
+          ],
+          "referencia": "Flora habitual"
+        },
+        {
+          "id": "lesao_intraepitelial",
+          "tipo": "select",
+          "label": "Lesão Intraepitelial / Malignidade",
+          "opcoes": [
+            {
+              "valor": "negativa",
+              "label": "Negativa"
+            },
+            {
+              "valor": "ascus",
+              "label": "ASC-US"
+            },
+            {
+              "valor": "lsil",
+              "label": "LSIL"
+            },
+            {
+              "valor": "hsil",
+              "label": "HSIL"
+            },
+            {
+              "valor": "carcinoma",
+              "label": "Carcinoma"
+            }
+          ],
+          "referencia": "Negativa"
+        },
+        {
+          "id": "impressao",
+          "tipo": "select",
+          "label": "Impressão Ginecológica",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Exame dentro da normalidade"
+            },
+            {
+              "valor": "inflamatorio",
+              "label": "Citologia inflamatória"
+            },
+            {
+              "valor": "alteracao_citologica",
+              "label": "Alteração citológica"
+            }
+          ],
+          "referencia": "Normal / Alterado"
+        },
+        {
+          "id": "interpretacao",
+          "tipo": "textarea",
+          "label": "Interpretação"
+        },
+        {
+          "id": "conclusao",
+          "tipo": "textarea",
+          "label": "Conclusão"
+        }
+      ]
+    },
+    {
+      "id": "gineco_colposcopia",
+      "nome": "Colposcopia",
+      "descricao": "Avaliação do colo uterino e vagina com magnificação e testes com reagentes",
+      "categoria": "ginecologia",
+      "icone": "fa-search",
+      "campos": [
+        {
+          "id": "juncao_escamocolunar",
+          "tipo": "select",
+          "label": "Junção Escamocolunar (JEC)",
+          "opcoes": [
+            {
+              "valor": "visivel",
+              "label": "Visível"
+            },
+            {
+              "valor": "nao_visivel",
+              "label": "Não visível"
+            }
+          ],
+          "referencia": "Visível"
+        },
+        {
+          "id": "teste_acido_acetico",
+          "tipo": "select",
+          "label": "Teste com Ácido Acético",
+          "opcoes": [
+            {
+              "valor": "negativo",
+              "label": "Negativo"
+            },
+            {
+              "valor": "acetobranco",
+              "label": "Acetobranco"
+            }
+          ],
+          "referencia": "Negativo"
+        },
+        {
+          "id": "teste_lugol",
+          "tipo": "select",
+          "label": "Teste de Lugol",
+          "opcoes": [
+            {
+              "valor": "positivo",
+              "label": "Positivo (captação)"
+            },
+            {
+              "valor": "negativo",
+              "label": "Negativo (iodo-negativo)"
+            }
+          ],
+          "referencia": "Positivo"
+        },
+        {
+          "id": "achado_suspeito",
+          "tipo": "select",
+          "label": "Achado Suspeito",
+          "opcoes": [
+            {
+              "valor": "ausente",
+              "label": "Ausente"
+            },
+            {
+              "valor": "presente",
+              "label": "Presente"
+            }
+          ],
+          "referencia": "Ausente"
+        },
+        {
+          "id": "conduta_sugerida",
+          "tipo": "select",
+          "label": "Conduta Sugerida",
+          "opcoes": [
+            {
+              "valor": "rotina",
+              "label": "Rotina"
+            },
+            {
+              "valor": "biopsia",
+              "label": "Biópsia dirigida"
+            },
+            {
+              "valor": "seguimento",
+              "label": "Seguimento"
+            }
+          ],
+          "referencia": "Rotina"
+        },
+        {
+          "id": "impressao",
+          "tipo": "select",
+          "label": "Impressão Colposcópica",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Exame colposcópico normal"
+            },
+            {
+              "valor": "alterado",
+              "label": "Achados colposcópicos alterados"
+            }
+          ],
+          "referencia": "Normal / Alterado"
+        },
+        {
+          "id": "interpretacao",
+          "tipo": "textarea",
+          "label": "Interpretação"
+        },
+        {
+          "id": "conclusao",
+          "tipo": "textarea",
+          "label": "Conclusão"
+        }
+      ]
+    },
+    {
+      "id": "gineco_us_transvaginal_completo",
+      "nome": "Ultrassonografia Transvaginal (Ginecológica)",
+      "descricao": "Avaliação detalhada do útero, endométrio, ovários e anexos",
+      "categoria": "ginecologia",
+      "icone": "fa-wave-square",
+      "campos": [
+        {
+          "id": "utero",
+          "tipo": "select",
+          "label": "Útero",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Normal"
+            },
+            {
+              "valor": "miomatose",
+              "label": "Miomatose"
+            },
+            {
+              "valor": "adenomiose",
+              "label": "Adenomiose"
+            }
+          ],
+          "referencia": "Normal"
+        },
+        {
+          "id": "endométrio_mm",
+          "tipo": "number",
+          "label": "Espessura Endometrial",
+          "unidade": "mm",
+          "referencia": "< 12"
+        },
+        {
+          "id": "ovario_direito",
+          "tipo": "select",
+          "label": "Ovário Direito",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Normal"
+            },
+            {
+              "valor": "cisto_simples",
+              "label": "Cisto simples"
+            },
+            {
+              "valor": "cisto_complexo",
+              "label": "Cisto complexo"
+            },
+            {
+              "valor": "policistico",
+              "label": "Aspecto policístico"
+            }
+          ],
+          "referencia": "Normal"
+        },
+        {
+          "id": "ovario_esquerdo",
+          "tipo": "select",
+          "label": "Ovário Esquerdo",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Normal"
+            },
+            {
+              "valor": "cisto_simples",
+              "label": "Cisto simples"
+            },
+            {
+              "valor": "cisto_complexo",
+              "label": "Cisto complexo"
+            },
+            {
+              "valor": "policistico",
+              "label": "Aspecto policístico"
+            }
+          ],
+          "referencia": "Normal"
+        },
+        {
+          "id": "liquido_livre",
+          "tipo": "select",
+          "label": "Líquido Livre em Fundo de Saco",
+          "opcoes": [
+            {
+              "valor": "ausente",
+              "label": "Ausente"
+            },
+            {
+              "valor": "presente",
+              "label": "Presente"
+            }
+          ],
+          "referencia": "Ausente"
+        },
+        {
+          "id": "impressao",
+          "tipo": "select",
+          "label": "Impressão Ultrassonográfica",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Exame dentro da normalidade"
+            },
+            {
+              "valor": "alteracoes_uterinas",
+              "label": "Alterações uterinas"
+            },
+            {
+              "valor": "alteracoes_ovarinas",
+              "label": "Alterações ovarianas"
+            }
+          ],
+          "referencia": "Normal / Alterado"
+        },
+        {
+          "id": "interpretacao",
+          "tipo": "textarea",
+          "label": "Interpretação"
+        },
+        {
+          "id": "conclusao",
+          "tipo": "textarea",
+          "label": "Conclusão"
+        }
+      ]
+    },
+    {
+      "id": "obst_us_rotina_completo",
+      "nome": "Ultrassonografia Obstétrica (Rotina)",
+      "descricao": "Avaliação do desenvolvimento fetal, placenta e líquido amniótico",
+      "categoria": "obstetricia",
+      "icone": "fa-baby",
+      "campos": [
+        {
+          "id": "idade_gestacional",
+          "tipo": "number",
+          "label": "Idade Gestacional",
+          "unidade": "semanas",
+          "referencia": "—"
+        },
+        {
+          "id": "apresentacao_fetal",
+          "tipo": "select",
+          "label": "Apresentação Fetal",
+          "opcoes": [
+            {
+              "valor": "cefalica",
+              "label": "Cefálica"
+            },
+            {
+              "valor": "pelvica",
+              "label": "Pélvica"
+            },
+            {
+              "valor": "transversa",
+              "label": "Transversa"
+            }
+          ],
+          "referencia": "Cefálica"
+        },
+        {
+          "id": "batimentos_fetais",
+          "tipo": "select",
+          "label": "Batimentos Cardíacos Fetais",
+          "opcoes": [
+            {
+              "valor": "presentes",
+              "label": "Presentes"
+            },
+            {
+              "valor": "ausentes",
+              "label": "Ausentes"
+            }
+          ],
+          "referencia": "Presentes"
+        },
+        {
+          "id": "placenta_localizacao",
+          "tipo": "select",
+          "label": "Placenta (Localização)",
+          "opcoes": [
+            {
+              "valor": "anterior",
+              "label": "Anterior"
+            },
+            {
+              "valor": "posterior",
+              "label": "Posterior"
+            },
+            {
+              "valor": "previa",
+              "label": "Prévia"
+            }
+          ],
+          "referencia": "Normal"
+        },
+        {
+          "id": "liquido_amniotico",
+          "tipo": "select",
+          "label": "Líquido Amniótico",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Normal"
+            },
+            {
+              "valor": "oligo",
+              "label": "Oligoâmnio"
+            },
+            {
+              "valor": "poli",
+              "label": "Polidrâmnio"
+            }
+          ],
+          "referencia": "Normal"
+        },
+        {
+          "id": "biometria_fetal",
+          "tipo": "select",
+          "label": "Biometria Fetal",
+          "opcoes": [
+            {
+              "valor": "compatível",
+              "label": "Compatível com IG"
+            },
+            {
+              "valor": "discordante",
+              "label": "Discordante"
+            }
+          ],
+          "referencia": "Compatível"
+        },
+        {
+          "id": "impressao",
+          "tipo": "select",
+          "label": "Impressão Obstétrica",
+          "opcoes": [
+            {
+              "valor": "evolutiva",
+              "label": "Gestação evolutiva"
+            },
+            {
+              "valor": "risco",
+              "label": "Gestação com achados de risco"
+            }
+          ],
+          "referencia": "Evolutiva"
+        },
+        {
+          "id": "interpretacao",
+          "tipo": "textarea",
+          "label": "Interpretação"
+        },
+        {
+          "id": "conclusao",
+          "tipo": "textarea",
+          "label": "Conclusão"
+        }
+      ]
+    },
+    {
+      "id": "obst_doppler_materno_fetal",
+      "nome": "Doppler Obstétrico (Materno-fetal)",
+      "descricao": "Avaliação hemodinâmica fetal e uteroplacentária",
+      "categoria": "obstetricia",
+      "icone": "fa-wave-square",
+      "campos": [
+        {
+          "id": "arteria_umbilical",
+          "tipo": "select",
+          "label": "Artéria Umbilical",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Normal"
+            },
+            {
+              "valor": "resistencia_aumentada",
+              "label": "Resistência aumentada"
+            },
+            {
+              "valor": "fluxo_diastolico_ausente",
+              "label": "Fluxo diastólico ausente"
+            },
+            {
+              "valor": "fluxo_reverso",
+              "label": "Fluxo reverso"
+            }
+          ],
+          "referencia": "Normal"
+        },
+        {
+          "id": "arteria_cerebral_media",
+          "tipo": "select",
+          "label": "Artéria Cerebral Média",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Normal"
+            },
+            {
+              "valor": "centralizacao",
+              "label": "Centralização fetal"
+            }
+          ],
+          "referencia": "Normal"
+        },
+        {
+          "id": "ducto_venoso",
+          "tipo": "select",
+          "label": "Ducto Venoso",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Normal"
+            },
+            {
+              "valor": "alterado",
+              "label": "Alterado"
+            }
+          ],
+          "referencia": "Normal"
+        },
+        {
+          "id": "impressao",
+          "tipo": "select",
+          "label": "Impressão Doppler",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Hemodinâmica fetal preservada"
+            },
+            {
+              "valor": "insuficiencia_placentaria",
+              "label": "Sugestivo de insuficiência placentária"
+            }
+          ],
+          "referencia": "Normal / Alterado"
+        },
+        {
+          "id": "interpretacao",
+          "tipo": "textarea",
+          "label": "Interpretação"
+        },
+        {
+          "id": "conclusao",
+          "tipo": "textarea",
+          "label": "Conclusão"
+        }
+      ]
+    },
+    {
+      "id": "obst_cardiotocografia",
+      "nome": "Cardiotocografia (CTG)",
+      "descricao": "Avaliação do bem-estar fetal por frequência cardíaca fetal e contrações uterinas",
+      "categoria": "obstetricia",
+      "icone": "fa-heartbeat",
+      "campos": [
+        {
+          "id": "fcf_basal",
+          "tipo": "number",
+          "label": "FCF Basal",
+          "unidade": "bpm",
+          "referencia": "110 – 160"
+        },
+        {
+          "id": "variabilidade",
+          "tipo": "select",
+          "label": "Variabilidade",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Normal"
+            },
+            {
+              "valor": "diminuida",
+              "label": "Diminuída"
+            },
+            {
+              "valor": "aumentada",
+              "label": "Aumentada"
+            }
+          ],
+          "referencia": "Normal"
+        },
+        {
+          "id": "aceleracoes",
+          "tipo": "select",
+          "label": "Acelerações",
+          "opcoes": [
+            {
+              "valor": "presentes",
+              "label": "Presentes"
+            },
+            {
+              "valor": "ausentes",
+              "label": "Ausentes"
+            }
+          ],
+          "referencia": "Presentes"
+        },
+        {
+          "id": "desaceleracoes",
+          "tipo": "select",
+          "label": "Desacelerações",
+          "opcoes": [
+            {
+              "valor": "ausentes",
+              "label": "Ausentes"
+            },
+            {
+              "valor": "precoces",
+              "label": "Precoces"
+            },
+            {
+              "valor": "tardias",
+              "label": "Tardias"
+            },
+            {
+              "valor": "variaveis",
+              "label": "Variáveis"
+            }
+          ],
+          "referencia": "Ausentes"
+        },
+        {
+          "id": "impressao",
+          "tipo": "select",
+          "label": "Impressão Obstétrica",
+          "opcoes": [
+            {
+              "valor": "reativa",
+              "label": "CTG reativa"
+            },
+            {
+              "valor": "nao_reativa",
+              "label": "CTG não reativa"
+            },
+            {
+              "valor": "suspeita",
+              "label": "CTG suspeita"
+            }
+          ],
+          "referencia": "Reativa"
+        },
+        {
+          "id": "interpretacao",
+          "tipo": "textarea",
+          "label": "Interpretação"
+        },
+        {
+          "id": "conclusao",
+          "tipo": "textarea",
+          "label": "Conclusão"
+        }
+      ]
+    },
+    {
+      "id": "obst_us_3d",
+      "nome": "Ultrassonografia Obstétrica 3D",
+      "descricao": "Avaliação tridimensional da anatomia fetal com reconstrução volumétrica",
+      "categoria": "obstetricia",
+      "icone": "fa-cube",
+      "campos": [
+        {
+          "id": "idade_gestacional",
+          "tipo": "number",
+          "label": "Idade Gestacional",
+          "unidade": "semanas",
+          "referencia": "—"
+        },
+        {
+          "id": "face_fetal",
+          "tipo": "select",
+          "label": "Face Fetal",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Aspecto normal"
+            },
+            {
+              "valor": "suspeita",
+              "label": "Suspeita de malformação"
+            }
+          ],
+          "referencia": "Normal"
+        },
+        {
+          "id": "membros",
+          "tipo": "select",
+          "label": "Membros",
+          "opcoes": [
+            {
+              "valor": "preservados",
+              "label": "Preservados"
+            },
+            {
+              "valor": "alterados",
+              "label": "Alterações morfológicas"
+            }
+          ],
+          "referencia": "Preservados"
+        },
+        {
+          "id": "coluna",
+          "tipo": "select",
+          "label": "Coluna Vertebral",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Normal"
+            },
+            {
+              "valor": "defeito",
+              "label": "Defeito de fechamento"
+            }
+          ],
+          "referencia": "Normal"
+        },
+        {
+          "id": "impressao",
+          "tipo": "select",
+          "label": "Impressão Obstétrica",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Anatomia fetal sem alterações significativas"
+            },
+            {
+              "valor": "suspeita_malformacao",
+              "label": "Suspeita de malformação fetal"
+            }
+          ],
+          "referencia": "Normal / Alterado"
+        },
+        {
+          "id": "interpretacao",
+          "tipo": "textarea",
+          "label": "Interpretação"
+        },
+        {
+          "id": "conclusao",
+          "tipo": "textarea",
+          "label": "Conclusão"
+        }
+      ]
+    },
+    {
+      "id": "obst_us_4d",
+      "nome": "Ultrassonografia Obstétrica 4D",
+      "descricao": "Avaliação dinâmica em tempo real do feto com reconstrução tridimensional",
+      "categoria": "obstetricia",
+      "icone": "fa-video",
+      "campos": [
+        {
+          "id": "idade_gestacional",
+          "tipo": "number",
+          "label": "Idade Gestacional",
+          "unidade": "semanas",
+          "referencia": "—"
+        },
+        {
+          "id": "movimentos_fetais",
+          "tipo": "select",
+          "label": "Movimentos Fetais",
+          "opcoes": [
+            {
+              "valor": "adequados",
+              "label": "Adequados"
+            },
+            {
+              "valor": "reduzidos",
+              "label": "Reduzidos"
+            }
+          ],
+          "referencia": "Adequados"
+        },
+        {
+          "id": "expressao_facial",
+          "tipo": "select",
+          "label": "Expressões Faciais",
+          "opcoes": [
+            {
+              "valor": "presentes",
+              "label": "Presentes"
+            },
+            {
+              "valor": "pouco_observadas",
+              "label": "Pouco observadas"
+            }
+          ],
+          "referencia": "Presentes"
+        },
+        {
+          "id": "atividade_global",
+          "tipo": "select",
+          "label": "Atividade Global Fetal",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Normal"
+            },
+            {
+              "valor": "hipoativa",
+              "label": "Hipoativa"
+            }
+          ],
+          "referencia": "Normal"
+        },
+        {
+          "id": "impressao",
+          "tipo": "select",
+          "label": "Impressão Obstétrica",
+          "opcoes": [
+            {
+              "valor": "bem_estar",
+              "label": "Bem-estar fetal preservado"
+            },
+            {
+              "valor": "alteracao_comportamental",
+              "label": "Alterações comportamentais fetais"
+            }
+          ],
+          "referencia": "Normal / Alterado"
+        },
+        {
+          "id": "interpretacao",
+          "tipo": "textarea",
+          "label": "Interpretação"
+        },
+        {
+          "id": "conclusao",
+          "tipo": "textarea",
+          "label": "Conclusão"
+        }
+      ]
+    },
+    {
+      "id": "pediatria_crescimento_desenvolvimento",
+      "nome": "Avaliação de Crescimento e Desenvolvimento",
+      "descricao": "Monitoramento antropométrico e desenvolvimento neuropsicomotor",
+      "categoria": "pediatria",
+      "icone": "fa-chart-line",
+      "campos": [
+        {
+          "id": "peso",
+          "tipo": "number",
+          "label": "Peso",
+          "unidade": "kg",
+          "referencia": "Percentis OMS"
+        },
+        {
+          "id": "estatura",
+          "tipo": "number",
+          "label": "Estatura",
+          "unidade": "cm",
+          "referencia": "Percentis OMS"
+        },
+        {
+          "id": "desenvolvimento",
+          "tipo": "select",
+          "label": "Desenvolvimento Neuropsicomotor",
+          "opcoes": [
+            {
+              "valor": "adequado",
+              "label": "Adequado para a idade"
+            },
+            {
+              "valor": "atraso",
+              "label": "Atraso no desenvolvimento"
+            }
+          ],
+          "referencia": "Adequado"
+        },
+        {
+          "id": "impressao",
+          "tipo": "select",
+          "label": "Impressão Pediátrica",
+          "opcoes": [
+            {
+              "valor": "adequado",
+              "label": "Crescimento adequado"
+            },
+            {
+              "valor": "alerta",
+              "label": "Necessita acompanhamento"
+            }
+          ],
+          "referencia": "Adequado"
+        },
+        {
+          "id": "interpretacao",
+          "tipo": "textarea",
+          "label": "Interpretação"
+        },
+        {
+          "id": "conclusao",
+          "tipo": "textarea",
+          "label": "Conclusão"
+        }
+      ]
+    },
+    {
+      "id": "func_espirometria",
+      "nome": "Espirometria",
+      "descricao": "Avaliação da função pulmonar por volumes e fluxos respiratórios",
+      "categoria": "funcional",
+      "icone": "fa-lungs",
+      "campos": [
+        {
+          "id": "cvf",
+          "tipo": "number",
+          "label": "CVF",
+          "unidade": "% previsto",
+          "referencia": "≥ 80"
+        },
+        {
+          "id": "vef1",
+          "tipo": "number",
+          "label": "VEF1",
+          "unidade": "% previsto",
+          "referencia": "≥ 80"
+        },
+        {
+          "id": "vef1_cvf",
+          "tipo": "number",
+          "label": "VEF1/CVF",
+          "unidade": "%",
+          "referencia": "≥ 70"
+        },
+        {
+          "id": "padrao",
+          "tipo": "select",
+          "label": "Padrão Ventilatório",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Normal"
+            },
+            {
+              "valor": "obstrutivo",
+              "label": "Obstrutivo"
+            },
+            {
+              "valor": "restritivo",
+              "label": "Restritivo"
+            },
+            {
+              "valor": "misto",
+              "label": "Misto"
+            }
+          ],
+          "referencia": "Normal"
+        },
+        {
+          "id": "resposta_broncodilatador",
+          "tipo": "select",
+          "label": "Resposta ao Broncodilatador",
+          "opcoes": [
+            {
+              "valor": "nao_realizado",
+              "label": "Não realizado"
+            },
+            {
+              "valor": "negativa",
+              "label": "Negativa"
+            },
+            {
+              "valor": "positiva",
+              "label": "Positiva"
+            }
+          ],
+          "referencia": "—"
+        },
+        {
+          "id": "impressao",
+          "tipo": "select",
+          "label": "Impressão Funcional",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Função pulmonar preservada"
+            },
+            {
+              "valor": "asma",
+              "label": "Padrão compatível com asma"
+            },
+            {
+              "valor": "dpoc",
+              "label": "Padrão compatível com DPOC"
+            }
+          ],
+          "referencia": "Normal / Alterado"
+        },
+        {
+          "id": "interpretacao",
+          "tipo": "textarea",
+          "label": "Interpretação"
+        },
+        {
+          "id": "conclusao",
+          "tipo": "textarea",
+          "label": "Conclusão"
+        }
+      ]
+    },
+    {
+      "id": "func_oximetria",
+      "nome": "Oximetria de Pulso",
+      "descricao": "Avaliação da saturação periférica de oxigênio",
+      "categoria": "funcional",
+      "icone": "fa-heartbeat",
+      "campos": [
+        {
+          "id": "spo2",
+          "tipo": "number",
+          "label": "Saturação de O₂",
+          "unidade": "%",
+          "referencia": "≥ 95"
+        },
+        {
+          "id": "condicao",
+          "tipo": "select",
+          "label": "Condição de Medida",
+          "opcoes": [
+            {
+              "valor": "repouso",
+              "label": "Repouso"
+            },
+            {
+              "valor": "esforco",
+              "label": "Esforço"
+            }
+          ],
+          "referencia": "Repouso"
+        },
+        {
+          "id": "impressao",
+          "tipo": "select",
+          "label": "Impressão Funcional",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Oxigenação adequada"
+            },
+            {
+              "valor": "hipoxemia",
+              "label": "Hipoxemia"
+            }
+          ],
+          "referencia": "Normal / Alterado"
+        },
+        {
+          "id": "interpretacao",
+          "tipo": "textarea",
+          "label": "Interpretação"
+        },
+        {
+          "id": "conclusao",
+          "tipo": "textarea",
+          "label": "Conclusão"
+        }
+      ]
+    },
+    {
+      "id": "func_potenciais_evocados",
+      "nome": "Potenciais Evocados",
+      "descricao": "Avaliação da condução sensorial central",
+      "categoria": "funcional",
+      "icone": "fa-brain",
+      "campos": [
+        {
+          "id": "tipo",
+          "tipo": "select",
+          "label": "Tipo de Potencial Evocado",
+          "opcoes": [
+            {
+              "valor": "visual",
+              "label": "Visual"
+            },
+            {
+              "valor": "auditivo",
+              "label": "Auditivo"
+            },
+            {
+              "valor": "somatossensorial",
+              "label": "Somatossensorial"
+            }
+          ],
+          "referencia": "—"
+        },
+        {
+          "id": "latencia",
+          "tipo": "select",
+          "label": "Latência",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Normal"
+            },
+            {
+              "valor": "aumentada",
+              "label": "Aumentada"
+            }
+          ],
+          "referencia": "Normal"
+        },
+        {
+          "id": "amplitude",
+          "tipo": "select",
+          "label": "Amplitude",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Normal"
+            },
+            {
+              "valor": "reduzida",
+              "label": "Reduzida"
+            }
+          ],
+          "referencia": "Normal"
+        },
+        {
+          "id": "impressao",
+          "tipo": "select",
+          "label": "Impressão Neurológica",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Condução preservada"
+            },
+            {
+              "valor": "desmielinizante",
+              "label": "Alteração desmielinizante"
+            }
+          ],
+          "referencia": "Normal / Alterado"
+        },
+        {
+          "id": "interpretacao",
+          "tipo": "textarea",
+          "label": "Interpretação"
+        },
+        {
+          "id": "conclusao",
+          "tipo": "textarea",
+          "label": "Conclusão"
+        }
+      ]
+    },
+    {
+      "id": "func_tilt_test",
+      "nome": "Teste de Inclinação (Tilt Test)",
+      "descricao": "Avaliação de síncope e disautonomia",
+      "categoria": "funcional",
+      "icone": "fa-sync",
+      "campos": [
+        {
+          "id": "resposta_pressorica",
+          "tipo": "select",
+          "label": "Resposta Pressórica",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Normal"
+            },
+            {
+              "valor": "queda_pa",
+              "label": "Queda de pressão"
+            }
+          ],
+          "referencia": "Normal"
+        },
+        {
+          "id": "frequencia_cardiaca",
+          "tipo": "select",
+          "label": "Resposta da Frequência Cardíaca",
+          "opcoes": [
+            {
+              "valor": "adequada",
+              "label": "Adequada"
+            },
+            {
+              "valor": "inadequada",
+              "label": "Inadequada"
+            }
+          ],
+          "referencia": "Adequada"
+        },
+        {
+          "id": "sintomas",
+          "tipo": "select",
+          "label": "Sintomas Durante o Teste",
+          "opcoes": [
+            {
+              "valor": "ausentes",
+              "label": "Ausentes"
+            },
+            {
+              "valor": "sincope",
+              "label": "Síncope"
+            },
+            {
+              "valor": "pre_sincope",
+              "label": "Pré-síncope"
+            }
+          ],
+          "referencia": "Ausentes"
+        },
+        {
+          "id": "impressao",
+          "tipo": "select",
+          "label": "Impressão Funcional",
+          "opcoes": [
+            {
+              "valor": "negativo",
+              "label": "Teste negativo"
+            },
+            {
+              "valor": "vasovagal",
+              "label": "Resposta vasovagal"
+            },
+            {
+              "valor": "disautonomia",
+              "label": "Disautonomia"
+            }
+          ],
+          "referencia": "Negativo"
+        },
+        {
+          "id": "interpretacao",
+          "tipo": "textarea",
+          "label": "Interpretação"
+        },
+        {
+          "id": "conclusao",
+          "tipo": "textarea",
+          "label": "Conclusão"
+        }
+      ]
+    },
+    {
+      "id": "func_teste_pezinho",
+      "nome": "Teste do Pezinho",
+      "descricao": "Triagem neonatal para doenças metabólicas e genéticas",
+      "categoria": "neonatal",
+      "icone": "fa-baby",
+      "campos": [
+        {
+          "id": "resultado",
+          "tipo": "select",
+          "label": "Resultado",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Normal"
+            },
+            {
+              "valor": "alterado",
+              "label": "Alterado"
+            }
+          ],
+          "referencia": "Normal"
+        },
+        {
+          "id": "doenca_suspeita",
+          "tipo": "select",
+          "label": "Doença Suspeita",
+          "opcoes": [
+            {
+              "valor": "nenhuma",
+              "label": "Nenhuma"
+            },
+            {
+              "valor": "fenilcetonuria",
+              "label": "Fenilcetonúria"
+            },
+            {
+              "valor": "hipotireoidismo",
+              "label": "Hipotireoidismo congênito"
+            },
+            {
+              "valor": "fibrose_cistica",
+              "label": "Fibrose cística"
+            }
+          ],
+          "referencia": "Nenhuma"
+        },
+        {
+          "id": "impressao",
+          "tipo": "select",
+          "label": "Impressão Neonatal",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Triagem neonatal normal"
+            },
+            {
+              "valor": "encaminhamento",
+              "label": "Necessita confirmação diagnóstica"
+            }
+          ],
+          "referencia": "Normal / Alterado"
+        },
+        {
+          "id": "interpretacao",
+          "tipo": "textarea",
+          "label": "Interpretação"
+        },
+        {
+          "id": "conclusao",
+          "tipo": "textarea",
+          "label": "Conclusão"
+        }
+      ]
+    },
+    {
+      "id": "neonatal_teste_orelhinha",
+      "nome": "Teste da Orelhinha",
+      "descricao": "Triagem auditiva neonatal por emissões otoacústicas",
+      "categoria": "neonatal",
+      "icone": "fa-ear-listen",
+      "campos": [
+        {
+          "id": "resultado",
+          "tipo": "select",
+          "label": "Resultado",
+          "opcoes": [
+            {
+              "valor": "passou",
+              "label": "Passou"
+            },
+            {
+              "valor": "falhou",
+              "label": "Falhou"
+            }
+          ],
+          "referencia": "Passou"
+        },
+        {
+          "id": "lateralidade",
+          "tipo": "select",
+          "label": "Lateralidade",
+          "opcoes": [
+            {
+              "valor": "bilateral",
+              "label": "Bilateral"
+            },
+            {
+              "valor": "direita",
+              "label": "Orelha direita"
+            },
+            {
+              "valor": "esquerda",
+              "label": "Orelha esquerda"
+            }
+          ],
+          "referencia": "Bilateral"
+        },
+        {
+          "id": "impressao",
+          "tipo": "select",
+          "label": "Impressão Neonatal",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Triagem auditiva normal"
+            },
+            {
+              "valor": "encaminhamento",
+              "label": "Necessita avaliação audiológica"
+            }
+          ],
+          "referencia": "Normal / Alterado"
+        },
+        {
+          "id": "interpretacao",
+          "tipo": "textarea",
+          "label": "Interpretação"
+        },
+        {
+          "id": "conclusao",
+          "tipo": "textarea",
+          "label": "Conclusão"
+        }
+      ]
+    },
+    {
+      "id": "neonatal_teste_coracaozinho",
+      "nome": "Teste do Coraçãozinho",
+      "descricao": "Triagem neonatal de cardiopatias congênitas por oximetria",
+      "categoria": "neonatal",
+      "icone": "fa-heart",
+      "campos": [
+        {
+          "id": "spo2_mao",
+          "tipo": "number",
+          "label": "SpO₂ Mão Direita",
+          "unidade": "%",
+          "referencia": "≥ 95"
+        },
+        {
+          "id": "spo2_pe",
+          "tipo": "number",
+          "label": "SpO₂ Pé",
+          "unidade": "%",
+          "referencia": "≥ 95"
+        },
+        {
+          "id": "diferenca",
+          "tipo": "number",
+          "label": "Diferença Mão–Pé",
+          "unidade": "%",
+          "referencia": "≤ 3"
+        },
+        {
+          "id": "resultado",
+          "tipo": "select",
+          "label": "Resultado",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Normal"
+            },
+            {
+              "valor": "alterado",
+              "label": "Alterado"
+            }
+          ],
+          "referencia": "Normal"
+        },
+        {
+          "id": "interpretacao",
+          "tipo": "textarea",
+          "label": "Interpretação"
+        },
+        {
+          "id": "conclusao",
+          "tipo": "textarea",
+          "label": "Conclusão"
+        }
+      ]
+    },
+    {
+      "id": "neonatal_teste_linguinha",
+      "nome": "Teste da Linguinha",
+      "descricao": "Avaliação do frênulo lingual no recém-nascido",
+      "categoria": "neonatal",
+      "icone": "fa-mouth",
+      "campos": [
+        {
+          "id": "freio_lingual",
+          "tipo": "select",
+          "label": "Frênulo Lingual",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Normal"
+            },
+            {
+              "valor": "curto",
+              "label": "Curto (Anquiloglossia)"
+            }
+          ],
+          "referencia": "Normal"
+        },
+        {
+          "id": "impacto_succao",
+          "tipo": "select",
+          "label": "Impacto na Sucção",
+          "opcoes": [
+            {
+              "valor": "ausente",
+              "label": "Ausente"
+            },
+            {
+              "valor": "presente",
+              "label": "Presente"
+            }
+          ],
+          "referencia": "Ausente"
+        },
+        {
+          "id": "conduta",
+          "tipo": "select",
+          "label": "Conduta",
+          "opcoes": [
+            {
+              "valor": "observacao",
+              "label": "Observação"
+            },
+            {
+              "valor": "frenotomia",
+              "label": "Frenotomia indicada"
+            }
+          ],
+          "referencia": "Observação"
+        },
+        {
+          "id": "interpretacao",
+          "tipo": "textarea",
+          "label": "Interpretação"
+        },
+        {
+          "id": "conclusao",
+          "tipo": "textarea",
+          "label": "Conclusão"
+        }
+      ]
+    },
+    {
+      "id": "pediatria_glicemia_capilar",
+      "nome": "Glicemia Capilar Pediátrica",
+      "descricao": "Avaliação rápida da glicemia em criança",
+      "categoria": "pediatria",
+      "icone": "fa-droplet",
+      "campos": [
+        {
+          "id": "valor",
+          "tipo": "number",
+          "label": "Glicemia",
+          "unidade": "mg/dL",
+          "referencia": "70 – 100"
+        },
+        {
+          "id": "impressao",
+          "tipo": "select",
+          "label": "Impressão Pediátrica",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Glicemia normal"
+            },
+            {
+              "valor": "hipoglicemia",
+              "label": "Hipoglicemia"
+            },
+            {
+              "valor": "hiperglicemia",
+              "label": "Hiperglicemia"
+            }
+          ],
+          "referencia": "Normal / Alterado"
+        },
+        {
+          "id": "interpretacao",
+          "tipo": "textarea",
+          "label": "Interpretação"
+        },
+        {
+          "id": "conclusao",
+          "tipo": "textarea",
+          "label": "Conclusão"
+        }
+      ]
+    },
+    {
+      "id": "pediatria_teste_rapido_viral",
+      "nome": "Teste Rápido Viral",
+      "descricao": "Detecção rápida de vírus respiratórios em pediatria",
+      "categoria": "pediatria",
+      "icone": "fa-virus",
+      "campos": [
+        {
+          "id": "virus",
+          "tipo": "select",
+          "label": "Vírus Pesquisado",
+          "opcoes": [
+            {
+              "valor": "influenza",
+              "label": "Influenza"
+            },
+            {
+              "valor": "covid",
+              "label": "SARS-CoV-2"
+            },
+            {
+              "valor": "vrs",
+              "label": "Vírus Sincicial Respiratório"
+            }
+          ],
+          "referencia": "—"
+        },
+        {
+          "id": "resultado",
+          "tipo": "select",
+          "label": "Resultado",
+          "opcoes": [
+            {
+              "valor": "positivo",
+              "label": "Positivo"
+            },
+            {
+              "valor": "negativo",
+              "label": "Negativo"
+            }
+          ],
+          "referencia": "Negativo"
+        },
+        {
+          "id": "impressao",
+          "tipo": "select",
+          "label": "Impressão Pediátrica",
+          "opcoes": [
+            {
+              "valor": "confirmado",
+              "label": "Infecção viral confirmada"
+            },
+            {
+              "valor": "descartado",
+              "label": "Infecção viral descartada"
+            }
+          ],
+          "referencia": "Normal / Alterado"
+        },
+        {
+          "id": "interpretacao",
+          "tipo": "textarea",
+          "label": "Interpretação"
+        },
+        {
+          "id": "conclusao",
+          "tipo": "textarea",
+          "label": "Conclusão"
+        }
+      ]
+    },
+    {
+      "id": "oftalmo_acuidade_visual",
+      "nome": "Acuidade Visual",
+      "descricao": "Avaliação da capacidade visual com e sem correção",
+      "categoria": "oftalmologia",
+      "icone": "fa-eye",
+      "campos": [
+        {
+          "id": "olho_direito",
+          "tipo": "select",
+          "label": "Olho Direito (OD)",
+          "opcoes": [
+            {
+              "valor": "20_20",
+              "label": "20/20"
+            },
+            {
+              "valor": "20_40",
+              "label": "20/40"
+            },
+            {
+              "valor": "20_60",
+              "label": "20/60"
+            },
+            {
+              "valor": "conta_dedos",
+              "label": "Conta dedos"
+            }
+          ],
+          "referencia": "20/20"
+        },
+        {
+          "id": "olho_esquerdo",
+          "tipo": "select",
+          "label": "Olho Esquerdo (OE)",
+          "opcoes": [
+            {
+              "valor": "20_20",
+              "label": "20/20"
+            },
+            {
+              "valor": "20_40",
+              "label": "20/40"
+            },
+            {
+              "valor": "20_60",
+              "label": "20/60"
+            },
+            {
+              "valor": "conta_dedos",
+              "label": "Conta dedos"
+            }
+          ],
+          "referencia": "20/20"
+        },
+        {
+          "id": "correcao",
+          "tipo": "select",
+          "label": "Avaliação com Correção",
+          "opcoes": [
+            {
+              "valor": "sem",
+              "label": "Sem correção"
+            },
+            {
+              "valor": "com",
+              "label": "Com correção"
+            }
+          ],
+          "referencia": "—"
+        },
+        {
+          "id": "impressao",
+          "tipo": "select",
+          "label": "Impressão Oftalmológica",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Acuidade preservada"
+            },
+            {
+              "valor": "reduzida",
+              "label": "Redução da acuidade visual"
+            }
+          ],
+          "referencia": "Normal / Alterado"
+        },
+        {
+          "id": "interpretacao",
+          "tipo": "textarea",
+          "label": "Interpretação"
+        },
+        {
+          "id": "conclusao",
+          "tipo": "textarea",
+          "label": "Conclusão"
+        }
+      ]
+    },
+    {
+      "id": "oftalmo_acuidade_visual",
+      "nome": "Acuidade Visual",
+      "descricao": "Avaliação da capacidade visual com e sem correção",
+      "categoria": "oftalmologia",
+      "icone": "fa-eye",
+      "campos": [
+        {
+          "id": "olho_direito",
+          "tipo": "select",
+          "label": "Olho Direito (OD)",
+          "opcoes": [
+            {
+              "valor": "20_20",
+              "label": "20/20"
+            },
+            {
+              "valor": "20_40",
+              "label": "20/40"
+            },
+            {
+              "valor": "20_60",
+              "label": "20/60"
+            },
+            {
+              "valor": "conta_dedos",
+              "label": "Conta dedos"
+            }
+          ],
+          "referencia": "20/20"
+        },
+        {
+          "id": "olho_esquerdo",
+          "tipo": "select",
+          "label": "Olho Esquerdo (OE)",
+          "opcoes": [
+            {
+              "valor": "20_20",
+              "label": "20/20"
+            },
+            {
+              "valor": "20_40",
+              "label": "20/40"
+            },
+            {
+              "valor": "20_60",
+              "label": "20/60"
+            },
+            {
+              "valor": "conta_dedos",
+              "label": "Conta dedos"
+            }
+          ],
+          "referencia": "20/20"
+        },
+        {
+          "id": "correcao",
+          "tipo": "select",
+          "label": "Avaliação com Correção",
+          "opcoes": [
+            {
+              "valor": "sem",
+              "label": "Sem correção"
+            },
+            {
+              "valor": "com",
+              "label": "Com correção"
+            }
+          ],
+          "referencia": "—"
+        },
+        {
+          "id": "impressao",
+          "tipo": "select",
+          "label": "Impressão Oftalmológica",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Acuidade preservada"
+            },
+            {
+              "valor": "reduzida",
+              "label": "Redução da acuidade visual"
+            }
+          ],
+          "referencia": "Normal / Alterado"
+        },
+        {
+          "id": "interpretacao",
+          "tipo": "textarea",
+          "label": "Interpretação"
+        },
+        {
+          "id": "conclusao",
+          "tipo": "textarea",
+          "label": "Conclusão"
+        }
+      ]
+    },
+    {
+      "id": "oftalmo_biomicroscopia",
+      "nome": "Biomicroscopia",
+      "descricao": "Avaliação do segmento anterior do olho",
+      "categoria": "oftalmologia",
+      "icone": "fa-search",
+      "campos": [
+        {
+          "id": "palpebras_conjuntiva",
+          "tipo": "select",
+          "label": "Pálpebras e Conjuntiva",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Normais"
+            },
+            {
+              "valor": "hiperemia",
+              "label": "Hiperemia"
+            },
+            {
+              "valor": "blefarite",
+              "label": "Blefarite"
+            }
+          ],
+          "referencia": "Normais"
+        },
+        {
+          "id": "cornea",
+          "tipo": "select",
+          "label": "Córnea",
+          "opcoes": [
+            {
+              "valor": "transparente",
+              "label": "Transparente"
+            },
+            {
+              "valor": "opacidade",
+              "label": "Opacidade"
+            },
+            {
+              "valor": "ceratite",
+              "label": "Ceratite"
+            }
+          ],
+          "referencia": "Transparente"
+        },
+        {
+          "id": "camara_anterior",
+          "tipo": "select",
+          "label": "Câmara Anterior",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Normal"
+            },
+            {
+              "valor": "rasa",
+              "label": "Rasa"
+            },
+            {
+              "valor": "inflamacao",
+              "label": "Sinais inflamatórios"
+            }
+          ],
+          "referencia": "Normal"
+        },
+        {
+          "id": "cristalino",
+          "tipo": "select",
+          "label": "Cristalino",
+          "opcoes": [
+            {
+              "valor": "transparente",
+              "label": "Transparente"
+            },
+            {
+              "valor": "catarata",
+              "label": "Opacidades (Catarata)"
+            }
+          ],
+          "referencia": "Transparente"
+        },
+        {
+          "id": "impressao",
+          "tipo": "select",
+          "label": "Impressão Biomicroscópica",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Segmento anterior sem alterações"
+            },
+            {
+              "valor": "alterado",
+              "label": "Alterações no segmento anterior"
+            }
+          ],
+          "referencia": "Normal / Alterado"
+        },
+        {
+          "id": "interpretacao",
+          "tipo": "textarea",
+          "label": "Interpretação"
+        },
+        {
+          "id": "conclusao",
+          "tipo": "textarea",
+          "label": "Conclusão"
+        }
+      ]
+    },
+    {
+      "id": "oftalmo_fundo_olho",
+      "nome": "Fundo de Olho",
+      "descricao": "Avaliação da retina, mácula e nervo óptico",
+      "categoria": "oftalmologia",
+      "icone": "fa-eye-low-vision",
+      "campos": [
+        {
+          "id": "disco_optico",
+          "tipo": "select",
+          "label": "Disco Óptico",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Normal"
+            },
+            {
+              "valor": "escavacao_aumentada",
+              "label": "Escavação aumentada"
+            },
+            {
+              "valor": "edema",
+              "label": "Edema de papila"
+            }
+          ],
+          "referencia": "Normal"
+        },
+        {
+          "id": "macula",
+          "tipo": "select",
+          "label": "Mácula",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Normal"
+            },
+            {
+              "valor": "edema",
+              "label": "Edema macular"
+            }
+          ],
+          "referencia": "Normal"
+        },
+        {
+          "id": "retina",
+          "tipo": "select",
+          "label": "Retina",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Normal"
+            },
+            {
+              "valor": "retinopatia_diabetica",
+              "label": "Retinopatia diabética"
+            },
+            {
+              "valor": "lesoes",
+              "label": "Lesões retinianas"
+            }
+          ],
+          "referencia": "Normal"
+        },
+        {
+          "id": "impressao",
+          "tipo": "select",
+          "label": "Impressão Oftalmoscópica",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Fundo de olho normal"
+            },
+            {
+              "valor": "alterado",
+              "label": "Alterações fundoscópicas"
+            }
+          ],
+          "referencia": "Normal / Alterado"
+        },
+        {
+          "id": "interpretacao",
+          "tipo": "textarea",
+          "label": "Interpretação"
+        },
+        {
+          "id": "conclusao",
+          "tipo": "textarea",
+          "label": "Conclusão"
+        }
+      ]
+    },
+    {
+      "id": "oftalmo_refracao",
+      "nome": "Refração",
+      "descricao": "Determinação do erro refrativo",
+      "categoria": "oftalmologia",
+      "icone": "fa-glasses",
+      "campos": [
+        {
+          "id": "esferico_od",
+          "tipo": "number",
+          "label": "Esférico OD",
+          "unidade": "D",
+          "referencia": "—"
+        },
+        {
+          "id": "cilindrico_od",
+          "tipo": "number",
+          "label": "Cilíndrico OD",
+          "unidade": "D",
+          "referencia": "—"
+        },
+        {
+          "id": "esferico_oe",
+          "tipo": "number",
+          "label": "Esférico OE",
+          "unidade": "D",
+          "referencia": "—"
+        },
+        {
+          "id": "cilindrico_oe",
+          "tipo": "number",
+          "label": "Cilíndrico OE",
+          "unidade": "D",
+          "referencia": "—"
+        },
+        {
+          "id": "diagnostico",
+          "tipo": "select",
+          "label": "Diagnóstico Refrativo",
+          "opcoes": [
+            {
+              "valor": "emmetropia",
+              "label": "Emetropia"
+            },
+            {
+              "valor": "miopia",
+              "label": "Miopia"
+            },
+            {
+              "valor": "hipermetropia",
+              "label": "Hipermetropia"
+            },
+            {
+              "valor": "astigmatismo",
+              "label": "Astigmatismo"
+            }
+          ],
+          "referencia": "—"
+        },
+        {
+          "id": "interpretacao",
+          "tipo": "textarea",
+          "label": "Interpretação"
+        },
+        {
+          "id": "conclusao",
+          "tipo": "textarea",
+          "label": "Conclusão"
+        }
+      ]
+    },
+    {
+      "id": "oftalmo_campimetria",
+      "nome": "Campimetria Visual",
+      "descricao": "Avaliação do campo visual",
+      "categoria": "oftalmologia",
+      "icone": "fa-bullseye",
+      "campos": [
+        {
+          "id": "campo_visual",
+          "tipo": "select",
+          "label": "Campo Visual",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Normal"
+            },
+            {
+              "valor": "escotoma",
+              "label": "Escotomas"
+            },
+            {
+              "valor": "perda_periferica",
+              "label": "Perda periférica"
+            }
+          ],
+          "referencia": "Normal"
+        },
+        {
+          "id": "padrao_glaucomatoso",
+          "tipo": "select",
+          "label": "Padrão Glaucomatoso",
+          "opcoes": [
+            {
+              "valor": "ausente",
+              "label": "Ausente"
+            },
+            {
+              "valor": "presente",
+              "label": "Presente"
+            }
+          ],
+          "referencia": "Ausente"
+        },
+        {
+          "id": "impressao",
+          "tipo": "select",
+          "label": "Impressão Campimétrica",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Campo visual preservado"
+            },
+            {
+              "valor": "alterado",
+              "label": "Alterações do campo visual"
+            }
+          ],
+          "referencia": "Normal / Alterado"
+        },
+        {
+          "id": "interpretacao",
+          "tipo": "textarea",
+          "label": "Interpretação"
+        },
+        {
+          "id": "conclusao",
+          "tipo": "textarea",
+          "label": "Conclusão"
+        }
+      ]
+    },
+    {
+      "id": "derm_exame_clinico",
+      "nome": "Exame Dermatológico Clínico",
+      "descricao": "Avaliação morfológica das lesões cutâneas",
+      "categoria": "dermatologia",
+      "icone": "fa-skin",
+      "campos": [
+        {
+          "id": "tipo_lesao",
+          "tipo": "select",
+          "label": "Tipo de Lesão",
+          "opcoes": [
+            {
+              "valor": "macula",
+              "label": "Mácula"
+            },
+            {
+              "valor": "papula",
+              "label": "Pápula"
+            },
+            {
+              "valor": "nodulo",
+              "label": "Nódulo"
+            },
+            {
+              "valor": "vesicula",
+              "label": "Vesícula"
+            },
+            {
+              "valor": "placa",
+              "label": "Placa"
+            }
+          ],
+          "referencia": "—"
+        },
+        {
+          "id": "distribuicao",
+          "tipo": "select",
+          "label": "Distribuição",
+          "opcoes": [
+            {
+              "valor": "localizada",
+              "label": "Localizada"
+            },
+            {
+              "valor": "difusa",
+              "label": "Difusa"
+            }
+          ],
+          "referencia": "Localizada"
+        },
+        {
+          "id": "sinais_inflamatorios",
+          "tipo": "select",
+          "label": "Sinais Inflamatórios",
+          "opcoes": [
+            {
+              "valor": "ausentes",
+              "label": "Ausentes"
+            },
+            {
+              "valor": "presentes",
+              "label": "Presentes"
+            }
+          ],
+          "referencia": "Ausentes"
+        },
+        {
+          "id": "impressao",
+          "tipo": "select",
+          "label": "Impressão Dermatológica",
+          "opcoes": [
+            {
+              "valor": "benigna",
+              "label": "Lesão de aspecto benigno"
+            },
+            {
+              "valor": "inflamatoria",
+              "label": "Dermatose inflamatória"
+            },
+            {
+              "valor": "suspeita",
+              "label": "Lesão suspeita"
+            }
+          ],
+          "referencia": "—"
+        },
+        {
+          "id": "interpretacao",
+          "tipo": "textarea",
+          "label": "Interpretação"
+        },
+        {
+          "id": "conclusao",
+          "tipo": "textarea",
+          "label": "Conclusão"
+        }
+      ]
+    },
+    {
+      "id": "derm_dermatoscopia",
+      "nome": "Dermatoscopia",
+      "descricao": "Avaliação ampliada das estruturas cutâneas",
+      "categoria": "dermatologia",
+      "icone": "fa-search",
+      "campos": [
+        {
+          "id": "padrao_pigmentar",
+          "tipo": "select",
+          "label": "Padrão Pigmentar",
+          "opcoes": [
+            {
+              "valor": "regular",
+              "label": "Regular"
+            },
+            {
+              "valor": "irregular",
+              "label": "Irregular"
+            }
+          ],
+          "referencia": "Regular"
+        },
+        {
+          "id": "estrutura_vascular",
+          "tipo": "select",
+          "label": "Estrutura Vascular",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Normal"
+            },
+            {
+              "valor": "atipica",
+              "label": "Atípica"
+            }
+          ],
+          "referencia": "Normal"
+        },
+        {
+          "id": "criterios_malignidade",
+          "tipo": "select",
+          "label": "Critérios de Malignidade",
+          "opcoes": [
+            {
+              "valor": "ausentes",
+              "label": "Ausentes"
+            },
+            {
+              "valor": "presentes",
+              "label": "Presentes"
+            }
+          ],
+          "referencia": "Ausentes"
+        },
+        {
+          "id": "impressao",
+          "tipo": "select",
+          "label": "Impressão Dermatoscópica",
+          "opcoes": [
+            {
+              "valor": "benigna",
+              "label": "Lesão benigna"
+            },
+            {
+              "valor": "suspeita",
+              "label": "Lesão suspeita"
+            }
+          ],
+          "referencia": "—"
+        },
+        {
+          "id": "interpretacao",
+          "tipo": "textarea",
+          "label": "Interpretação"
+        },
+        {
+          "id": "conclusao",
+          "tipo": "textarea",
+          "label": "Conclusão"
+        }
+      ]
+    },
+    {
+      "id": "derm_micologico_direto",
+      "nome": "Exame Microscópico Direto (Micológico)",
+      "descricao": "Pesquisa de fungos em pele, unhas ou cabelos",
+      "categoria": "dermatologia",
+      "icone": "fa-vial",
+      "campos": [
+        {
+          "id": "material",
+          "tipo": "select",
+          "label": "Material Coletado",
+          "opcoes": [
+            {
+              "valor": "pele",
+              "label": "Pele"
+            },
+            {
+              "valor": "unha",
+              "label": "Unha"
+            },
+            {
+              "valor": "cabelo",
+              "label": "Cabelo"
+            }
+          ],
+          "referencia": "—"
+        },
+        {
+          "id": "fungos",
+          "tipo": "select",
+          "label": "Fungos",
+          "opcoes": [
+            {
+              "valor": "ausentes",
+              "label": "Ausentes"
+            },
+            {
+              "valor": "presentes",
+              "label": "Presentes"
+            }
+          ],
+          "referencia": "Ausentes"
+        },
+        {
+          "id": "impressao",
+          "tipo": "select",
+          "label": "Impressão Dermatológica",
+          "opcoes": [
+            {
+              "valor": "negativo",
+              "label": "Exame negativo"
+            },
+            {
+              "valor": "positivo",
+              "label": "Micoses confirmadas"
+            }
+          ],
+          "referencia": "Negativo / Positivo"
+        },
+        {
+          "id": "interpretacao",
+          "tipo": "textarea",
+          "label": "Interpretação"
+        },
+        {
+          "id": "conclusao",
+          "tipo": "textarea",
+          "label": "Conclusão"
+        }
+      ]
+    },
+    {
+      "id": "derm_biopsia_pele",
+      "nome": "Biópsia de Pele",
+      "descricao": "Análise histopatológica de lesão cutânea",
+      "categoria": "dermatologia",
+      "icone": "fa-dna",
+      "campos": [
+        {
+          "id": "tipo_biopsia",
+          "tipo": "select",
+          "label": "Tipo de Biópsia",
+          "opcoes": [
+            {
+              "valor": "punch",
+              "label": "Punch"
+            },
+            {
+              "valor": "excisional",
+              "label": "Excisional"
+            },
+            {
+              "valor": "incisional",
+              "label": "Incisional"
+            }
+          ],
+          "referencia": "Punch"
+        },
+        {
+          "id": "resultado_histologico",
+          "tipo": "select",
+          "label": "Resultado Histológico",
+          "opcoes": [
+            {
+              "valor": "benigno",
+              "label": "Benigno"
+            },
+            {
+              "valor": "maligno",
+              "label": "Maligno"
+            },
+            {
+              "valor": "inconclusivo",
+              "label": "Inconclusivo"
+            }
+          ],
+          "referencia": "—"
+        },
+        {
+          "id": "impressao",
+          "tipo": "select",
+          "label": "Impressão Histopatológica",
+          "opcoes": [
+            {
+              "valor": "lesao_benigna",
+              "label": "Lesão benigna"
+            },
+            {
+              "valor": "neoplasia",
+              "label": "Neoplasia cutânea"
+            }
+          ],
+          "referencia": "—"
+        },
+        {
+          "id": "interpretacao",
+          "tipo": "textarea",
+          "label": "Interpretação"
+        },
+        {
+          "id": "conclusao",
+          "tipo": "textarea",
+          "label": "Conclusão"
+        }
+      ]
+    },
+    {
+      "id": "derm_patch_test",
+      "nome": "Teste de Contato (Patch Test)",
+      "descricao": "Investigação de dermatite de contato alérgica",
+      "categoria": "dermatologia",
+      "icone": "fa-allergies",
+      "campos": [
+        {
+          "id": "substancia_testada",
+          "tipo": "select",
+          "label": "Substância Testada",
+          "opcoes": [
+            {
+              "valor": "niquel",
+              "label": "Níquel"
+            },
+            {
+              "valor": "cromo",
+              "label": "Cromo"
+            },
+            {
+              "valor": "perfume",
+              "label": "Perfumes"
+            },
+            {
+              "valor": "conservantes",
+              "label": "Conservantes"
+            }
+          ],
+          "referencia": "—"
+        },
+        {
+          "id": "resultado",
+          "tipo": "select",
+          "label": "Resultado",
+          "opcoes": [
+            {
+              "valor": "negativo",
+              "label": "Negativo"
+            },
+            {
+              "valor": "positivo",
+              "label": "Positivo"
+            }
+          ],
+          "referencia": "Negativo"
+        },
+        {
+          "id": "impressao",
+          "tipo": "select",
+          "label": "Impressão Dermatológica",
+          "opcoes": [
+            {
+              "valor": "sem_sensibilizacao",
+              "label": "Sem sensibilização"
+            },
+            {
+              "valor": "dermatite_contato",
+              "label": "Dermatite de contato alérgica"
+            }
+          ],
+          "referencia": "Normal / Alterado"
+        },
+        {
+          "id": "interpretacao",
+          "tipo": "textarea",
+          "label": "Interpretação"
+        },
+        {
+          "id": "conclusao",
+          "tipo": "textarea",
+          "label": "Conclusão"
+        }
+      ]
+    },
+    {
+      "id": "derm_teste_sensibilidade",
+      "nome": "Avaliação de Sensibilidade Cutânea",
+      "descricao": "Avaliação neurossensorial da pele (Hanseníase)",
+      "categoria": "dermatologia",
+      "icone": "fa-hand",
+      "campos": [
+        {
+          "id": "sensibilidade",
+          "tipo": "select",
+          "label": "Sensibilidade",
+          "opcoes": [
+            {
+              "valor": "preservada",
+              "label": "Preservada"
+            },
+            {
+              "valor": "reduzida",
+              "label": "Reduzida"
+            },
+            {
+              "valor": "ausente",
+              "label": "Ausente"
+            }
+          ],
+          "referencia": "Preservada"
+        },
+        {
+          "id": "nervos_perifericos",
+          "tipo": "select",
+          "label": "Espessamento de Nervos",
+          "opcoes": [
+            {
+              "valor": "ausente",
+              "label": "Ausente"
+            },
+            {
+              "valor": "presente",
+              "label": "Presente"
+            }
+          ],
+          "referencia": "Ausente"
+        },
+        {
+          "id": "impressao",
+          "tipo": "select",
+          "label": "Impressão Dermatoneurológica",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Sem sinais de hanseníase"
+            },
+            {
+              "valor": "suspeita",
+              "label": "Suspeita de hanseníase"
+            }
+          ],
+          "referencia": "Normal / Alterado"
+        },
+        {
+          "id": "interpretacao",
+          "tipo": "textarea",
+          "label": "Interpretação"
+        },
+        {
+          "id": "conclusao",
+          "tipo": "textarea",
+          "label": "Conclusão"
+        }
+      ]
+    },
+    {
+      "id": "horm_cortisol",
+      "nome": "Cortisol",
+      "descricao": "Avaliação da função adrenal",
+      "categoria": "hormonal",
+      "icone": "fa-clock",
+      "campos": [
+        {
+          "id": "horario_coleta",
+          "tipo": "select",
+          "label": "Horário da Coleta",
+          "opcoes": [
+            {
+              "valor": "manha",
+              "label": "Manhã"
+            },
+            {
+              "valor": "tarde",
+              "label": "Tarde"
+            },
+            {
+              "valor": "noite",
+              "label": "Noite"
+            }
+          ],
+          "referencia": "Manhã"
+        },
+        {
+          "id": "valor",
+          "tipo": "number",
+          "label": "Cortisol",
+          "unidade": "µg/dL",
+          "referencia": "—"
+        },
+        {
+          "id": "impressao",
+          "tipo": "select",
+          "label": "Impressão Hormonal",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Eixo preservado"
+            },
+            {
+              "valor": "insuficiencia",
+              "label": "Insuficiência adrenal"
+            },
+            {
+              "valor": "hipercortisolismo",
+              "label": "Hipercortisolismo"
+            }
+          ],
+          "referencia": "Normal / Alterado"
+        },
+        {
+          "id": "interpretacao",
+          "tipo": "textarea",
+          "label": "Interpretação"
+        },
+        {
+          "id": "conclusao",
+          "tipo": "textarea",
+          "Conclusão": "Conclusão"
+        }
+      ]
+    },
+    {
+      "id": "horm_estradiol",
+      "nome": "Estradiol",
+      "descricao": "Avaliação da função ovariana",
+      "categoria": "hormonal",
+      "icone": "fa-venus",
+      "campos": [
+        {
+          "id": "valor",
+          "tipo": "number",
+          "label": "Estradiol",
+          "unidade": "pg/mL",
+          "referencia": "Conforme fase do ciclo"
+        },
+        {
+          "id": "fase_ciclo",
+          "tipo": "select",
+          "label": "Fase do Ciclo",
+          "opcoes": [
+            {
+              "valor": "folicular",
+              "label": "Folicular"
+            },
+            {
+              "valor": "ovulatoria",
+              "label": "Ovulatória"
+            },
+            {
+              "valor": "lutea",
+              "label": "Lútea"
+            }
+          ],
+          "referencia": "—"
+        },
+        {
+          "id": "impressao",
+          "tipo": "select",
+          "label": "Impressão Hormonal",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Compatível com a fase do ciclo"
+            },
+            {
+              "valor": "disfuncao_ovariana",
+              "label": "Disfunção ovariana"
+            }
+          ],
+          "referencia": "Normal / Alterado"
+        },
+        {
+          "id": "interpretacao",
+          "tipo": "textarea",
+          "label": "Interpretação"
+        },
+        {
+          "id": "conclusao",
+          "tipo": "textarea",
+          "label": "Conclusão"
+        }
+      ]
+    },
+    {
+      "id": "horm_fsh",
+      "nome": "FSH (Hormônio Folículo-Estimulante)",
+      "descricao": "Avaliação da função gonadal e do eixo hipotálamo-hipófise-gonadal",
+      "categoria": "hormonal",
+      "icone": "fa-dna",
+      "campos": [
+        {
+          "id": "valor",
+          "tipo": "number",
+          "label": "FSH",
+          "unidade": "mUI/mL",
+          "referencia": "Conforme sexo, idade e fase do ciclo"
+        },
+        {
+          "id": "fase_ciclo",
+          "tipo": "select",
+          "label": "Fase do Ciclo (se aplicável)",
+          "opcoes": [
+            {
+              "valor": "folicular",
+              "label": "Folicular"
+            },
+            {
+              "valor": "ovulatoria",
+              "label": "Ovulatória"
+            },
+            {
+              "valor": "lutea",
+              "label": "Lútea"
+            },
+            {
+              "valor": "menopausa",
+              "label": "Menopausa"
+            },
+            {
+              "valor": "nao_aplicavel",
+              "label": "Não aplicável"
+            }
+          ],
+          "referencia": "—"
+        },
+        {
+          "id": "impressao",
+          "tipo": "select",
+          "label": "Impressão Hormonal",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Valor compatível com o contexto clínico"
+            },
+            {
+              "valor": "elevado",
+              "label": "FSH elevado"
+            },
+            {
+              "valor": "reduzido",
+              "label": "FSH reduzido"
+            }
+          ],
+          "referencia": "Normal / Alterado"
+        },
+        {
+          "id": "interpretacao",
+          "tipo": "textarea",
+          "label": "Interpretação"
+        },
+        {
+          "id": "conclusao",
+          "tipo": "textarea",
+          "label": "Conclusão"
+        }
+      ]
+    },
+    {
+      "id": "horm_lh",
+      "nome": "LH (Hormônio Luteinizante)",
+      "descricao": "Avaliação da ovulação, função gonadal e eixo hipotálamo-hipófise",
+      "categoria": "hormonal",
+      "icone": "fa-dna",
+      "campos": [
+        {
+          "id": "valor",
+          "tipo": "number",
+          "label": "LH",
+          "unidade": "mUI/mL",
+          "referencia": "Conforme sexo, idade e fase do ciclo"
+        },
+        {
+          "id": "fase_ciclo",
+          "tipo": "select",
+          "label": "Fase do Ciclo (se aplicável)",
+          "opcoes": [
+            {
+              "valor": "folicular",
+              "label": "Folicular"
+            },
+            {
+              "valor": "ovulatoria",
+              "label": "Ovulatória"
+            },
+            {
+              "valor": "lutea",
+              "label": "Lútea"
+            },
+            {
+              "valor": "menopausa",
+              "label": "Menopausa"
+            },
+            {
+              "valor": "nao_aplicavel",
+              "label": "Não aplicável"
+            }
+          ],
+          "referencia": "—"
+        },
+        {
+          "id": "impressao",
+          "tipo": "select",
+          "label": "Impressão Hormonal",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Valor compatível com o contexto clínico"
+            },
+            {
+              "valor": "pico_ovulatorio",
+              "label": "Pico ovulatório"
+            },
+            {
+              "valor": "elevado",
+              "label": "LH elevado"
+            },
+            {
+              "valor": "reduzido",
+              "label": "LH reduzido"
+            }
+          ],
+          "referencia": "Normal / Alterado"
+        },
+        {
+          "id": "interpretacao",
+          "tipo": "textarea",
+          "label": "Interpretação"
+        },
+        {
+          "id": "conclusao",
+          "tipo": "textarea",
+          "label": "Conclusão"
+        }
+      ]
+    },
+    {
+      "id": "lab_funcao_tireoidiana_completa",
+      "nome": "Função Tireoidiana (TSH + T4 Livre)",
+      "descricao": "Avaliação da função da glândula tireoide e do eixo hipotálamo-hipófise-tireoide",
+      "categoria": "hormonal",
+      "icone": "fa-wave-square",
+      "campos": [
+        {
+          "id": "tsh",
+          "tipo": "number",
+          "label": "TSH (Hormônio Estimulante da Tireoide)",
+          "unidade": "µUI/mL",
+          "referencia": "0.4 – 4.5"
+        },
+        {
+          "id": "t4_livre",
+          "tipo": "number",
+          "label": "T4 Livre",
+          "unidade": "ng/dL",
+          "referencia": "0.8 – 1.8"
+        },
+        {
+          "id": "padrao_hormonal",
+          "tipo": "select",
+          "label": "Padrão Hormonal",
+          "opcoes": [
+            {
+              "valor": "eutireoidismo",
+              "label": "Eutireoidismo"
+            },
+            {
+              "valor": "hipotireoidismo_subclinico",
+              "label": "Hipotireoidismo subclínico"
+            },
+            {
+              "valor": "hipotireoidismo_clinico",
+              "label": "Hipotireoidismo clínico"
+            },
+            {
+              "valor": "hipertireoidismo_subclinico",
+              "label": "Hipertireoidismo subclínico"
+            },
+            {
+              "valor": "hipertireoidismo_clinico",
+              "label": "Hipertireoidismo clínico"
+            }
+          ],
+          "referencia": "Eutireoidismo"
+        },
+        {
+          "id": "correlacao_clinica",
+          "tipo": "select",
+          "label": "Correlação Clínica",
+          "opcoes": [
+            {
+              "valor": "assintomatico",
+              "label": "Assintomático"
+            },
+            {
+              "valor": "sintomas_hipo",
+              "label": "Sintomas de hipotireoidismo"
+            },
+            {
+              "valor": "sintomas_hiper",
+              "label": "Sintomas de hipertireoidismo"
+            }
+          ],
+          "referencia": "Assintomático"
+        },
+        {
+          "id": "impressao",
+          "tipo": "select",
+          "label": "Impressão Clínica",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Função tireoidiana normal"
+            },
+            {
+              "valor": "hipotireoidismo",
+              "label": "Hipotireoidismo"
+            },
+            {
+              "valor": "hipertireoidismo",
+              "label": "Hipertireoidismo"
+            },
+            {
+              "valor": "alterado",
+              "label": "Função tireoidiana alterada"
+            }
+          ],
+          "referencia": "Normal / Alterado"
+        },
+        {
+          "id": "interpretacao",
+          "tipo": "textarea",
+          "label": "Interpretação"
+        },
+        {
+          "id": "conclusao",
+          "tipo": "textarea",
+          "label": "Conclusão"
+        }
+      ]
+    },
+    {
+      "id": "exame_generico",
+      "nome": "Exame Clínico Genérico",
+      "descricao": "Modelo universal para registro de exames não padronizados",
+      "categoria": "geral",
+      "icone": "fa-file-medical",
+      "campos": [
+        {
+          "id": "tipo_exame",
+          "tipo": "text",
+          "label": "Tipo de Exame",
+          "placeholder": "Ex: Teste funcional específico, exame externo, avaliação clínica dirigida"
+        },
+        {
+          "id": "metodologia",
+          "tipo": "text",
+          "label": "Metodologia",
+          "placeholder": "Método utilizado para realização do exame"
+        },
+        {
+          "id": "resultado_principal",
+          "tipo": "text",
+          "label": "Resultado Principal",
+          "placeholder": "Resultado objetivo do exame"
+        },
+        {
+          "id": "parametros_adicionais",
+          "tipo": "textarea",
+          "label": "Parâmetros / Achados Adicionais",
+          "placeholder": "Descrever achados complementares relevantes"
+        },
+        {
+          "id": "impressao",
+          "tipo": "select",
+          "label": "Impressão Clínica",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Dentro da normalidade"
+            },
+            {
+              "valor": "alterado",
+              "label": "Com alterações"
+            },
+            {
+              "valor": "inconclusivo",
+              "label": "Inconclusivo"
+            }
+          ],
+          "referencia": "Normal / Alterado / Inconclusivo"
+        },
+        {
+          "id": "interpretacao",
+          "tipo": "textarea",
+          "label": "Interpretação",
+          "placeholder": "Correlação clínica dos achados"
+        },
+        {
+          "id": "conclusao",
+          "tipo": "textarea",
+          "label": "Conclusão",
+          "placeholder": "Conclusão final do exame"
+        }
+      ]
+    }
+  ]
+}
