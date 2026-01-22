@@ -61,8 +61,15 @@
 }
 
 @keyframes pulse {
-    0%, 100% { opacity: 0.6; }
-    50% { opacity: 1; }
+
+    0%,
+    100% {
+        opacity: 0.6;
+    }
+
+    50% {
+        opacity: 1;
+    }
 }
 
 /* ===============================
@@ -407,29 +414,33 @@
 ================================ */
 
 .documento-composto {
-  grid-column: span 2; /* se estiver usando grid */
+    grid-column: span 2;
+    /* se estiver usando grid */
 }
 
 .documento-inputs {
-  display: flex;
-  width: 100%;
+    display: flex;
+    width: 100%;
 }
 
 .documento-inputs .documento-tipo {
-  max-width: 140px;
-  border-right: none;
-  border-radius: 6px 0 0 6px;
-  background: #f3f4f6;
-  font-weight: 600;
-  cursor: default;
+    max-width: 140px;
+    border-right: none;
+    border-radius: 6px 0 0 6px;
+    background: #f3f4f6;
+    font-weight: 600;
+    cursor: default;
 }
 
 .documento-inputs .documento-numero {
-  flex: 1;
-  border-radius: 0 6px 6px 0;
+    flex: 1;
+    border-radius: 0 6px 6px 0;
 }
+
 #dados-administrativos .form-grid {
-    grid-template-columns: 2.5fr 1fr 1fr;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
 }
 
 /* Documento ocupa naturalmente a primeira coluna larga */
@@ -439,5 +450,21 @@
 
 /* Idade */
 #dados-administrativos #idade {
+    width: 100%;
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.form-group {
+    flex: 1 1 160px;
+    min-width: 140px;
+}
+
+.form-group input,
+.form-group select {
     width: 100%;
 }
