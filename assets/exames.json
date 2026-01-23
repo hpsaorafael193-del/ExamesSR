@@ -7226,71 +7226,6 @@
       ]
     },
     {
-      "id": "exame_generico",
-      "nome": "Exame Clínico Genérico",
-      "descricao": "Modelo universal para registro de exames não padronizados",
-      "categoria": "geral",
-      "icone": "fa-file-medical",
-      "campos": [
-        {
-          "id": "tipo_exame",
-          "tipo": "text",
-          "label": "Tipo de Exame",
-          "placeholder": "Ex: Teste funcional específico, exame externo, avaliação clínica dirigida"
-        },
-        {
-          "id": "metodologia",
-          "tipo": "text",
-          "label": "Metodologia",
-          "placeholder": "Método utilizado para realização do exame"
-        },
-        {
-          "id": "resultado_principal",
-          "tipo": "text",
-          "label": "Resultado Principal",
-          "placeholder": "Resultado objetivo do exame"
-        },
-        {
-          "id": "parametros_adicionais",
-          "tipo": "textarea",
-          "label": "Parâmetros / Achados Adicionais",
-          "placeholder": "Descrever achados complementares relevantes"
-        },
-        {
-          "id": "impressao",
-          "tipo": "select",
-          "label": "Impressão Clínica",
-          "opcoes": [
-            {
-              "valor": "normal",
-              "label": "Dentro da normalidade"
-            },
-            {
-              "valor": "alterado",
-              "label": "Com alterações"
-            },
-            {
-              "valor": "inconclusivo",
-              "label": "Inconclusivo"
-            }
-          ],
-          "referencia": "Normal / Alterado / Inconclusivo"
-        },
-        {
-          "id": "interpretacao",
-          "tipo": "textarea",
-          "label": "Interpretação",
-          "placeholder": "Correlação clínica dos achados"
-        },
-        {
-          "id": "conclusao",
-          "tipo": "textarea",
-          "label": "Conclusão",
-          "placeholder": "Conclusão final do exame"
-        }
-      ]
-    },
-    {
       "id": "lab_feze_analise",
       "nome": "Fezes – Análise Completa",
       "descricao": "Avaliação macroscópica, microscópica, funcional e parasitológica das fezes",
@@ -7512,6 +7447,71 @@
           "id": "conclusao",
           "tipo": "textarea",
           "label": "Conclusão"
+        }
+      ]
+    },
+    {
+      "id": "exame_generico",
+      "nome": "Exame Clínico Genérico",
+      "descricao": "Modelo universal para registro de exames não padronizados",
+      "categoria": "geral",
+      "icone": "fa-file-medical",
+      "campos": [
+        {
+          "id": "tipo_exame",
+          "tipo": "text",
+          "label": "Tipo de Exame",
+          "placeholder": "Ex: Teste funcional específico, exame externo, avaliação clínica dirigida"
+        },
+        {
+          "id": "metodologia",
+          "tipo": "text",
+          "label": "Metodologia",
+          "placeholder": "Método utilizado para realização do exame"
+        },
+        {
+          "id": "resultado_principal",
+          "tipo": "text",
+          "label": "Resultado Principal",
+          "placeholder": "Resultado objetivo do exame"
+        },
+        {
+          "id": "parametros_adicionais",
+          "tipo": "textarea",
+          "label": "Parâmetros / Achados Adicionais",
+          "placeholder": "Descrever achados complementares relevantes"
+        },
+        {
+          "id": "impressao",
+          "tipo": "select",
+          "label": "Impressão Clínica",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Dentro da normalidade"
+            },
+            {
+              "valor": "alterado",
+              "label": "Com alterações"
+            },
+            {
+              "valor": "inconclusivo",
+              "label": "Inconclusivo"
+            }
+          ],
+          "referencia": "Normal / Alterado / Inconclusivo"
+        },
+        {
+          "id": "interpretacao",
+          "tipo": "textarea",
+          "label": "Interpretação",
+          "placeholder": "Correlação clínica dos achados"
+        },
+        {
+          "id": "conclusao",
+          "tipo": "textarea",
+          "label": "Conclusão",
+          "placeholder": "Conclusão final do exame"
         }
       ]
     }
