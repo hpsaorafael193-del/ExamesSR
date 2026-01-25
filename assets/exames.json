@@ -1274,6 +1274,10 @@
             {
               "valor": "resistente",
               "label": "Resistente (R)"
+            },
+            {
+              "valor": "Não aplicável",
+              "label": "Não aplicável"
             }
           ],
           "referencia": "—"
