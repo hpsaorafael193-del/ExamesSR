@@ -564,6 +564,10 @@
             {
               "valor": "igm",
               "label": "IgM"
+            },
+            {
+              "valor": "igg_igm",
+              "label": "IgG + IgM" 
             }
           ],
           "referencia": "—"
