@@ -990,7 +990,7 @@
     },
     {
       "id": "lab_urina_analise",
-      "nome": "Urina Tipo I – Análise",
+      "nome": "Urina – Análise (EAS / Tipo I)",
       "descricao": "Análise físico-química e microscópica da urina",
       "categoria": "laboratorio",
       "icone": "fa-flask",
@@ -1246,8 +1246,9 @@
               "label": "Outros"
             },
             {
-              "valor": "Não houve crescimento bacteriano",
-              "label": "Não houve crescimento bacteriano"
+              "valor": "Não Encontrado",
+              "label": "Não Encontrado"
+            }
           ],
           "referencia": "—"
         },
