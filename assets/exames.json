@@ -1242,12 +1242,12 @@
               "label": "Staphylococcus saprophyticus"
             },
             {
-              "valor": "outros",
-              "label": "Outros"
-            },
-            {
               "valor": "Não Encontrado",
               "label": "Não Encontrado"
+            },
+            {
+              "valor": "outros",
+              "label": "Outros"
             }
           ],
           "referencia": "—"
