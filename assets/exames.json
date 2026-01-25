@@ -1194,6 +1194,126 @@
       ]
     },
     {
+      "id": "lab_urocultura",
+      "nome": "Urocultura",
+      "descricao": "Identificação de microrganismos na urina e teste de sensibilidade aos antimicrobianos",
+      "categoria": "laboratorio",
+      "icone": "fa-microscope",
+      "campos": [
+        {
+          "id": "crescimento_bacteriano",
+          "tipo": "select",
+          "label": "Crescimento Bacteriano",
+          "opcoes": [
+            {
+              "valor": "negativo",
+              "label": "Negativo"
+            },
+            {
+              "valor": "positivo",
+              "label": "Positivo"
+            }
+          ],
+          "referencia": "Negativo"
+        },
+        {
+          "id": "microorganismo",
+          "tipo": "select",
+          "label": "Micro-organismo Identificado",
+          "opcoes": [
+            {
+              "valor": "ecoli",
+              "label": "Escherichia coli"
+            },
+            {
+              "valor": "klebsiella",
+              "label": "Klebsiella pneumoniae"
+            },
+            {
+              "valor": "proteus",
+              "label": "Proteus mirabilis"
+            },
+            {
+              "valor": "enterococcus",
+              "label": "Enterococcus faecalis"
+            },
+            {
+              "valor": "staph_saprophyticus",
+              "label": "Staphylococcus saprophyticus"
+            },
+            {
+              "valor": "outros",
+              "label": "Outros"
+            }
+          ],
+          "referencia": "—"
+        },
+        {
+          "id": "contagem_colonias",
+          "tipo": "number",
+          "label": "Contagem de Colônias",
+          "unidade": "UFC/mL",
+          "referencia": "≥ 100.000"
+        },
+        {
+          "id": "antibiograma",
+          "tipo": "select",
+          "label": "Resultado do Antibiograma",
+          "opcoes": [
+            {
+              "valor": "sensivel",
+              "label": "Sensível (S)"
+            },
+            {
+              "valor": "intermediario",
+              "label": "Intermediário (I)"
+            },
+            {
+              "valor": "resistente",
+              "label": "Resistente (R)"
+            }
+          ],
+          "referencia": "—"
+        },
+        {
+          "id": "antibioticos_testados",
+          "tipo": "textarea",
+          "label": "Antibióticos Testados",
+          "placeholder": "Ex: Nitrofurantoína, Ciprofloxacino, Amoxicilina-clavulanato..."
+        },
+        {
+          "id": "impressao",
+          "tipo": "select",
+          "label": "Impressão Laboratorial",
+          "opcoes": [
+            {
+              "valor": "negativa",
+              "label": "Cultura negativa"
+            },
+            {
+              "valor": "itu",
+              "label": "Infecção do trato urinário confirmada"
+            },
+            {
+              "valor": "contaminacao",
+              "label": "Amostra possivelmente contaminada"
+            }
+          ],
+          "referencia": "Normal / Alterado"
+        },
+        {
+          "id": "interpretacao",
+          "tipo": "textarea",
+          "label": "Interpretação"
+        },
+        {
+          "id": "conclusao",
+          "tipo": "textarea",
+          "label": "Conclusão"
+        }
+      ]
+    },
+    {
       "id": "lab_funcao_hepatica_completa",
       "nome": "Função Hepática",
       "descricao": "Avaliação da função hepática, integridade hepatocelular e vias biliares",
@@ -7512,126 +7632,6 @@
           "tipo": "textarea",
           "label": "Conclusão",
           "placeholder": "Conclusão final do exame"
-        }
-      ]
-    },
-    {
-      "id": "lab_urocultura",
-      "nome": "Urocultura com Antibiograma",
-      "descricao": "Identificação de microrganismos na urina e teste de sensibilidade aos antimicrobianos",
-      "categoria": "laboratorio",
-      "icone": "fa-microscope",
-      "campos": [
-        {
-          "id": "crescimento_bacteriano",
-          "tipo": "select",
-          "label": "Crescimento Bacteriano",
-          "opcoes": [
-            {
-              "valor": "negativo",
-              "label": "Negativo"
-            },
-            {
-              "valor": "positivo",
-              "label": "Positivo"
-            }
-          ],
-          "referencia": "Negativo"
-        },
-        {
-          "id": "microorganismo",
-          "tipo": "select",
-          "label": "Micro-organismo Identificado",
-          "opcoes": [
-            {
-              "valor": "ecoli",
-              "label": "Escherichia coli"
-            },
-            {
-              "valor": "klebsiella",
-              "label": "Klebsiella pneumoniae"
-            },
-            {
-              "valor": "proteus",
-              "label": "Proteus mirabilis"
-            },
-            {
-              "valor": "enterococcus",
-              "label": "Enterococcus faecalis"
-            },
-            {
-              "valor": "staph_saprophyticus",
-              "label": "Staphylococcus saprophyticus"
-            },
-            {
-              "valor": "outros",
-              "label": "Outros"
-            }
-          ],
-          "referencia": "—"
-        },
-        {
-          "id": "contagem_colonias",
-          "tipo": "number",
-          "label": "Contagem de Colônias",
-          "unidade": "UFC/mL",
-          "referencia": "≥ 100.000"
-        },
-        {
-          "id": "antibiograma",
-          "tipo": "select",
-          "label": "Resultado do Antibiograma",
-          "opcoes": [
-            {
-              "valor": "sensivel",
-              "label": "Sensível (S)"
-            },
-            {
-              "valor": "intermediario",
-              "label": "Intermediário (I)"
-            },
-            {
-              "valor": "resistente",
-              "label": "Resistente (R)"
-            }
-          ],
-          "referencia": "—"
-        },
-        {
-          "id": "antibioticos_testados",
-          "tipo": "textarea",
-          "label": "Antibióticos Testados",
-          "placeholder": "Ex: Nitrofurantoína, Ciprofloxacino, Amoxicilina-clavulanato..."
-        },
-        {
-          "id": "impressao",
-          "tipo": "select",
-          "label": "Impressão Laboratorial",
-          "opcoes": [
-            {
-              "valor": "negativa",
-              "label": "Cultura negativa"
-            },
-            {
-              "valor": "itu",
-              "label": "Infecção do trato urinário confirmada"
-            },
-            {
-              "valor": "contaminacao",
-              "label": "Amostra possivelmente contaminada"
-            }
-          ],
-          "referencia": "Normal / Alterado"
-        },
-        {
-          "id": "interpretacao",
-          "tipo": "textarea",
-          "label": "Interpretação"
-        },
-        {
-          "id": "conclusao",
-          "tipo": "textarea",
-          "label": "Conclusão"
         }
       ]
     }
