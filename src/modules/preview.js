@@ -29,9 +29,8 @@ class Preview {
     });
   }
 
-  /* ===============================
-     PÁGINA 1 — CLÍNICA
-  =============================== */
+// PÁGINA 1 — PRINCIPAL
+
   renderMainPage(container) {
     const pagina = document.createElement("div");
     pagina.className = "laudo-pagina";
