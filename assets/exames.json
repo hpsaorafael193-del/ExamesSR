@@ -800,9 +800,9 @@
       ]
     },
     {
-      "id": "lab_glicemia_completa",
+      "id": "lab_glicemia",
       "nome": "Glicemia",
-      "descricao": "Avaliação da glicose plasmática e do metabolismo glicídico",
+      "descricao": "Avaliação detalhada da glicose plasmática para diagnóstico e acompanhamento de distúrbios glicêmicos",
       "categoria": "laboratorio",
       "icone": "fa-vial",
       "campos": [
@@ -831,15 +831,15 @@
           "tipo": "number",
           "label": "Glicose Plasmática",
           "unidade": "mg/dL",
-          "referencia": "Jejum < 100"
+          "referencia": "Jejum < 100 | PP < 140"
         },
         {
-          "id": "sintomas_associados",
+          "id": "sintomas",
           "tipo": "select",
           "label": "Sintomas Associados",
           "opcoes": [
             {
-              "valor": "ausente",
+              "valor": "ausentes",
               "label": "Ausentes"
             },
             {
@@ -853,9 +853,89 @@
             {
               "valor": "polifagia",
               "label": "Polifagia"
+            },
+            {
+              "valor": "perda_peso",
+              "label": "Perda de peso"
+            },
+            {
+              "valor": "astenia",
+              "label": "Astenia"
             }
           ],
           "referencia": "Ausentes"
+        },
+        {
+          "id": "condicao_coleta",
+          "tipo": "select",
+          "label": "Condição da Coleta",
+          "opcoes": [
+            {
+              "valor": "adequada",
+              "label": "Coleta adequada"
+            },
+            {
+              "valor": "jejum_inadequado",
+              "label": "Jejum inadequado"
+            },
+            {
+              "valor": "uso_medicacao",
+              "label": "Uso de medicação hiperglicemiante"
+            },
+            {
+              "valor": "estresse_agudo",
+              "label": "Estresse agudo / intercorrência"
+            }
+          ],
+          "referencia": "Adequada"
+        },
+        {
+          "id": "classificacao_glicemica",
+          "tipo": "select",
+          "label": "Classificação Glicêmica",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Normoglicemia"
+            },
+            {
+              "valor": "hipoglicemia",
+              "label": "Hipoglicemia"
+            },
+            {
+              "valor": "intolerancia",
+              "label": "Intolerância à glicose"
+            },
+            {
+              "valor": "prediabetes",
+              "label": "Pré-diabetes"
+            },
+            {
+              "valor": "diabetes",
+              "label": "Diabetes mellitus"
+            }
+          ],
+          "referencia": "Normal / Alterado"
+        },
+        {
+          "id": "risco_metabolico",
+          "tipo": "select",
+          "label": "Risco Metabólico",
+          "opcoes": [
+            {
+              "valor": "baixo",
+              "label": "Baixo risco"
+            },
+            {
+              "valor": "moderado",
+              "label": "Risco moderado"
+            },
+            {
+              "valor": "alto",
+              "label": "Alto risco metabólico"
+            }
+          ],
+          "referencia": "Baixo"
         },
         {
           "id": "impressao",
@@ -867,16 +947,16 @@
               "label": "Glicemia dentro da normalidade"
             },
             {
-              "valor": "hipoglicemia",
-              "label": "Hipoglicemia"
+              "valor": "alterada_isolada",
+              "label": "Alteração glicêmica isolada"
             },
             {
-              "valor": "prediabetes",
-              "label": "Glicemia sugestiva de pré-diabetes"
+              "valor": "suspeita_diabetes",
+              "label": "Achados sugestivos de diabetes"
             },
             {
-              "valor": "diabetes",
-              "label": "Glicemia compatível com diabetes"
+              "valor": "descompensacao",
+              "label": "Descompensação glicêmica"
             }
           ],
           "referencia": "Normal / Alterado"
@@ -4773,20 +4853,11 @@
           "referencia": "Cefálica"
         },
         {
-          "id": "batimentos_fetais",
-          "tipo": "select",
+          "id": "batimentos_cardiacos",
+          "tipo": "number",
           "label": "Batimentos Cardíacos Fetais",
-          "opcoes": [
-            {
-              "valor": "presentes",
-              "label": "Presentes"
-            },
-            {
-              "valor": "ausentes",
-              "label": "Ausentes"
-            }
-          ],
-          "referencia": "Presentes"
+          "unidade": "bpm",
+          "referencia": "120 – 160"
         },
         {
           "id": "placenta_localizacao",
@@ -5432,6 +5503,271 @@
             {
               "valor": "alto_risco",
               "label": "Achados sugestivos de alto risco materno-fetal"
+            }
+          ],
+          "referencia": "Normal / Alterado"
+        },
+        {
+          "id": "interpretacao",
+          "tipo": "textarea",
+          "label": "Interpretação"
+        },
+        {
+          "id": "conclusao",
+          "tipo": "textarea",
+          "label": "Conclusão"
+        }
+      ]
+    },
+    {
+      "id": "img_us_morfologica",
+      "nome": "USG Morfológica",
+      "descricao": "Avaliação morfológica fetal detalhada para rastreio de malformações estruturais",
+      "categoria": "obstetricia",
+      "icone": "fa-baby",
+      "campos": [
+        {
+          "id": "idade_gestacional",
+          "tipo": "number",
+          "label": "Idade Gestacional",
+          "unidade": "semanas",
+          "referencia": "18 – 24"
+        },
+        {
+          "id": "numero_fetos",
+          "tipo": "select",
+          "label": "Número de Fetos",
+          "opcoes": [
+            {
+              "valor": "unico",
+              "label": "Feto único"
+            },
+            {
+              "valor": "gemelar",
+              "label": "Gestação gemelar"
+            }
+          ],
+          "referencia": "Feto único"
+        },
+        {
+          "id": "batimentos_cardiacos",
+          "tipo": "number",
+          "label": "Batimentos Cardíacos Fetais",
+          "unidade": "bpm",
+          "referencia": "120 – 160"
+        },
+        {
+          "id": "apresentacao_fetal",
+          "tipo": "select",
+          "label": "Apresentação Fetal",
+          "opcoes": [
+            {
+              "valor": "cefalica",
+              "label": "Cefálica"
+            },
+            {
+              "valor": "pelvica",
+              "label": "Pélvica"
+            },
+            {
+              "valor": "transversa",
+              "label": "Transversa"
+            }
+          ],
+          "referencia": "—"
+        },
+        {
+          "id": "placenta_localizacao",
+          "tipo": "select",
+          "label": "Placenta (Localização)",
+          "opcoes": [
+            {
+              "valor": "anterior",
+              "label": "Anterior"
+            },
+            {
+              "valor": "posterior",
+              "label": "Posterior"
+            },
+            {
+              "valor": "fundo",
+              "label": "Fúndica"
+            },
+            {
+              "valor": "previa",
+              "label": "Prévia"
+            }
+          ],
+          "referencia": "—"
+        },
+        {
+          "id": "liquido_amniotico",
+          "tipo": "select",
+          "label": "Líquido Amniótico",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Volume normal"
+            },
+            {
+              "valor": "oligodramnio",
+              "label": "Oligodrâmnio"
+            },
+            {
+              "valor": "polidramnio",
+              "label": "Polidrâmnio"
+            }
+          ],
+          "referencia": "Normal"
+        },
+        {
+          "id": "cranio_cerebro",
+          "tipo": "select",
+          "label": "Crânio e Encéfalo",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Sem alterações"
+            },
+            {
+              "valor": "alterado",
+              "label": "Alterações estruturais"
+            }
+          ],
+          "referencia": "Normal"
+        },
+        {
+          "id": "face",
+          "tipo": "select",
+          "label": "Face",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Perfil facial preservado"
+            },
+            {
+              "valor": "fenda",
+              "label": "Suspeita de fenda labiopalatina"
+            }
+          ],
+          "referencia": "Normal"
+        },
+        {
+          "id": "coluna",
+          "tipo": "select",
+          "label": "Coluna Vertebral",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Coluna íntegra"
+            },
+            {
+              "valor": "defeito",
+              "label": "Defeito de fechamento"
+            }
+          ],
+          "referencia": "Normal"
+        },
+        {
+          "id": "torax_coracao",
+          "tipo": "select",
+          "label": "Tórax e Coração",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Quatro câmaras preservadas"
+            },
+            {
+              "valor": "alterado",
+              "label": "Alterações cardíacas estruturais"
+            }
+          ],
+          "referencia": "Normal"
+        },
+        {
+          "id": "abdome",
+          "tipo": "select",
+          "label": "Abdome",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Parede abdominal íntegra"
+            },
+            {
+              "valor": "defeito",
+              "label": "Defeito de parede abdominal"
+            }
+          ],
+          "referencia": "Normal"
+        },
+        {
+          "id": "rins_bexiga",
+          "tipo": "select",
+          "label": "Rins e Bexiga",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Visualização adequada"
+            },
+            {
+              "valor": "alterado",
+              "label": "Alterações renais"
+            }
+          ],
+          "referencia": "Normal"
+        },
+        {
+          "id": "membros",
+          "tipo": "select",
+          "label": "Membros",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Membros formados"
+            },
+            {
+              "valor": "alterado",
+              "label": "Alterações de membros"
+            }
+          ],
+          "referencia": "Normal"
+        },
+        {
+          "id": "sexo_fetal",
+          "tipo": "select",
+          "label": "Sexo Fetal",
+          "opcoes": [
+            {
+              "valor": "masculino",
+              "label": "Masculino"
+            },
+            {
+              "valor": "feminino",
+              "label": "Feminino"
+            },
+            {
+              "valor": "nao_identificado",
+              "label": "Não identificado"
+            }
+          ],
+          "referencia": "—"
+        },
+        {
+          "id": "impressao",
+          "tipo": "select",
+          "label": "Impressão Morfológica",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Morfologia fetal dentro da normalidade"
+            },
+            {
+              "valor": "suspeita",
+              "label": "Achados suspeitos de malformação"
+            },
+            {
+              "valor": "alterada",
+              "label": "Malformações fetais identificadas"
             }
           ],
           "referencia": "Normal / Alterado"
