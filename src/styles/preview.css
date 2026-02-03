@@ -21,7 +21,7 @@
     border-radius: 0;
     overflow: hidden;
 }
- 
+
 /* Páginas do laudo */
 .laudo-pagina {
     display: none !important;
@@ -34,7 +34,7 @@
     box-sizing: border-box;
     overflow: hidden;
     position: relative;
-    box-shadow: 0 0 30px rgba(0,0,0,0.1);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
     border-radius: 2px;
 }
 
@@ -179,9 +179,9 @@
 
 /* Observações */
 .observacoes-container {
-    margin: 2rem 0;
-    padding: 1.5rem;
-    min-height: 90mm;
+    margin: 1rem 0;
+    padding: 1.2rem;
+    height: 90mm;
     background: #fff9e6;
     border-left: 3px solid var(--warning-color);
     border-radius: 0 var(--border-radius-sm) var(--border-radius-sm) 0;
@@ -197,71 +197,90 @@
 }
 
 .observacao-text {
-    color: var(--dark-color);
-    line-height: 1.6;
-    white-space: pre-wrap;
+    white-space: pre-line;
+    line-height: 1.5;
+    margin-bottom: 22px;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 /* Rodapé com Assinatura */
 .laudo-footer {
-  position: absolute;
-  bottom: 15mm;         /* respeita a margem inferior */
-  left: 20mm;
-  right: 20mm;
+    position: absolute;
+    bottom: 15mm;
+    /* respeita a margem inferior */
+    left: 20mm;
+    right: 20mm;
 
-  padding-top: 6mm;
+    padding-top: 6mm;
 }
 
-.assinatura-container{
-  display: grid;
-  grid-template-columns: 1fr 180px; /* info | assinatura */
-  align-items: end;
-  gap: 12px;
-  justify-content: center;
-  margin: 0.75rem 0;   /* antes: 2rem 0 */
-  padding: 0.75rem 0;  /* antes: 2rem 0 */
-  border-top: 1px solid var(--border-color);
+.assinatura-container {
+    display: grid;
+    grid-template-columns: 1fr 180px;
+    /* info | assinatura */
+    align-items: end;
+    gap: 12px;
+    justify-content: center;
+    margin: 0.75rem 0;
+    /* antes: 2rem 0 */
+    padding: 0.75rem 0;
+    /* antes: 2rem 0 */
+    border-top: 1px solid var(--border-color);
 }
 
 /* área da assinatura menor */
-.assinatura-preview-footer{
-  flex: unset;           /* neutraliza o flex antigo */
-  min-height: unset;     /* remove altura mínima */
-  height: auto;
-  text-align: right;
+.assinatura-preview-footer {
+    flex: unset;
+    /* neutraliza o flex antigo */
+    min-height: unset;
+    /* remove altura mínima */
+    height: auto;
+    text-align: right;
 }
 
-.assinatura-preview-footer img{
-  max-height: 45px;      /* antes: 80px */
-  max-width: 180px;
-  object-fit: contain;
+.assinatura-preview-footer img {
+    max-height: 45px;
+    /* antes: 80px */
+    max-width: 180px;
+    object-fit: contain;
 }
 
 /* info do médico mais “seca” e alinhada */
-.profissional-info{
-  text-align: left;      /* antes: center */
-  line-height: 1.2;
+.profissional-info {
+    text-align: left;
+    /* antes: center */
+    line-height: 1.2;
 }
 
-.profissional-nome{
-  font-size: 0.95em;     /* antes: 1.1em */
-  margin-bottom: 0.15rem;
-  min-height: unset;     /* antes: 2rem */
-  border-bottom: none;   /* remove linha grande */
-  padding-bottom: 0;
-  font-weight: 700;
+.profissional-nome {
+    font-size: 0.95em;
+    /* antes: 1.1em */
+    margin-bottom: 0.15rem;
+    min-height: unset;
+    /* antes: 2rem */
+    border-bottom: none;
+    /* remove linha grande */
+    padding-bottom: 0;
+    font-weight: 700;
 }
 
-.profissional-registro{
-  font-size: 0.8em;      /* antes: 0.9em */
-  margin-top: 0;
+.profissional-registro {
+    font-size: 0.8em;
+    /* antes: 0.9em */
+    margin-top: 0;
 }
 
 /* rodapé final (aviso) mais compacto */
-.laudo-rodape{
-  margin-top: 0.5rem;    /* antes: 2rem */
-  padding-top: 0.4rem;
-  font-size: 0.78em;     /* antes: 0.85em */
+.laudo-rodape {
+    margin-top: 0.5rem;
+    /* antes: 2rem */
+    padding-top: 0.4rem;
+    font-size: 0.78em;
+    /* antes: 0.85em */
 }
 
 .profissional-nome {
@@ -339,7 +358,7 @@
 .anexo-pagina-imagem img {
     max-width: 100%;
     object-fit: contain;
-    display: block; 
+    display: block;
     border: 1px solid var(--border-color);
     border-radius: var(--border-radius-sm);
     padding: 0.5rem;
@@ -351,6 +370,7 @@
     font-size: 0.9em;
     margin-top: 1rem;
 }
+
 /* Garantir compatibilidade com html2canvas */
 .laudo-preview * {
     box-sizing: border-box;
@@ -390,15 +410,15 @@
 }
 
 .laudo-footer .profissional-info {
-  line-height: 1.2;
+    line-height: 1.2;
 }
 
 .laudo-footer .profissional-nome {
-  font-size: 0.95em;
+    font-size: 0.95em;
 }
 
 .laudo-footer .profissional-registro {
-  font-size: 0.8em;
+    font-size: 0.8em;
 }
 
 
@@ -407,15 +427,15 @@
 ================================ */
 
 @media print {
-  .laudo-preview {
-    height: auto !important;
-    overflow: visible !important;
-  }
+    .laudo-preview {
+        height: auto !important;
+        overflow: visible !important;
+    }
 
-  .laudo-pagina {
-    display: block !important;
-    page-break-after: always;
-  }
+    .laudo-pagina {
+        display: block !important;
+        page-break-after: always;
+    }
 }
 
 /* REMOVER BLOCO DE CONCLUSÃO (institucional) */
@@ -426,7 +446,7 @@
 .conclusao-box,
 .info-box,
 .info-institucional {
-  display: none !important;
+    display: none !important;
 }
 
 /* ===============================
@@ -435,45 +455,45 @@
 ================================ */
 
 .tabela-resultados {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 1rem;
-  font-size: 0.9em;
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    font-size: 0.9em;
 }
 
 .tabela-resultados thead {
-  background: #f2f4f7;
+    background: #f2f4f7;
 }
 
 .tabela-resultados th,
 .tabela-resultados td {
-  border: 1px solid #d0d5dd;
-  padding: 8px 10px;
-  text-align: left;
-  vertical-align: middle;
+    border: 1px solid #d0d5dd;
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: middle;
 }
 
 .tabela-resultados th {
-  font-weight: 600;
+    font-weight: 600;
 }
 
 /* Larguras equilibradas */
 .tabela-resultados .col-parametro {
-  width: 40%;
+    width: 40%;
 }
 
 .tabela-resultados .col-resultado {
-  width: 30%;
+    width: 30%;
 }
 
 .tabela-resultados .col-referencia {
-  width: 30%;
-  color: #475467;
-  font-size: 0.85em;
+    width: 30%;
+    color: #475467;
+    font-size: 0.85em;
 }
 
 .sem-resultados {
-  font-style: italic;
-  color: #667085;
-  margin-top: 1rem;
+    font-style: italic;
+    color: #667085;
+    margin-top: 1rem;
 }
