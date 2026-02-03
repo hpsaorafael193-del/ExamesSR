@@ -512,70 +512,14 @@
     {
       "id": "lab_sorologia",
       "nome": "Sorologia",
-      "descricao": "Pesquisa de anticorpos para doenças infecciosas",
+      "descricao": "Pesquisa sorológica para investigação de doenças infecciosas",
       "categoria": "laboratorio",
       "icone": "fa-vials",
       "campos": [
         {
-          "id": "agente",
+          "id": "hiv",
           "tipo": "select",
-          "label": "Agente Pesquisado",
-          "opcoes": [
-            {
-              "valor": "hiv",
-              "label": "HIV"
-            },
-            {
-              "valor": "hepatite_b",
-              "label": "Hepatite B"
-            },
-            {
-              "valor": "hepatite_c",
-              "label": "Hepatite C"
-            },
-            {
-              "valor": "sifilis",
-              "label": "Sífilis"
-            },
-            {
-              "valor": "toxoplasmose",
-              "label": "Toxoplasmose"
-            },
-            {
-              "valor": "rubéola",
-              "label": "Rubéola"
-            },
-            {
-              "valor": "citomegalovirus",
-              "label": "Citomegalovírus"
-            }
-          ],
-          "referencia": "—"
-        },
-        {
-          "id": "anticorpo",
-          "tipo": "select",
-          "label": "Anticorpo",
-          "opcoes": [
-            {
-              "valor": "igg",
-              "label": "IgG"
-            },
-            {
-              "valor": "igm",
-              "label": "IgM"
-            },
-            {
-              "valor": "igg_igm",
-              "label": "IgG + IgM" 
-            }
-          ],
-          "referencia": "—"
-        },
-        {
-          "id": "resultado",
-          "tipo": "select",
-          "label": "Resultado",
+          "label": "HIV",
           "opcoes": [
             {
               "valor": "reagente",
@@ -584,13 +528,153 @@
             {
               "valor": "nao_reagente",
               "label": "Não reagente"
-            },
-            {
-              "valor": "indeterminado",
-              "label": "Indeterminado"
             }
           ],
           "referencia": "Não reagente"
+        },
+        {
+          "id": "sifilis",
+          "tipo": "select",
+          "label": "Sífilis",
+          "opcoes": [
+            {
+              "valor": "reagente",
+              "label": "Reagente"
+            },
+            {
+              "valor": "nao_reagente",
+              "label": "Não reagente"
+            }
+          ],
+          "referencia": "Não reagente"
+        },
+        {
+          "id": "hepatite_b",
+          "tipo": "select",
+          "label": "Hepatite B (HBsAg)",
+          "opcoes": [
+            {
+              "valor": "reagente",
+              "label": "Reagente"
+            },
+            {
+              "valor": "nao_reagente",
+              "label": "Não reagente"
+            }
+          ],
+          "referencia": "Não reagente"
+        },
+        {
+          "id": "hepatite_c",
+          "tipo": "select",
+          "label": "Hepatite C (Anti-HCV)",
+          "opcoes": [
+            {
+              "valor": "reagente",
+              "label": "Reagente"
+            },
+            {
+              "valor": "nao_reagente",
+              "label": "Não reagente"
+            }
+          ],
+          "referencia": "Não reagente"
+        },
+        {
+          "id": "toxoplasmose_igg",
+          "tipo": "select",
+          "label": "Toxoplasmose IgG",
+          "opcoes": [
+            {
+              "valor": "positivo",
+              "label": "Positivo"
+            },
+            {
+              "valor": "negativo",
+              "label": "Negativo"
+            }
+          ],
+          "referencia": "—"
+        },
+        {
+          "id": "toxoplasmose_igm",
+          "tipo": "select",
+          "label": "Toxoplasmose IgM",
+          "opcoes": [
+            {
+              "valor": "positivo",
+              "label": "Positivo"
+            },
+            {
+              "valor": "negativo",
+              "label": "Negativo"
+            }
+          ],
+          "referencia": "—"
+        },
+        {
+          "id": "rubeola_igg",
+          "tipo": "select",
+          "label": "Rubéola IgG",
+          "opcoes": [
+            {
+              "valor": "positivo",
+              "label": "Positivo"
+            },
+            {
+              "valor": "negativo",
+              "label": "Negativo"
+            }
+          ],
+          "referencia": "—"
+        },
+        {
+          "id": "rubeola_igm",
+          "tipo": "select",
+          "label": "Rubéola IgM",
+          "opcoes": [
+            {
+              "valor": "positivo",
+              "label": "Positivo"
+            },
+            {
+              "valor": "negativo",
+              "label": "Negativo"
+            }
+          ],
+          "referencia": "—"
+        },
+        {
+          "id": "citomegalovirus_igg",
+          "tipo": "select",
+          "label": "Citomegalovírus IgG",
+          "opcoes": [
+            {
+              "valor": "positivo",
+              "label": "Positivo"
+            },
+            {
+              "valor": "negativo",
+              "label": "Negativo"
+            }
+          ],
+          "referencia": "—"
+        },
+        {
+          "id": "citomegalovirus_igm",
+          "tipo": "select",
+          "label": "Citomegalovírus IgM",
+          "opcoes": [
+            {
+              "valor": "positivo",
+              "label": "Positivo"
+            },
+            {
+              "valor": "negativo",
+              "label": "Negativo"
+            }
+          ],
+          "referencia": "—"
         },
         {
           "id": "impressao",
@@ -598,16 +682,16 @@
           "label": "Impressão Sorológica",
           "opcoes": [
             {
-              "valor": "negativa",
-              "label": "Sorologia negativa"
+              "valor": "normal",
+              "label": "Sorologia sem alterações significativas"
             },
             {
               "valor": "infeccao_previa",
-              "label": "Contato prévio / imunidade"
+              "label": "Evidência de infecção prévia / imunidade"
             },
             {
               "valor": "infeccao_ativa",
-              "label": "Infecção ativa"
+              "label": "Achados sugestivos de infecção ativa"
             }
           ],
           "referencia": "Normal / Alterado"
@@ -994,7 +1078,7 @@
     },
     {
       "id": "lab_urina_analise",
-      "nome": "Urina – Análise (EAS / Tipo I)",
+      "nome": "Urina Tipo I – Análise",
       "descricao": "Análise físico-química e microscópica da urina",
       "categoria": "laboratorio",
       "icone": "fa-flask",
@@ -5166,6 +5250,205 @@
       ]
     },
     {
+      "id": "lab_sorologia_gestante",
+      "nome": "Sorologia Gestante",
+      "descricao": "Pesquisa sorológica completa para rastreio de infecções com impacto materno-fetal",
+      "categoria": "obstetricia",
+      "icone": "fa-baby",
+      "campos": [
+        {
+          "id": "hiv",
+          "tipo": "select",
+          "label": "HIV",
+          "opcoes": [
+            {
+              "valor": "reagente",
+              "label": "Reagente"
+            },
+            {
+              "valor": "nao_reagente",
+              "label": "Não reagente"
+            }
+          ],
+          "referencia": "Não reagente"
+        },
+        {
+          "id": "sifilis",
+          "tipo": "select",
+          "label": "Sífilis",
+          "opcoes": [
+            {
+              "valor": "reagente",
+              "label": "Reagente"
+            },
+            {
+              "valor": "nao_reagente",
+              "label": "Não reagente"
+            }
+          ],
+          "referencia": "Não reagente"
+        },
+        {
+          "id": "hepatite_b",
+          "tipo": "select",
+          "label": "Hepatite B (HBsAg)",
+          "opcoes": [
+            {
+              "valor": "reagente",
+              "label": "Reagente"
+            },
+            {
+              "valor": "nao_reagente",
+              "label": "Não reagente"
+            }
+          ],
+          "referencia": "Não reagente"
+        },
+        {
+          "id": "hepatite_c",
+          "tipo": "select",
+          "label": "Hepatite C (Anti-HCV)",
+          "opcoes": [
+            {
+              "valor": "reagente",
+              "label": "Reagente"
+            },
+            {
+              "valor": "nao_reagente",
+              "label": "Não reagente"
+            }
+          ],
+          "referencia": "Não reagente"
+        },
+        {
+          "id": "toxoplasmose_igg",
+          "tipo": "select",
+          "label": "Toxoplasmose IgG",
+          "opcoes": [
+            {
+              "valor": "positivo",
+              "label": "Positivo"
+            },
+            {
+              "valor": "negativo",
+              "label": "Negativo"
+            }
+          ],
+          "referencia": "—"
+        },
+        {
+          "id": "toxoplasmose_igm",
+          "tipo": "select",
+          "label": "Toxoplasmose IgM",
+          "opcoes": [
+            {
+              "valor": "positivo",
+              "label": "Positivo"
+            },
+            {
+              "valor": "negativo",
+              "label": "Negativo"
+            }
+          ],
+          "referencia": "—"
+        },
+        {
+          "id": "rubeola_igg",
+          "tipo": "select",
+          "label": "Rubéola IgG",
+          "opcoes": [
+            {
+              "valor": "positivo",
+              "label": "Positivo"
+            },
+            {
+              "valor": "negativo",
+              "label": "Negativo"
+            }
+          ],
+          "referencia": "—"
+        },
+        {
+          "id": "rubeola_igm",
+          "tipo": "select",
+          "label": "Rubéola IgM",
+          "opcoes": [
+            {
+              "valor": "positivo",
+              "label": "Positivo"
+            },
+            {
+              "valor": "negativo",
+              "label": "Negativo"
+            }
+          ],
+          "referencia": "—"
+        },
+        {
+          "id": "citomegalovirus_igg",
+          "tipo": "select",
+          "label": "Citomegalovírus IgG",
+          "opcoes": [
+            {
+              "valor": "positivo",
+              "label": "Positivo"
+            },
+            {
+              "valor": "negativo",
+              "label": "Negativo"
+            }
+          ],
+          "referencia": "—"
+        },
+        {
+          "id": "citomegalovirus_igm",
+          "tipo": "select",
+          "label": "Citomegalovírus IgM",
+          "opcoes": [
+            {
+              "valor": "positivo",
+              "label": "Positivo"
+            },
+            {
+              "valor": "negativo",
+              "label": "Negativo"
+            }
+          ],
+          "referencia": "—"
+        },
+        {
+          "id": "impressao",
+          "tipo": "select",
+          "label": "Impressão Obstétrica",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Sorologia gestacional sem alterações relevantes"
+            },
+            {
+              "valor": "acompanhar",
+              "label": "Necessita acompanhamento sorológico"
+            },
+            {
+              "valor": "alto_risco",
+              "label": "Achados sugestivos de alto risco materno-fetal"
+            }
+          ],
+          "referencia": "Normal / Alterado"
+        },
+        {
+          "id": "interpretacao",
+          "tipo": "textarea",
+          "label": "Interpretação"
+        },
+        {
+          "id": "conclusao",
+          "tipo": "textarea",
+          "label": "Conclusão"
+        }
+      ]
+    },
+    {
       "id": "pediatria_crescimento_desenvolvimento",
       "nome": "Avaliação de Crescimento e Desenvolvimento",
       "descricao": "Monitoramento antropométrico e desenvolvimento neuropsicomotor",
@@ -7644,6 +7927,426 @@
           "tipo": "textarea",
           "label": "Conclusão",
           "placeholder": "Conclusão final do exame"
+        }
+      ]
+    },
+    {
+      "id": "lab_metabolismo_ferro",
+      "nome": "Metabolismo do Ferro",
+      "descricao": "Avaliação do estoque, transporte e utilização do ferro no organismo",
+      "categoria": "laboratorio",
+      "icone": "fa-vial",
+      "campos": [
+        {
+          "id": "ferro_serico",
+          "tipo": "number",
+          "label": "Ferro sérico",
+          "unidade": "µg/dL",
+          "referencia": "50 – 170"
+        },
+        {
+          "id": "ferritina",
+          "tipo": "number",
+          "label": "Ferritina",
+          "unidade": "ng/mL",
+          "referencia": "15 – 150"
+        },
+        {
+          "id": "tibc",
+          "tipo": "number",
+          "label": "Capacidade Total de Ligação do Ferro (TIBC)",
+          "unidade": "µg/dL",
+          "referencia": "250 – 450"
+        },
+        {
+          "id": "saturacao_transferrina",
+          "tipo": "number",
+          "label": "Saturação de Transferrina",
+          "unidade": "%",
+          "referencia": "20 – 50"
+        },
+        {
+          "id": "impressao",
+          "tipo": "select",
+          "label": "Impressão Clínica",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Metabolismo do ferro preservado"
+            },
+            {
+              "valor": "deficiencia",
+              "label": "Deficiência de ferro"
+            },
+            {
+              "valor": "sobrecarga",
+              "label": "Sobrecarga de ferro"
+            }
+          ],
+          "referencia": "Normal / Alterado"
+        },
+        {
+          "id": "interpretacao",
+          "tipo": "textarea",
+          "label": "Interpretação"
+        },
+        {
+          "id": "conclusao",
+          "tipo": "textarea",
+          "label": "Conclusão"
+        }
+      ]
+    },
+    {
+      "id": "lab_reticulocitos",
+      "nome": "Contagem de Reticulócitos",
+      "descricao": "Avaliação da atividade eritropoiética da medula óssea",
+      "categoria": "laboratorio",
+      "icone": "fa-tint",
+      "campos": [
+        {
+          "id": "reticulocitos_percentual",
+          "tipo": "number",
+          "label": "Reticulócitos",
+          "unidade": "%",
+          "referencia": "0.5 – 2.5"
+        },
+        {
+          "id": "reticulocitos_absoluto",
+          "tipo": "number",
+          "label": "Reticulócitos Absolutos",
+          "unidade": "/mm³",
+          "referencia": "25.000 – 75.000"
+        },
+        {
+          "id": "impressao",
+          "tipo": "select",
+          "label": "Impressão Hematológica",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Produção eritrocitária adequada"
+            },
+            {
+              "valor": "aumentada",
+              "label": "Resposta medular aumentada"
+            },
+            {
+              "valor": "reduzida",
+              "label": "Produção eritrocitária reduzida"
+            }
+          ],
+          "referencia": "Normal / Alterado"
+        },
+        {
+          "id": "interpretacao",
+          "tipo": "textarea",
+          "label": "Interpretação"
+        },
+        {
+          "id": "conclusao",
+          "tipo": "textarea",
+          "label": "Conclusão"
+        }
+      ]
+    },
+    {
+      "id": "lab_eletroforese_hemoglobina",
+      "nome": "Eletroforese de Hemoglobina",
+      "descricao": "Identificação e quantificação das frações de hemoglobina",
+      "categoria": "laboratorio",
+      "icone": "fa-dna",
+      "campos": [
+        {
+          "id": "hemoglobina_a",
+          "tipo": "number",
+          "label": "Hemoglobina A (HbA)",
+          "unidade": "%",
+          "referencia": "95 – 98"
+        },
+        {
+          "id": "hemoglobina_a2",
+          "tipo": "number",
+          "label": "Hemoglobina A2 (HbA2)",
+          "unidade": "%",
+          "referencia": "2 – 3.5"
+        },
+        {
+          "id": "hemoglobina_f",
+          "tipo": "number",
+          "label": "Hemoglobina F (HbF)",
+          "unidade": "%",
+          "referencia": "< 1"
+        },
+        {
+          "id": "hemoglobina_variantes",
+          "tipo": "select",
+          "label": "Variantes de Hemoglobina",
+          "opcoes": [
+            {
+              "valor": "ausente",
+              "label": "Ausentes"
+            },
+            {
+              "valor": "presente",
+              "label": "Presentes"
+            }
+          ],
+          "referencia": "Ausentes"
+        },
+        {
+          "id": "impressao",
+          "tipo": "select",
+          "label": "Impressão Diagnóstica",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Padrão normal"
+            },
+            {
+              "valor": "talassemia",
+              "label": "Sugestivo de talassemia"
+            },
+            {
+              "valor": "hemoglobinopatia",
+              "label": "Hemoglobinopatia"
+            }
+          ],
+          "referencia": "Normal / Alterado"
+        },
+        {
+          "id": "interpretacao",
+          "tipo": "textarea",
+          "label": "Interpretação"
+        },
+        {
+          "id": "conclusao",
+          "tipo": "textarea",
+          "label": "Conclusão"
+        }
+      ]
+    },
+    {
+      "id": "lab_gasometria_arterial",
+      "nome": "Gasometria Arterial",
+      "descricao": "Avaliação do equilíbrio ácido-base, ventilação e oxigenação",
+      "categoria": "laboratorio",
+      "icone": "fa-lungs",
+      "campos": [
+        {
+          "id": "ph",
+          "tipo": "number",
+          "label": "pH",
+          "referencia": "7.35 – 7.45"
+        },
+        {
+          "id": "pco2",
+          "tipo": "number",
+          "label": "pCO₂",
+          "unidade": "mmHg",
+          "referencia": "35 – 45"
+        },
+        {
+          "id": "po2",
+          "tipo": "number",
+          "label": "pO₂",
+          "unidade": "mmHg",
+          "referencia": "80 – 100"
+        },
+        {
+          "id": "hco3",
+          "tipo": "number",
+          "label": "HCO₃⁻",
+          "unidade": "mEq/L",
+          "referencia": "22 – 26"
+        },
+        {
+          "id": "saturacao_o2",
+          "tipo": "number",
+          "label": "Saturação de O₂",
+          "unidade": "%",
+          "referencia": "≥ 95"
+        },
+        {
+          "id": "impressao",
+          "tipo": "select",
+          "label": "Impressão Gasométrica",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Equilíbrio ácido-base preservado"
+            },
+            {
+              "valor": "acidose",
+              "label": "Acidose"
+            },
+            {
+              "valor": "alcalose",
+              "label": "Alcalose"
+            }
+          ],
+          "referencia": "Normal / Alterado"
+        },
+        {
+          "id": "interpretacao",
+          "tipo": "textarea",
+          "label": "Interpretação"
+        },
+        {
+          "id": "conclusao",
+          "tipo": "textarea",
+          "label": "Conclusão"
+        }
+      ]
+    },
+    {
+      "id": "lab_anticorpos_irregulares",
+      "nome": "Anticorpos Irregulares",
+      "descricao": "Detecção de anticorpos irregulares associados a anemia hemolítica imunomediada",
+      "categoria": "laboratorio",
+      "icone": "fa-droplet",
+      "campos": [
+        {
+          "id": "resultado",
+          "tipo": "select",
+          "label": "Resultado da Pesquisa",
+          "opcoes": [
+            {
+              "valor": "negativo",
+              "label": "Negativo"
+            },
+            {
+              "valor": "positivo",
+              "label": "Positivo"
+            }
+          ],
+          "referencia": "Negativo"
+        },
+        {
+          "id": "anticorpo",
+          "tipo": "select",
+          "label": "Anticorpo Identificado",
+          "opcoes": [
+            {
+              "valor": "nao_identificado",
+              "label": "Não identificado"
+            },
+            {
+              "valor": "anti_d",
+              "label": "Anti-D"
+            },
+            {
+              "valor": "anti_c",
+              "label": "Anti-C"
+            },
+            {
+              "valor": "anti_e",
+              "label": "Anti-E"
+            },
+            {
+              "valor": "anti_kell",
+              "label": "Anti-Kell"
+            },
+            {
+              "valor": "anti_duffy",
+              "label": "Anti-Duffy"
+            },
+            {
+              "valor": "anti_kidd",
+              "label": "Anti-Kidd"
+            },
+            {
+              "valor": "outros",
+              "label": "Outros"
+            }
+          ],
+          "referencia": "—"
+        },
+        {
+          "id": "classe",
+          "tipo": "select",
+          "label": "Classe de Imunoglobulina",
+          "opcoes": [
+            {
+              "valor": "igg",
+              "label": "IgG"
+            },
+            {
+              "valor": "igm",
+              "label": "IgM"
+            },
+            {
+              "valor": "mista",
+              "label": "IgG + IgM"
+            }
+          ],
+          "referencia": "—"
+        },
+        {
+          "id": "intensidade",
+          "tipo": "select",
+          "label": "Intensidade da Reação",
+          "opcoes": [
+            {
+              "valor": "fraca",
+              "label": "Fraca"
+            },
+            {
+              "valor": "moderada",
+              "label": "Moderada"
+            },
+            {
+              "valor": "forte",
+              "label": "Forte"
+            }
+          ],
+          "referencia": "—"
+        },
+        {
+          "id": "correlacao",
+          "tipo": "select",
+          "label": "Correlação Clínica",
+          "opcoes": [
+            {
+              "valor": "sem_hemolise",
+              "label": "Sem evidência de hemólise"
+            },
+            {
+              "valor": "hemolise_aguda",
+              "label": "Sugestivo de hemólise aguda"
+            },
+            {
+              "valor": "hemolise_cronica",
+              "label": "Sugestivo de hemólise crônica"
+            }
+          ],
+          "referencia": "—"
+        },
+        {
+          "id": "impressao",
+          "tipo": "select",
+          "label": "Impressão",
+          "opcoes": [
+            {
+              "valor": "negativa",
+              "label": "Pesquisa negativa"
+            },
+            {
+              "valor": "positiva",
+              "label": "Anticorpos detectados"
+            }
+          ],
+          "referencia": "Normal / Alterado"
+        },
+        {
+          "id": "interpretacao",
+          "tipo": "textarea",
+          "label": "Interpretação"
+        },
+        {
+          "id": "conclusao",
+          "tipo": "textarea",
+          "label": "Conclusão"
         }
       ]
     }
