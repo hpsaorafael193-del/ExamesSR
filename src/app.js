@@ -69,6 +69,10 @@ class LaudosApp {
         // Verificar view mobile
         this.checkMobileView();
 
+        // Gera automaticamente o número do exame
+        this.generateExameNumber();
+      
+
         console.log('Sistema inicializado com sucesso');
     }
 
@@ -169,3 +173,4 @@ class LaudosApp {
 document.addEventListener('DOMContentLoaded', () => {
     window.laudosApp = new LaudosApp();
 });
+
