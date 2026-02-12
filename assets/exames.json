@@ -709,59 +709,114 @@
       ]
     },
     {
-      "id": "lab_perfil_lipidico_completo",
-      "nome": "Perfil Lipídico Completo",
-      "descricao": "Avaliação do metabolismo lipídico e do risco cardiovascular",
+      "id": "lab_painel_alergia",
+      "nome": "Painel de Alergia",
+      "descricao": "Investigação de sensibilização alérgica por IgE total e específica",
       "categoria": "laboratorio",
-      "icone": "fa-heartbeat",
+      "icone": "fa-vial",
       "campos": [
         {
-          "id": "colesterol_total",
+          "id": "ige_total",
           "tipo": "number",
-          "label": "Colesterol Total",
-          "unidade": "mg/dL",
-          "referencia": "< 200"
+          "label": "IgE Total",
+          "unidade": "UI/mL",
+          "referencia": "< 100"
         },
         {
-          "id": "hdl",
-          "tipo": "number",
-          "label": "HDL (Colesterol HDL)",
-          "unidade": "mg/dL",
-          "referencia": "≥ 40"
+          "id": "alergenos_respiratorios",
+          "tipo": "select",
+          "label": "Alergenos Respiratórios",
+          "opcoes": [
+            {
+              "valor": "negativo",
+              "label": "Negativo"
+            },
+            {
+              "valor": "positivo",
+              "label": "Positivo"
+            }
+          ],
+          "referencia": "Negativo"
         },
         {
-          "id": "ldl",
-          "tipo": "number",
-          "label": "LDL (Colesterol LDL)",
-          "unidade": "mg/dL",
-          "referencia": "< 130"
+          "id": "alergenos_alimentares",
+          "tipo": "select",
+          "label": "Alergenos Alimentares",
+          "opcoes": [
+            {
+              "valor": "negativo",
+              "label": "Negativo"
+            },
+            {
+              "valor": "positivo",
+              "label": "Positivo"
+            }
+          ],
+          "referencia": "Negativo"
         },
         {
-          "id": "vldl",
-          "tipo": "number",
-          "label": "VLDL",
-          "unidade": "mg/dL",
-          "referencia": "< 30"
+          "id": "alergenos_medicamentos",
+          "tipo": "select",
+          "label": "Alergenos Medicamentosos",
+          "opcoes": [
+            {
+              "valor": "negativo",
+              "label": "Negativo"
+            },
+            {
+              "valor": "positivo",
+              "label": "Positivo"
+            }
+          ],
+          "referencia": "Negativo"
         },
         {
-          "id": "triglicerideos",
-          "tipo": "number",
-          "label": "Triglicerídeos",
-          "unidade": "mg/dL",
-          "referencia": "< 150"
+          "id": "tipo_reacao",
+          "tipo": "select",
+          "label": "Tipo de Reação",
+          "opcoes": [
+            {
+              "valor": "cutanea",
+              "label": "Cutânea"
+            },
+            {
+              "valor": "respiratoria",
+              "label": "Respiratória"
+            },
+            {
+              "valor": "gastrointestinal",
+              "label": "Gastrointestinal"
+            },
+            {
+              "valor": "sistemica",
+              "label": "Sistêmica"
+            },
+            {
+              "valor": "nao_identificada",
+              "label": "Não identificada"
+            }
+          ],
+          "referencia": "—"
         },
         {
-          "id": "colesterol_nao_hdl",
-          "tipo": "number",
-          "label": "Colesterol Não-HDL",
-          "unidade": "mg/dL",
-          "referencia": "< 160"
-        },
-        {
-          "id": "indice_aterogenico",
-          "tipo": "number",
-          "label": "Índice Aterogênico (CT/HDL)",
-          "referencia": "< 5.0"
+          "id": "gravidade",
+          "tipo": "select",
+          "label": "Gravidade",
+          "opcoes": [
+            {
+              "valor": "leve",
+              "label": "Leve"
+            },
+            {
+              "valor": "moderada",
+              "label": "Moderada"
+            },
+            {
+              "valor": "grave",
+              "label": "Grave"
+            }
+          ],
+          "referencia": "Leve"
         },
         {
           "id": "impressao",
@@ -770,19 +825,15 @@
           "opcoes": [
             {
               "valor": "normal",
-              "label": "Perfil lipídico dentro da normalidade"
+              "label": "Sem evidências laboratoriais de alergia"
             },
             {
-              "valor": "dislipidemia_isolada",
-              "label": "Dislipidemia isolada"
+              "valor": "sensibilizacao",
+              "label": "Sensibilização alérgica identificada"
             },
             {
-              "valor": "alto_risco",
-              "label": "Alto risco cardiovascular"
-            },
-            {
-              "valor": "alterado",
-              "label": "Perfil lipídico alterado"
+              "valor": "alergia_confirmada",
+              "label": "Perfil compatível com doença alérgica"
             }
           ],
           "referencia": "Normal / Alterado"
@@ -957,189 +1008,6 @@
             {
               "valor": "descompensacao",
               "label": "Descompensação glicêmica"
-            }
-          ],
-          "referencia": "Normal / Alterado"
-        },
-        {
-          "id": "interpretacao",
-          "tipo": "textarea",
-          "label": "Interpretação"
-        },
-        {
-          "id": "conclusao",
-          "tipo": "textarea",
-          "label": "Conclusão"
-        }
-      ]
-    },
-    {
-      "id": "lab_hba1c_completa",
-      "nome": "Hemoglobina Glicada (HbA1c)",
-      "descricao": "Avaliação do controle glicêmico médio dos últimos 2 a 3 meses",
-      "categoria": "laboratorio",
-      "icone": "fa-chart-line",
-      "campos": [
-        {
-          "id": "hba1c",
-          "tipo": "number",
-          "label": "HbA1c",
-          "unidade": "%",
-          "referencia": "< 5.7"
-        },
-        {
-          "id": "glicemia_media_estimada",
-          "tipo": "number",
-          "label": "Glicemia Média Estimada (eAG)",
-          "unidade": "mg/dL",
-          "referencia": "—"
-        },
-        {
-          "id": "controle_glicemico",
-          "tipo": "select",
-          "label": "Controle Glicêmico",
-          "opcoes": [
-            {
-              "valor": "adequado",
-              "label": "Adequado"
-            },
-            {
-              "valor": "parcial",
-              "label": "Parcialmente controlado"
-            },
-            {
-              "valor": "inadequado",
-              "label": "Inadequado"
-            }
-          ],
-          "referencia": "Adequado"
-        },
-        {
-          "id": "impressao",
-          "tipo": "select",
-          "label": "Impressão Clínica",
-          "opcoes": [
-            {
-              "valor": "normal",
-              "label": "Controle glicêmico normal"
-            },
-            {
-              "valor": "prediabetes",
-              "label": "Compatível com pré-diabetes"
-            },
-            {
-              "valor": "diabetes_controlado",
-              "label": "Diabetes controlado"
-            },
-            {
-              "valor": "diabetes_descompensado",
-              "label": "Diabetes descompensado"
-            }
-          ],
-          "referencia": "Normal / Alterado"
-        },
-        {
-          "id": "interpretacao",
-          "tipo": "textarea",
-          "label": "Interpretação"
-        },
-        {
-          "id": "conclusao",
-          "tipo": "textarea",
-          "label": "Conclusão"
-        }
-      ]
-    },
-    {
-      "id": "lab_funcao_renal_completa",
-      "nome": "Função Renal",
-      "descricao": "Avaliação da função renal e da filtração glomerular",
-      "categoria": "laboratorio",
-      "icone": "fa-vial",
-      "campos": [
-        {
-          "id": "ureia",
-          "tipo": "number",
-          "label": "Ureia",
-          "unidade": "mg/dL",
-          "referencia": "10 – 50"
-        },
-        {
-          "id": "creatinina",
-          "tipo": "number",
-          "label": "Creatinina",
-          "unidade": "mg/dL",
-          "referencia": "0.6 – 1.3"
-        },
-        {
-          "id": "taxa_filtracao_glomerular",
-          "tipo": "number",
-          "label": "Taxa de Filtração Glomerular (TFG estimada)",
-          "unidade": "mL/min/1,73m²",
-          "referencia": "≥ 90"
-        },
-        {
-          "id": "estagio_drc",
-          "tipo": "select",
-          "label": "Estágio de Doença Renal Crônica (DRC)",
-          "opcoes": [
-            {
-              "valor": "nao_aplicavel",
-              "label": "Não aplicável"
-            },
-            {
-              "valor": "estagio_1",
-              "label": "Estágio 1"
-            },
-            {
-              "valor": "estagio_2",
-              "label": "Estágio 2"
-            },
-            {
-              "valor": "estagio_3a",
-              "label": "Estágio 3A"
-            },
-            {
-              "valor": "estagio_3b",
-              "label": "Estágio 3B"
-            },
-            {
-              "valor": "estagio_4",
-              "label": "Estágio 4"
-            },
-            {
-              "valor": "estagio_5",
-              "label": "Estágio 5"
-            }
-          ],
-          "referencia": "Não aplicável"
-        },
-        {
-          "id": "relacao_ureia_creatinina",
-          "tipo": "number",
-          "label": "Relação Ureia/Creatinina",
-          "referencia": "10 – 20"
-        },
-        {
-          "id": "impressao",
-          "tipo": "select",
-          "label": "Impressão Clínica",
-          "opcoes": [
-            {
-              "valor": "normal",
-              "label": "Função renal preservada"
-            },
-            {
-              "valor": "azotemia_prerrenal",
-              "label": "Sugestivo de azotemia pré-renal"
-            },
-            {
-              "valor": "insuficiencia_renal",
-              "label": "Insuficiência renal"
-            },
-            {
-              "valor": "drc",
-              "label": "Doença renal crônica"
             }
           ],
           "referencia": "Normal / Alterado"
@@ -1362,6 +1230,231 @@
       ]
     },
     {
+      "id": "lab_feze_analise",
+      "nome": "Fezes – Análise Completa",
+      "descricao": "Avaliação macroscópica, microscópica, funcional e parasitológica das fezes",
+      "categoria": "laboratorio",
+      "icone": "fa-vial",
+      "campos": [
+        {
+          "id": "cor",
+          "tipo": "select",
+          "label": "Cor",
+          "opcoes": [
+            {
+              "valor": "marrom",
+              "label": "Marrom"
+            },
+            {
+              "valor": "amarelada",
+              "label": "Amarelada"
+            },
+            {
+              "valor": "esverdeada",
+              "label": "Esverdeada"
+            },
+            {
+              "valor": "enegrecida",
+              "label": "Enegrecida"
+            },
+            {
+              "valor": "esbranquicada",
+              "label": "Esbranquiçada"
+            }
+          ],
+          "referencia": "Marrom"
+        },
+        {
+          "id": "consistencia",
+          "tipo": "select",
+          "label": "Consistência",
+          "opcoes": [
+            {
+              "valor": "formada",
+              "label": "Formada"
+            },
+            {
+              "valor": "pastosa",
+              "label": "Pastosa"
+            },
+            {
+              "valor": "liquida",
+              "label": "Líquida"
+            }
+          ],
+          "referencia": "Formada"
+        },
+        {
+          "id": "muco",
+          "tipo": "select",
+          "label": "Muco",
+          "opcoes": [
+            {
+              "valor": "ausente",
+              "label": "Ausente"
+            },
+            {
+              "valor": "presente",
+              "label": "Presente"
+            }
+          ],
+          "referencia": "Ausente"
+        },
+        {
+          "id": "sangue_visivel",
+          "tipo": "select",
+          "label": "Sangue Visível",
+          "opcoes": [
+            {
+              "valor": "ausente",
+              "label": "Ausente"
+            },
+            {
+              "valor": "presente",
+              "label": "Presente"
+            }
+          ],
+          "referencia": "Ausente"
+        },
+        {
+          "id": "ph",
+          "tipo": "number",
+          "label": "pH",
+          "referencia": "6.0 – 7.5"
+        },
+        {
+          "id": "leucocitos",
+          "tipo": "select",
+          "label": "Leucócitos",
+          "opcoes": [
+            {
+              "valor": "ausentes",
+              "label": "Ausentes"
+            },
+            {
+              "valor": "presentes",
+              "label": "Presentes"
+            }
+          ],
+          "referencia": "Ausentes"
+        },
+        {
+          "id": "hemacias",
+          "tipo": "select",
+          "label": "Hemácias",
+          "opcoes": [
+            {
+              "valor": "ausentes",
+              "label": "Ausentes"
+            },
+            {
+              "valor": "presentes",
+              "label": "Presentes"
+            }
+          ],
+          "referencia": "Ausentes"
+        },
+        {
+          "id": "gordura",
+          "tipo": "select",
+          "label": "Gordura",
+          "opcoes": [
+            {
+              "valor": "ausente",
+              "label": "Ausente"
+            },
+            {
+              "valor": "aumentada",
+              "label": "Aumentada"
+            }
+          ],
+          "referencia": "Ausente"
+        },
+        {
+          "id": "parasitas",
+          "tipo": "select",
+          "label": "Parasitas",
+          "opcoes": [
+            {
+              "valor": "ausentes",
+              "label": "Ausentes"
+            },
+            {
+              "valor": "giardia",
+              "label": "Giardia lamblia"
+            },
+            {
+              "valor": "entamoeba",
+              "label": "Entamoeba histolytica"
+            },
+            {
+              "valor": "ascaris",
+              "label": "Ascaris lumbricoides"
+            },
+            {
+              "valor": "ancilostomideos",
+              "label": "Ancilostomídeos"
+            },
+            {
+              "valor": "oxiuros",
+              "label": "Enterobius vermicularis"
+            }
+          ],
+          "referencia": "Ausentes"
+        },
+        {
+          "id": "ovos_cistos",
+          "tipo": "select",
+          "label": "Ovos e Cistos",
+          "opcoes": [
+            {
+              "valor": "ausentes",
+              "label": "Ausentes"
+            },
+            {
+              "valor": "presentes",
+              "label": "Presentes"
+            }
+          ],
+          "referencia": "Ausentes"
+        },
+        {
+          "id": "impressao",
+          "tipo": "select",
+          "label": "Impressão Laboratorial",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Exame dentro da normalidade"
+            },
+            {
+              "valor": "parasitose",
+              "label": "Parasitose intestinal"
+            },
+            {
+              "valor": "diarreia_infecciosa",
+              "label": "Quadro sugestivo de diarreia infecciosa"
+            },
+            {
+              "valor": "sind_ma_absorcao",
+              "label": "Síndrome de má absorção"
+            }
+          ],
+          "referencia": "Normal / Alterado"
+        },
+        {
+          "id": "interpretacao",
+          "tipo": "textarea",
+          "label": "Interpretação"
+        },
+        {
+          "id": "conclusao",
+          "tipo": "textarea",
+          "label": "Conclusão"
+        }
+      ]
+    },
+    {
       "id": "lab_urocultura",
       "nome": "Urocultura",
       "descricao": "Identificação de microrganismos na urina e teste de sensibilidade aos antimicrobianos",
@@ -1473,6 +1566,263 @@
             {
               "valor": "contaminacao",
               "label": "Amostra possivelmente contaminada"
+            }
+          ],
+          "referencia": "Normal / Alterado"
+        },
+        {
+          "id": "interpretacao",
+          "tipo": "textarea",
+          "label": "Interpretação"
+        },
+        {
+          "id": "conclusao",
+          "tipo": "textarea",
+          "label": "Conclusão"
+        }
+      ]
+    },
+    {
+      "id": "lab_anticorpos_irregulares",
+      "nome": "Anticorpos Irregulares",
+      "descricao": "Detecção de anticorpos irregulares associados a anemia hemolítica imunomediada",
+      "categoria": "laboratorio",
+      "icone": "fa-droplet",
+      "campos": [
+        {
+          "id": "resultado",
+          "tipo": "select",
+          "label": "Resultado da Pesquisa",
+          "opcoes": [
+            {
+              "valor": "negativo",
+              "label": "Negativo"
+            },
+            {
+              "valor": "positivo",
+              "label": "Positivo"
+            }
+          ],
+          "referencia": "Negativo"
+        },
+        {
+          "id": "anticorpo",
+          "tipo": "select",
+          "label": "Anticorpo Identificado",
+          "opcoes": [
+            {
+              "valor": "nao_identificado",
+              "label": "Não identificado"
+            },
+            {
+              "valor": "anti_d",
+              "label": "Anti-D"
+            },
+            {
+              "valor": "anti_c",
+              "label": "Anti-C"
+            },
+            {
+              "valor": "anti_e",
+              "label": "Anti-E"
+            },
+            {
+              "valor": "anti_kell",
+              "label": "Anti-Kell"
+            },
+            {
+              "valor": "anti_duffy",
+              "label": "Anti-Duffy"
+            },
+            {
+              "valor": "anti_kidd",
+              "label": "Anti-Kidd"
+            },
+            {
+              "valor": "outros",
+              "label": "Outros"
+            }
+          ],
+          "referencia": "—"
+        },
+        {
+          "id": "classe",
+          "tipo": "select",
+          "label": "Classe de Imunoglobulina",
+          "opcoes": [
+            {
+              "valor": "igg",
+              "label": "IgG"
+            },
+            {
+              "valor": "igm",
+              "label": "IgM"
+            },
+            {
+              "valor": "mista",
+              "label": "IgG + IgM"
+            }
+          ],
+          "referencia": "—"
+        },
+        {
+          "id": "intensidade",
+          "tipo": "select",
+          "label": "Intensidade da Reação",
+          "opcoes": [
+            {
+              "valor": "fraca",
+              "label": "Fraca"
+            },
+            {
+              "valor": "moderada",
+              "label": "Moderada"
+            },
+            {
+              "valor": "forte",
+              "label": "Forte"
+            }
+          ],
+          "referencia": "—"
+        },
+        {
+          "id": "correlacao",
+          "tipo": "select",
+          "label": "Correlação Clínica",
+          "opcoes": [
+            {
+              "valor": "sem_hemolise",
+              "label": "Sem evidência de hemólise"
+            },
+            {
+              "valor": "hemolise_aguda",
+              "label": "Sugestivo de hemólise aguda"
+            },
+            {
+              "valor": "hemolise_cronica",
+              "label": "Sugestivo de hemólise crônica"
+            }
+          ],
+          "referencia": "—"
+        },
+        {
+          "id": "impressao",
+          "tipo": "select",
+          "label": "Impressão",
+          "opcoes": [
+            {
+              "valor": "negativa",
+              "label": "Pesquisa negativa"
+            },
+            {
+              "valor": "positiva",
+              "label": "Anticorpos detectados"
+            }
+          ],
+          "referencia": "Normal / Alterado"
+        },
+        {
+          "id": "interpretacao",
+          "tipo": "textarea",
+          "label": "Interpretação"
+        },
+        {
+          "id": "conclusao",
+          "tipo": "textarea",
+          "label": "Conclusão"
+        }
+      ]
+    },
+    {
+      "id": "lab_funcao_renal_completa",
+      "nome": "Função Renal",
+      "descricao": "Avaliação da função renal e da filtração glomerular",
+      "categoria": "laboratorio",
+      "icone": "fa-vial",
+      "campos": [
+        {
+          "id": "ureia",
+          "tipo": "number",
+          "label": "Ureia",
+          "unidade": "mg/dL",
+          "referencia": "10 – 50"
+        },
+        {
+          "id": "creatinina",
+          "tipo": "number",
+          "label": "Creatinina",
+          "unidade": "mg/dL",
+          "referencia": "0.6 – 1.3"
+        },
+        {
+          "id": "taxa_filtracao_glomerular",
+          "tipo": "number",
+          "label": "Taxa de Filtração Glomerular (TFG estimada)",
+          "unidade": "mL/min/1,73m²",
+          "referencia": "≥ 90"
+        },
+        {
+          "id": "estagio_drc",
+          "tipo": "select",
+          "label": "Estágio de Doença Renal Crônica (DRC)",
+          "opcoes": [
+            {
+              "valor": "nao_aplicavel",
+              "label": "Não aplicável"
+            },
+            {
+              "valor": "estagio_1",
+              "label": "Estágio 1"
+            },
+            {
+              "valor": "estagio_2",
+              "label": "Estágio 2"
+            },
+            {
+              "valor": "estagio_3a",
+              "label": "Estágio 3A"
+            },
+            {
+              "valor": "estagio_3b",
+              "label": "Estágio 3B"
+            },
+            {
+              "valor": "estagio_4",
+              "label": "Estágio 4"
+            },
+            {
+              "valor": "estagio_5",
+              "label": "Estágio 5"
+            }
+          ],
+          "referencia": "Não aplicável"
+        },
+        {
+          "id": "relacao_ureia_creatinina",
+          "tipo": "number",
+          "label": "Relação Ureia/Creatinina",
+          "referencia": "10 – 20"
+        },
+        {
+          "id": "impressao",
+          "tipo": "select",
+          "label": "Impressão Clínica",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Função renal preservada"
+            },
+            {
+              "valor": "azotemia_prerrenal",
+              "label": "Sugestivo de azotemia pré-renal"
+            },
+            {
+              "valor": "insuficiencia_renal",
+              "label": "Insuficiência renal"
+            },
+            {
+              "valor": "drc",
+              "label": "Doença renal crônica"
             }
           ],
           "referencia": "Normal / Alterado"
@@ -1726,6 +2076,83 @@
             {
               "valor": "disturbio_grave",
               "label": "Distúrbio eletrolítico grave"
+            }
+          ],
+          "referencia": "Normal / Alterado"
+        },
+        {
+          "id": "interpretacao",
+          "tipo": "textarea",
+          "label": "Interpretação"
+        },
+        {
+          "id": "conclusao",
+          "tipo": "textarea",
+          "label": "Conclusão"
+        }
+      ]
+    },
+    {
+      "id": "lab_hba1c_completa",
+      "nome": "Hemoglobina Glicada (HbA1c)",
+      "descricao": "Avaliação do controle glicêmico médio dos últimos 2 a 3 meses",
+      "categoria": "laboratorio",
+      "icone": "fa-chart-line",
+      "campos": [
+        {
+          "id": "hba1c",
+          "tipo": "number",
+          "label": "HbA1c",
+          "unidade": "%",
+          "referencia": "< 5.7"
+        },
+        {
+          "id": "glicemia_media_estimada",
+          "tipo": "number",
+          "label": "Glicemia Média Estimada (eAG)",
+          "unidade": "mg/dL",
+          "referencia": "—"
+        },
+        {
+          "id": "controle_glicemico",
+          "tipo": "select",
+          "label": "Controle Glicêmico",
+          "opcoes": [
+            {
+              "valor": "adequado",
+              "label": "Adequado"
+            },
+            {
+              "valor": "parcial",
+              "label": "Parcialmente controlado"
+            },
+            {
+              "valor": "inadequado",
+              "label": "Inadequado"
+            }
+          ],
+          "referencia": "Adequado"
+        },
+        {
+          "id": "impressao",
+          "tipo": "select",
+          "label": "Impressão Clínica",
+          "opcoes": [
+            {
+              "valor": "normal",
+              "label": "Controle glicêmico normal"
+            },
+            {
+              "valor": "prediabetes",
+              "label": "Compatível com pré-diabetes"
+            },
+            {
+              "valor": "diabetes_controlado",
+              "label": "Diabetes controlado"
+            },
+            {
+              "valor": "diabetes_descompensado",
+              "label": "Diabetes descompensado"
             }
           ],
           "referencia": "Normal / Alterado"
@@ -2219,382 +2646,6 @@
             {
               "valor": "alcalose",
               "label": "Alcalose"
-            }
-          ],
-          "referencia": "Normal / Alterado"
-        },
-        {
-          "id": "interpretacao",
-          "tipo": "textarea",
-          "label": "Interpretação"
-        },
-        {
-          "id": "conclusao",
-          "tipo": "textarea",
-          "label": "Conclusão"
-        }
-      ]
-    },
-    {
-      "id": "lab_anticorpos_irregulares",
-      "nome": "Anticorpos Irregulares",
-      "descricao": "Detecção de anticorpos irregulares associados a anemia hemolítica imunomediada",
-      "categoria": "laboratorio",
-      "icone": "fa-droplet",
-      "campos": [
-        {
-          "id": "resultado",
-          "tipo": "select",
-          "label": "Resultado da Pesquisa",
-          "opcoes": [
-            {
-              "valor": "negativo",
-              "label": "Negativo"
-            },
-            {
-              "valor": "positivo",
-              "label": "Positivo"
-            }
-          ],
-          "referencia": "Negativo"
-        },
-        {
-          "id": "anticorpo",
-          "tipo": "select",
-          "label": "Anticorpo Identificado",
-          "opcoes": [
-            {
-              "valor": "nao_identificado",
-              "label": "Não identificado"
-            },
-            {
-              "valor": "anti_d",
-              "label": "Anti-D"
-            },
-            {
-              "valor": "anti_c",
-              "label": "Anti-C"
-            },
-            {
-              "valor": "anti_e",
-              "label": "Anti-E"
-            },
-            {
-              "valor": "anti_kell",
-              "label": "Anti-Kell"
-            },
-            {
-              "valor": "anti_duffy",
-              "label": "Anti-Duffy"
-            },
-            {
-              "valor": "anti_kidd",
-              "label": "Anti-Kidd"
-            },
-            {
-              "valor": "outros",
-              "label": "Outros"
-            }
-          ],
-          "referencia": "—"
-        },
-        {
-          "id": "classe",
-          "tipo": "select",
-          "label": "Classe de Imunoglobulina",
-          "opcoes": [
-            {
-              "valor": "igg",
-              "label": "IgG"
-            },
-            {
-              "valor": "igm",
-              "label": "IgM"
-            },
-            {
-              "valor": "mista",
-              "label": "IgG + IgM"
-            }
-          ],
-          "referencia": "—"
-        },
-        {
-          "id": "intensidade",
-          "tipo": "select",
-          "label": "Intensidade da Reação",
-          "opcoes": [
-            {
-              "valor": "fraca",
-              "label": "Fraca"
-            },
-            {
-              "valor": "moderada",
-              "label": "Moderada"
-            },
-            {
-              "valor": "forte",
-              "label": "Forte"
-            }
-          ],
-          "referencia": "—"
-        },
-        {
-          "id": "correlacao",
-          "tipo": "select",
-          "label": "Correlação Clínica",
-          "opcoes": [
-            {
-              "valor": "sem_hemolise",
-              "label": "Sem evidência de hemólise"
-            },
-            {
-              "valor": "hemolise_aguda",
-              "label": "Sugestivo de hemólise aguda"
-            },
-            {
-              "valor": "hemolise_cronica",
-              "label": "Sugestivo de hemólise crônica"
-            }
-          ],
-          "referencia": "—"
-        },
-        {
-          "id": "impressao",
-          "tipo": "select",
-          "label": "Impressão",
-          "opcoes": [
-            {
-              "valor": "negativa",
-              "label": "Pesquisa negativa"
-            },
-            {
-              "valor": "positiva",
-              "label": "Anticorpos detectados"
-            }
-          ],
-          "referencia": "Normal / Alterado"
-        },
-        {
-          "id": "interpretacao",
-          "tipo": "textarea",
-          "label": "Interpretação"
-        },
-        {
-          "id": "conclusao",
-          "tipo": "textarea",
-          "label": "Conclusão"
-        }
-      ]
-    },
-    {
-      "id": "lab_feze_analise",
-      "nome": "Fezes – Análise Completa",
-      "descricao": "Avaliação macroscópica, microscópica, funcional e parasitológica das fezes",
-      "categoria": "laboratorio",
-      "icone": "fa-vial",
-      "campos": [
-        {
-          "id": "cor",
-          "tipo": "select",
-          "label": "Cor",
-          "opcoes": [
-            {
-              "valor": "marrom",
-              "label": "Marrom"
-            },
-            {
-              "valor": "amarelada",
-              "label": "Amarelada"
-            },
-            {
-              "valor": "esverdeada",
-              "label": "Esverdeada"
-            },
-            {
-              "valor": "enegrecida",
-              "label": "Enegrecida"
-            },
-            {
-              "valor": "esbranquicada",
-              "label": "Esbranquiçada"
-            }
-          ],
-          "referencia": "Marrom"
-        },
-        {
-          "id": "consistencia",
-          "tipo": "select",
-          "label": "Consistência",
-          "opcoes": [
-            {
-              "valor": "formada",
-              "label": "Formada"
-            },
-            {
-              "valor": "pastosa",
-              "label": "Pastosa"
-            },
-            {
-              "valor": "liquida",
-              "label": "Líquida"
-            }
-          ],
-          "referencia": "Formada"
-        },
-        {
-          "id": "muco",
-          "tipo": "select",
-          "label": "Muco",
-          "opcoes": [
-            {
-              "valor": "ausente",
-              "label": "Ausente"
-            },
-            {
-              "valor": "presente",
-              "label": "Presente"
-            }
-          ],
-          "referencia": "Ausente"
-        },
-        {
-          "id": "sangue_visivel",
-          "tipo": "select",
-          "label": "Sangue Visível",
-          "opcoes": [
-            {
-              "valor": "ausente",
-              "label": "Ausente"
-            },
-            {
-              "valor": "presente",
-              "label": "Presente"
-            }
-          ],
-          "referencia": "Ausente"
-        },
-        {
-          "id": "ph",
-          "tipo": "number",
-          "label": "pH",
-          "referencia": "6.0 – 7.5"
-        },
-        {
-          "id": "leucocitos",
-          "tipo": "select",
-          "label": "Leucócitos",
-          "opcoes": [
-            {
-              "valor": "ausentes",
-              "label": "Ausentes"
-            },
-            {
-              "valor": "presentes",
-              "label": "Presentes"
-            }
-          ],
-          "referencia": "Ausentes"
-        },
-        {
-          "id": "hemacias",
-          "tipo": "select",
-          "label": "Hemácias",
-          "opcoes": [
-            {
-              "valor": "ausentes",
-              "label": "Ausentes"
-            },
-            {
-              "valor": "presentes",
-              "label": "Presentes"
-            }
-          ],
-          "referencia": "Ausentes"
-        },
-        {
-          "id": "gordura",
-          "tipo": "select",
-          "label": "Gordura",
-          "opcoes": [
-            {
-              "valor": "ausente",
-              "label": "Ausente"
-            },
-            {
-              "valor": "aumentada",
-              "label": "Aumentada"
-            }
-          ],
-          "referencia": "Ausente"
-        },
-        {
-          "id": "parasitas",
-          "tipo": "select",
-          "label": "Parasitas",
-          "opcoes": [
-            {
-              "valor": "ausentes",
-              "label": "Ausentes"
-            },
-            {
-              "valor": "giardia",
-              "label": "Giardia lamblia"
-            },
-            {
-              "valor": "entamoeba",
-              "label": "Entamoeba histolytica"
-            },
-            {
-              "valor": "ascaris",
-              "label": "Ascaris lumbricoides"
-            },
-            {
-              "valor": "ancilostomideos",
-              "label": "Ancilostomídeos"
-            },
-            {
-              "valor": "oxiuros",
-              "label": "Enterobius vermicularis"
-            }
-          ],
-          "referencia": "Ausentes"
-        },
-        {
-          "id": "ovos_cistos",
-          "tipo": "select",
-          "label": "Ovos e Cistos",
-          "opcoes": [
-            {
-              "valor": "ausentes",
-              "label": "Ausentes"
-            },
-            {
-              "valor": "presentes",
-              "label": "Presentes"
-            }
-          ],
-          "referencia": "Ausentes"
-        },
-        {
-          "id": "impressao",
-          "tipo": "select",
-          "label": "Impressão Laboratorial",
-          "opcoes": [
-            {
-              "valor": "normal",
-              "label": "Exame dentro da normalidade"
-            },
-            {
-              "valor": "parasitose",
-              "label": "Parasitose intestinal"
-            },
-            {
-              "valor": "diarreia_infecciosa",
-              "label": "Quadro sugestivo de diarreia infecciosa"
-            },
-            {
-              "valor": "sind_ma_absorcao",
-              "label": "Síndrome de má absorção"
             }
           ],
           "referencia": "Normal / Alterado"
